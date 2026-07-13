@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "PowerShell(Get-Content *)",
+      "PowerShell(Write-Output *)",
+      "PowerShell(Get-ChildItem *)",
+      "PowerShell(Test-Path *)",
+      "PowerShell(Select-String *)",
+      "PowerShell(Resolve-Path *)",
+      "PowerShell(Get-Command *)",
+      "PowerShell(Get-Item *)"
+    ]
+  }
+}

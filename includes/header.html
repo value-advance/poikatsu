@@ -1,0 +1,27 @@
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a href="/index.html" class="site-logo">ポイ活ナビ<span>β</span></a>
+
+    <form class="site-search site-search--desktop" action="/pages/search" method="get" role="search">
+      <input type="search" name="q" class="site-search__input" placeholder="キーワードを入力" aria-label="サイト内検索">
+      <button type="submit" class="site-search__btn" aria-label="検索する">🔍</button>
+    </form>
+
+    <button class="nav-toggle" id="navToggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="siteNav">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="site-nav" id="siteNav">
+      <form class="site-search site-search--mobile" action="/pages/search" method="get" role="search">
+        <input type="search" name="q" class="site-search__input" placeholder="キーワードを入力" aria-label="サイト内検索">
+        <button type="submit" class="site-search__btn" aria-label="検索する">🔍</button>
+      </form>
+      <ul class="site-nav__list">
+        <li><a href="/index.html">ホーム</a></li>
+        <!-- TODO: カテゴリー構成が決まり次第、ここにカテゴリーリンクを追加 -->
+        <li><a href="/pages/about.html">サイトについて</a></li>
+        <li><a href="/pages/contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

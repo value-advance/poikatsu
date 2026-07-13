@@ -1,0 +1,1873 @@
+﻿<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ポイ活ナビ | お得なポイ活情報まとめ</title>
+  <meta name="description" content="ポイ活初心者から上級者まで、お得なキャンペーンや稼ぎ方をわかりやすく紹介するポイ活情報サイトです。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-root="">
+
+  <div data-include="header"></div>
+
+  <main>
+
+    <!-- スライダー -->
+    <!-- キャンペーン・特集が無い場合はメインバナー(slider_main_pc.png / slider_main_sp.png)のみ表示する -->
+    <!-- キャンペーンがある場合は、下の「例:キャンペーンスライド」のコメントを外してURLを指定する -->
+    <section class="slider" aria-label="メインバナー">
+      <div class="slider__track">
+        <div class="slider__slide slider__slide--1">
+          <!-- TODO: リンク先が決まり次第、href を差し替え(内部ページは相対パス/アフィリエイトは発行URLをそのまま指定) -->
+          <a class="slider__link" href="#" data-slide-id="slider_main">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="images/slider/slider_main_pc.png">
+              <img class="slider__img" src="images/slider/slider_main_sp.png" alt="ポイ活ナビ メインバナー">
+            </picture>
+          </a>
+        </div>
+
+        <!--
+        例:キャンペーンスライド(キャンペーン確定後、コメントを外して href / 画像URL を差し替える)
+
+        <div class="slider__slide slider__slide--2">
+          <a class="slider__link" href="#" data-slide-id="main_slider02">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="images/slider/main_slider02_pc.png">
+              <img class="slider__img" src="images/slider/main_slider02_sp.png" alt="ポイ活の始め方ガイド公開">
+            </picture>
+            <div class="slider__overlay"></div>
+            <div class="slider__caption">
+              <h2>ポイ活の始め方ガイド公開</h2>
+              <p>初心者向けの完全ガイドをチェック(サンプル)</p>
+            </div>
+          </a>
+        </div>
+        <div class="slider__slide slider__slide--3">
+          <a class="slider__link" href="#" data-slide-id="main_slider03">
+            <picture>
+              <source media="(min-width: 1024px)" srcset="images/slider/main_slider03_pc.png">
+              <img class="slider__img" src="images/slider/main_slider03_sp.png" alt="期間限定!特別還元キャンペーン">
+            </picture>
+            <div class="slider__overlay"></div>
+            <div class="slider__caption">
+              <h2>期間限定!特別還元キャンペーン</h2>
+              <p>対象サービス利用でポイント増量中(サンプル)</p>
+            </div>
+          </a>
+        </div>
+        -->
+      </div>
+      <button class="slider__nav slider__nav--prev" aria-label="前のスライド">&#8249;</button>
+      <button class="slider__nav slider__nav--next" aria-label="次のスライド">&#8250;</button>
+      <div class="slider__dots"></div>
+    </section>
+
+    <!-- ポイントアイコン -->
+    <section class="section container point-logo-section">
+      <h2 class="section-title">対応ポイントサイト</h2>
+      <ul class="point-logo-list">
+        <li class="point-logo-item">
+          <img class="point-logo-item__img" src="images/point_logo/rakutenpoint_logo.png" alt="楽天ポイント">
+          <span class="point-logo-item__label">楽天ポイント</span>
+        </li>
+        <li class="point-logo-item">
+          <img class="point-logo-item__img" src="images/point_logo/paypaypoint_logo.png" alt="PayPayポイント">
+          <span class="point-logo-item__label">PayPayポイント</span>
+        </li>
+        <li class="point-logo-item">
+          <img class="point-logo-item__img" src="images/point_logo/dpoint_logo.png" alt="dポイント">
+          <span class="point-logo-item__label">dポイント</span>
+        </li>
+        <li class="point-logo-item">
+          <img class="point-logo-item__img" src="images/point_logo/vpoint_logo.png" alt="Vポイント">
+          <span class="point-logo-item__label">Vポイント</span>
+        </li>
+        <li class="point-logo-item">
+          <img class="point-logo-item__img" src="images/point_logo/pontapoint_logo.png" alt="Pontaポイント">
+          <span class="point-logo-item__label">Pontaポイント</span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- 初心者用カテゴリ集 -->
+    <section class="section container" id="beginner">
+      <h2 class="section-title">初心者向けカテゴリ</h2>
+      <div class="beginner-grid">
+        <a class="beginner-card" href="pages/beginner/poikatsu-toha.html">
+          <div class="beginner-card__icon">🔰</div>
+          <div class="beginner-card__title">ポイ活とは?</div>
+          <p class="beginner-card__desc">仕組みとメリットを解説</p>
+        </a>
+        <a class="beginner-card" href="pages/beginner/hajimekata-3steps.html">
+          <div class="beginner-card__icon">🚀</div>
+          <div class="beginner-card__title">始め方3ステップ</div>
+          <p class="beginner-card__desc">今日からすぐ始められる</p>
+        </a>
+        <a class="beginner-card" href="#">
+          <div class="beginner-card__icon">⭐</div>
+          <div class="beginner-card__title">おすすめサイト</div>
+          <p class="beginner-card__desc">厳選ポイントサイト紹介</p>
+        </a>
+        <a class="beginner-card" href="#">
+          <div class="beginner-card__icon">💡</div>
+          <div class="beginner-card__title">稼ぎ方の種類</div>
+          <p class="beginner-card__desc">自分に合った方法を発見</p>
+        </a>
+      </div>
+    </section>
+
+    <!-- カテゴリ -->
+    <section class="section container">
+      <h2 class="section-title">カテゴリ一覧</h2>
+      <!-- TODO: TOPカテゴリ構成が決まり次第、内容を差し替え -->
+      <div class="category-grid" id="categoryGrid">
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">🛍️</div>
+          <span class="category-icon__label">ショッピング</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">💳</div>
+          <span class="category-icon__label">クレジットカード</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">📱</div>
+          <span class="category-icon__label">アプリ案件</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">🏦</div>
+          <span class="category-icon__label">口座開設</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">📝</div>
+          <span class="category-icon__label">アンケート</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">🎁</div>
+          <span class="category-icon__label">キャンペーン</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">🔄</div>
+          <span class="category-icon__label">フリマ</span>
+        </a>
+        <a class="category-icon" href="#">
+          <div class="category-icon__circle">💰</div>
+          <span class="category-icon__label">副業</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- 記事カテゴリ表示(カテゴリ別ランキング) -->
+    <section class="section container">
+      <h2 class="section-title">カテゴリ別ランキング</h2>
+      <!-- TODO: 実際の案件・記事が決まり次第、カード内容とタブ構成を差し替え -->
+      <div class="ranking-tabs" id="rankingTabs">
+        <button class="ranking-tab is-active" data-tab="sougou">総合</button>
+        <button class="ranking-tab" data-tab="muryo">無料</button>
+        <button class="ranking-tab" data-tab="creca">クレカ</button>
+        <button class="ranking-tab" data-tab="kouza">口座開設</button>
+        <button class="ranking-tab" data-tab="kaimono">お買い物</button>
+        <button class="ranking-tab" data-tab="pointsite">ポイントサイト</button>
+      </div>
+      <div class="ranking-panel">
+        <div class="ranking-grid" id="rankingGrid"></div>
+      </div>
+    </section>
+
+    <!-- 新着記事 -->
+    <section class="section container" id="news">
+      <h2 class="section-title">新着記事</h2>
+      <div class="article-list" id="articleList">
+        <a class="article-card" href="pages/articles/line-point-nichijou.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">LINEポイントを日常で貯める方法!LINEサービスと決済前チェックの基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">LINEポイントの特徴やLINE関連サービスで貯める場面、支払い前に確認すること、スタンプ・ギフト利用時の注意、使い道を決めて無駄なく使うコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/mercari-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">メルカリでできるポイ活術!売る・買う・支払うをお得につなげる方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">メルカリ内でポイントが発生する場面や売上金とポイントの違い、購入時に確認したいキャンペーン、メルペイ利用時の注意点、不用品整理と節約を両立するコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/amazon-gift-charge.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Amazonギフト券チャージで損しない考え方!支払い方法と使い切りのコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ギフト券チャージの基本やチャージ前に確認する条件、クレジットカード支払いとの違い、残高管理で失敗しない方法、必要額だけ使うためのルールを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/aupay-market-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">au PAYマーケットでポイントを活用する方法!買い物前の確認ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">au PAYマーケットの特徴や還元条件の確認方法、クーポンとの組み合わせ方、Pontaポイント利用時の注意、日用品購入で活かすコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/qoo10-poikatsu.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Qoo10でポイ活する方法!メガ割前に準備したいチェックリスト</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">Qoo10で確認したいポイント制度やメガ割前に準備すること、クーポンとポイントの使い分け、送料・配送条件の確認、コスメ購入で失敗しないコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/shukuhaku-yoyaku-point.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">宿泊予約サイトでポイントを取りこぼさない方法!予約前の比較ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">予約サイトごとのポイントの違いや公式サイト予約との比較、クーポン併用の確認、キャンセル時のポイント注意、旅行後に確認することを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/biyouin-salon-point.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">美容院・サロン代をポイントで節約!予約前に見るべき条件と使い方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">サロン予約で貯まるポイントの種類や予約前に見るべき条件、クーポンとポイントの使い分け、来店後の反映確認、リピート時に損しないコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/pasmo-icoca-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">PASMO・ICOCAでもポイ活できる?交通系IC利用者向けの確認ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">PASMO・ICOCAなど交通系ICカードのポイント対応状況や、登録が必要になるケース、定期券・チャージで見るポイント、買い物利用時の注意点、自分の利用エリアで確認する方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/etc-mileage-toha.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ETCマイレージサービスとは?高速道路利用者が知っておきたい基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ETCマイレージの仕組みや登録前に必要なもの、通行料金でポイントが貯まる流れ、還元額の使い方、車利用者が注意したい期限について解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/coke-on-setsuyaku.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Coke ONで飲み物代を節約する方法!スタンプ・チケット活用の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">Coke ONの仕組みやスタンプが貯まる場面、チケットの使い方、キャンペーン参加時の注意、自販機利用を増やしすぎないコツをまとめて解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kadenryohanten-point.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">家電量販店のポイントを賢く使う方法!現金値引きとの違いを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">家電量販店ポイントの特徴やポイント還元と値引きの違い、大型家電で注意したいこと、保証・配送費との比較、次回購入に残すか使うかの判断について解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hyakkaten-depart-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">百貨店・デパートでポイ活する方法!ギフト購入で損しないコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">百貨店ポイントの特徴やクレジットカードとの相性、ギフト購入で確認すること、セール品のポイント注意、高額購入時の使い方についてまとめて解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/homecenter-app-katsuyou.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ホームセンターの会員アプリ活用術!DIY用品と日用品をお得に買う方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ホームセンターで貯まるポイントの仕組みや会員アプリの活用、まとめ買い前の確認、大型商品の配送費の注意、生活消耗品で使うコツについて解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/uniqlo-gu-point.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ユニクロ・GUでポイントは貯まる?衣類購入でできる節約チェック</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">衣類購入で見るべきポイントや公式アプリの役割、キャッシュレス決済との組み合わせ、セール時の買い方、買いすぎを防ぐルールについて解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/muji-otoku-kaimono.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">無印良品でお得に買い物する方法!マイル・クーポン・決済の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">無印良品の会員制度の基本や、マイルとポイントの違い、クーポン確認のタイミング、支払い方法ごとの還元、定番品をお得に買うコツまでを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/starbucks-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">スターバックスでポイ活する方法!アプリ・チャージ・支払いの基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">スタバアプリの仕組みや、チャージ時に確認したいこと、カード支払いとの組み合わせ、リワード利用時の注意点、カフェ代を増やさないコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/famiresu-cafe-point.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ファミレス・カフェでポイントを貯める方法!外食前のアプリ確認術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">飲食店アプリで確認すべきことや、共通ポイント対応の見方、クーポンとの併用条件、支払い方法の選び方、家族利用で管理するコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/eigakan-point.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">映画館でポイントを貯める方法!チケット購入と会員制度の使い分け</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">映画館の会員制度や、チケット購入で見るポイント、前売券・割引日との比較、売店利用の注意点、エンタメ費を抑えるコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hon-denshi-shoseki-poikatsu.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">本・電子書籍でポイ活する方法!紙の本と電子版の選び方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">書店ポイントの特徴や、電子書籍ストアの還元、セール時期の見方、読みたい本だけ買うルール、ポイントで学習費を抑えるコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/game-kakin-point.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ゲーム課金でポイントを貯める方法!Apple・Google残高利用時の注意</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ゲーム課金で見るポイントや、ギフトカード購入時の確認、アプリ内課金の注意点、子ども利用時の管理、課金しすぎを防ぐルールを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/furima-app-kounyuu-point.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">フリマアプリ購入でポイントを活用する方法!中古品選びの注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">フリマ購入で得する場面やクーポンとポイントの使い方、送料込み価格の見方、出品者評価の確認、新品購入との比較方法を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/takuhai-delivery-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">宅配・デリバリーでポイ活する方法!割引とポイントの使い分け</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">デリバリーアプリの還元条件や初回クーポンの注意、少額注文で損しやすい理由、支払い方法の選び方、外食費を増やさないコツをやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/net-super-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ネットスーパーでポイ活する方法!送料・配達枠・ポイントの確認術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ネットスーパーのメリットや送料・最低注文金額の確認、ポイント還元の見方、店舗受け取りの活用、買い忘れを減らすコツをやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/iryouhi-shohouyaku-point.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">医療費・処方薬でポイントは貯まる?支払い前に確認したい注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">医療費支払いの基本やキャッシュレス対応の確認、薬局で貯まるポイント、領収書管理の重要性、節約より優先すべきことをやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/pet-yohin-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ペット用品でポイ活する方法!定期購入とまとめ買いの節約術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ペット用品で貯めやすい場面や定期購入のメリット、まとめ買いの注意点、ネット通販と店舗の比較、必要量を管理するコツをやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ginkou-kouza-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">銀行口座のポイ活とは?給与受取・口座振替で貯める基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">銀行口座でポイントが貯まる場面や給与受取の確認ポイント、口座振替で見る条件、手数料との比較、メイン口座を決めるコツをやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/net-ginkou-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ネット銀行を使ったポイ活術!振込・ATM・残高条件の見方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ネット銀行のポイント制度や振込回数と手数料の確認、ATM利用時の注意、ランク制度の見方、生活口座として使う判断をやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/pointsite-kougaku-anken.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントサイトの高額案件を見る前に!口座開設・カード案件の注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">高額案件が多い理由や申し込み条件の確認、短期間で増やしすぎるリスク、成果反映までの流れ、必要な案件だけ選ぶコツを冷静な視点で解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/creca-tsumitate-point.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">クレカ積立でポイントは貯まる?投資前に知りたい基本と注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">クレジットカードで投資信託を積み立てるクレカ積立について、仕組みやポイント還元の見方、投資リスクとの違い、NISA利用時に確認したい点、無理のない積立額の決め方まで、投資初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/charge-route-point.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">チャージルートでポイントを増やす考え方!複雑にしすぎない決済設計</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">クレジットカードから電子マネーやQR決済へのチャージルートとは何かという基本から、複数経由するメリット、管理が難しくなる原因、改悪時の見直し方、シンプルに続けるルールまで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/prepaid-card-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">プリペイドカードでポイ活する方法!使いすぎ防止にも役立つ活用術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">クレジットカードに抵抗がある方や使いすぎが心配な方に向けて、プリペイドカードの特徴やチャージ時に見るポイント、残高管理のコツ、使える店の確認方法、予算管理への活かし方まで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/debit-card-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">デビットカード派のポイ活入門!即時払いで支出を管理するコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">クレジットカードの後払いに不安がある方に向けて、即時払いのデビットカードの基本やクレジットカードとの違い、ポイント還元の見方、口座残高管理の注意点、支出を抑えて節約するコツまで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kazoku-card-matomeru.html" data-thumb-type="yosekatsu">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">家族カードでポイントをまとめる方法!家計管理と使いすぎ防止のコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">家族それぞれの支出をまとめてポイントを貯めたい方に向けて、家族カードの仕組みやポイントをまとめるメリット、利用明細の確認方法、予算ルールの決め方、家族で使う時の注意点まで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/tsukin-teiki-koutsuhi-point.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">通勤定期・交通費でポイントを貯める方法!毎月の移動費を見直そう</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">毎月かかる通勤定期や交通費でポイントを貯める考え方から、定期券購入時の確認点、チャージ方法の選び方、会社への精算時の注意点、日々の移動費を上手に管理するコツまで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kojinjigyounushi-point-kanri.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">個人事業主向けポイント管理術!経費支払いで迷わない考え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">個人事業主の経費支払いで迷わないよう、事業用と私用を分けて管理する理由や経費支払いで貯まる場面、会計処理で注意すること、ポイント利用時の記録、無理なく管理する方法まで初心者向けに丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/keihiseisan-point-dareno.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">経費精算でポイントは誰のもの?会社員が確認したいルールとマナー</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">経費精算とポイントの考え方、会社規定を確認する理由、立替払いの注意点、トラブルを防ぐ記録、個人利用と分けるコツを会社員向けにわかりやすく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kakuteishinkoku-point-seiri.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">確定申告前に整理したいポイント利用履歴!家計と事業を分ける方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイント履歴を残す理由、事業利用と私用利用の分け方、領収書との照合、会計ソフト入力の注意、迷った時の確認先を確定申告前に整理する視点から解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-shuushihyou-tsukurikata.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイント収支表の作り方!貯める・使う・失効を見える化する方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイント収支を作るメリット、記録する項目、使ったポイントの扱い、失効予定の管理、月1回で続けるコツを、初心者でも続けやすい方法として解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/maebarai-shisugi-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">前払いしすぎないポイ活術!ポイント目当ての出費を防ぐ考え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">前払いで失敗しやすい理由、チャージ残高の管理、まとめ買いの判断基準、現金余力を残す重要性、買う前に確認するルールを、無理のないポイ活の視点から解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-seikatsuhi-karuku.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントで生活費を軽くする方法!食費・日用品に優先して使う考え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">生活費に使うメリット、優先して使う支出、貯め込みすぎのデメリット、月末の使い切りルール、節約実感を高めるコツを、初心者向けにやさしく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/shinseikatsu-poikatsu-checklist.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">新生活のポイ活チェックリスト!家具・家電・日用品をお得にそろえる方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">新生活で必要な出費の洗い出し、家電購入前の確認、家具・日用品の買い方、配送費と設置費への注意、ポイントを新生活費に回すコツをチェックリスト形式で解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hikkoshi-poikatsu.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">引っ越しでポイ活する方法!見積もり・家具購入・手続きの確認ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">引っ越しで発生する出費、見積もり比較時の注意、家具家電購入のタイミング、住所変更で忘れがちなこと、無駄な契約を増やさないコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/nyuugaku-shingaku-junbi-point.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">入学・進学準備でポイントを貯める方法!学用品購入の節約術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">新学期を迎える家庭に向けて、入学・進学準備で必要なものの整理から、まとめ買い前のリスト作成、ネット通販と店舗の比較、名前入れ・配送の注意点、家計負担を平準化するコツまで初心者にもわかりやすく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/natsuyasumi-poikatsu-junbi.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">夏休み前のポイ活準備!旅行・レジャー・日用品を計画的に買う方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">家族の予定が集中しやすい夏休み前に押さえておきたい支出の特徴や旅行予約の確認ポイント、レジャー用品の購入時期、外食費を抑える工夫、帰宅後のポイント確認方法まで初心者にもわかりやすく詳しく解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/nenmatsunenshi-poikatsu.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">年末年始のポイ活術!帰省・おせち・初売りで使える節約ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">毎年慌ただしくなりがちな年末年始にかかる出費の整理や帰省費用で見るポイント、おせち・手土産の買い方、初売り前に決める予算、失効ポイントを使い切るコツまでをまとめて丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/black-friday-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ブラックフライデーで失敗しないポイ活!買うものリストと上限確認の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">毎年11月下旬に大型セールが集中するブラックフライデーの特徴や事前リストを作る理由、還元上限の確認方法、セール価格の見極め方、買いすぎを防ぐ方法まで初心者にもわかりやすく丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kessan-sale-poikatsu.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">決算セールでポイ活する方法!家電・日用品をお得に買う判断基準</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">家電量販店などで年に数回実施される決算セールの時期の把握や本当に必要な物を決める考え方、ポイント還元との比較、型落ち商品の注意点、購入後に確認すべきことまで丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hahanohi-chichinohi-gift-point.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">母の日・父の日ギフトでポイントを貯める方法!早割と配送日の確認術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">毎年5月・6月に訪れる母の日・父の日のギフト購入で貯まるポイントや早割を使うメリット、配送日指定の注意点、メッセージカードの確認、相手に合わせた選び方まで初心者にも丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/bousai-goods-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">防災グッズ購入でポイ活する方法!備蓄を無駄なくそろえるコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">いざという時に備えたい防災グッズで必要なものやまとめ買いの注意点、期限管理が必要な商品、ネットと店舗の使い分け、ポイントより安全を優先する考え方までを丁寧に解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/mile-koukan-merit.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントをマイルに交換するメリットは?旅行好き向けポイ活入門</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">マイル交換の基本やANA・JALマイルの違い、特典航空券の魅力、初心者が注意することを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-ana-mile-koukan.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天ポイントをANAマイルに交換できる?交換ルートと注意点を解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">楽天ポイントとマイルの関係や交換条件の確認、交換レートの考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/vpoint-tasha-koukan.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Vポイントを他社ポイントへ交換する方法!交換先の選び方と注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">Vポイント交換の基本や交換先の種類、レートと手数料、反映までの日数を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ponta-mile-koukan.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Pontaポイントをマイルや他社ポイントに交換する方法!使い道を広げるコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">Ponta交換の基本やマイル交換の考え方、au系サービスでの活用を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-toushi-toha.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイント投資とは?貯めたポイントで投資体験を始める方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイント投資の基本や現金投資との違い、メリットとリスク、向いている人を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-unyou-toha.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイント運用とは?投資との違いと初心者が知るべき注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイント運用の仕組みやポイント投資との違い、損失リスクへの向き合い方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/kazoku-poikatsu.html" data-thumb-type="yosekatsu">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">家族でポイ活する方法!ポイントをまとめて効率よく貯めるコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">家族で貯めるメリットやメインポイントの決め方、家族カードの活用を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/shufu-shufu-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">主婦・主夫におすすめのポイ活!日用品とスーパーで無理なく節約</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">日用品購入で貯める方法やスーパーアプリの活用法、無駄買いを防ぐコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/gakusei-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">学生でもできるポイ活!お金をかけずに始める安全な方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">学生に向くポイ活の始め方やクレカなしでできる方法、個人情報の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hitorigurashi-poikatsu.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">一人暮らしのポイ活術!固定費と日用品をポイントで節約する方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">一人暮らしで貯めやすい場面やコンビニ利用の見直し、固定費支払いの工夫を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/senior-poikatsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">シニア向けポイ活入門!スマホが苦手でも始めやすいポイント活用</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">シニアに向くポイントの特徴やカード提示で貯める方法、詐欺への注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-kakeibo.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活を家計簿に活かす方法!ポイントを収入ではなく節約として管理する</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイントの家計上の考え方や記録方法、貯めすぎない使い方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-nenkan-keikaku.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活の年間計画を作る方法!セール時期と固定費を整理しよう</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">年間で見るメリットや大型セールの把握、ポイント失効月の確認を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-yuusenjyuni.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活の優先順位を決める方法!時間効率の良い案件と買い物の選び方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">時間効率の考え方や日常買い物を優先する理由、継続しやすいルールを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-muki-fumuki.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で節約できる人・できない人の違い!向き不向きを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイ活に向いている人・向いていない人の特徴や無理なく始める判断を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/pointsite-toha.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントサイトとは?情報メディアとの違いと利用時の注意点</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイントサイトの基本や情報メディアとの違い、安全な使い方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/a8net-point-ng.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">A8.netのポイントNGとは?ポイ活記事で注意したい広告掲載ルール</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ポイントNGの意味やポイントサイト掲載との違い、安全な記事作成の考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-kiji-hyogen-chuui.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活記事で避けたい表現まとめ!広告掲載ルールに配慮した書き方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">避けたい誘導表現やポイント付与と誤解される文言、読者に誠実な書き方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-site-shinraisei.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活サイトの信頼性を高める方法!運営者情報・引用・更新日の整え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">信頼されるサイトの条件や運営者情報の必要性、誤情報を防ぐチェックを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-hikakuhyou-tsukurikata.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活記事の比較表の作り方!読者にわかりやすいポイント整理術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">比較表に入れる項目や還元率だけで比べない理由、見やすい表の作成を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-logo-chuui.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活サイトでロゴを使う時の注意点!商標・公式素材・代替表現を解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ロゴを勝手に使わない理由や公式素材の確認方法、商標表記の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-kuchikomi-shinyou.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活の口コミは信用できる?体験談を見る時のチェックポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">口コミのメリットや古い情報に注意する理由、公式情報と照合する方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-ranking-hanteikijun.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活でおすすめランキングを見る前に!順位より大切な判断基準</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">ランキングの見方や生活圏との相性、自分向けに選ぶコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-demerit.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活のデメリットとは?時間・個人情報・無駄買いのリスクを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">時間がかかるデメリットや個人情報登録の注意、デメリットを減らす方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-tsukarenai-kotsu.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で疲れないコツ!キャンペーン追いすぎを防ぐシンプル運用</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.12</span>
+            </div>
+            <p class="article-card__excerpt">疲れる原因ややることを絞るメリット、ゆるく続けるルールを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/qr-kessai-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">QRコード決済でポイントを貯める方法!支払い前のチェックポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">QRコード決済の種類やクーポン確認の重要性、ポイント付与条件の見方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/sumaho-kessai-campaign-mikata.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">スマホ決済キャンペーンの見方!エントリー・上限・対象店舗を確認しよう</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">キャンペーンページで見る項目やエントリーの必要性、付与上限の考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/cashless-setsuyaku.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">キャッシュレス決済で節約する方法!現金派から始めるポイ活入門</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">キャッシュレスのメリットや使いすぎを防ぐ管理方法、少額決済で貯めるコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/net-shopping-point-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ネットショッピングでポイントを貯める方法!楽天・Yahoo・Amazonの基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ネット通販のポイント構造やモールごとの特徴、セール前の準備を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/amazon-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Amazonでポイ活はできる?ポイントを貯める方法と注意点を解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">Amazonポイントの基本やクレジットカード活用、他モールとの比較を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-yahoo-hikaku.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天市場とYahoo!ショッピングはどっちがお得?ポイ活視点で比較</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ポイント還元の仕組みやセール・キャンペーンの違い、初心者に向く選び方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/furusato-nozei-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ふるさと納税でポイ活はできる?ポイント還元と注意点をわかりやすく解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ふるさと納税の基本やポイント還元の考え方、控除上限額の確認を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ryokou-yoyaku-point.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">旅行予約でポイントを貯める方法!ホテル・航空券・予約サイト活用術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">旅行予約で貯まるポイントやクレカ決済の活用、予約変更時の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/konbini-poikatsu-hikaku.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">コンビニでポイ活する方法!主要チェーンで貯まるポイントを比較</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">セブン・ローソン・ファミマの違いやクーポン活用のコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/super-point-tameru.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">スーパーでポイントを貯める方法!日用品の買い物を節約につなげるコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">スーパー系ポイントの特徴や曜日キャンペーンの活用、家計とのバランスを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/drugstore-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ドラッグストアでポイ活する方法!日用品・薬・コスメでポイントを貯める</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ドラッグストアの還元の特徴や共通ポイントの使い分け、対象外商品への注意を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/gaishoku-point-tameru.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">外食でポイントを貯める方法!予約サイト・決済・アプリ活用の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">外食で貯まるポイントや予約サイトの活用、予約キャンセル時の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/gasoline-point-tameru.html" data-thumb-type="creditcard">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ガソリン代でポイントを貯める方法!車利用者向けポイ活の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ガソリンスタンドのポイントやクレジットカードの選び方、給油前の確認事項を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/keitai-ryokin-setsuyaku.html" data-thumb-type="mobile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">携帯料金をポイ活で節約する方法!ポイント払いとキャンペーンの活用</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">携帯料金で貯まるポイントやポイント払いのメリット、乗り換え時の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/koukyou-ryokin-poikatsu.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">電気・ガス・水道でポイントは貯まる?公共料金ポイ活の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">公共料金で貯める方法やカード払いの注意点、固定費見直しの考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/subscription-point-tameru.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">サブスク料金でポイントを貯める方法!動画・音楽・クラウドサービスの支払い術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">サブスク支払いの見直しやカード払いで貯める方法、毎月の固定費管理を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/yachin-point-chuui.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">家賃支払いでポイントは貯まる?対応サービスと注意点を解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">家賃でポイントを狙う方法やカード払い対応の確認、無理に狙わない判断基準を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hokenryo-point-tameru.html" data-thumb-type="creditcard">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">保険料でポイントを貯める方法!クレジットカード払いの確認ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">保険料支払いの基本やカード払い対応の確認、注意したい規約を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/zeikin-shiharai-point.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">税金支払いでポイントを貯める方法はある?手数料と還元率の考え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">税金支払いの方法やクレカ払いの手数料、自治体ルールの確認を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-campaign-shippai-boushi.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活キャンペーンで失敗しない方法!エントリー忘れと上限に注意</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">キャンペーンの基本構造やエントリーの必要性、対象外条件の確認を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-kangenritsu-mikata.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイント還元率の見方を解説!本当にお得か判断する計算方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">還元率の意味や実質還元の考え方、お得に見える表現の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-tsukanai-genin.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントが付かない原因まとめ!問い合わせ前に確認すべきこと</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">付与時期の確認や対象外商品・店舗、証拠を残す方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-yuukoukigen-kanri.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイントの有効期限を管理する方法!失効を防ぐチェック習慣</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">有効期限の種類やアプリで確認する方法、月1回の確認習慣を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-yattehaikenai-koto.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活でやってはいけないこと!規約違反・不正利用・危険な案件に注意</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">規約違反になりやすい行為や複数アカウントのリスク、怪しい案件の見分け方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-kojinjouhou-mamoru.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で個人情報を守る方法!登録前に確認したい安全チェック</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">登録前に見るべき運営情報やパスワード管理、怪しいサイトを避けるコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-koukan-toha.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイント交換とは?他社ポイント・ギフト券・マイルへの交換方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.11</span>
+            </div>
+            <p class="article-card__excerpt">ポイント交換の基本や交換レートの見方、交換先の選び方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/dpoint-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">dポイントの貯め方を初心者向けに解説!ドコモ以外の人でも使える?</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">dポイントの基本からdアカウントでできること、d払いや加盟店での貯め方までを初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/dpoint-d-harai.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">d払いでdポイントを貯める方法!日常決済で活用するコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">d払いの基本やdポイントカード提示との違い、支払い方法の組み合わせを初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/dcard-poikatsu.html" data-thumb-type="creditcard">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">dカードはポイ活におすすめ?dポイントを貯めやすい人の特徴</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">dカードの基本還元やd払いとの相性、申し込み前の確認点を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/dpoint-tsukaimichi.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">dポイントのおすすめの使い道!コンビニ・ドラッグストア・ネットで使う方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">街のお店やd払いでの使い方、期間・用途限定ポイントの注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/dpoint-hanei-sarenai.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">dポイントが反映されない原因は?付与時期と対象条件を確認しよう</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">付与時期のズレやカード提示忘れ、対象外商品・サービスなど反映されない原因を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/vpoint-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Vポイントとは?旧Tポイントとの違いとポイ活での使い方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Vポイントの基本や旧Tポイントとの関係、貯められる主な場所を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/mitsui-sumitomo-card-vpoint.html" data-thumb-type="creditcard">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">三井住友カードでVポイントを貯める方法!対象店舗とタッチ決済の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">三井住友カードの還元の考え方や対象店舗の確認方法、タッチ決済の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/vpoint-tameru-tsukau.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Vポイントの貯め方と使い方!コンビニ・カード・アプリ活用術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Vポイントを貯める主な方法やファミマなどでの使い方、アプリ連携の基本を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/vpoint-rakuten-hikaku.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Vポイントと楽天ポイントはどっちが使いやすい?生活圏別に比較</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">使える店舗の違いやネットショッピングでの違い、向いている人の違いを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/vpoint-tamaranai.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Vポイントが貯まらない原因は?よくあるミスと確認ポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">提示忘れ・連携ミスや対象外決済の確認など、貯まらない原因を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ponta-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Pontaポイントとは?貯め方・使い方・相性の良いサービスを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Pontaポイントの基本やローソンで貯める方法、au PAYとの組み合わせを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/lawson-ponta.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ローソンでPontaポイントを貯める方法!買い物前に知っておきたい基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Pontaカード提示の基本やアプリを使うメリット、対象外商品の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/aupay-ponta.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">au PAYでPontaポイントを貯める方法!スマホ決済との組み合わせを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">au PAYの基本やPonta連携の手順、還元対象外の注意点を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/recruit-ponta.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">リクルートサービスでPontaポイントを貯める方法!予約・買い物で活用</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">リクルートIDとの関係やじゃらん・ホットペッパーで貯める方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ponta-tsukaimichi.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Pontaポイントのおすすめの使い道!ローソン・au・旅行で活用する方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">ローソンで使う方法やau PAYで使う方法、失効を防ぐ管理方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/waon-point-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">WAON POINTの貯め方を解説!イオンで得するポイ活の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">WAON POINTの基本やイオンで貯める方法、電子マネーWAONとの違いを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/aeon-point-tameru.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">イオンでポイントを効率よく貯める方法!WAON POINTと支払い方法の選び方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">イオンカードの基本や対象店舗、お客さま感謝デーの考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/waon-point-chigai.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">WAON POINTと電子マネーWAONポイントの違いは?初心者向けに整理</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">名称が似ている理由や貯まり方の違い、間違えやすいポイントを整理します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/nanaco-point-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">nanacoポイントの貯め方と使い方!セブン系で活用する基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">nanacoポイントの基本やセブン-イレブンで貯める方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/seven-eleven-point.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">セブン-イレブンでポイントを貯める方法!nanacoとアプリ活用の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">nanaco提示・決済の違いやセブンアプリの活用、公共料金支払いの注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/jre-point-kiso.html" data-thumb-type="mile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">JRE POINTの貯め方と使い方!Suica利用者向けポイ活入門</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">JRE POINTの基本やSuicaで貯める方法、ビューカードとの相性を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/suica-point-tameru.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Suicaでポイントを貯める方法!JRE POINT登録から使い方まで解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Suica登録の必要性や鉄道利用で貯める条件、モバイルSuicaの活用を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/creditcard-poikatsu-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">クレジットカードでポイ活する基本!還元率だけで選ばない考え方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">還元率の基本や年会費とのバランス、作りすぎを避ける注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/creditcard-erabikata.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活向けクレジットカードの選び方!初心者が見るべき5つのポイント</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">メインポイントとの相性や普段使う店舗での還元、管理しやすさの重要性を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/creditcard-kangenritsu.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">クレジットカードのポイント還元率とは?1%と0.5%の違いをわかりやすく解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">還元率の計算方法や年間利用額での差、高還元カードの注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/nenkaihi-muryo-card.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">年会費無料カードでポイ活はできる?無理なく始めるカード活用術</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">年会費無料カードのメリットや初心者に向く理由、カード管理の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/creditcard-tsukurisugi-chuui.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">クレジットカードを作りすぎると危険?ポイ活で注意したい信用情報の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">カード枚数が増えるデメリットや申し込み頻度の注意点、安全なポイ活の考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/sumaho-kessai-poikatsu.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">スマホ決済でポイ活する方法!PayPay・楽天ペイ・d払いの使い分け</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">スマホ決済の基本や主要決済サービスの違い、キャンペーン活用のコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/sumaho-kessai-creditcard-hikaku.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">スマホ決済とクレジットカードはどっちがお得?ポイント二重取りの基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">二重取りの仕組みや組み合わせ例、対象外になるケースを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-poikatsu-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天ポイントの貯め方を初心者向けに解説!楽天経済圏の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">楽天ポイントの特徴から、楽天市場・楽天カード・楽天ペイでの貯め方、SPUの考え方、注意点までを初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-ichiba-kaimawari.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天市場でポイントを効率よく貯める方法!買い回り前に確認すること</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">楽天市場のポイント構造や買い回りキャンペーンの基本、エントリー忘れを防ぐ方法、無駄買いを避けるコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-card-poikatsu.html" data-thumb-type="creditcard">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天カードはポイ活に向いている?メリットと注意点を初心者向けに解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">楽天カードの基本還元や楽天市場・楽天ペイとの相性、申し込み前の確認事項を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-pay-tameru.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天ペイで楽天ポイントを貯める方法!街のお買い物で使うコツ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">楽天ペイの基本や楽天ポイントカードとの違い、二重取りを狙える場面、支払い時の注意点を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/rakuten-point-tsukaimichi.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">楽天ポイントの使い道おすすめまとめ!通常ポイントと期間限定ポイントの違い</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">通常ポイントと期間限定ポイントの違いや、失効を防ぐ管理方法を初心者向けに解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/paypay-point-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">PayPayポイントとは?貯め方・使い方・注意点を初心者向けに解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">PayPayポイントの基本、決済やYahoo!ショッピングでの貯め方、ポイント運用との違いを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/paypay-campaign-katsuyo.html" data-thumb-type="campaign">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">PayPayでポイントを効率よく貯める方法!キャンペーン活用の基本</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">PayPayの基本還元やクーポンの使い方、キャンペーン確認の手順を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/yahoo-shopping-paypay.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">Yahoo!ショッピングでPayPayポイントを貯める方法!買い物前のチェックリスト</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">Yahoo!ショッピングの還元構造、支払い方法の選び方、付与上限の見方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/paypay-point-tsukaimichi.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">PayPayポイントの使い道おすすめ!支払い・運用・貯蓄感覚で使う方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">PayPay残高との違いや、街のお店・ネットサービスでの使い方、運用の考え方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/paypay-point-tsukanai.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">PayPayポイントが付かない原因は?確認すべき条件と対策</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.10</span>
+            </div>
+            <p class="article-card__excerpt">PayPayポイントが付かないときに考えられる原因と、確認すべき条件を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/keitai-ryokin-point.html" data-thumb-type="mobile">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">携帯料金でポイント還元!キャリア別お得な貯め方ガイド</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">携帯料金の支払いでポイントを貯める方法を、ドコモ・ソフトバンク・au・楽天モバイル別に解説。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/poikatsu-kiso.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活とは?初心者が最初に知っておきたい仕組みと始め方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">ポイ活の基本的な意味から、ポイントが貯まる主な場面、最初に準備するものまで解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/tsukiikura-setsuyaku.html" data-thumb-type="earnings">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で月いくら節約できる?目安金額と現実的な稼ぎ方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">ポイ活で得られる金額の考え方や、月1,000円〜5,000円を目指す現実的な方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/hajimeni-tameru-point.html" data-thumb-type="compare">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活初心者が最初に貯めるべきポイントはどれ?主要ポイントを比較</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">楽天ポイント・PayPayポイント・dポイント・Ponta・Vポイントの特徴を比較して解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/yosekatsu.html" data-thumb-type="yosekatsu">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活の新常識!ポイントを分散せず効率よく貯める「寄せ活」の始め方</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">ポイントを1つに寄せて貯める「寄せ活」の考え方と具体的な始め方を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/fukugyou.html" data-thumb-type="earnings">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活は副業になる?収入目的で始める前に知るべきメリットと限界</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">ポイ活と副業の違い、得られる主な利益、副業として考える場合の注意点を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/ichinichi-10pun.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活を1日10分で続ける方法!忙しい人向けの時短ルーティン</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">忙しい人でも続けやすいポイ活の時短ルーティンを紹介します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/shippai-shinai-hajimekata.html" data-thumb-type="caution">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で失敗しない始め方!初心者がやりがちな勘違いを解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">高還元だけを追うリスク、条件確認を忘れる失敗など、やりがちな勘違いを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/app-hitsuyou.html" data-thumb-type="app">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活アプリは必要?初心者におすすめの使い分けと管理方法</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">ポイ活アプリでできることや、公式アプリを使うメリット、管理方法を解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/point-tsukaimichi.html" data-thumb-type="summary">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活で貯めたポイントの使い道は?節約につながる使い方を解説</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">日用品への活用やネットショッピングでの使い方、失効前に使い切るコツを解説します。</p>
+          </div>
+        </a>
+        <a class="article-card" href="pages/articles/roadmap.html" data-thumb-type="beginner">
+          <div class="article-card__thumb">
+            <h3 class="article-card__title">ポイ活初心者向けロードマップ!登録から初回ポイント獲得までの流れ</h3>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__meta">
+              <span class="article-card__date">更新日:2026.07.08</span>
+            </div>
+            <p class="article-card__excerpt">登録から初めてポイントを獲得するまでの流れをロードマップ形式で解説します。</p>
+          </div>
+        </a>
+      </div>
+      <a class="show-more-btn" href="pages/articles/index.html">もっと見る</a>
+    </section>
+
+    <!-- 期間限定 -->
+    <section class="section container limited-section">
+      <h2 class="section-title section-title--limited">期間限定キャンペーン</h2>
+      <div class="limited-grid">
+        <a class="limited-card" href="#">
+          <span class="limited-card__badge">残り3日</span>
+          <div class="limited-card__thumb"></div>
+          <div class="limited-card__body">
+            <h3 class="limited-card__title">新規登録で2,000pt還元</h3>
+            <p class="limited-card__desc">今だけの特別キャンペーン</p>
+          </div>
+        </a>
+        <a class="limited-card" href="#">
+          <span class="limited-card__badge">残り7日</span>
+          <div class="limited-card__thumb"></div>
+          <div class="limited-card__body">
+            <h3 class="limited-card__title">対象カード発行で還元率2倍</h3>
+            <p class="limited-card__desc">期間中のみのお得な条件</p>
+          </div>
+        </a>
+        <a class="limited-card" href="#">
+          <span class="limited-card__badge">本日まで</span>
+          <div class="limited-card__thumb"></div>
+          <div class="limited-card__body">
+            <h3 class="limited-card__title">アプリ初回起動でボーナスポイント</h3>
+            <p class="limited-card__desc">見逃し注意の限定特典</p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
