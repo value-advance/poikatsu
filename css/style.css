@@ -97,12 +97,15 @@ h1, h2, h3, h4 {
 }
 
 .site-logo {
-  font-size: 18px;
-  font-weight: 700;
-  color: var(--color-primary);
   display: flex;
   align-items: center;
   gap: 4px;
+}
+
+.site-logo__img {
+  height: 32px;
+  width: auto;
+  display: block;
 }
 
 .site-logo span {
