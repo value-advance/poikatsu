@@ -108,12 +108,6 @@ h1, h2, h3, h4 {
   display: block;
 }
 
-.site-logo span {
-  color: var(--color-text);
-  font-weight: 500;
-  font-size: 12px;
-}
-
 /* Site search (header) */
 .site-search {
   display: flex;
