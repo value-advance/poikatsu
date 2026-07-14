@@ -267,30 +267,90 @@
     const form = document.getElementById("articleFilter");
     const grid = document.getElementById("articleListFull");
     const countEl = document.getElementById("articleCount");
+    const paginationEl = document.getElementById("articlePagination");
     if (!form || !grid || !countEl) return;
 
+    const PAGE_SIZE = 24;
     const cards = Array.from(grid.querySelectorAll(".article-card"));
     const total = cards.length;
+    let currentPage = 1;
 
-    function applyFilter() {
+    function getMatchedCards() {
       const checked = Array.from(form.querySelectorAll("input[type='checkbox']:checked")).map((cb) => cb.value);
+      return cards.filter((card) => checked.length === 0 || checked.includes(card.dataset.category));
+    }
 
-      let visibleCount = 0;
+    function renderPagination(totalPages) {
+      if (!paginationEl) return;
+      if (totalPages <= 1) {
+        paginationEl.innerHTML = "";
+        return;
+      }
+
+      const pageNumbers = [];
+      for (let p = 1; p <= totalPages; p++) {
+        if (p === 1 || p === totalPages || Math.abs(p - currentPage) <= 1) {
+          pageNumbers.push(p);
+        } else if (pageNumbers[pageNumbers.length - 1] !== "...") {
+          pageNumbers.push("...");
+        }
+      }
+
+      const btn = (label, page, opts = {}) => {
+        const { disabled = false, active = false } = opts;
+        return `<button type="button" class="pagination__btn${active ? " is-active" : ""}"
+          data-page="${page}" ${disabled ? "disabled" : ""} aria-label="${label === "‹" ? "前のページ" : label === "›" ? "次のページ" : `${label}ページ目`}"
+          ${active ? 'aria-current="page"' : ""}>${label}</button>`;
+      };
+
+      let html = btn("‹", currentPage - 1, { disabled: currentPage === 1 });
+      pageNumbers.forEach((p) => {
+        html += p === "..."
+          ? `<span class="pagination__ellipsis">…</span>`
+          : btn(String(p), p, { active: p === currentPage });
+      });
+      html += btn("›", currentPage + 1, { disabled: currentPage === totalPages });
+
+      paginationEl.innerHTML = html;
+
+      paginationEl.querySelectorAll(".pagination__btn").forEach((b) => {
+        b.addEventListener("click", () => {
+          const page = Number(b.dataset.page);
+          if (!page || page === currentPage) return;
+          currentPage = page;
+          renderPage();
+          grid.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+      });
+    }
+
+    function renderPage() {
+      const matched = getMatchedCards();
+      const totalPages = Math.max(1, Math.ceil(matched.length / PAGE_SIZE));
+      currentPage = Math.min(Math.max(1, currentPage), totalPages);
+
+      const start = (currentPage - 1) * PAGE_SIZE;
+      const end = start + PAGE_SIZE;
+      const matchedSet = new Set(matched);
+
       cards.forEach((card) => {
-        const show = checked.length === 0 || checked.includes(card.dataset.category);
-        card.hidden = !show;
-        if (show) visibleCount++;
+        card.hidden = !matchedSet.has(card);
+      });
+      matched.forEach((card, i) => {
+        card.hidden = i < start || i >= end;
       });
 
-      countEl.innerHTML = `全${total}件中 <strong>${visibleCount}件</strong> を表示`;
+      countEl.innerHTML = `全${total}件中 <strong>${matched.length}件</strong> を表示`;
+      renderPagination(totalPages);
     }
 
     form.addEventListener("submit", (e) => {
       e.preventDefault();
-      applyFilter();
+      currentPage = 1;
+      renderPage();
     });
 
-    applyFilter();
+    renderPage();
   }
 
   // 記事タイプ別サムネイル
