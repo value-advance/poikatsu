@@ -502,16 +502,22 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
+.beginner-card__head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
 .beginner-card__icon {
-  font-size: 24px;
-  margin-bottom: 8px;
+  font-size: 22px;
+  line-height: 1;
 }
 
 .beginner-card__title {
   font-size: 13px;
   font-weight: 700;
   color: var(--color-navy);
-  margin-bottom: 4px;
 }
 
 .beginner-card__desc {
