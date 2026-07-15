@@ -606,6 +606,7 @@
     { title: "忙しい会社員の週末ポイ活ルーティン!平日に追わない管理方法", url: "/pages/articles/isogashii-kaishain-shuumatsu-poikatsu.html", category: "ポイントサイト", date: "2026.07.14", thumbType: "summary", excerpt: "平日に追わないメリットや週末に確認する項目、通勤・昼食費の見直し、固定費の支払い確認、続けやすい予定の入れ方まで、忙しい会社員向けの週末ポイ活ルーティンを解説します。" },
     { title: "固定費が少ない人のポイ活術!少額支出でも効率よく貯める方法", url: "/pages/articles/koteihi-sukunai-poikatsu.html", category: "ポイントサイト", date: "2026.07.14", thumbType: "beginner", excerpt: "固定費が少ない人の特徴や日常買い物を中心にする考え方、キャンペーンの絞り方、ポイント失効を防ぐ方法、少額でも満足度を上げる工夫まで、少額支出型のポイ活術を解説します。" },
     { title: "キャッシュレスが不安な人向けポイ活!現金感覚で使うための管理方法", url: "/pages/articles/cashless-fuan-poikatsu.html", category: "ポイントサイト", date: "2026.07.14", thumbType: "beginner", excerpt: "不安を感じる理由や利用上限を決める方法、通知で支出を確認するコツ、プリペイド型の活用、現金と併用するコツまで、キャッシュレスが不安な人向けのポイ活管理方法を解説します。" },
+    { title: "ちょびリッチとは?評判・特徴からポイントの貯め方まで徹底解説", url: "/pages/articles/chobirich-poikatsu.html", category: "ポイントサイト", date: "2026.07.15", thumbType: "earnings", excerpt: "老舗ポイントサイト「ちょびリッチ」の特徴や実績、おすすめの訴求ポイント、ポイントの貯め方、登録方法までをわかりやすく解説します。" },
   ];
 
   function initSearchResults() {
