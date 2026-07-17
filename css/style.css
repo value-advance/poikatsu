@@ -734,19 +734,6 @@ h1, h2, h3, h4 {
   transform: translateY(-2px);
 }
 
-.offer-card__pr {
-  position: absolute;
-  top: 6px;
-  left: 6px;
-  background: rgba(0, 0, 0, .45);
-  color: #fff;
-  font-size: 9px;
-  font-weight: 700;
-  padding: 1px 6px;
-  border-radius: 4px;
-  z-index: 1;
-}
-
 .offer-card__thumb {
   flex: 0 0 300px;
   max-width: 100%;
