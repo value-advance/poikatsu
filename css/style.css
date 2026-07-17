@@ -748,7 +748,7 @@ h1, h2, h3, h4 {
   border-radius: 999px;
 }
 
-.offer-card__title {
+.offer-card .offer-card__title {
   grid-column: 2;
   grid-row: 1;
   align-self: start;
@@ -793,14 +793,14 @@ h1, h2, h3, h4 {
   gap: 6px;
 }
 
-.offer-card__desc {
+.offer-card .offer-card__desc {
   font-size: 11px;
   color: var(--color-text-light);
   line-height: 1.4;
   margin: 0;
 }
 
-.offer-card__reward {
+.offer-card .offer-card__reward {
   font-size: 14px;
   font-weight: 700;
   color: var(--color-danger);
