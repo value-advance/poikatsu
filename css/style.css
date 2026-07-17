@@ -734,6 +734,7 @@ h1, h2, h3, h4 {
 }
 
 .offer-card__thumb {
+  position: relative;
   flex: 0 0 34%;
   max-width: 140px;
   align-self: flex-start;
@@ -766,15 +767,11 @@ h1, h2, h3, h4 {
   margin: 0;
 }
 
-.offer-card__desc {
-  font-size: 11px;
-  color: var(--color-text-light);
-  line-height: 1.4;
-  margin: 0;
-}
-
 .offer-card__type {
-  align-self: flex-start;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  z-index: 1;
   font-size: 10px;
   font-weight: 700;
   color: var(--color-primary);
