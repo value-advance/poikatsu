@@ -719,7 +719,6 @@ h1, h2, h3, h4 {
 .offer-card {
   position: relative;
   display: flex;
-  flex-wrap: wrap;
   gap: 12px;
   min-width: 0;
   background: var(--color-surface);
@@ -735,8 +734,9 @@ h1, h2, h3, h4 {
 }
 
 .offer-card__thumb {
-  flex: 0 0 300px;
-  max-width: 100%;
+  flex: 0 0 34%;
+  max-width: 140px;
+  align-self: flex-start;
   aspect-ratio: 300 / 250;
   border-radius: 8px;
   background: linear-gradient(145deg, #ffe1b8, var(--color-secondary));
@@ -751,8 +751,8 @@ h1, h2, h3, h4 {
 }
 
 .offer-card__body {
-  flex: 1 1 200px;
-  min-width: 200px;
+  flex: 1;
+  min-width: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
