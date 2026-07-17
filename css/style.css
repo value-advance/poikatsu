@@ -721,7 +721,7 @@ h1, h2, h3, h4 {
   display: grid;
   grid-template-columns: minmax(0, min(34%, 140px)) minmax(0, 1fr);
   column-gap: 12px;
-  row-gap: 4px;
+  row-gap: 0;
   min-width: 0;
   background: var(--color-surface);
   border-radius: var(--radius);
@@ -769,7 +769,7 @@ h1, h2, h3, h4 {
   grid-column: 1;
   grid-row: 3;
   align-self: start;
-  margin-top: 4px;
+  margin-top: 8px;
   aspect-ratio: 300 / 250;
   border-radius: 8px;
   background: linear-gradient(145deg, #ffe1b8, var(--color-secondary));
@@ -787,7 +787,7 @@ h1, h2, h3, h4 {
   grid-column: 2;
   grid-row: 3;
   min-width: 0;
-  margin-top: 4px;
+  margin-top: 8px;
   display: flex;
   flex-direction: column;
   gap: 6px;
