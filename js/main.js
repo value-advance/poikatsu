@@ -107,7 +107,7 @@
   // TODO: 実際の案件・記事が決まり次第、各タブのTOP10データを差し替える
   const RANKING_DATA = {
     sougou: [
-      { title: "サンプル銀行カードローン新規申込", type: "新規口座開設", points: "50,000", suffix: "pts.", pr: true },
+      { title: "サンプル銀行カードローン新規申込", type: "新規口座開設", points: "50,000", suffix: "pts." },
       { title: "サンプルカード新規発行後の利用で獲得", type: "新規カード発行", points: "60,000", suffix: "pts." },
       { title: "本人カード1枚発行でポイントもらえる", type: "新規カード発行", points: "110,000", suffix: "pts." },
       { title: "証券口座開設&入金で獲得できる", type: "新規無料口座開設", points: "20,000", suffix: "pts." },
@@ -119,7 +119,7 @@
       { title: "回線申込で特典還元、特典還元中", type: "無料申込", points: "171,790", suffix: "pts." },
     ],
     muryo: [
-      { title: "無料会員登録で今すぐポイント獲得", type: "無料登録", points: "2,000", suffix: "pts.", pr: true },
+      { title: "無料会員登録で今すぐポイント獲得", type: "無料登録", points: "2,000", suffix: "pts." },
       { title: "サンプルアプリのインストールで無料ポイント", type: "無料登録", points: "1,500", suffix: "pts." },
       { title: "アンケート会員登録で無料ポイント進呈", type: "無料登録", points: "1,200", suffix: "pts." },
       { title: "サンプルサービス無料体験登録", type: "無料登録", points: "1,000", suffix: "pts." },
@@ -131,7 +131,7 @@
       { title: "無料スマホ診断登録キャンペーン", type: "無料登録", points: "300", suffix: "pts." },
     ],
     creca: [
-      { title: "本人カード1枚発行でポイントもらえる", type: "新規カード発行", points: "110,000", suffix: "pts.", pr: true },
+      { title: "本人カード1枚発行でポイントもらえる", type: "新規カード発行", points: "110,000", suffix: "pts." },
       { title: "サンプルカード新規発行後の利用で獲得", type: "新規カード発行", points: "60,000", suffix: "pts." },
       { title: "年会費無料カード発行キャンペーン", type: "新規カード発行", points: "45,000", suffix: "pts." },
       { title: "ETCカード同時申込で獲得", type: "新規カード発行", points: "30,000", suffix: "pts." },
@@ -143,7 +143,7 @@
       { title: "サンプルカード継続利用ポイント", type: "継続利用", points: "8,000", suffix: "pts." },
     ],
     kouza: [
-      { title: "サンプル銀行カードローン新規申込", type: "新規口座開設", points: "50,000", suffix: "pts.", pr: true },
+      { title: "サンプル銀行カードローン新規申込", type: "新規口座開設", points: "50,000", suffix: "pts." },
       { title: "銀行口座開設+各種取引でポイント進呈", type: "無料口座開設", points: "44,000", suffix: "pts." },
       { title: "証券口座開設&入金で獲得できる", type: "新規無料口座開設", points: "20,000", suffix: "pts." },
       { title: "FX口座新規開設&取引でポイント獲得", type: "新規口座開設", points: "18,000", suffix: "pts." },
@@ -155,7 +155,7 @@
       { title: "積立口座開設スタートキャンペーン", type: "新規口座開設", points: "5,000", suffix: "pts." },
     ],
     kaimono: [
-      { title: "対象店舗のご利用でポイント最大20%還元", type: "お買い物", points: "最大20", suffix: "%還元", pr: true },
+      { title: "対象店舗のご利用でポイント最大20%還元", type: "お買い物", points: "最大20", suffix: "%還元" },
       { title: "冷凍食品のご自宅お届けでポイント還元", type: "お買い物", points: "1,500", suffix: "pts." },
       { title: "サンプル通販サイトご利用でポイント還元", type: "お買い物", points: "1,200", suffix: "pts." },
       { title: "ふるさと納税でポイント進呈", type: "お買い物", points: "1,000", suffix: "pts." },
@@ -167,11 +167,11 @@
       { title: "サンプル旅行予約サイトご利用で獲得", type: "お買い物", points: "300", suffix: "pts." },
     ],
     pointsite: [
-      { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900", suffix: "円相当", pr: true, url: "/pages/articles/monitor-town-poikatsu.html", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
-      { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", pr: true, url: "/pages/articles/chobirich-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
-      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", pr: true, url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
-      { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", pr: true, url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
-      { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", pr: true, url: "/pages/articles/hapitas-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
+      { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900", suffix: "円相当", url: "/pages/articles/monitor-town-poikatsu.html", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
+      { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", url: "/pages/articles/chobirich-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
+      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
+      { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
+      { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", url: "/pages/articles/hapitas-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
     ],
   };
 
@@ -180,7 +180,6 @@
     grid.innerHTML = items.map((item, i) => `
       <a class="ranking-card" href="${item.url || "#"}">
         <span class="ranking-card__rank">${i + 1}</span>
-        ${item.pr ? '<span class="ranking-card__pr">PR</span>' : ""}
         <div class="ranking-card__thumb">${item.img ? `<img src="${item.img}" alt="${item.title}" loading="lazy">` : ""}</div>
         <div class="ranking-card__body">
           <p class="ranking-card__title">${item.title}</p>
