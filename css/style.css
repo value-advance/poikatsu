@@ -1861,3 +1861,34 @@ h1, h2, h3, h4 {
   opacity: .9;
 }
 
+/* ===================================================================
+   サイトマップページ
+=================================================================== */
+
+.sitemap-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 28px;
+  display: grid;
+  gap: 8px;
+}
+
+.sitemap-list li {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+.sitemap-list a {
+  display: block;
+  padding: 12px 14px;
+  color: var(--color-text);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.sitemap-list a:hover {
+  color: var(--color-primary);
+}
+
