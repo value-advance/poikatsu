@@ -1210,25 +1210,41 @@ h1, h2, h3, h4 {
    Footer
 ------------------------------------------------------------- */
 .site-footer {
-  background: #2b2b2b;
-  color: #cfcfcf;
-  padding: 32px 0 24px;
+  background: var(--color-navy);
+  color: #c9d4e0;
+  padding: 36px 0 24px;
   font-size: 12px;
+  border-top: 3px solid var(--color-primary);
+  text-align: center;
+}
+
+.site-footer__brand {
+  color: #fff;
+  font-size: 16px;
+  font-weight: 800;
+  margin-bottom: 18px;
+  letter-spacing: .02em;
 }
 
 .site-footer a {
-  color: #cfcfcf;
+  color: #c9d4e0;
+  transition: color .15s ease;
+}
+
+.site-footer a:hover {
+  color: var(--color-secondary);
 }
 
 .site-footer__links {
   display: flex;
   flex-wrap: wrap;
-  gap: 12px 20px;
-  margin-bottom: 16px;
+  justify-content: center;
+  gap: 10px 24px;
+  margin-bottom: 20px;
 }
 
 .site-footer__copy {
-  color: #8a8a8a;
+  color: #8a97a8;
 }
 
 /* -------------------------------------------------------------
