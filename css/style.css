@@ -650,8 +650,8 @@ h1, h2, h3, h4 {
 }
 
 .ranking-card__thumb {
-  flex: 0 0 88px;
-  height: 88px;
+  flex: 0 0 106px;
+  aspect-ratio: 1.2 / 1;
   border-radius: 8px;
   background: linear-gradient(145deg, #ffe1b8, var(--color-secondary));
   overflow: hidden;
@@ -1079,6 +1079,33 @@ h1, h2, h3, h4 {
 .site-search--page .site-search__input {
   padding: 10px 16px;
   font-size: 14px;
+}
+
+/* -------------------------------------------------------------
+   Feature banners (特集) - banner images at 3.7:1
+------------------------------------------------------------- */
+.feature-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.feature-banner {
+  display: block;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+}
+
+.feature-banner:hover {
+  box-shadow: var(--shadow-hover);
+}
+
+.feature-banner img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3.7 / 1;
+  object-fit: cover;
 }
 
 /* -------------------------------------------------------------
