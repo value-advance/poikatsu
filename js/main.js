@@ -167,7 +167,6 @@
       { title: "サンプル旅行予約サイトご利用で獲得", type: "お買い物", points: "300", suffix: "pts." },
     ],
     pointsite: [
-      { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900", suffix: "円相当", url: "/pages/articles/monitor-town-poikatsu.html", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
       { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", url: "/pages/articles/chobirich-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
       { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
       { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
