@@ -224,6 +224,39 @@ h1, h2, h3, h4 {
   font-weight: 500;
 }
 
+/* Nav (mobile only): category shortcuts + site info links */
+.site-nav__categories {
+  padding: 4px 16px 16px;
+  border-top: 8px solid var(--color-bg);
+}
+
+.site-nav__section-title {
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  margin: 12px 0 4px;
+}
+
+.site-nav__category-list li + li {
+  border-top: 1px solid var(--color-border);
+}
+
+.site-nav__category-list a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 4px;
+  font-weight: 500;
+}
+
+.site-nav__cat-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  font-size: 16px;
+}
+
 /* -------------------------------------------------------------
    Hero
 ------------------------------------------------------------- */
@@ -1809,6 +1842,10 @@ h1, h2, h3, h4 {
 
   .site-nav__list a {
     padding: 0;
+  }
+
+  .site-nav__categories {
+    display: none;
   }
 
   .hero {
