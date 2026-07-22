@@ -652,6 +652,7 @@ h1, h2, h3, h4 {
 .ranking-card__thumb {
   flex: 0 0 106px;
   aspect-ratio: 1.2 / 1;
+  align-self: flex-start;
   border-radius: 8px;
   background: linear-gradient(145deg, #ffe1b8, var(--color-secondary));
   overflow: hidden;
