@@ -9,11 +9,33 @@
   <link rel="stylesheet" href="../css/style.css">
   <link rel="icon" href="../images/favicon/favicon.png" type="image/png">
   <style>
+    html, body {
+      height: 100%;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    body > main {
+      flex: 1 0 auto;
+    }
     .company-noselect {
       -webkit-user-select: none;
       -moz-user-select: none;
       -ms-user-select: none;
       user-select: none;
+    }
+    .company-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+      margin-top: 8px;
+    }
+    .company-card .article-body__table-wrap {
+      margin: 0;
     }
   </style>
 </head>
@@ -30,27 +52,35 @@
 
       <h2 class="section-title">会社情報</h2>
 
-      <div class="article-body__table-wrap">
-        <table>
-          <tbody>
-            <tr>
-              <th>会社名</th>
-              <td>株式会社ネクストフロー</td>
-            </tr>
-            <tr>
-              <th>代表者</th>
-              <td>樫山 和音</td>
-            </tr>
-            <tr>
-              <th>住所</th>
-              <td>福岡市博多区博多駅前1丁目15-20</td>
-            </tr>
-            <tr>
-              <th>連絡先</th>
-              <td>info@value-advance.com</td>
-            </tr>
-          </tbody>
-        </table>
+      <div class="company-card article-body">
+        <div class="article-body__table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>項目</th>
+                <th>内容</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>会社名</th>
+                <td>株式会社ネクストフロー</td>
+              </tr>
+              <tr>
+                <th>代表者</th>
+                <td>樫山 和音</td>
+              </tr>
+              <tr>
+                <th>住所</th>
+                <td>福岡市博多区博多駅前1丁目15-20</td>
+              </tr>
+              <tr>
+                <th>連絡先</th>
+                <td>info@value-advance.com</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
 
     </section>
