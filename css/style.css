@@ -257,6 +257,20 @@ h1, h2, h3, h4 {
   font-size: 16px;
 }
 
+.site-intro {
+  padding-top: 20px;
+  padding-bottom: 12px;
+  text-align: center;
+}
+
+.site-intro p {
+  max-width: 720px;
+  margin: 0 auto;
+  color: var(--color-text-light);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
 /* -------------------------------------------------------------
    Hero
 ------------------------------------------------------------- */
