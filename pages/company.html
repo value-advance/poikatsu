@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex, nofollow">
+  <title>会社概要 | ポイントの殿堂</title>
+  <meta name="description" content="ポイントの殿堂を運営する会社の概要です。">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="icon" href="../images/favicon/favicon.png" type="image/png">
+  <style>
+    .company-noselect {
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+  </style>
+</head>
+<body data-root="../">
+
+  <div data-include="header"></div>
+
+  <main>
+    <section class="section container company-noselect" id="companyBody">
+      <p class="breadcrumb">
+        <a href="../index.html">ホーム</a><span class="breadcrumb__sep">›</span>
+        会社概要
+      </p>
+
+      <h2 class="section-title">会社情報</h2>
+
+      <div class="article-body__table-wrap">
+        <table>
+          <tbody>
+            <tr>
+              <th>会社名</th>
+              <td>株式会社ネクストフロー</td>
+            </tr>
+            <tr>
+              <th>代表者</th>
+              <td>樫山 和音</td>
+            </tr>
+            <tr>
+              <th>住所</th>
+              <td>福岡市博多区博多駅前1丁目15-20</td>
+            </tr>
+            <tr>
+              <th>連絡先</th>
+              <td>info@value-advance.com</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </section>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="../js/main.js"></script>
+  <script>
+    (function () {
+      const el = document.getElementById("companyBody");
+      if (!el) return;
+      ["copy", "cut", "contextmenu", "selectstart", "dragstart"].forEach((evt) => {
+        el.addEventListener(evt, (e) => e.preventDefault());
+      });
+    })();
+  </script>
+</body>
+</html>
