@@ -202,24 +202,67 @@
     });
   }
 
-  // 記事下部の「関連する案件」表示用データ
-  // 分類(category、1つ) … creditcard(クレジットカード) / kouza(口座開設) / shopping(ショッピング) /
-  //                        app(アプリ案件) / survey(アンケート) / campaign(キャンペーン) /
-  //                        furima(フリマ・オークション) / sidejob(副業) / pointsite(ポイントサイト)
+  // 記事下部の「関連するお得なポイント」表示用データ
+  // 分類(category、1つ) … pointsite(ポイントサイト) / shopping(ショッピング) /
+  //                        campaign(旅行・キャンペーン系) / survey(アンケート) /
+  //                        seikatsu(生活) / app(アプリ案件)
   // タグ(tags、複数可)   … rakuten(楽天ポイント) / dpoint(dポイント) / paypay(PayPayポイント) /
   //                        ponta(Pontaポイント) / vpoint(Vポイント) / beginner(初心者向け)
   // 記事側は <article> タグに data-category / data-tags を指定する(半角スペース区切り)。
-  // TODO: 実際の案件が決まり次第、内容を差し替え・追加する
+  // 各記事の category/tags は実際の <article> タグの値と一致させること。
   const PR_OFFERS = [
-    { title: "楽天カード 新規発行&利用で獲得", type: "クレジットカード", points: "8,000", suffix: "pts.", category: "creditcard", tags: ["rakuten"] },
-    { title: "dカード 新規入会+利用で獲得", type: "クレジットカード", points: "6,000", suffix: "pts.", category: "creditcard", tags: ["dpoint"] },
-    { title: "PayPayカード 新規発行で獲得", type: "クレジットカード", points: "5,000", suffix: "pts.", category: "creditcard", tags: ["paypay"] },
-    { title: "au PAY カード 新規発行で獲得", type: "クレジットカード", points: "5,000", suffix: "pts.", category: "creditcard", tags: ["ponta"] },
-    { title: "楽天モバイル 新規契約+利用で獲得", type: "キャンペーン", points: "10,000", suffix: "pts.", category: "campaign", tags: ["rakuten"] },
-    { title: "ドコモ(ahamo)新規契約で獲得", type: "キャンペーン", points: "7,000", suffix: "pts.", category: "campaign", tags: ["dpoint"] },
-    { title: "ソフトバンク/ワイモバイル 新規契約で獲得", type: "キャンペーン", points: "6,000", suffix: "pts.", category: "campaign", tags: ["paypay"] },
-    { title: "au/UQ mobile 新規契約で獲得", type: "キャンペーン", points: "6,000", suffix: "pts.", category: "campaign", tags: ["ponta"] },
+    // ポイントサイト
+    { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", category: "pointsite", tags: ["beginner"], url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
+    { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", category: "pointsite", tags: ["beginner"], url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
+    { title: "アメフリ 1日5分のすきま時間から", type: "ポイントサイト", points: "5", suffix: "分から始められる", category: "pointsite", tags: ["beginner"], url: "/pages/articles/amefri-poikatsu.html", img: "https://www26.a8.net/svt/bgt?aid=260715065190&wid=002&eno=01&mid=s00000020637001023000&mc=1" },
+    { title: "ECナビ 多彩な貯め方に対応", type: "ポイントサイト", points: "多彩な貯め方", suffix: "に対応", category: "pointsite", tags: ["beginner"], url: "/pages/articles/ecnavi-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065204&wid=002&eno=01&mid=s00000017066001042000&mc=1" },
+    { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", category: "pointsite", tags: ["beginner"], url: "/pages/articles/hapitas-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
+    { title: "ポイントミュージアム 毎日抽選で当たる", type: "ポイントサイト", points: "1,000", suffix: "円が毎日抽選で当たる", category: "pointsite", tags: ["beginner"], url: "/pages/articles/point-museum-poikatsu.html", img: "https://www20.a8.net/svt/bgt?aid=260715065224&wid=002&eno=01&mid=s00000003655005014000&mc=1" },
+    { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", category: "pointsite", tags: ["beginner"], url: "/pages/articles/chobirich-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
+    // ショッピング
+    { title: "楽天市場 総合通販でジャンルが幅広い", type: "総合通販", points: "楽天ポイント", suffix: "が貯まる", category: "shopping", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-ichiba-toha.html", img: "/images/article-thumb/shopping/rakuten-ichiba.webp" },
+    { title: "Yahoo!ショッピング 獲得予定ポイントを表示", type: "総合通販", points: "PayPayポイント", suffix: "などが貯まる", category: "shopping", tags: ["paypay", "beginner"], url: "/pages/articles/yahoo-shopping-toha.html", img: "/images/article-thumb/shopping/yahoo-shopping.webp" },
+    { title: "Amazon 品ぞろえと配送が充実", type: "総合通販", points: "Amazonポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/amazon-tsuhan-toha.html", img: "/images/article-thumb/shopping/amazon.webp" },
+    { title: "au PAY マーケット Pontaポイントが貯まる", type: "総合通販", points: "Pontaポイント", suffix: "が貯まる", category: "shopping", tags: ["ponta", "beginner"], url: "/pages/articles/aupay-market-toha.html", img: "/images/article-thumb/shopping/aupay-market.webp" },
+    { title: "dショッピング 食品・日用品・家電まで幅広く", type: "総合通販", points: "dポイント", suffix: "が貯まる", category: "shopping", tags: ["dpoint", "beginner"], url: "/pages/articles/dshopping-toha.html", img: "/images/article-thumb/shopping/dshopping.webp" },
+    { title: "LOHACO 日用品・食品中心の通販", type: "日用品", points: "PayPayポイント", suffix: "が貯まる", category: "shopping", tags: ["paypay", "beginner"], url: "/pages/articles/lohaco-toha.html", img: "/images/article-thumb/shopping/lohaco.webp" },
+    { title: "ヨドバシ.com 家電から書籍まで幅広く展開", type: "家電", points: "ゴールドポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/yodobashi-toha.html", img: "/images/article-thumb/shopping/yodobashi.webp" },
+    { title: "ビックカメラ.com 店舗とネットで共通利用", type: "家電", points: "ビックポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/biccamera-toha.html", img: "/images/article-thumb/shopping/biccamera.webp" },
+    { title: "Joshin webショップ 家電・ゲーム・おもちゃ中心", type: "家電", points: "ジョーシンポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/joshin-web-toha.html", img: "/images/article-thumb/shopping/joshin-web.webp" },
+    { title: "ニッセン 衣類・家具・生活用品の通販", type: "衣類・家具", points: "ニッセンポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/nissen-toha.html", img: "/images/article-thumb/shopping/nissen.webp" },
+    { title: "高島屋オンラインストア 百貨店品質のギフト", type: "百貨店", points: "タカシマヤポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/takashimaya-online-toha.html", img: "/images/article-thumb/shopping/takashimaya-online.webp" },
+    { title: "大丸松坂屋オンラインストア ギフト・化粧品", type: "百貨店", points: "QIRAポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/daimaru-matsuzakaya-toha.html", img: "/images/article-thumb/shopping/daimaru-matsuzakaya.webp" },
+    // 旅行(data-category="campaign")
+    { title: "イオンコンパストラベルモール(宿泊予約) WAON POINTが貯まる", type: "宿・ホテル予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["beginner"], url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu.html", img: "https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" },
+    { title: "Yahoo!トラベル 約17,000施設から比較", type: "宿・ホテル予約", points: "PayPayポイント", suffix: "が貯まる・その場で使える", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/yahoo-travel-poikatsu.html", img: "https://www25.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1" },
+    { title: "トラベリスト(海外航空券) IATA認可代理店", type: "海外航空券予約", points: "20秒", suffix: "で発券完了(最短)", category: "campaign", tags: ["beginner"], url: "/pages/articles/travelist-kaigai-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260720103939&wid=002&eno=01&mid=s00000023067003003000&mc=1" },
+    { title: "じゃらんnet 国内最大級の掲載数", type: "宿・ホテル予約", points: "2%", suffix: "程度のポイント還元(基本)", category: "campaign", tags: ["beginner", "ponta", "dpoint"], url: "/pages/articles/jalan-net-poikatsu.html", img: "https://www23.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1" },
+    { title: "エアトリ 国内主要14社を一括比較", type: "航空券予約", points: "2%", suffix: "がポイント還元(購入額)", category: "campaign", tags: ["beginner"], url: "/pages/articles/airtrip-poikatsu.html", img: "https://www29.a8.net/svt/bgt?aid=260720103908&wid=002&eno=01&mid=s00000001343001062000&mc=1" },
+    { title: "イオンコンパストラベルモール(レンタカー予約) 複数社を比較", type: "レンタカー予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["beginner"], url: "/pages/articles/aeoncompass-travelmall-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260720103819&wid=002&eno=01&mid=s00000026954002003000&mc=1" },
+    { title: "トラベリスト(国内航空券) JAL・ANA・LCCを比較", type: "航空券予約", points: "3%", suffix: "還元(アプリ購入時)", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/travelist-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260715065195&wid=002&eno=01&mid=s00000023067001009000&mc=1" },
+    // アンケート
+    { title: "ファンくる 約8,000店舗の飲食店が対象", type: "覆面調査・モニター", points: "8,000", suffix: "店舗の飲食店が対象", category: "survey", tags: ["beginner"], url: "/pages/articles/fancrew-poikatsu.html", img: "https://www26.a8.net/svt/bgt?aid=260720103535&wid=002&eno=01&mid=s00000007875007018000&mc=1" },
+    { title: "オピニオンワールド 単価が高くて貯まりやすい", type: "海外企業アンケート", points: "1pt=2円", suffix: "と単価が高め", category: "survey", tags: ["beginner"], url: "/pages/articles/opinionworld-poikatsu.html", img: "https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" },
+    { title: "Ipsos iSay 交換先が豊富", type: "海外企業アンケート", points: "300pt", suffix: "から交換可能(Amazon/PeX)", category: "survey", tags: ["beginner"], url: "/pages/articles/ipsos-isay-poikatsu.html", img: "https://www28.a8.net/svt/bgt?aid=260715065235&wid=002&eno=01&mid=s00000018951001006000&mc=1" },
+    { title: "アイリサーチ 簡単にポイントが貯まる", type: "アンケート・会場調査", points: "500円", suffix: "相当以上が簡単に貯まる", category: "survey", tags: ["beginner"], url: "/pages/articles/iresearch-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260715065250&wid=002&eno=01&mid=s00000023983001009000&mc=1" },
+    { title: "マクロミル 振込手数料無料で交換可能", type: "アンケートモニター", points: "1pt=1円", suffix: "相当・振込手数料無料", category: "survey", tags: ["beginner"], url: "/pages/articles/macromill-poikatsu.html", img: "https://www23.a8.net/svt/bgt?aid=260715065256&wid=002&eno=01&mid=s00000013554002116000&mc=1" },
+    { title: "フルーツメール 運営実績20年以上", type: "ゲーム・アンケート・懸賞", points: "20年", suffix: "以上の運営実績", category: "survey", tags: ["beginner"], url: "/pages/articles/fruitmail-poikatsu.html", img: "https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" },
+    { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900円", suffix: "相当ポイント(登録+アプリ導入)", category: "survey", tags: ["beginner"], url: "/pages/articles/monitor-town-poikatsu.html", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
+    // 生活
+    { title: "楽天モバイル データ使い放題で楽天ポイントも貯まる", type: "携帯回線", points: "2,980円", suffix: "(税込3,278円)/月でデータ使い放題", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-mobile-poikatsu.html", img: "https://www28.a8.net/svt/bgt?aid=260720103756&wid=002&eno=01&mid=s00000027494001003000&mc=1" },
+    { title: "@nifty with ドコモ光 最大35,000円キャッシュバック", type: "光回線", points: "35,000円", suffix: "キャッシュバック(最大)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/nifty-docomo-hikari-poikatsu.html", img: "https://www29.a8.net/svt/bgt?aid=260720104398&wid=002&eno=01&mid=s00000019208003021000&mc=1" },
+    { title: "au PAY ふるさと納税 Pontaポイントが貯まる", type: "ふるさと納税", points: "1%", suffix: "相当のPontaポイント還元(基本)", category: "seikatsu", tags: ["ponta", "beginner"], url: "/pages/articles/aupay-furusato-poikatsu.html", img: "https://www28.a8.net/svt/bgt?aid=260720103926&wid=002&eno=01&mid=s00000023934001006000&mc=1" },
+    { title: "ドコモでんき 電気代でdポイントが貯まる", type: "電力", points: "最大20%", suffix: "dポイント還元(Greenプラン)", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/docomo-denki-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260720103797&wid=002&eno=01&mid=s00000000018049011000&mc=1" },
+    { title: "ahamo光 新規申込みでdポイントプレゼント", type: "光回線", points: "10,000pt", suffix: "dポイントプレゼント(新規申込)", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/ahamo-hikari-poikatsu.html", img: "https://www29.a8.net/svt/bgt?aid=260720103759&wid=002&eno=01&mid=s00000017718076006000&mc=1" },
+    { title: "Retty 会員登録不要でネット予約", type: "グルメ予約", points: "2,600万人", suffix: "が利用(2022年5月時点)", category: "seikatsu", tags: ["paypay", "beginner"], url: "/pages/articles/retty-poikatsu.html", img: "https://www29.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1" },
+    { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/d-value-pass-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
+    { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/auhikari-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
+    // アプリ(特集)
+    { title: "HashPort Wallet 暗号資産・ポイント・NFTを一元管理", type: "Web3ウォレット", points: "無料", suffix: "で基本機能を利用可能", category: "app", tags: ["beginner"], url: "/pages/articles/hashport-wallet-poikatsu.html", img: null },
   ];
+
+  // 関連リンクとして意味を持つタグ(beginnerは対象が広すぎるため除外)
+  const RELATED_TAG_WHITELIST = ["rakuten", "dpoint", "paypay", "ponta", "vpoint"];
 
   function initRelatedOffers() {
     const section = document.getElementById("relatedOffers");
@@ -229,10 +272,13 @@
 
     const category = article.dataset.category || "";
     const tags = (article.dataset.tags || "").split(" ").filter(Boolean);
+    const meaningfulTags = tags.filter((t) => RELATED_TAG_WHITELIST.includes(t));
+    const currentFile = location.pathname.split("/").pop();
 
-    const matches = PR_OFFERS.filter((offer) =>
-      offer.category === category || offer.tags.some((t) => tags.includes(t))
-    );
+    const matches = PR_OFFERS.filter((offer) => {
+      if (offer.url && currentFile && offer.url.endsWith("/" + currentFile)) return false;
+      return offer.category === category || offer.tags.some((t) => meaningfulTags.includes(t));
+    }).slice(0, 6);
 
     if (matches.length === 0) {
       section.remove();
@@ -240,8 +286,8 @@
     }
 
     grid.innerHTML = matches.map((offer) => `
-      <a class="ranking-card" href="#">
-        <div class="ranking-card__thumb"></div>
+      <a class="ranking-card" href="${offer.url || "#"}">
+        <div class="ranking-card__thumb">${offer.img ? `<img src="${offer.img}" alt="${offer.title}" loading="lazy">` : ""}</div>
         <div class="ranking-card__body">
           <p class="ranking-card__title">${offer.title}</p>
           <span class="ranking-card__type">${offer.type}</span>
