@@ -938,14 +938,13 @@ h1, h2, h3, h4 {
 
 .article-card__title {
   position: absolute;
-  top: 50%;
+  top: 0;
   left: 0;
   right: 0;
-  transform: translateY(-50%);
   z-index: 1;
   width: 100%;
   margin: 0;
-  padding: 0 14px;
+  padding: 14px 14px 0;
   font-size: 11px;
   font-weight: 700;
   line-height: 1.4;
@@ -992,6 +991,30 @@ h1, h2, h3, h4 {
 
 .article-card[hidden] {
   display: none;
+}
+
+/* -------------------------------------------------------------
+   Popular articles (よくみられている記事): 横スクロールカルーセル
+------------------------------------------------------------- */
+.popular-articles .article-list {
+  display: flex;
+  grid-template-columns: none;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 8px;
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+}
+
+.popular-articles .article-card {
+  flex: 0 0 160px;
+  scroll-snap-align: start;
+}
+
+@media (min-width: 600px) {
+  .popular-articles .article-card {
+    flex-basis: 200px;
+  }
 }
 
 /* -------------------------------------------------------------

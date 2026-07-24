@@ -349,7 +349,7 @@
     const STRIDE = 5;
     const start = selfIndex >= 0 ? (selfIndex * STRIDE) % others.length : 0;
     const matches = [];
-    for (let i = 0; i < Math.min(4, others.length); i++) {
+    for (let i = 0; i < Math.min(10, others.length); i++) {
       matches.push(others[(start + i) % others.length]);
     }
 
