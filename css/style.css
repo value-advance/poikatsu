@@ -1446,6 +1446,12 @@ h1, h2, h3, h4 {
   border-top: 1px solid var(--color-border);
 }
 
+.popular-articles {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
 .article-footer-nav {
   margin-top: 32px;
   padding-top: 20px;
