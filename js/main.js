@@ -329,17 +329,28 @@
 
     const category = article.dataset.category || "";
     const currentFile = location.pathname.split("/").pop();
-    const notSelf = (item) => !(item.url && currentFile && item.url.endsWith("/" + currentFile));
+    const isSelf = (item) => item.url && currentFile && item.url.endsWith("/" + currentFile);
 
-    let matches = POPULAR_ARTICLES.filter((item) => item.category === category && notSelf(item));
-    if (matches.length === 0) {
-      matches = POPULAR_ARTICLES.filter((item) => item.category === "__default__" && notSelf(item));
+    let pool = POPULAR_ARTICLES.filter((item) => item.category === category);
+    if (pool.length === 0) {
+      pool = POPULAR_ARTICLES.filter((item) => item.category === "__default__");
     }
-    matches = matches.slice(0, 4);
 
-    if (matches.length === 0) {
+    const selfIndex = pool.findIndex(isSelf);
+    const others = pool.filter((item) => !isSelf(item));
+
+    if (others.length === 0) {
       section.remove();
       return;
+    }
+
+    // 同じカテゴリ内の記事同士で表示が偏らないよう、自記事の位置に応じて開始位置をずらす
+    // (11と互いに素な5をずらし幅にすることで、隣り合う記事同士でも表示が大きく重ならないようにする)
+    const STRIDE = 5;
+    const start = selfIndex >= 0 ? (selfIndex * STRIDE) % others.length : 0;
+    const matches = [];
+    for (let i = 0; i < Math.min(4, others.length); i++) {
+      matches.push(others[(start + i) % others.length]);
     }
 
     grid.innerHTML = matches.map((item) => `
