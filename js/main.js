@@ -344,13 +344,23 @@
       return;
     }
 
-    // 同じカテゴリ内の記事同士で表示が偏らないよう、自記事の位置に応じて開始位置をずらす
-    // (11と互いに素な5をずらし幅にすることで、隣り合う記事同士でも表示が大きく重ならないようにする)
-    const STRIDE = 5;
-    const start = selfIndex >= 0 ? (selfIndex * STRIDE) % others.length : 0;
+    const MAX_ITEMS = 10;
     const matches = [];
-    for (let i = 0; i < Math.min(10, others.length); i++) {
-      matches.push(others[(start + i) % others.length]);
+
+    // 配列の先頭(=新しく追加した記事)を、自分自身でなければ常に1枠目に固定表示する
+    const newest = pool[0];
+    if (newest && !isSelf(newest)) {
+      matches.push(newest);
+    }
+
+    // 残りの枠は、自分自身と1枠目に固定した記事を除いた中から、
+    // 自記事の位置に応じて開始位置をずらして表示する
+    // (11と互いに素な5をずらし幅にすることで、隣り合う記事同士でも表示が大きく重ならないようにする)
+    const rotationPool = others.filter((item) => item !== newest);
+    const STRIDE = 5;
+    const start = selfIndex >= 0 && rotationPool.length > 0 ? (selfIndex * STRIDE) % rotationPool.length : 0;
+    for (let i = 0; matches.length < MAX_ITEMS && i < rotationPool.length; i++) {
+      matches.push(rotationPool[(start + i) % rotationPool.length]);
     }
 
     grid.innerHTML = matches.map((item) => `
