@@ -319,6 +319,39 @@
     { title: "ニッセンとは?衣類・家具・生活用品の通販", excerpt: "衣類・家具・生活用品を扱う通販サイト「ニッセン」の特徴を解説します。", url: "/pages/articles/nissen-toha.html", thumbType: "summary", category: "shopping" },
     { title: "高島屋オンラインストアとは?百貨店品質のギフト・食品・衣類", excerpt: "百貨店品質のギフト・食品・衣類を扱う「高島屋オンラインストア」の特徴を解説します。", url: "/pages/articles/takashimaya-online-toha.html", thumbType: "summary", category: "shopping" },
     { title: "大丸松坂屋オンラインストアとは?ギフト・化粧品・ファッション", excerpt: "百貨店のギフト・化粧品・ファッションを扱う「大丸松坂屋オンラインストア」の特徴を解説します。", url: "/pages/articles/daimaru-matsuzakaya-toha.html", thumbType: "summary", category: "shopping" },
+    // ポイントサイト
+    { title: "ワラウとは?老舗ポイントサイトの貯め方・交換方法を解説", excerpt: "運営歴25年以上、コンテンツ50種類以上の老舗ポイントサイト「ワラウ」の特徴を解説します。", url: "/pages/articles/warau-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ポイントインカムとは?アプリでも貯まるポイントサイトの特徴を解説", excerpt: "累計500万人以上が利用し、アプリの動画視聴や歩数計測でも貯まるポイントサイト「ポイントインカム」の特徴を解説します。", url: "/pages/articles/pointincome-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "アメフリとは?すきま時間で貯まるポイントサイトの特徴を解説", excerpt: "1日5分のすきま時間からでも取り組める、続けやすさが魅力のポイントサイト「アメフリ」の特徴を解説します。", url: "/pages/articles/amefri-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ECナビとは?多彩な方法でポイントが貯まるポイントサイトの特徴を解説", excerpt: "ネットショッピングやアンケート、モニター参加など多彩な方法でポイントが貯まるポイントサイト「ECナビ」の特徴を解説します。", url: "/pages/articles/ecnavi-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ハピタスとは?1pt=1円の明確なレートで貯まるポイントサイトの特徴を解説", excerpt: "3,000件以上のショップと提携し、1pt=1円のわかりやすいレートで貯まる高還元ポイントサイト「ハピタス」の特徴を解説します。", url: "/pages/articles/hapitas-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ポイントミュージアムとは?毎日楽しく貯まるポイントサイトの特徴を解説", excerpt: "毎日抽選の「1000円ゲット」など、コツコツ楽しく貯められるポイントサイト「ポイントミュージアム」の特徴を解説します。", url: "/pages/articles/point-museum-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ちょびリッチとは?評判・特徴からポイントの貯め方まで徹底解説", excerpt: "20年の実績を誇り、無料登録+ミッション達成でポイントが貯まる老舗ポイントサイト「ちょびリッチ」の特徴を解説します。", url: "/pages/articles/chobirich-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    // 旅行(data-category="campaign")
+    { title: "イオンコンパストラベルモール(宿泊予約)とは?WAON POINTが貯まる予約サービス", excerpt: "全国の宿・ホテルを検索・予約でき、WAON POINTが貯まる・使える「イオンコンパストラベルモール」の宿泊予約サービスを解説します。", url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "Yahoo!トラベルとは?PayPayポイントが貯まる・使える宿泊予約サービス", excerpt: "全国約17,000施設から比較できる宿泊予約サービス「Yahoo!トラベル」の特徴を解説します。", url: "/pages/articles/yahoo-travel-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "トラベリスト(海外航空券)とは?IATA認可代理店の予約サービスを解説", excerpt: "IATA認可代理店として海外航空券を比較・予約できる「トラベリスト」の海外航空券サービスを解説します。", url: "/pages/articles/travelist-kaigai-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "じゃらんnetとは?宿・ホテル予約でポイントが貯まる仕組みを解説", excerpt: "国内最大級の掲載数を誇る宿泊予約サービス「じゃらんnet」の特徴を解説します。", url: "/pages/articles/jalan-net-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "エアトリとは?国内航空券の一括比較とポイントの貯め方を解説", excerpt: "国内主要14社の航空券を一括比較できる旅行予約サービス「エアトリ」の特徴を解説します。", url: "/pages/articles/airtrip-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "イオンコンパストラベルモール(レンタカー予約)とは?WAON POINTを貯める方法", excerpt: "複数のレンタカー会社を比較・予約できる「イオンコンパストラベルモール」のレンタカー予約サービスを解説します。", url: "/pages/articles/aeoncompass-travelmall-poikatsu.html", thumbType: "compare", category: "campaign" },
+    { title: "トラベリストとは?国内航空券を一括比較できる予約サービス", excerpt: "JAL・ANA・LCCを一括比較できる航空券予約サービス「トラベリスト」の特徴を解説します。", url: "/pages/articles/travelist-poikatsu.html", thumbType: "compare", category: "campaign" },
+    // アンケート
+    { title: "ファンくるとは?覆面調査でお店をおトクに体験できるモニターサービス", excerpt: "約8,000店舗の飲食店をはじめ多ジャンルの案件がある覆面調査サービス「ファンくる」の特徴を解説します。", url: "/pages/articles/fancrew-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "オピニオンワールドとは?単価が高めの海外アンケートサイトを解説", excerpt: "大手市場調査会社Dynataの日本法人が運営し、単価が高めとされるアンケートサイト「オピニオンワールド」の特徴を解説します。", url: "/pages/articles/opinionworld-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "Ipsos iSayとは?海外企業のアンケートに答えてポイントが貯まるサイト", excerpt: "世界的な市場調査会社イプソスが運営するアンケートサイト「Ipsos iSay」の特徴を解説します。", url: "/pages/articles/ipsos-isay-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "アイリサーチとは?自社会場調査もあるアンケートサイトの特徴を解説", excerpt: "東証スタンダード上場企業が運営し、自社会場調査もあるアンケートサイト「アイリサーチ」の特徴を解説します。", url: "/pages/articles/iresearch-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "マクロミルとは?アンケート回答でポイントが貯まるモニターサービス", excerpt: "アンケート回答でポイントが貯まる大手ネットリサーチ企業のモニターサービス「マクロミル」の特徴を解説します。", url: "/pages/articles/macromill-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "フルーツメールとは?ゲーム・アンケートでポイントが貯まる懸賞サイト", excerpt: "ゲームやアンケートで手軽にポイントが貯まる懸賞サイト「フルーツメール」の特徴を解説します。", url: "/pages/articles/fruitmail-poikatsu.html", thumbType: "earnings", category: "survey" },
+    { title: "モニタータウンとは?PC調査モニターの特徴・参加方法をわかりやすく解説", excerpt: "PCに専用アプリを入れるだけで参加できる調査モニターサービス「モニタータウン」の特徴を解説します。", url: "/pages/articles/monitor-town-poikatsu.html", thumbType: "beginner", category: "survey" },
+    // 生活
+    { title: "楽天モバイルとは?データ使い放題と楽天ポイント最大+4倍を解説", excerpt: "データ使用量に応じた段階制料金で、楽天市場のポイントも上乗せされる「楽天モバイル」の特徴を解説します。", url: "/pages/articles/rakuten-mobile-poikatsu.html", thumbType: "compare", category: "seikatsu" },
+    { title: "@nifty with ドコモ光とは?キャッシュバックと料金・特典を解説", excerpt: "老舗プロバイダーのニフティが提供するドコモ光の申込窓口「@nifty with ドコモ光」の特徴を解説します。", url: "/pages/articles/nifty-docomo-hikari-poikatsu.html", thumbType: "compare", category: "seikatsu" },
+    { title: "au PAY ふるさと納税とは?Pontaポイントが貯まる・使える寄付サイト", excerpt: "KDDIとauコマース&ライフが共同運営するふるさと納税ポータル「au PAY ふるさと納税」の特徴を解説します。", url: "/pages/articles/aupay-furusato-poikatsu.html", thumbType: "beginner", category: "seikatsu" },
+    { title: "ドコモでんきとは?電気代でdポイントが貯まる仕組みを解説", excerpt: "電気料金の支払いでdポイントが貯まる電力サービス「ドコモでんき」の特徴を解説します。", url: "/pages/articles/docomo-denki-poikatsu.html", thumbType: "compare", category: "seikatsu" },
+    { title: "ahamo光とは?料金・dポイント特典・工事費無料の条件を解説", excerpt: "NTTドコモが提供する光インターネットサービス「ahamo光」の特徴を解説します。", url: "/pages/articles/ahamo-hikari-poikatsu.html", thumbType: "compare", category: "seikatsu" },
+    { title: "Rettyとは?会員登録不要でPayPayポイントが貯まるグルメ予約サービス", excerpt: "実名ユーザーの口コミからお店探し・ネット予約ができるグルメサービス「Retty」の特徴を解説します。", url: "/pages/articles/retty-poikatsu.html", thumbType: "app", category: "seikatsu" },
+    { title: "dバリューパスとは?初月無料で壁紙・待受が使い放題のサブスク", excerpt: "NTTドコモが提供し、待受・壁紙など約150の人気コンテンツが使い放題になるサブスク「dバリューパス」の特徴を解説します。", url: "/pages/articles/d-value-pass-poikatsu.html", thumbType: "app", category: "seikatsu" },
+    { title: "auひかりとは?NEXT経由の申込みでキャッシュバックが早いって本当?", excerpt: "IPv6通信標準装備のKDDI光回線「auひかり」を、正規代理店NEXT経由で申し込める窓口を解説します。", url: "/pages/articles/auhikari-poikatsu.html", thumbType: "compare", category: "seikatsu" },
   ];
 
   function initPopularArticles() {
