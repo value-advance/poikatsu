@@ -297,6 +297,63 @@
     `).join("");
   }
 
+  // 記事下部の「よくみられている記事」表示用データ
+  // category が現在の記事の data-category と一致するものを優先的に表示し、
+  // 一致がない場合は "__default__"(初心者ガイド)にフォールバックする。
+  const POPULAR_ARTICLES = [
+    // 初心者ガイド(フォールバック用)
+    { title: "ポイ活とは?仕組み・種類・始め方から注意点まで完全ガイド", excerpt: "ポイ活とは何か、できること、種類、始め方、メリット・デメリット、よくある質問まで、初心者向けに13のポイントで詳しく解説します。", url: "/pages/beginner/poikatsu-toha.html", thumbType: "beginner", category: "__default__" },
+    { title: "ポイ活の始め方3ステップ|初心者でも今日から始められる", excerpt: "ポイ活を始めたいけど何からすればいいかわからない方向けに、登録から交換までの流れを3ステップでわかりやすく解説します。", url: "/pages/beginner/hajimekata-3steps.html", thumbType: "beginner", category: "__default__" },
+    { title: "初心者におすすめのポイントサイト3選", excerpt: "初めてポイントサイトを使う方に向けて、おすすめのポイントサイト3つと、サイト選びで失敗しないためのチェックポイントをわかりやすく紹介します。", url: "/pages/beginner/osusume-site.html", thumbType: "beginner", category: "__default__" },
+    { title: "ポイ活の稼ぎ方には何がある?自分に合った方法を見つけよう", excerpt: "ポイントサイトでポイントを貯める方法にはさまざまな種類があります。それぞれの仕組みやメリット、向いている人を初心者向けにわかりやすく解説します。", url: "/pages/beginner/kasegikata-shurui.html", thumbType: "beginner", category: "__default__" },
+    // ショッピング
+    { title: "楽天市場とは?総合通販でジャンルが幅広い", excerpt: "総合通販でジャンルが幅広く、楽天ポイントが貯まる「楽天市場」の特徴を解説します。", url: "/pages/articles/rakuten-ichiba-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "Yahoo!ショッピングとは?獲得予定ポイントを表示", excerpt: "商品ごとに獲得予定ポイントを表示してくれる「Yahoo!ショッピング」の特徴を解説します。", url: "/pages/articles/yahoo-shopping-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "Amazonとは?品ぞろえと配送サービスが充実", excerpt: "品ぞろえと配送サービスが充実した通販サイト「Amazon」の特徴を解説します。", url: "/pages/articles/amazon-tsuhan-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "au PAY マーケットとは?Pontaポイントが貯まる総合通販", excerpt: "Pontaポイントが貯まる総合通販サイト「au PAY マーケット」の特徴を解説します。", url: "/pages/articles/aupay-market-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "dショッピングとは?食品・日用品・家電など幅広く展開", excerpt: "食品・日用品・家電など幅広く展開する通販サイト「dショッピング」の特徴を解説します。", url: "/pages/articles/dshopping-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "LOHACOとは?日用品・食品中心の通販サイト", excerpt: "日用品・食品を中心に取り扱う通販サイト「LOHACO」の特徴を解説します。", url: "/pages/articles/lohaco-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "ヨドバシ.comとは?家電から日用品・書籍まで幅広く展開", excerpt: "家電から日用品・書籍まで幅広く展開する通販サイト「ヨドバシ.com」の特徴を解説します。", url: "/pages/articles/yodobashi-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "ビックカメラ.comとは?店舗とネットでポイント共通利用", excerpt: "店舗とネットでポイントを共通利用できる「ビックカメラ.com」の特徴を解説します。", url: "/pages/articles/biccamera-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "Joshin webショップとは?家電・ゲーム・おもちゃが中心", excerpt: "家電・ゲーム・おもちゃを中心に取り扱う「Joshin webショップ」の特徴を解説します。", url: "/pages/articles/joshin-web-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "ニッセンとは?衣類・家具・生活用品の通販", excerpt: "衣類・家具・生活用品を扱う通販サイト「ニッセン」の特徴を解説します。", url: "/pages/articles/nissen-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "高島屋オンラインストアとは?百貨店品質のギフト・食品・衣類", excerpt: "百貨店品質のギフト・食品・衣類を扱う「高島屋オンラインストア」の特徴を解説します。", url: "/pages/articles/takashimaya-online-toha.html", thumbType: "summary", category: "shopping" },
+    { title: "大丸松坂屋オンラインストアとは?ギフト・化粧品・ファッション", excerpt: "百貨店のギフト・化粧品・ファッションを扱う「大丸松坂屋オンラインストア」の特徴を解説します。", url: "/pages/articles/daimaru-matsuzakaya-toha.html", thumbType: "summary", category: "shopping" },
+  ];
+
+  function initPopularArticles() {
+    const section = document.getElementById("popularArticles");
+    const grid = document.getElementById("popularArticlesGrid");
+    const article = document.querySelector("[data-category]");
+    if (!section || !grid || !article) return;
+
+    const category = article.dataset.category || "";
+    const currentFile = location.pathname.split("/").pop();
+    const notSelf = (item) => !(item.url && currentFile && item.url.endsWith("/" + currentFile));
+
+    let matches = POPULAR_ARTICLES.filter((item) => item.category === category && notSelf(item));
+    if (matches.length === 0) {
+      matches = POPULAR_ARTICLES.filter((item) => item.category === "__default__" && notSelf(item));
+    }
+    matches = matches.slice(0, 4);
+
+    if (matches.length === 0) {
+      section.remove();
+      return;
+    }
+
+    grid.innerHTML = matches.map((item) => `
+      <a class="article-card" href="${item.url}" data-thumb-type="${item.thumbType}">
+        <div class="article-card__thumb">
+          <h3 class="article-card__title">${item.title}</h3>
+        </div>
+        <div class="article-card__body">
+          <p class="article-card__excerpt">${item.excerpt}</p>
+        </div>
+      </a>
+    `).join("");
+  }
+
   function initArticleFilter() {
     const form = document.getElementById("articleFilter");
     const grid = document.getElementById("articleListFull");
@@ -701,6 +758,7 @@
     initSlider();
     initRankingTabs();
     initRelatedOffers();
+    initPopularArticles();
     initArticleFilter();
     initSearchResults();
     initArticleThumbTypes();
