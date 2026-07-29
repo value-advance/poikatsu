@@ -752,6 +752,18 @@
     { title: "固定費が少ない人のポイ活術!少額支出でも効率よく貯める方法", url: "/pages/articles/koteihi-sukunai-poikatsu.html", category: "ポイントサイト", date: "2026.07.14", thumbType: "beginner", excerpt: "固定費が少ない人の特徴や日常買い物を中心にする考え方、キャンペーンの絞り方、ポイント失効を防ぐ方法、少額でも満足度を上げる工夫まで、少額支出型のポイ活術を解説します。" },
     { title: "キャッシュレスが不安な人向けポイ活!現金感覚で使うための管理方法", url: "/pages/articles/cashless-fuan-poikatsu.html", category: "ポイントサイト", date: "2026.07.14", thumbType: "beginner", excerpt: "不安を感じる理由や利用上限を決める方法、通知で支出を確認するコツ、プリペイド型の活用、現金と併用するコツまで、キャッシュレスが不安な人向けのポイ活管理方法を解説します。" },
     { title: "ちょびリッチとは?評判・特徴からポイントの貯め方まで徹底解説", url: "/pages/articles/chobirich-poikatsu.html", category: "ポイントサイト", date: "2026.07.15", thumbType: "earnings", excerpt: "老舗ポイントサイト「ちょびリッチ」の特徴や実績、おすすめの訴求ポイント、ポイントの貯め方、登録方法までをわかりやすく解説します。" },
+    { title: "モッピーでポイ活を始める方法!高還元案件を見る前の確認ポイント", url: "/pages/articles/moppy-hajimekata.html", category: "ポイントサイト", date: "2026.07.26", thumbType: "earnings", excerpt: "モッピーの基本や案件ジャンルの種類、高還元案件の注意点、承認条件の読み方、交換先を決めて使うコツを初心者向けに解説します。" },
+    { title: "ポイントインカムの特徴とは?買い物・ゲーム・案件を使い分ける方法", url: "/pages/articles/pointincome-tsukaikata.html", category: "ポイントサイト", date: "2026.07.26", thumbType: "earnings", excerpt: "ポイントインカムの特徴や買い物案件の使い方、ゲーム案件の考え方、ランク制度を見る時の注意、自分に合う案件を選ぶコツを初心者向けに解説します。" },
+    { title: "ワラウでできるポイ活とは?遊びながら貯める前に知りたい基本", url: "/pages/articles/warau-tsukaikata.html", category: "ポイントサイト", date: "2026.07.26", thumbType: "earnings", excerpt: "ワラウの主な貯め方やゲーム系コンテンツの使い方、広告案件の確認ポイント、毎日続ける場合の注意、時間をかけすぎないコツを初心者向けに解説します。" },
+    { title: "ちょびリッチの使い方!ポイントサイト初心者が見るべき案件と交換先", url: "/pages/articles/chobirich-tsukaikata.html", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ちょびリッチの基本や案件利用の流れ、交換先の選び方、承認待ちの確認方法、他サイトと比べる時のポイントを初心者向けに解説します。" },
+    { title: "ECナビでポイントを貯める方法!アンケートと買い物を組み合わせるコツ", url: "/pages/articles/ecnavi-tsukaikata.html", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ECナビの特徴やアンケートで貯める方法、ネットショッピングで使う流れ、交換先と手数料の確認、毎日作業にしない続け方を初心者向けに解説します。" },
+    { title: "ニフティポイントクラブの活用術!ネット利用者向けのポイ活基本", url: "/pages/articles/nifty-point-club-poikatsu.html", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ニフティポイントクラブの特徴や通販案件の探し方、サービス申込み案件の注意、ポイント交換の流れ、利用履歴を残すコツを初心者向けに解説します。" },
+    { title: "トリマで移動ポイ活する方法!歩く・移動する前に知るべき注意点", url: "/pages/articles/torima-idou-poikatsu.html", category: "アプリ案件", date: "2026.07.27", thumbType: "mobile", excerpt: "トリマの仕組みや移動・歩数で貯める流れ、バッテリー消費の注意、生活に合わせて続けるコツを初心者向けに解説します。" },
+    { title: "レシチャレ(旧クラシルリワード)で貯めるポイ活とは?レシート・移動・広告の使い方", url: "/pages/articles/reshichare-poikatsu.html", category: "アプリ案件", date: "2026.07.27", thumbType: "mobile", excerpt: "レシチャレ(旧クラシルリワード)の特徴やレシート登録の基本、移動や広告で貯める方法、交換前に確認することを初心者向けに解説します。" },
+    { title: "TikTok Liteのポイ活はどう使う?登録前に確認したい条件と注意点", url: "/pages/articles/tiktok-lite-poikatsu.html", category: "アプリ案件", date: "2026.07.27", thumbType: "mobile", excerpt: "TikTok Liteで貯める仕組みや招待・タスクの確認ポイント、条件変更への注意、交換・出金前のチェック事項を初心者向けに解説します。" },
+    { title: "レシートアプリでポイ活する方法!買い物後に捨てずに活用するコツ", url: "/pages/articles/receipt-app-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "app", excerpt: "レシートアプリの基本や撮影前に確認すること、対象商品案件の探し方、個人情報を守る注意点、習慣化しやすい管理方法を初心者向けに解説します。" },
+    { title: "ONEでレシートポイ活を始める方法!撮影前に確認したいポイント", url: "/pages/articles/one-receipt-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "mobile", excerpt: "レシート買取アプリONEの特徴やレシート登録の流れ、対象ミッションの選び方、否認されやすいケースを初心者向けに解説します。" },
+    { title: "CODEで商品バーコードを使ったポイ活!レシート登録と案件活用の基本", url: "/pages/articles/code-receipt-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "mobile", excerpt: "CODEの仕組みやバーコード登録の流れ、対象商品の見つけ方、レシート撮影の注意点、日用品購入で活かすコツを初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
