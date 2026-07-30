@@ -764,6 +764,9 @@
     { title: "レシートアプリでポイ活する方法!買い物後に捨てずに活用するコツ", url: "/pages/articles/receipt-app-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "app", excerpt: "レシートアプリの基本や撮影前に確認すること、対象商品案件の探し方、個人情報を守る注意点、習慣化しやすい管理方法を初心者向けに解説します。" },
     { title: "ONEでレシートポイ活を始める方法!撮影前に確認したいポイント", url: "/pages/articles/one-receipt-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "mobile", excerpt: "レシート買取アプリONEの特徴やレシート登録の流れ、対象ミッションの選び方、否認されやすいケースを初心者向けに解説します。" },
     { title: "CODEで商品バーコードを使ったポイ活!レシート登録と案件活用の基本", url: "/pages/articles/code-receipt-poikatsu.html", category: "アプリ案件", date: "2026.07.29", thumbType: "mobile", excerpt: "CODEの仕組みやバーコード登録の流れ、対象商品の見つけ方、レシート撮影の注意点、日用品購入で活かすコツを初心者向けに解説します。" },
+    { title: "楽天チェックで来店ポイントを貯める方法!外出ついでに使う基本", url: "/pages/articles/rakuten-check-poikatsu.html", category: "ショッピング", date: "2026.07.30", thumbType: "app", excerpt: "楽天チェックの特徴や対象店舗の探し方、来店時の操作手順、位置情報利用の注意点を初心者向けに解説します。" },
+    { title: "移動系ポイ活アプリの選び方!歩数・移動距離・広告視聴の違い", url: "/pages/articles/idou-app-erabikata.html", category: "アプリ案件", date: "2026.07.30", thumbType: "compare", excerpt: "歩数型・移動距離型・広告視聴型など、移動系ポイ活アプリの種類と違い、バッテリー・通信量の確認ポイントを初心者向けに解説します。" },
+    { title: "歩数アプリでポイントを貯める方法!健康習慣と節約を両立するコツ", url: "/pages/articles/hosuu-app-poikatsu.html", category: "アプリ案件", date: "2026.07.30", thumbType: "beginner", excerpt: "歩数ポイ活の基本や目標歩数の決め方、ポイント獲得条件の見方、スマホ設定の注意点を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
