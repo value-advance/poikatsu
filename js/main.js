@@ -767,6 +767,9 @@
     { title: "楽天チェックで来店ポイントを貯める方法!外出ついでに使う基本", url: "/pages/articles/rakuten-check-poikatsu.html", category: "ショッピング", date: "2026.07.30", thumbType: "app", excerpt: "楽天チェックの特徴や対象店舗の探し方、来店時の操作手順、位置情報利用の注意点を初心者向けに解説します。" },
     { title: "移動系ポイ活アプリの選び方!歩数・移動距離・広告視聴の違い", url: "/pages/articles/idou-app-erabikata.html", category: "アプリ案件", date: "2026.07.30", thumbType: "compare", excerpt: "歩数型・移動距離型・広告視聴型など、移動系ポイ活アプリの種類と違い、バッテリー・通信量の確認ポイントを初心者向けに解説します。" },
     { title: "歩数アプリでポイントを貯める方法!健康習慣と節約を両立するコツ", url: "/pages/articles/hosuu-app-poikatsu.html", category: "アプリ案件", date: "2026.07.30", thumbType: "beginner", excerpt: "歩数ポイ活の基本や目標歩数の決め方、ポイント獲得条件の見方、スマホ設定の注意点を初心者向けに解説します。" },
+    { title: "アンケートモニターでポイ活する方法!スキマ時間で稼ぐ前の基本", url: "/pages/articles/enquete-monitor-poikatsu.html", category: "アンケート", date: "2026.07.31", thumbType: "beginner", excerpt: "アンケートモニターの仕組みや事前登録で入力する情報、単価と時間効率の考え方、個人情報の注意点を初心者向けに解説します。" },
+    { title: "マクロミルでアンケートポイ活を始める方法!回答前の注意点を解説", url: "/pages/articles/macromill-tsukaikata.html", category: "アンケート", date: "2026.07.31", thumbType: "earnings", excerpt: "マクロミルの特徴やアンケート配信の流れ、本調査に進むための考え方、ポイント交換の基本、正確に回答するための注意点を初心者向けに解説します。" },
+    { title: "楽天インサイトの使い方!楽天ポイントをアンケートで貯める方法", url: "/pages/articles/rakuten-insight-tsukaikata.html", category: "アンケート", date: "2026.07.31", thumbType: "app", excerpt: "楽天インサイトの特徴やアンケート回答の流れ、楽天ポイントとして受け取る仕組み、回答時の注意点を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
