@@ -770,6 +770,9 @@
     { title: "アンケートモニターでポイ活する方法!スキマ時間で稼ぐ前の基本", url: "/pages/articles/enquete-monitor-poikatsu.html", category: "アンケート", date: "2026.07.31", thumbType: "beginner", excerpt: "アンケートモニターの仕組みや事前登録で入力する情報、単価と時間効率の考え方、個人情報の注意点を初心者向けに解説します。" },
     { title: "マクロミルでアンケートポイ活を始める方法!回答前の注意点を解説", url: "/pages/articles/macromill-tsukaikata.html", category: "アンケート", date: "2026.07.31", thumbType: "earnings", excerpt: "マクロミルの特徴やアンケート配信の流れ、本調査に進むための考え方、ポイント交換の基本、正確に回答するための注意点を初心者向けに解説します。" },
     { title: "楽天インサイトの使い方!楽天ポイントをアンケートで貯める方法", url: "/pages/articles/rakuten-insight-tsukaikata.html", category: "アンケート", date: "2026.07.31", thumbType: "app", excerpt: "楽天インサイトの特徴やアンケート回答の流れ、楽天ポイントとして受け取る仕組み、回答時の注意点を初心者向けに解説します。" },
+    { title: "infoQでポイ活する方法!アンケートと記事作成案件の見方", url: "/pages/articles/infoq-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "compare", excerpt: "infoQの主な貯め方やアンケート案件の基本、ライティング系案件の注意、交換先の確認、得意な案件に絞るコツを初心者向けに解説します。" },
+    { title: "キューモニターでアンケートポイ活!初心者が知るべき使い方", url: "/pages/articles/cue-monitor-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "earnings", excerpt: "キューモニターの特徴やアンケートの種類、ポイント付与の流れ、回答品質で注意することを初心者向けに解説します。" },
+    { title: "座談会・会場調査のポイ活とは?高単価案件に参加する前の注意点", url: "/pages/articles/zadankai-kaijouchousa-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "caution", excerpt: "座談会案件の特徴や会場調査の流れ、参加条件の確認方法、個人情報と交通費の注意を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
