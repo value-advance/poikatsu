@@ -752,6 +752,9 @@
     { title: "infoQでポイ活する方法!アンケートと記事作成案件の見方", url: "/pages/articles/infoq-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "compare", excerpt: "infoQの主な貯め方やアンケート案件の基本、ライティング系案件の注意、交換先の確認、得意な案件に絞るコツを初心者向けに解説します。" },
     { title: "キューモニターでアンケートポイ活!初心者が知るべき使い方", url: "/pages/articles/cue-monitor-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "earnings", excerpt: "キューモニターの特徴やアンケートの種類、ポイント付与の流れ、回答品質で注意することを初心者向けに解説します。" },
     { title: "座談会・会場調査のポイ活とは?高単価案件に参加する前の注意点", url: "/pages/articles/zadankai-kaijouchousa-poikatsu.html", category: "アンケート", date: "2026.08.01", thumbType: "caution", excerpt: "座談会案件の特徴や会場調査の流れ、参加条件の確認方法、個人情報と交通費の注意を初心者向けに解説します。" },
+    { title: "クレジットカード発行案件のポイ活術!申し込み前に確認すべきこと", url: "/pages/articles/creditcard-hakkou-anken-poikatsu.html", category: "クレジットカード", date: "2026.08.02", thumbType: "caution", excerpt: "カード発行案件の仕組みや年会費と利用条件の確認、信用情報への影響、複数申込みを避ける理由、作った後の管理方法を初心者向けに解説します。" },
+    { title: "じゃらんでポイ活する方法!宿泊・遊び体験予約でポイントを貯めるコツ", url: "/pages/articles/jalan-tsukaikata.html", category: "キャンペーン", date: "2026.08.02", thumbType: "earnings", excerpt: "じゃらんのポイントの特徴や宿泊予約で貯める流れ、遊び体験予約の活用、クーポンとポイントの確認、旅行後に見直すことを初心者向けに解説します。" },
+    { title: "マクドナルドでお得に買うポイ活術!アプリ・クーポン・支払いの基本", url: "/pages/articles/mcdonalds-poikatsu.html", category: "ショッピング", date: "2026.08.02", thumbType: "mobile", excerpt: "マクドナルドアプリの使い方やクーポン利用の注意、ポイントが貯まる支払い方法、モバイルオーダーの確認を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
