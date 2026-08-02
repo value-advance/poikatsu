@@ -2125,13 +2125,49 @@ h1, h2, h3, h4 {
 .compare-table__official {
   display: inline-block;
   margin-top: 2px;
+  padding: 8px 14px;
+  border: 1px solid var(--color-primary);
+  border-radius: 999px;
   color: var(--color-primary);
   font-weight: 700;
+  font-size: 12px;
   text-decoration: none;
+  white-space: nowrap;
 }
 
 .compare-table__official:hover {
-  text-decoration: underline;
+  background: var(--color-primary);
+  color: #fff;
+}
+
+/* スマホでのみ表示する「横スクロールできます」案内 */
+.compare-table-hint {
+  display: block;
+  margin: 0 0 8px;
+  font-size: 12px;
+  color: var(--color-text-light);
+}
+
+@media (min-width: 600px) {
+  .compare-table-hint {
+    display: none;
+  }
+}
+
+/* guide-card__title / faq-item__q をh3に変更した際も、
+   article-body h3の共通スタイルで上書きされないようにする */
+.article-body .guide-card__title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin: 0 0 6px;
+}
+
+.article-body .faq-item__q {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--color-navy);
+  margin: 0 0 6px;
 }
 
 /* 目的別カード・選び方カード共通 */
