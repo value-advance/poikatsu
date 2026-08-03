@@ -314,6 +314,14 @@ h1, h2, h3, h4 {
   border-left-color: var(--color-danger);
 }
 
+.section-desc {
+  margin: -8px 0 16px;
+  padding-left: 10px;
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+}
+
 .category-grid {
   display: grid;
   grid-template-columns: 1fr;
