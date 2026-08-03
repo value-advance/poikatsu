@@ -322,6 +322,13 @@ h1, h2, h3, h4 {
   line-height: 1.6;
 }
 
+/* 単調にならないよう背景色で目立たせるセクション */
+.section--highlight {
+  background: linear-gradient(135deg, #fff1d6, #ffe6cc);
+  border-radius: var(--radius);
+  padding: 24px 16px;
+}
+
 .category-grid {
   display: grid;
   grid-template-columns: 1fr;
