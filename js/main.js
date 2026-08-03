@@ -755,6 +755,9 @@
     { title: "クレジットカード発行案件のポイ活術!申し込み前に確認すべきこと", url: "/pages/articles/creditcard-hakkou-anken-poikatsu.html", category: "クレジットカード", date: "2026.08.02", thumbType: "caution", excerpt: "カード発行案件の仕組みや年会費と利用条件の確認、信用情報への影響、複数申込みを避ける理由、作った後の管理方法を初心者向けに解説します。" },
     { title: "じゃらんでポイ活する方法!宿泊・遊び体験予約でポイントを貯めるコツ", url: "/pages/articles/jalan-tsukaikata.html", category: "キャンペーン", date: "2026.08.02", thumbType: "earnings", excerpt: "じゃらんのポイントの特徴や宿泊予約で貯める流れ、遊び体験予約の活用、クーポンとポイントの確認、旅行後に見直すことを初心者向けに解説します。" },
     { title: "マクドナルドでお得に買うポイ活術!アプリ・クーポン・支払いの基本", url: "/pages/articles/mcdonalds-poikatsu.html", category: "ショッピング", date: "2026.08.02", thumbType: "mobile", excerpt: "マクドナルドアプリの使い方やクーポン利用の注意、ポイントが貯まる支払い方法、モバイルオーダーの確認を初心者向けに解説します。" },
+    { title: "証券口座開設案件でポイ活する方法!投資前提で注意したい基本", url: "/pages/articles/shouken-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.03", thumbType: "caution", excerpt: "証券口座案件の特徴や開設だけと取引条件の違い、入金・取引条件の確認、投資リスクを分けて考える視点を初心者向けに解説します。" },
+    { title: "一休.comでお得に予約する考え方!高級宿・レストラン利用時のポイント", url: "/pages/articles/ikkyu-poikatsu.html", category: "キャンペーン", date: "2026.08.03", thumbType: "campaign", excerpt: "一休.comの特徴や宿泊とレストラン予約の違い、ポイント即時利用の考え方、タイムセールの注意点を初心者向けに解説します。" },
+    { title: "タクシーアプリでポイ活する方法!クーポンと決済ポイントの使い方", url: "/pages/articles/taxi-app-poikatsu.html", category: "アプリ案件", date: "2026.08.03", thumbType: "mobile", excerpt: "タクシーアプリの基本や初回クーポンの確認、決済方法で貯まるポイント、迎車料金の注意点を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
