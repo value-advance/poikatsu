@@ -758,6 +758,9 @@
     { title: "証券口座開設案件でポイ活する方法!投資前提で注意したい基本", url: "/pages/articles/shouken-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.03", thumbType: "caution", excerpt: "証券口座案件の特徴や開設だけと取引条件の違い、入金・取引条件の確認、投資リスクを分けて考える視点を初心者向けに解説します。" },
     { title: "一休.comでお得に予約する考え方!高級宿・レストラン利用時のポイント", url: "/pages/articles/ikkyu-poikatsu.html", category: "キャンペーン", date: "2026.08.03", thumbType: "campaign", excerpt: "一休.comの特徴や宿泊とレストラン予約の違い、ポイント即時利用の考え方、タイムセールの注意点を初心者向けに解説します。" },
     { title: "タクシーアプリでポイ活する方法!クーポンと決済ポイントの使い方", url: "/pages/articles/taxi-app-poikatsu.html", category: "アプリ案件", date: "2026.08.03", thumbType: "mobile", excerpt: "タクシーアプリの基本や初回クーポンの確認、決済方法で貯まるポイント、迎車料金の注意点を初心者向けに解説します。" },
+    { title: "ANAマイレージモールの使い方!通販前にマイルを貯める経由術", url: "/pages/articles/ana-mileage-mall-poikatsu.html", category: "ショッピング", date: "2026.08.04", thumbType: "mile", excerpt: "ANAマイレージモールの仕組みや対象ショップの探し方、マイル付与条件の確認、他ポイントとの違いを初心者向けに解説します。" },
+    { title: "FX口座案件のポイ活は注意が必要?高還元に飛びつく前の確認点", url: "/pages/articles/fx-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.04", thumbType: "caution", excerpt: "FX案件が高還元になりやすい理由や取引条件の確認、損失リスクの考え方、初心者が避けたい使い方を初心者向けに解説します。" },
+    { title: "牛丼チェーンでポイ活する方法!吉野家・すき家・松屋利用時の基本", url: "/pages/articles/gyudon-chain-poikatsu.html", category: "ショッピング", date: "2026.08.04", thumbType: "mobile", excerpt: "牛丼チェーンのポイント確認や公式アプリとクーポン、スマホ決済の使い分け、朝食・ランチ利用の注意点を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
