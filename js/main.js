@@ -761,6 +761,9 @@
     { title: "ANAマイレージモールの使い方!通販前にマイルを貯める経由術", url: "/pages/articles/ana-mileage-mall-poikatsu.html", category: "ショッピング", date: "2026.08.04", thumbType: "mile", excerpt: "ANAマイレージモールの仕組みや対象ショップの探し方、マイル付与条件の確認、他ポイントとの違いを初心者向けに解説します。" },
     { title: "FX口座案件のポイ活は注意が必要?高還元に飛びつく前の確認点", url: "/pages/articles/fx-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.04", thumbType: "caution", excerpt: "FX案件が高還元になりやすい理由や取引条件の確認、損失リスクの考え方、初心者が避けたい使い方を初心者向けに解説します。" },
     { title: "牛丼チェーンでポイ活する方法!吉野家・すき家・松屋利用時の基本", url: "/pages/articles/gyudon-chain-poikatsu.html", category: "ショッピング", date: "2026.08.04", thumbType: "mobile", excerpt: "牛丼チェーンのポイント確認や公式アプリとクーポン、スマホ決済の使い分け、朝食・ランチ利用の注意点を初心者向けに解説します。" },
+    { title: "ウエル活とは?ドラッグストアでポイントを活用する基本と注意点", url: "/pages/articles/welkatsu-poikatsu.html", category: "ショッピング", date: "2026.08.05", thumbType: "campaign", excerpt: "ウエル活の基本や対象日・対象ポイント、買うものリストの作り方、使いすぎを防ぐ注意点を初心者向けに解説します。" },
+    { title: "暗号資産口座案件でポイ活する時の注意点!口座開設前に見るべき条件", url: "/pages/articles/kasoshisan-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.05", thumbType: "compare", excerpt: "暗号資産口座案件の基本や本人確認と入金条件、価格変動リスクの確認、手数料と送金条件を初心者向けに解説します。" },
+    { title: "ふるさと納税ポータルの選び方!ポイント重視で比較する時の注意点", url: "/pages/articles/furusato-portal-erabikata.html", category: "ショッピング", date: "2026.08.05", thumbType: "compare", excerpt: "ふるさと納税ポータルサイトごとの特徴やポイント還元を見る時の注意、返礼品だけで選ばない理由、控除上限額の確認を初心者向けに解説します。" },
   ];
 
   function initSearchResults() {
