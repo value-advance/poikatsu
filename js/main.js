@@ -764,6 +764,7 @@
     { title: "ウエル活とは?ドラッグストアでポイントを活用する基本と注意点", url: "/pages/articles/welkatsu-poikatsu.html", category: "ショッピング", date: "2026.08.05", thumbType: "campaign", excerpt: "ウエル活の基本や対象日・対象ポイント、買うものリストの作り方、使いすぎを防ぐ注意点を初心者向けに解説します。" },
     { title: "暗号資産口座案件でポイ活する時の注意点!口座開設前に見るべき条件", url: "/pages/articles/kasoshisan-kouza-anken-poikatsu.html", category: "口座開設", date: "2026.08.05", thumbType: "compare", excerpt: "暗号資産口座案件の基本や本人確認と入金条件、価格変動リスクの確認、手数料と送金条件を初心者向けに解説します。" },
     { title: "ふるさと納税ポータルの選び方!ポイント重視で比較する時の注意点", url: "/pages/articles/furusato-portal-erabikata.html", category: "ショッピング", date: "2026.08.05", thumbType: "compare", excerpt: "ふるさと納税ポータルサイトごとの特徴やポイント還元を見る時の注意、返礼品だけで選ばない理由、控除上限額の確認を初心者向けに解説します。" },
+    { title: "DMM株とは?少額投資・低手数料が魅力の株式投資アプリを解説", url: "/pages/articles/dmm-kabu-poikatsu.html", category: "口座開設", date: "2026.08.05", thumbType: "earnings", excerpt: "DMM株の特徴や手数料、少額投資への対応、口座開設の流れ、キャンペーン情報までを投資初心者向けにわかりやすく解説します。" },
   ];
 
   function initSearchResults() {
