@@ -766,6 +766,7 @@
     { title: "ふるさと納税ポータルの選び方!ポイント重視で比較する時の注意点", url: "/pages/articles/furusato-portal-erabikata.html", category: "ショッピング", date: "2026.08.05", thumbType: "compare", excerpt: "ふるさと納税ポータルサイトごとの特徴やポイント還元を見る時の注意、返礼品だけで選ばない理由、控除上限額の確認を初心者向けに解説します。" },
     { title: "DMM株とは?少額投資・低手数料が魅力の株式投資アプリを解説", url: "/pages/articles/dmm-kabu-poikatsu.html", category: "口座開設", date: "2026.08.05", thumbType: "earnings", excerpt: "DMM株の特徴や手数料、少額投資への対応、口座開設の流れ、キャンペーン情報までを投資初心者向けにわかりやすく解説します。" },
     { title: "松井証券のiDeCo(イデコ)とは?手数料や商品ラインナップを解説", url: "/pages/articles/matsui-shouken-ideco-poikatsu.html", category: "口座開設", date: "2026.08.06", thumbType: "earnings", excerpt: "松井証券のiDeCoは運営管理手数料が0円で、eMAXIS Slimを含む低コスト商品40種類が揃うのが特徴。投信残高ポイントサービスの仕組みや申込方法までわかりやすく解説します。" },
+    { title: "dポイント・d払いの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/dpoint-dharai-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "dポイントやd払いでポイントを貯める方法を初心者向けに解説。店舗、d払い、dカード、ネットサービスなど、主な貯め方と使い方、注意点をまとめています。" },
   ];
 
   function initSearchResults() {
