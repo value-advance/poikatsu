@@ -767,6 +767,10 @@
     { title: "DMM株とは?少額投資・低手数料が魅力の株式投資アプリを解説", url: "/pages/articles/dmm-kabu-poikatsu.html", category: "口座開設", date: "2026.08.05", thumbType: "earnings", excerpt: "DMM株の特徴や手数料、少額投資への対応、口座開設の流れ、キャンペーン情報までを投資初心者向けにわかりやすく解説します。" },
     { title: "松井証券のiDeCo(イデコ)とは?手数料や商品ラインナップを解説", url: "/pages/articles/matsui-shouken-ideco-poikatsu.html", category: "口座開設", date: "2026.08.06", thumbType: "earnings", excerpt: "松井証券のiDeCoは運営管理手数料が0円で、eMAXIS Slimを含む低コスト商品40種類が揃うのが特徴。投信残高ポイントサービスの仕組みや申込方法までわかりやすく解説します。" },
     { title: "dポイント・d払いの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/dpoint-dharai-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "dポイントやd払いでポイントを貯める方法を初心者向けに解説。店舗、d払い、dカード、ネットサービスなど、主な貯め方と使い方、注意点をまとめています。" },
+    { title: "楽天ポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/rakuten-point-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "楽天ポイントの貯め方を初心者向けに解説。楽天市場、楽天ペイ、楽天カード、楽天ポイントカード加盟店など、主な貯め方と使い方、注意点をまとめています。" },
+    { title: "PayPayポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/paypay-point-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "PayPayポイントの貯め方を初心者向けに解説。PayPay決済、Yahoo!ショッピング、クレジットカード紐付けなど、主な貯め方と使い方、注意点をまとめています。" },
+    { title: "Pontaポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/ponta-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "Pontaポイントの貯め方を初心者向けに解説。ローソン、au PAY、リクルート系サービスなど、主な貯め方と使い方、注意点をまとめています。" },
+    { title: "Vポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/vpoint-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "Vポイントの貯め方を初心者向けに解説。提携店舗での提示、三井住友カードのタッチ決済、VポイントPayアプリなど、主な貯め方と使い方、注意点をまとめています。" },
   ];
 
   function initSearchResults() {
