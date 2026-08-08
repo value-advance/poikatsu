@@ -2382,3 +2382,128 @@ a.points-by-type__card:focus-visible {
   }
 }
 
+/* ===================================================================
+   アコーディオン(項目数が多いリストの開閉表示。ネイティブdetails/summaryを使用)
+=================================================================== */
+.accordion {
+  margin: 16px 0;
+}
+
+.accordion-item {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  margin-bottom: 8px;
+  overflow: hidden;
+}
+
+.accordion-item__summary {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-weight: 700;
+  font-size: 14px;
+  color: var(--color-navy);
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.accordion-item__summary::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-item__summary::after {
+  content: "+";
+  flex: 0 0 auto;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-primary);
+  transition: transform .2s ease;
+}
+
+.accordion-item[open] .accordion-item__summary::after {
+  transform: rotate(45deg);
+}
+
+.accordion-item__summary:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: -2px;
+}
+
+.accordion-item__body {
+  padding: 0 16px 16px;
+  font-size: 13px;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
+.accordion-item__body p {
+  margin: 0 0 8px;
+}
+
+.accordion-item__body p:last-child {
+  margin-bottom: 0;
+}
+
+.accordion-item__body a {
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+/* ===================================================================
+   dポイントの使い方ページ:3カテゴリ選択カード(横並び・アンカージャンプ)
+=================================================================== */
+.dpoint-category-nav {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+@media (min-width: 600px) {
+  .dpoint-category-nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.dpoint-category-nav__card {
+  display: block;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  padding: 18px 16px;
+  text-align: center;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+.dpoint-category-nav__card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.dpoint-category-nav__card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.dpoint-category-nav__icon {
+  font-size: 26px;
+  margin-bottom: 8px;
+}
+
+.dpoint-category-nav__title {
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-navy);
+  margin: 0 0 6px;
+}
+
+.dpoint-category-nav__desc {
+  font-size: 12px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+

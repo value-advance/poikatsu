@@ -771,6 +771,7 @@
     { title: "PayPayポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/paypay-point-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "PayPayポイントの貯め方を初心者向けに解説。PayPay決済、Yahoo!ショッピング、クレジットカード紐付けなど、主な貯め方と使い方、注意点をまとめています。" },
     { title: "Pontaポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/ponta-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "Pontaポイントの貯め方を初心者向けに解説。ローソン、au PAY、リクルート系サービスなど、主な貯め方と使い方、注意点をまとめています。" },
     { title: "Vポイントの貯め方|ポイントをもらう方法と使い方", url: "/pages/articles/vpoint-tamekata.html", category: "ショッピング", date: "2026.08.06", thumbType: "beginner", excerpt: "Vポイントの貯め方を初心者向けに解説。提携店舗での提示、三井住友カードのタッチ決済、VポイントPayアプリなど、主な貯め方と使い方、注意点をまとめています。" },
+    { title: "dポイントの使い方|そのまま使う・連携する・交換する完全ガイド", url: "/pages/articles/dpoint-tsukaikata.html", category: "ショッピング", date: "2026.08.07", thumbType: "summary", excerpt: "dポイントの使い方を徹底解説。街のお店やネットでそのまま使う方法、アカウント連携で使えるサービス、JALマイル・スターバックスカードへの交換方法を紹介します。" },
   ];
 
   function initSearchResults() {
