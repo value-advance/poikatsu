@@ -773,6 +773,7 @@
     { title: "dポイントの使い方|そのまま使う・連携する・交換する完全ガイド", url: "/pages/articles/dpoint-tsukaikata.html", category: "ショッピング", date: "2026.08.07", thumbType: "summary", excerpt: "dポイントの使い方を徹底解説。街のお店やネットでそのまま使う方法、アカウント連携で使えるサービス、JALマイル・スターバックスカードへの交換方法を紹介します。" },
     { title: "楽天ポイントの使い方|そのまま使う・連携する・交換する完全ガイド", url: "/pages/articles/rakuten-point-tsukaikata.html", category: "ショッピング", date: "2026.08.09", thumbType: "summary", excerpt: "楽天ポイントの使い方を徹底解説。街のお店やネットでそのまま使う方法、アカウント連携で使えるサービス、ANAマイル・楽天Edyへの交換方法を紹介します。" },
     { title: "PayPayポイントの使い方|そのまま使う・連携する・交換する完全ガイド", url: "/pages/articles/paypay-point-tsukaikata.html", category: "ショッピング", date: "2026.08.09", thumbType: "summary", excerpt: "PayPayポイントの使い方を徹底解説。街のお店やネットでそのまま使う方法、アカウント連携で使えるサービス、Vポイントへの交換方法を紹介します。" },
+    { title: "Pontaポイントの使い方|そのまま使う・連携する・交換する完全ガイド", url: "/pages/articles/ponta-tsukaikata.html", category: "ショッピング", date: "2026.08.09", thumbType: "summary", excerpt: "Pontaポイントの使い方を徹底解説。街のお店やau PAYでそのまま使う方法、アカウント連携で使えるサービス、JALマイル・ポイント運用への交換方法を紹介します。" },
   ];
 
   function initSearchResults() {
