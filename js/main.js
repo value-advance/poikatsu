@@ -171,9 +171,8 @@
 
   function renderRankingCards(grid, catKey) {
     const items = RANKING_DATA[catKey] || [];
-    grid.innerHTML = items.map((item, i) => `
+    grid.innerHTML = items.map((item) => `
       <a class="ranking-card" href="${item.url || "#"}">
-        <span class="ranking-card__rank">${i + 1}</span>
         <div class="ranking-card__thumb">${item.img ? `<img src="${item.img}" alt="${item.title}" loading="lazy">` : ""}</div>
         <div class="ranking-card__body">
           <p class="ranking-card__title">${item.title}</p>
