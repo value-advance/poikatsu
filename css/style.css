@@ -2344,6 +2344,30 @@ a.points-by-type__card:focus-visible {
   color: var(--color-text-light);
 }
 
+/* guide-cardをリンク単体(<a>)で使う場合、グリッドの外でも
+   ブロック要素として正しく表示されるようにする */
+a.guide-card {
+  display: block;
+  text-decoration: none;
+  transition: box-shadow .2s ease, transform .2s ease;
+}
+
+a.guide-card:hover {
+  box-shadow: var(--shadow-hover);
+  transform: translateY(-2px);
+}
+
+.guide-card__badge {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: #fff1e0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 8px;
+}
+
 /* ページ内ショートカット(article-tocを横並びチップ風に拡張) */
 .article-toc__list {
   list-style: none;
