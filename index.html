@@ -29,8 +29,8 @@
     <section class="slider" aria-label="メインバナー">
       <div class="slider__track">
         <div class="slider__slide slider__slide--1">
-          <!-- TODO: リンク先が決まり次第、href を差し替え(内部ページは相対パス/アフィリエイトは発行URLをそのまま指定) -->
-          <a class="slider__link" href="#" data-slide-id="slider_main">
+          <!-- TODO: リンク先が決まり次第、href を追加(内部ページは相対パス/アフィリエイトは発行URLをそのまま指定)。href未指定の間はクリックしても遷移しない -->
+          <a class="slider__link" data-slide-id="slider_main">
             <picture>
               <source media="(min-width: 1024px)" srcset="images/slider/slider_main_pc.png">
               <img class="slider__img" src="images/slider/slider_main_sp.png" alt="ポイントの殿堂 メインバナー">
@@ -41,7 +41,7 @@
         <!--例:キャンペーンスライド(キャンペーン確定後、コメントを外して href / 画像URL を差し替える)
 
         <div class="slider__slide slider__slide--2">
-          <a class="slider__link" href="#" data-slide-id="main_slider02">
+          <a class="slider__link" data-slide-id="main_slider02">
             <picture>
               <source media="(min-width: 1024px)" srcset="images/slider/main_slider02_pc.png">
               <img class="slider__img" src="images/slider/main_slider02_sp.png" alt="ポイ活の始め方ガイド公開">
@@ -54,7 +54,7 @@
           </a>
         </div>
         <div class="slider__slide slider__slide--3">
-          <a class="slider__link" href="#" data-slide-id="main_slider03">
+          <a class="slider__link" data-slide-id="main_slider03">
             <picture>
               <source media="(min-width: 1024px)" srcset="images/slider/main_slider03_pc.png">
               <img class="slider__img" src="images/slider/main_slider03_sp.png" alt="期間限定!特別還元キャンペーン">
