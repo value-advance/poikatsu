@@ -319,13 +319,13 @@
     { title: "高島屋オンラインストアとは?百貨店品質のギフト・食品・衣類", excerpt: "百貨店品質のギフト・食品・衣類を扱う「高島屋オンラインストア」の特徴を解説します。", url: "/pages/articles/takashimaya-online-toha.html", thumbType: "summary", category: "shopping" },
     { title: "大丸松坂屋オンラインストアとは?ギフト・化粧品・ファッション", excerpt: "百貨店のギフト・化粧品・ファッションを扱う「大丸松坂屋オンラインストア」の特徴を解説します。", url: "/pages/articles/daimaru-matsuzakaya-toha.html", thumbType: "summary", category: "shopping" },
     // ポイントサイト
-    { title: "ワラウとは?老舗ポイントサイトの貯め方・交換方法を解説", excerpt: "運営歴25年以上、コンテンツ50種類以上の老舗ポイントサイト「ワラウ」の特徴を解説します。", url: "/pages/articles/warau-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ワラウとは?老舗ポイントサイトの貯め方・交換方法を解説", excerpt: "運営歴26年以上、コンテンツ50種類以上の老舗ポイントサイト「ワラウ」の特徴を解説します。", url: "/pages/articles/warau-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     { title: "ポイントインカムとは?アプリでも貯まるポイントサイトの特徴を解説", excerpt: "累計500万人以上が利用し、アプリの動画視聴や歩数計測でも貯まるポイントサイト「ポイントインカム」の特徴を解説します。", url: "/pages/articles/pointincome-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     { title: "アメフリとは?すきま時間で貯まるポイントサイトの特徴を解説", excerpt: "1日5分のすきま時間からでも取り組める、続けやすさが魅力のポイントサイト「アメフリ」の特徴を解説します。", url: "/pages/articles/amefri-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     { title: "ECナビとは?多彩な方法でポイントが貯まるポイントサイトの特徴を解説", excerpt: "ネットショッピングやアンケート、モニター参加など多彩な方法でポイントが貯まるポイントサイト「ECナビ」の特徴を解説します。", url: "/pages/articles/ecnavi-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     { title: "ハピタスとは?1pt=1円の明確なレートで貯まるポイントサイトの特徴を解説", excerpt: "3,000件以上のショップと提携し、1pt=1円のわかりやすいレートで貯まる高還元ポイントサイト「ハピタス」の特徴を解説します。", url: "/pages/articles/hapitas-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     { title: "ポイントミュージアムとは?毎日楽しく貯まるポイントサイトの特徴を解説", excerpt: "毎日抽選の「1000円ゲット」など、コツコツ楽しく貯められるポイントサイト「ポイントミュージアム」の特徴を解説します。", url: "/pages/articles/point-museum-poikatsu.html", thumbType: "earnings", category: "pointsite" },
-    { title: "ちょびリッチとは?評判・特徴からポイントの貯め方まで徹底解説", excerpt: "20年の実績を誇り、無料登録+ミッション達成でポイントが貯まる老舗ポイントサイト「ちょびリッチ」の特徴を解説します。", url: "/pages/articles/chobirich-poikatsu.html", thumbType: "earnings", category: "pointsite" },
+    { title: "ちょびリッチとは?評判・特徴からポイントの貯め方まで徹底解説", excerpt: "20年以上の運営実績があり、無料登録+ミッション達成でポイントが貯まる老舗ポイントサイト「ちょびリッチ」の特徴を解説します。", url: "/pages/articles/chobirich-poikatsu.html", thumbType: "earnings", category: "pointsite" },
     // 旅行(data-category="campaign")
     { title: "イオンコンパストラベルモール(宿泊予約)とは?WAON POINTが貯まる予約サービス", excerpt: "全国の宿・ホテルを検索・予約でき、WAON POINTが貯まる・使える「イオンコンパストラベルモール」の宿泊予約サービスを解説します。", url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu.html", thumbType: "compare", category: "campaign" },
     { title: "Yahoo!トラベルとは?PayPayポイントが貯まる・使える宿泊予約サービス", excerpt: "全国約17,000施設から比較できる宿泊予約サービス「Yahoo!トラベル」の特徴を解説します。", url: "/pages/articles/yahoo-travel-poikatsu.html", thumbType: "compare", category: "campaign" },
