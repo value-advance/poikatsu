@@ -548,6 +548,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "アプリインストール案件のポイ活!条件達成とアンインストールの注意", url: "/pages/articles/app-install-anken-poikatsu.html", category: "アプリ案件", date: "2026.08.11", thumbType: "app", excerpt: "アプリ案件の基本や初回起動・登録条件の確認、達成期限のチェック、アンインストール前の注意点を初心者向けに解説します。" },
+    { title: "カーシェア利用でポイントを活かす方法!短時間利用の節約チェック", url: "/pages/articles/carshare-point-katsuyou.html", category: "ショッピング", date: "2026.08.11", thumbType: "compare", excerpt: "カーシェアの費用構造やポイントが使える場面、クレカ払いの確認、長時間利用との比較、車なし生活で活用するコツを解説します。" },
+    { title: "無料会員登録案件でポイ活する方法!登録前後に確認したいこと", url: "/pages/articles/muryou-kaiin-touroku-poikatsu.html", category: "ポイントサイト", date: "2026.08.11", thumbType: "earnings", excerpt: "無料登録案件の特徴やメール認証の確認、対象外条件の見方、退会前の注意点、登録サービスを管理するコツを初心者向けに解説します。" },
     { title: "携帯料金でポイント還元!キャリア別お得な貯め方ガイド", url: "/pages/articles/keitai-ryokin-point.html", category: "クレジットカード", date: "2026.07.08", thumbType: "mobile", excerpt: "携帯料金の支払いでポイントを貯める方法を、ドコモ・ソフトバンク・au・楽天モバイル別に解説。" },
     { title: "ポイ活とは?初心者が最初に知っておきたい仕組みと始め方", url: "/pages/articles/poikatsu-kiso.html", category: "ポイントサイト", date: "2026.07.08", thumbType: "beginner", excerpt: "ポイ活の基本的な意味から、ポイントが貯まる主な場面、最初に準備するものまで解説します。" },
     { title: "ポイ活で月いくら節約できる?目安金額と現実的な稼ぎ方", url: "/pages/articles/tsukiikura-setsuyaku.html", category: "ポイントサイト", date: "2026.07.08", thumbType: "earnings", excerpt: "ポイ活で得られる金額の考え方や、月1,000円〜5,000円を目指す現実的な方法を解説します。" },
