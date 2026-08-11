@@ -106,7 +106,7 @@
 
   const RANKING_DATA = {
     pointsite: [
-      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
+      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
       { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
       { title: "アメフリ 1日5分のすきま時間から", type: "ポイントサイト", points: "5", suffix: "分から始められる", url: "/pages/articles/amefri-poikatsu.html", img: "https://www26.a8.net/svt/bgt?aid=260715065190&wid=002&eno=01&mid=s00000020637001023000&mc=1" },
       { title: "ECナビ 多彩な貯め方に対応", type: "ポイントサイト", points: "多彩な貯め方", suffix: "に対応", url: "/pages/articles/ecnavi-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065204&wid=002&eno=01&mid=s00000017066001042000&mc=1" },
@@ -156,7 +156,7 @@
       { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", url: "/pages/articles/auhikari-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
     ],
     sougou: [
-      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
+      { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
       { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", url: "/pages/articles/hapitas-poikatsu.html", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
       { title: "楽天市場 総合通販でジャンルが幅広い", type: "総合通販", points: "楽天ポイント", suffix: "が貯まる", url: "/pages/articles/rakuten-ichiba-toha.html", img: "/images/article-thumb/shopping/rakuten-ichiba.webp" },
       { title: "Amazon 品ぞろえと配送が充実", type: "総合通販", points: "Amazonポイント", suffix: "が貯まる", url: "/pages/articles/amazon-tsuhan-toha.html", img: "/images/article-thumb/shopping/amazon.webp" },
@@ -211,7 +211,7 @@
   // 各記事の category/tags は実際の <article> タグの値と一致させること。
   const PR_OFFERS = [
     // ポイントサイト
-    { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "41", suffix: "種類の交換先", category: "pointsite", tags: ["beginner"], url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
+    { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", category: "pointsite", tags: ["beginner"], url: "/pages/articles/warau-poikatsu.html", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
     { title: "ポイントインカム 累計会員数が突破", type: "ポイントサイト", points: "500", suffix: "万人が利用", category: "pointsite", tags: ["beginner"], url: "/pages/articles/pointincome-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065122&wid=002&eno=01&mid=s00000025908001003000&mc=1" },
     { title: "アメフリ 1日5分のすきま時間から", type: "ポイントサイト", points: "5", suffix: "分から始められる", category: "pointsite", tags: ["beginner"], url: "/pages/articles/amefri-poikatsu.html", img: "https://www26.a8.net/svt/bgt?aid=260715065190&wid=002&eno=01&mid=s00000020637001023000&mc=1" },
     { title: "ECナビ 多彩な貯め方に対応", type: "ポイントサイト", points: "多彩な貯め方", suffix: "に対応", category: "pointsite", tags: ["beginner"], url: "/pages/articles/ecnavi-poikatsu.html", img: "https://www27.a8.net/svt/bgt?aid=260715065204&wid=002&eno=01&mid=s00000017066001042000&mc=1" },
