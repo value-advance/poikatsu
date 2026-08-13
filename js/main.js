@@ -548,6 +548,12 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "サブスク無料トライアル案件のポイ活!解約忘れを防ぐ管理方法", url: "/pages/articles/subscription-trial-poikatsu", category: "ポイントサイト", date: "2026.08.13", thumbType: "caution", excerpt: "無料トライアル案件の仕組みやポイント条件の確認、解約期限の管理、継続課金の注意点、本当に使うサービスを選ぶコツを解説します。" },
+    { title: "すかいらーくグループでポイ活する方法!外食前のアプリ確認術", url: "/pages/articles/sukairaku-group-poikatsu", category: "ショッピング", date: "2026.08.13", thumbType: "mobile", excerpt: "すかいらーくアプリの特徴やクーポンの使い方、支払いで貯まるポイント、キャンペーン確認の注意、家族外食で活用するコツを解説します。" },
+    { title: "SHEINでポイ活する時の注意点!海外通販で見るべき費用とポイント", url: "/pages/articles/shein-poikatsu-chuuiten", category: "ショッピング", date: "2026.08.13", thumbType: "compare", excerpt: "SHEIN利用時の確認点やクーポン・ポイントの使い方、配送日数の注意、返品・サイズ確認、買いすぎを防ぐルールを解説します。" },
+    { title: "資料請求案件でポイ活する方法!申し込み前に確認したい注意点", url: "/pages/articles/shiryouseikyuu-anken-poikatsu", category: "ポイントサイト", date: "2026.08.12", thumbType: "caution", excerpt: "資料請求案件の特徴や対象外になりやすい条件、電話連絡の可能性、個人情報入力時の注意点、興味がある案件に絞るコツを初心者向けに解説します。" },
+    { title: "ブラウザ拡張機能でポイ活を便利にする方法!使いすぎない管理術", url: "/pages/articles/browser-kakuchou-poikatsu", category: "ポイントサイト", date: "2026.08.12", thumbType: "app", excerpt: "ブラウザ拡張の役割や経由忘れ防止に使う方法、通知が増えるデメリット、セキュリティ確認のポイント、必要な機能だけ残すコツを解説します。" },
+    { title: "ファストフードアプリでポイ活する方法!クーポンと決済を組み合わせるコツ", url: "/pages/articles/fastfood-app-poikatsu", category: "アプリ案件", date: "2026.08.12", thumbType: "compare", excerpt: "公式アプリの役割やクーポンの探し方、ポイントが貯まる決済、モバイルオーダーの注意、よく行く店だけ登録するコツを解説します。" },
     { title: "アプリインストール案件のポイ活!条件達成とアンインストールの注意", url: "/pages/articles/app-install-anken-poikatsu", category: "アプリ案件", date: "2026.08.11", thumbType: "app", excerpt: "アプリ案件の基本や初回起動・登録条件の確認、達成期限のチェック、アンインストール前の注意点を初心者向けに解説します。" },
     { title: "カーシェア利用でポイントを活かす方法!短時間利用の節約チェック", url: "/pages/articles/carshare-point-katsuyou", category: "ショッピング", date: "2026.08.11", thumbType: "compare", excerpt: "カーシェアの費用構造やポイントが使える場面、クレカ払いの確認、長時間利用との比較、車なし生活で活用するコツを解説します。" },
     { title: "無料会員登録案件でポイ活する方法!登録前後に確認したいこと", url: "/pages/articles/muryou-kaiin-touroku-poikatsu", category: "ポイントサイト", date: "2026.08.11", thumbType: "earnings", excerpt: "無料登録案件の特徴やメール認証の確認、対象外条件の見方、退会前の注意点、登録サービスを管理するコツを初心者向けに解説します。" },
