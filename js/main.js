@@ -548,6 +548,13 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "楽天ポイントとPayPayポイントはどっち?通販・決済・カードで比較", url: "/pages/articles/rakuten-paypay-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "楽天市場とYahoo!ショッピング、楽天ペイとPayPay、楽天カードとPayPayカードなど項目別に比較し、生活圏で選ぶ考え方を解説します。" },
+    { title: "dポイントとPontaポイントはどっち?貯めやすさ・使いやすさを比較", url: "/pages/articles/dpoint-ponta-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "携帯キャリア・スマホ決済・クレジットカード・コンビニ・ネット通販・交換・有効期限で比較し、生活圏で選ぶ考え方を解説します。" },
+    { title: "Vポイントはキャリアに縛られたくない人向け?メリット・相性の良いサービスを解説", url: "/pages/articles/vpoint-no-carrier", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "三井住友カード・Olive・SBI証券との相性やメリット・注意点、まとめない方がよいケースを初心者向けに解説します。" },
+    { title: "au・UQユーザーはPontaポイントにまとめるべき?相性の良いサービスを解説", url: "/pages/articles/au-uq-ponta", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "au PAY・au PAYカード・auじぶん銀行・ローソンとの相性や、Pontaに寄せない方がよいケースを初心者向けに解説します。" },
+    { title: "SoftBank・Y!mobileならPayPayポイント?相性の良いサービスを比較", url: "/pages/articles/softbank-ymobile-paypay-point", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "PayPay決済・PayPayカード・Yahoo!ショッピングとの相性や、他ポイントの方が向く人を初心者向けに解説します。" },
+    { title: "楽天モバイルなら楽天ポイントにまとめるべき?楽天経済圏との相性を解説", url: "/pages/articles/rakuten-mobile-rakuten-point", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "楽天カード・楽天ペイ・楽天市場・楽天銀行・楽天証券との相性や、寄せすぎるデメリットを初心者向けに解説します。" },
+    { title: "ドコモ・ahamoユーザーはdポイントにまとめるべき?相性の良いサービスを解説", url: "/pages/articles/docomo-ahamo-dpoint", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "d払い・dカード・ahamo光・ドコモでんきとの相性や、まとめなくてもよいケースを初心者向けに解説します。" },
     { title: "サブスク無料トライアル案件のポイ活!解約忘れを防ぐ管理方法", url: "/pages/articles/subscription-trial-poikatsu", category: "ポイントサイト", date: "2026.08.13", thumbType: "caution", excerpt: "無料トライアル案件の仕組みやポイント条件の確認、解約期限の管理、継続課金の注意点、本当に使うサービスを選ぶコツを解説します。" },
     { title: "すかいらーくグループでポイ活する方法!外食前のアプリ確認術", url: "/pages/articles/sukairaku-group-poikatsu", category: "ショッピング", date: "2026.08.13", thumbType: "mobile", excerpt: "すかいらーくアプリの特徴やクーポンの使い方、支払いで貯まるポイント、キャンペーン確認の注意、家族外食で活用するコツを解説します。" },
     { title: "SHEINでポイ活する時の注意点!海外通販で見るべき費用とポイント", url: "/pages/articles/shein-poikatsu-chuuiten", category: "ショッピング", date: "2026.08.13", thumbType: "compare", excerpt: "SHEIN利用時の確認点やクーポン・ポイントの使い方、配送日数の注意、返品・サイズ確認、買いすぎを防ぐルールを解説します。" },
