@@ -2407,6 +2407,98 @@ a.guide-card:hover {
 }
 
 /* ===================================================================
+   関連記事カード(重要な深掘り記事へのリンクを視覚的に強調する横長カード。
+   アフィリエイトCTA(.cta-simple)とは意図的に見た目を分離している)
+=================================================================== */
+.related-article-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+a.related-article-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 4px solid var(--color-navy);
+  border-radius: var(--radius);
+  padding: 14px 16px;
+  text-decoration: none;
+  transition: background .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+
+.related-article-card--compare {
+  border-left-color: var(--color-primary);
+}
+
+.related-article-card__body {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
+.related-article-card__label {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-navy);
+  background: #eef2f7;
+  padding: 2px 8px;
+  border-radius: 999px;
+  margin-bottom: 6px;
+}
+
+.related-article-card--compare .related-article-card__label {
+  color: var(--color-primary);
+  background: #fff1e0;
+}
+
+.related-article-card__title {
+  display: block;
+  font-size: 14px;
+  font-weight: 800;
+  color: var(--color-navy);
+  line-height: 1.5;
+  margin: 0 0 4px;
+}
+
+.related-article-card__desc {
+  display: block;
+  font-size: 13px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.related-article-card__arrow {
+  flex: none;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text-light);
+  transition: transform .2s ease, color .2s ease;
+}
+
+a.related-article-card:hover,
+a.related-article-card:focus-visible {
+  background: var(--color-bg);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-hover);
+}
+
+a.related-article-card:hover .related-article-card__arrow,
+a.related-article-card:focus-visible .related-article-card__arrow {
+  color: var(--color-primary);
+  transform: translateX(3px);
+}
+
+a.related-article-card:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* ===================================================================
    アコーディオン(項目数が多いリストの開閉表示。ネイティブdetails/summaryを使用)
 =================================================================== */
 .accordion {
