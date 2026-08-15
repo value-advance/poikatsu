@@ -548,6 +548,10 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "ANAマイルとMileagePlusはどっち?同じスターアライアンスで何が違う?", url: "/pages/articles/ana-mileageplus-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "有効期限・貯めやすさ・特典航空券・国内線の使いやすさで比較し、利用スタイルによる選び方を解説します。" },
+    { title: "MileagePlusは日本在住でも貯める価値がある?メリット・注意点を解説", url: "/pages/articles/mileageplus-nihon-zaijuu", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "有効期限なしのメリット、ANA便との関係、日本国内での貯めにくさなど注意点まで初心者向けに解説します。" },
+    { title: "JALマイルを貯めるべき人・貯めない方がいい人を解説", url: "/pages/articles/jal-mile-tameru-kachi", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "JALマイルを貯める価値がある人・無理に貯めなくてもよい人を利用状況別に解説します。" },
+    { title: "ANAマイルを貯めるべき人・貯めない方がいい人を解説", url: "/pages/articles/ana-mile-tameru-kachi", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "ANAマイルを貯める価値がある人・無理に貯めなくてもよい人を利用状況別に解説します。" },
     { title: "ANAマイルとJALマイルはどっち?貯めやすさ・使いやすさを比較", url: "/pages/articles/ana-jal-mile-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "利用航空会社・国内線・国際線・航空連合・ポイント交換・有効期限・特典航空券・家族利用の軸で比較し、生活圏で選ぶ考え方を解説します。" },
     { title: "楽天ポイントとPayPayポイントはどっち?通販・決済・カードで比較", url: "/pages/articles/rakuten-paypay-hikaku", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "楽天市場とYahoo!ショッピング、楽天ペイとPayPay、楽天カードとPayPayカードなど項目別に比較し、生活圏で選ぶ考え方を解説します。" },
     { title: "dポイントとPontaポイントはどっち?貯めやすさ・使いやすさを比較", url: "/pages/articles/dpoint-ponta-hikaku", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "携帯キャリア・スマホ決済・クレジットカード・コンビニ・ネット通販・交換・有効期限で比較し、生活圏で選ぶ考え方を解説します。" },
