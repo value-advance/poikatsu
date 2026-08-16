@@ -548,6 +548,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "Yahoo!トラベルでポイントを活用する方法!宿泊予約前の確認ポイント", url: "/pages/articles/yahoo-travel-tsukaikata", category: "キャンペーン", date: "2026.08.16", thumbType: "caution", excerpt: "予約時に確認したいポイントやクーポン併用の注意、キャンセル時の扱い、PayPay利用者が見るべき点を解説します。" },
+    { title: "出前館でポイ活する方法!注文前に確認したい割引とポイント", url: "/pages/articles/demaecan-poikatsu", category: "ショッピング", date: "2026.08.16", thumbType: "app", excerpt: "出前館のポイント確認やクーポン適用条件、支払い方法の選び方、配達料と最低注文金額、家族利用のコツを解説します。" },
+    { title: "ABC-MARTでポイ活する方法!靴購入時のアプリ・決済チェック", url: "/pages/articles/abc-mart-poikatsu", category: "ショッピング", date: "2026.08.16", thumbType: "beginner", excerpt: "ABC-MARTの会員特典やセール時期の確認、サイズ交換の注意、決済ポイントの組み合わせ、家族分を買うコツを解説します。" },
     { title: "ANAマイルとMileagePlusはどっち?同じスターアライアンスで何が違う?", url: "/pages/articles/ana-mileageplus-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "有効期限・貯めやすさ・特典航空券・国内線の使いやすさで比較し、利用スタイルによる選び方を解説します。" },
     { title: "MileagePlusは日本在住でも貯める価値がある?メリット・注意点を解説", url: "/pages/articles/mileageplus-nihon-zaijuu", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "有効期限なしのメリット、ANA便との関係、日本国内での貯めにくさなど注意点まで初心者向けに解説します。" },
     { title: "JALマイルを貯めるべき人・貯めない方がいい人を解説", url: "/pages/articles/jal-mile-tameru-kachi", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "JALマイルを貯める価値がある人・無理に貯めなくてもよい人を利用状況別に解説します。" },
