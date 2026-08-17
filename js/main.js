@@ -548,6 +548,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "ポイントサイト経由忘れを防ぐ方法!買い物前チェックを習慣化するコツ", url: "/pages/articles/keiyu-wasure-boushi", category: "ポイントサイト", date: "2026.08.17", thumbType: "caution", excerpt: "経由忘れが起きる理由や買い物前の確認手順、ブックマーク活用、家族共有時の注意、習慣化の工夫を解説します。" },
+    { title: "エアトリで旅行予約ポイ活!航空券購入前に見るべき費用とポイント", url: "/pages/articles/airtrip-tsukaikata", category: "キャンペーン", date: "2026.08.17", thumbType: "caution", excerpt: "エアトリ利用時の確認点や航空券代以外の費用、ポイント・クーポンの見方、キャンセル規定の注意を解説します。" },
+    { title: "駐車場予約サービスでポイ活する方法!イベント前に確認したい条件", url: "/pages/articles/chuushajou-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.17", thumbType: "caution", excerpt: "駐車場予約のメリットやポイント・クーポンの確認、予約時間と延長料金、キャンセル規定の注意を解説します。" },
     { title: "Yahoo!トラベルでポイントを活用する方法!宿泊予約前の確認ポイント", url: "/pages/articles/yahoo-travel-tsukaikata", category: "キャンペーン", date: "2026.08.16", thumbType: "caution", excerpt: "予約時に確認したいポイントやクーポン併用の注意、キャンセル時の扱い、PayPay利用者が見るべき点を解説します。" },
     { title: "出前館でポイ活する方法!注文前に確認したい割引とポイント", url: "/pages/articles/demaecan-poikatsu", category: "ショッピング", date: "2026.08.16", thumbType: "app", excerpt: "出前館のポイント確認やクーポン適用条件、支払い方法の選び方、配達料と最低注文金額、家族利用のコツを解説します。" },
     { title: "ABC-MARTでポイ活する方法!靴購入時のアプリ・決済チェック", url: "/pages/articles/abc-mart-poikatsu", category: "ショッピング", date: "2026.08.16", thumbType: "beginner", excerpt: "ABC-MARTの会員特典やセール時期の確認、サイズ交換の注意、決済ポイントの組み合わせ、家族分を買うコツを解説します。" },
