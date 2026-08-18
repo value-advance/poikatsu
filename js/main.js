@@ -548,6 +548,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "JALマイレージモールでマイルを貯める方法!ネット通販前の基本", url: "/pages/articles/jal-mileage-mall-poikatsu", category: "ショッピング", date: "2026.08.18", thumbType: "mile", excerpt: "JALマイレージモールの特徴や通販前に経由する流れ、対象外条件の確認、マイル反映までの注意、JALカード利用との組み合わせを解説します。" },
+    { title: "レンタカー予約でポイ活する方法!旅行前に確認したい支払いと補償", url: "/pages/articles/rentacar-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.18", thumbType: "caution", excerpt: "レンタカー予約でポイントを貯めるコツや比較サイトと公式予約の違い、クーポン利用時の注意、保険・補償の確認を解説します。" },
+    { title: "電力会社乗り換えでポイントを貯める方法!料金比較と特典の見方", url: "/pages/articles/denryoku-norikae-point", category: "ショッピング", date: "2026.08.18", thumbType: "compare", excerpt: "電力会社乗り換えの基本やポイント特典の確認、料金プランの比較、解約条件の注意、家計全体で判断するコツを解説します。" },
     { title: "ポイントサイト経由忘れを防ぐ方法!買い物前チェックを習慣化するコツ", url: "/pages/articles/keiyu-wasure-boushi", category: "ポイントサイト", date: "2026.08.17", thumbType: "caution", excerpt: "経由忘れが起きる理由や買い物前の確認手順、ブックマーク活用、家族共有時の注意、習慣化の工夫を解説します。" },
     { title: "エアトリで旅行予約ポイ活!航空券購入前に見るべき費用とポイント", url: "/pages/articles/airtrip-tsukaikata", category: "キャンペーン", date: "2026.08.17", thumbType: "caution", excerpt: "エアトリ利用時の確認点や航空券代以外の費用、ポイント・クーポンの見方、キャンセル規定の注意を解説します。" },
     { title: "駐車場予約サービスでポイ活する方法!イベント前に確認したい条件", url: "/pages/articles/chuushajou-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.17", thumbType: "caution", excerpt: "駐車場予約のメリットやポイント・クーポンの確認、予約時間と延長料金、キャンセル規定の注意を解説します。" },
