@@ -248,6 +248,7 @@
     { title: "フルーツメール 運営実績20年以上", type: "ゲーム・アンケート・懸賞", points: "20年", suffix: "以上の運営実績", category: "survey", tags: ["beginner"], url: "/pages/articles/fruitmail-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" },
     { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900円", suffix: "相当ポイント(登録+アプリ導入)", category: "survey", tags: ["beginner"], url: "/pages/articles/monitor-town-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
     // 生活
+    { title: "楽天写真館 写真プリント〜フォトブックが作れる", type: "写真プリント・フォトブック", points: "100円", suffix: "につき楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-shashinkan-poikatsu", img: "https://srv2.trafficgate.net/t/b/391/4055/318897_398564" },
     { title: "楽天でんわ 番号そのままで通話料半額", type: "電話アプリ", points: "30秒11円", suffix: "(税込)の通話料、110円で楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-denwa-poikatsu", img: "https://srv2.trafficgate.net/t/b/17/5812/318897_398564" },
     { title: "楽天モバイル データ使い放題で楽天ポイントも貯まる", type: "携帯回線", points: "2,980円", suffix: "(税込3,278円)/月でデータ使い放題", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-mobile-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260720103756&wid=002&eno=01&mid=s00000027494001003000&mc=1" },
     { title: "@nifty with ドコモ光 最大35,000円キャッシュバック", type: "光回線", points: "35,000円", suffix: "キャッシュバック(最大)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/nifty-docomo-hikari-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720104398&wid=002&eno=01&mid=s00000019208003021000&mc=1" },
@@ -344,6 +345,7 @@
     { title: "フルーツメールとは?ゲーム・アンケートでポイントが貯まる懸賞サイト", excerpt: "ゲームやアンケートで手軽にポイントが貯まる懸賞サイト「フルーツメール」の特徴を解説します。", url: "/pages/articles/fruitmail-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "モニタータウンとは?PC調査モニターの特徴・参加方法をわかりやすく解説", excerpt: "PCに専用アプリを入れるだけで参加できる調査モニターサービス「モニタータウン」の特徴を解説します。", url: "/pages/articles/monitor-town-poikatsu", thumbType: "beginner", category: "survey" },
     // 生活
+    { title: "楽天写真館とは?写真プリントからフォトブックまで作れるサービス", excerpt: "デジカメ写真のプリントからオリジナルフォトブックまで作成できる「楽天写真館」の特徴や料金、楽天ポイントの貯め方を解説します。", url: "/pages/articles/rakuten-shashinkan-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天でんわとは?番号そのままで通話料を半額にできる電話アプリ", excerpt: "通話料が30秒22円のプランを契約中なら通話料半額、月額基本料0円で使った分だけ後払いの電話アプリ「楽天でんわ」の特徴を解説します。", url: "/pages/articles/rakuten-denwa-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天モバイルとは?データ使い放題と楽天ポイント最大+4倍を解説", excerpt: "データ使用量に応じた段階制料金で、楽天市場のポイントも上乗せされる「楽天モバイル」の特徴を解説します。", url: "/pages/articles/rakuten-mobile-poikatsu", thumbType: "compare", category: "seikatsu" },
     { title: "@nifty with ドコモ光とは?キャッシュバックと料金・特典を解説", excerpt: "老舗プロバイダーのニフティが提供するドコモ光の申込窓口「@nifty with ドコモ光」の特徴を解説します。", url: "/pages/articles/nifty-docomo-hikari-poikatsu", thumbType: "compare", category: "seikatsu" },
