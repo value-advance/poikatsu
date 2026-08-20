@@ -248,6 +248,7 @@
     { title: "フルーツメール 運営実績20年以上", type: "ゲーム・アンケート・懸賞", points: "20年", suffix: "以上の運営実績", category: "survey", tags: ["beginner"], url: "/pages/articles/fruitmail-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" },
     { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900円", suffix: "相当ポイント(登録+アプリ導入)", category: "survey", tags: ["beginner"], url: "/pages/articles/monitor-town-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
     // 生活
+    { title: "BIGLOBE光 フレッツ光の設備を使った格安光回線", type: "光回線", points: "最大2,200円", suffix: "割引(auスマートバリュー)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/biglobe-hikari-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260813279105&wid=002&eno=01&mid=s00000017718046009000&mc=1" },
     { title: "SoftBank 光 フレッツ光より安い高速光回線", type: "光回線", points: "最大10万円", suffix: "還元(あんしん乗り換えキャンペーン)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/softbank-hikari-poikatsu", img: "https://www20.a8.net/svt/bgt?aid=260813279086&wid=002&eno=01&mid=s00000016370001008000&mc=1" },
     { title: "楽天ひかり 楽天モバイルとセットで楽天市場ポイント7倍", type: "光回線", points: "毎日7倍", suffix: "楽天モバイルとセット利用で楽天市場ポイント", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-hikari-poikatsu", img: "https://srv2.trafficgate.net/t/b/208/3159/318897_398564" },
     { title: "楽天ミュージック 広告なしで約1億曲聴き放題", type: "音楽サブスク", points: "780円", suffix: "〜/月(楽天モバイル・楽天カード会員)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-music-poikatsu", img: "https://srv2.trafficgate.net/t/b/146/6277/318897_398564" },
@@ -350,6 +351,7 @@
     { title: "フルーツメールとは?ゲーム・アンケートでポイントが貯まる懸賞サイト", excerpt: "ゲームやアンケートで手軽にポイントが貯まる懸賞サイト「フルーツメール」の特徴を解説します。", url: "/pages/articles/fruitmail-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "モニタータウンとは?PC調査モニターの特徴・参加方法をわかりやすく解説", excerpt: "PCに専用アプリを入れるだけで参加できる調査モニターサービス「モニタータウン」の特徴を解説します。", url: "/pages/articles/monitor-town-poikatsu", thumbType: "beginner", category: "survey" },
     // 生活
+    { title: "BIGLOBE光とは?フレッツ光の設備を使った高速・格安光回線を解説", excerpt: "フレッツ光の回線設備を使った「BIGLOBE光」の月額料金、auスマートバリュー割引、工事費、WEB限定キャンペーンを解説します。", url: "/pages/articles/biglobe-hikari-poikatsu", thumbType: "compare", category: "seikatsu" },
     { title: "SoftBank 光とは?フレッツ光より安い高速光回線とキャッシュバックを解説", excerpt: "フレッツ光の回線を使ったソフトバンクの光インターネット「SoftBank 光」の月額料金、あんしん乗り換えキャンペーン、キャッシュバックを解説します。", url: "/pages/articles/softbank-hikari-poikatsu", thumbType: "compare", category: "seikatsu" },
     { title: "楽天ひかりとは?楽天モバイルとセットで楽天市場ポイントが7倍になる光回線", excerpt: "楽天ひかりの月額料金、楽天モバイルとのセット利用による楽天市場ポイント最大7倍の仕組み、契約期間を解説します。", url: "/pages/articles/rakuten-hikari-poikatsu", thumbType: "compare", category: "seikatsu" },
     { title: "楽天ミュージックとは?広告なしで約1億曲聴き放題の音楽アプリを解説", excerpt: "月額980円(会員なら780円)で約1億曲が広告なしで聴き放題の「楽天ミュージック」の特徴、料金プラン、楽天ポイントの貯め方を解説します。", url: "/pages/articles/rakuten-music-poikatsu", thumbType: "app", category: "seikatsu" },
