@@ -204,7 +204,7 @@
   // 記事下部の「関連するお得なポイント」表示用データ
   // 分類(category、1つ) … pointsite(ポイントサイト) / shopping(ショッピング) /
   //                        campaign(旅行・キャンペーン系) / survey(アンケート) /
-  //                        seikatsu(生活) / app(アプリ案件)
+  //                        seikatsu(生活) / app(アプリ案件) / kouza(銀行/証券口座開設)
   // タグ(tags、複数可)   … rakuten(楽天ポイント) / dpoint(dポイント) / paypay(PayPayポイント) /
   //                        ponta(Pontaポイント) / vpoint(Vポイント) / beginner(初心者向け)
   // 記事側は <article> タグに data-category / data-tags を指定する(半角スペース区切り)。
@@ -266,6 +266,9 @@
     { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
     // アプリ(特集)
     { title: "HashPort Wallet 暗号資産・ポイント・NFTを一元管理", type: "Web3ウォレット", points: "無料", suffix: "で基本機能を利用可能", category: "app", tags: ["beginner"], url: "/pages/articles/hashport-wallet-poikatsu", img: null },
+    // 銀行/証券
+    { title: "松井証券のiDeCo 運営管理手数料0円", type: "証券", points: "0円", suffix: "の運営管理手数料・低コスト商品40種類", category: "kouza", tags: ["beginner"], url: "/pages/articles/matsui-shouken-ideco-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065123&wid=002&eno=01&mid=s00000018318002010000&mc=1" },
+    { title: "DMM株 少額投資・低コストのネット証券", type: "証券", points: "1,000円", suffix: "以下で購入できる銘柄あり", category: "kouza", tags: ["beginner"], url: "/pages/articles/dmm-kabu-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260714058100&wid=002&eno=01&mid=s00000008903007004000&mc=1" },
   ];
 
   // 関連リンクとして意味を持つタグ(beginnerは対象が広すぎるため除外)
@@ -782,6 +785,7 @@
     { title: "ワラウでできるポイ活とは?遊びながら貯める前に知りたい基本", url: "/pages/articles/warau-tsukaikata", category: "ポイントサイト", date: "2026.07.26", thumbType: "earnings", excerpt: "ワラウの主な貯め方やゲーム系コンテンツの使い方、広告案件の確認ポイント、毎日続ける場合の注意、時間をかけすぎないコツを初心者向けに解説します。" },
     { title: "ちょびリッチの使い方!ポイントサイト初心者が見るべき案件と交換先", url: "/pages/articles/chobirich-tsukaikata", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ちょびリッチの基本や案件利用の流れ、交換先の選び方、承認待ちの確認方法、他サイトと比べる時のポイントを初心者向けに解説します。" },
     { title: "ECナビでポイントを貯める方法!アンケートと買い物を組み合わせるコツ", url: "/pages/articles/ecnavi-tsukaikata", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ECナビの特徴やアンケートで貯める方法、ネットショッピングで使う流れ、交換先と手数料の確認、毎日作業にしない続け方を初心者向けに解説します。" },
+    { title: "ハピタスの使い方を初心者向けに解説!案件選びとポイント交換の基本", url: "/pages/articles/hapitas-tsukaikata", category: "ポイントサイト", date: "2026.07.25", thumbType: "beginner", excerpt: "ハピタスでできることや初心者が選びやすい案件、判定期間と通帳の確認方法、ポイント交換時の注意、無理なく続けるコツを初心者向けに解説します。" },
     { title: "ニフティポイントクラブの活用術!ネット利用者向けのポイ活基本", url: "/pages/articles/nifty-point-club-poikatsu", category: "ポイントサイト", date: "2026.07.27", thumbType: "earnings", excerpt: "ニフティポイントクラブの特徴や通販案件の探し方、サービス申込み案件の注意、ポイント交換の流れ、利用履歴を残すコツを初心者向けに解説します。" },
     { title: "トリマで移動ポイ活する方法!歩く・移動する前に知るべき注意点", url: "/pages/articles/torima-idou-poikatsu", category: "アプリ案件", date: "2026.07.27", thumbType: "mobile", excerpt: "トリマの仕組みや移動・歩数で貯める流れ、バッテリー消費の注意、生活に合わせて続けるコツを初心者向けに解説します。" },
     { title: "レシチャレ(旧クラシルリワード)で貯めるポイ活とは?レシート・移動・広告の使い方", url: "/pages/articles/reshichare-poikatsu", category: "アプリ案件", date: "2026.07.27", thumbType: "mobile", excerpt: "レシチャレ(旧クラシルリワード)の特徴やレシート登録の基本、移動や広告で貯める方法、交換前に確認することを初心者向けに解説します。" },
