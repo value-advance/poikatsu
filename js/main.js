@@ -248,6 +248,7 @@
     { title: "フルーツメール 運営実績20年以上", type: "ゲーム・アンケート・懸賞", points: "20年", suffix: "以上の運営実績", category: "survey", tags: ["beginner"], url: "/pages/articles/fruitmail-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" },
     { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900円", suffix: "相当ポイント(登録+アプリ導入)", category: "survey", tags: ["beginner"], url: "/pages/articles/monitor-town-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
     // 生活
+    { title: "楽天ひかり 楽天モバイルとセットで楽天市場ポイント7倍", type: "光回線", points: "毎日7倍", suffix: "楽天モバイルとセット利用で楽天市場ポイント", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-hikari-poikatsu", img: "https://srv2.trafficgate.net/t/b/208/3159/318897_398564" },
     { title: "楽天ミュージック 広告なしで約1億曲聴き放題", type: "音楽サブスク", points: "780円", suffix: "〜/月(楽天モバイル・楽天カード会員)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-music-poikatsu", img: "https://srv2.trafficgate.net/t/b/146/6277/318897_398564" },
     { title: "楽天Car車検 見積もり比較・予約で楽天ポイント", type: "車検の見積もり・予約", points: "500", suffix: "ポイント進呈(見積もり予約&車検実施)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-car-shaken-poikatsu", img: "https://srv2.trafficgate.net/t/b/78/5734/318897_398564" },
     { title: "楽天ビューティ 美容室・ネイル・エステの検索&予約", type: "美容室・サロン予約", points: "楽天ポイント", suffix: "が貯まる・使える", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-beauty-poikatsu", img: "https://srv2.trafficgate.net/t/b/10/6369/318897_398564" },
@@ -348,6 +349,7 @@
     { title: "フルーツメールとは?ゲーム・アンケートでポイントが貯まる懸賞サイト", excerpt: "ゲームやアンケートで手軽にポイントが貯まる懸賞サイト「フルーツメール」の特徴を解説します。", url: "/pages/articles/fruitmail-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "モニタータウンとは?PC調査モニターの特徴・参加方法をわかりやすく解説", excerpt: "PCに専用アプリを入れるだけで参加できる調査モニターサービス「モニタータウン」の特徴を解説します。", url: "/pages/articles/monitor-town-poikatsu", thumbType: "beginner", category: "survey" },
     // 生活
+    { title: "楽天ひかりとは?楽天モバイルとセットで楽天市場ポイントが7倍になる光回線", excerpt: "楽天ひかりの月額料金、楽天モバイルとのセット利用による楽天市場ポイント最大7倍の仕組み、契約期間を解説します。", url: "/pages/articles/rakuten-hikari-poikatsu", thumbType: "compare", category: "seikatsu" },
     { title: "楽天ミュージックとは?広告なしで約1億曲聴き放題の音楽アプリを解説", excerpt: "月額980円(会員なら780円)で約1億曲が広告なしで聴き放題の「楽天ミュージック」の特徴、料金プラン、楽天ポイントの貯め方を解説します。", url: "/pages/articles/rakuten-music-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天Car車検とは?見積もり比較・予約で楽天ポイントがもらえるサービス", excerpt: "車検の見積もり比較・予約ができる「楽天Car車検」の特徴、楽天ポイントの貯め方、加盟店を解説します。", url: "/pages/articles/rakuten-car-shaken-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天ビューティとは?美容室・ネイル・エステの検索・予約ができるサービス", excerpt: "全国の美容室・ネイル・まつげ・エステ・リラクサロンを検索・予約できる「楽天ビューティ」の特徴や楽天ポイントの貯め方・使い方を解説します。", url: "/pages/articles/rakuten-beauty-poikatsu", thumbType: "app", category: "seikatsu" },
