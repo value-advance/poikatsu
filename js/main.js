@@ -248,6 +248,7 @@
     { title: "フルーツメール 運営実績20年以上", type: "ゲーム・アンケート・懸賞", points: "20年", suffix: "以上の運営実績", category: "survey", tags: ["beginner"], url: "/pages/articles/fruitmail-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" },
     { title: "モニタータウン 登録+アプリインストールで獲得", type: "調査モニター", points: "900円", suffix: "相当ポイント(登録+アプリ導入)", category: "survey", tags: ["beginner"], url: "/pages/articles/monitor-town-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065264&wid=002&eno=01&mid=s00000017030004011000&mc=1" },
     // 生活
+    { title: "楽天Car車検 見積もり比較・予約で楽天ポイント", type: "車検の見積もり・予約", points: "500", suffix: "ポイント進呈(見積もり予約&車検実施)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-car-shaken-poikatsu", img: "https://srv2.trafficgate.net/t/b/78/5734/318897_398564" },
     { title: "楽天ビューティ 美容室・ネイル・エステの検索&予約", type: "美容室・サロン予約", points: "楽天ポイント", suffix: "が貯まる・使える", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-beauty-poikatsu", img: "https://srv2.trafficgate.net/t/b/10/6369/318897_398564" },
     { title: "楽天写真館 写真プリント〜フォトブックが作れる", type: "写真プリント・フォトブック", points: "100円", suffix: "につき楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-shashinkan-poikatsu", img: "https://srv2.trafficgate.net/t/b/391/4055/318897_398564" },
     { title: "楽天でんわ 番号そのままで通話料半額", type: "電話アプリ", points: "30秒11円", suffix: "(税込)の通話料、110円で楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-denwa-poikatsu", img: "https://srv2.trafficgate.net/t/b/17/5812/318897_398564" },
@@ -346,6 +347,7 @@
     { title: "フルーツメールとは?ゲーム・アンケートでポイントが貯まる懸賞サイト", excerpt: "ゲームやアンケートで手軽にポイントが貯まる懸賞サイト「フルーツメール」の特徴を解説します。", url: "/pages/articles/fruitmail-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "モニタータウンとは?PC調査モニターの特徴・参加方法をわかりやすく解説", excerpt: "PCに専用アプリを入れるだけで参加できる調査モニターサービス「モニタータウン」の特徴を解説します。", url: "/pages/articles/monitor-town-poikatsu", thumbType: "beginner", category: "survey" },
     // 生活
+    { title: "楽天Car車検とは?見積もり比較・予約で楽天ポイントがもらえるサービス", excerpt: "車検の見積もり比較・予約ができる「楽天Car車検」の特徴、楽天ポイントの貯め方、加盟店を解説します。", url: "/pages/articles/rakuten-car-shaken-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天ビューティとは?美容室・ネイル・エステの検索・予約ができるサービス", excerpt: "全国の美容室・ネイル・まつげ・エステ・リラクサロンを検索・予約できる「楽天ビューティ」の特徴や楽天ポイントの貯め方・使い方を解説します。", url: "/pages/articles/rakuten-beauty-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天写真館とは?写真プリントからフォトブックまで作れるサービス", excerpt: "デジカメ写真のプリントからオリジナルフォトブックまで作成できる「楽天写真館」の特徴や料金、楽天ポイントの貯め方を解説します。", url: "/pages/articles/rakuten-shashinkan-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "楽天でんわとは?番号そのままで通話料を半額にできる電話アプリ", excerpt: "通話料が30秒22円のプランを契約中なら通話料半額、月額基本料0円で使った分だけ後払いの電話アプリ「楽天でんわ」の特徴を解説します。", url: "/pages/articles/rakuten-denwa-poikatsu", thumbType: "app", category: "seikatsu" },
