@@ -567,6 +567,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "ANAマイルが貯まる光回線が登場!「ANA光 powered by SoftBank」を徹底解説", url: "/pages/articles/ana-hikari-poikatsu", category: "生活", date: "2026.08.21", thumbType: "compare", excerpt: "ANAマイルが貯まる新しい光回線サービス「ANA光 powered by SoftBank」の月額料金、マイル特典の仕組み、契約期間、申込方法を解説します。" },
     { title: "家電量販店のポイント還元を徹底比較!ヨドバシ・ビック・ヤマダなど", url: "/pages/articles/kadenryohanten-point-hikaku", category: "ショッピング", date: "2026.08.20", thumbType: "compare", excerpt: "ヨドバシ・ビック・ヤマダ・エディオン・ジョーシン・ノジマ・ケーズデンキのポイント制度と現金値引きを比較。支払い方法による差、10万円購入シミュレーションまで解説します。" },
     { title: "JALマイレージモールでマイルを貯める方法!ネット通販前の基本", url: "/pages/articles/jal-mileage-mall-poikatsu", category: "ショッピング", date: "2026.08.18", thumbType: "mile", excerpt: "JALマイレージモールの特徴や通販前に経由する流れ、対象外条件の確認、マイル反映までの注意、JALカード利用との組み合わせを解説します。" },
     { title: "レンタカー予約でポイ活する方法!旅行前に確認したい支払いと補償", url: "/pages/articles/rentacar-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.18", thumbType: "caution", excerpt: "レンタカー予約でポイントを貯めるコツや比較サイトと公式予約の違い、クーポン利用時の注意、保険・補償の確認を解説します。" },
