@@ -567,6 +567,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "【期間限定】ANAアメックス新規入会キャンペーン特集!最大242,000マイル", url: "/pages/articles/ana-amex-campaign-2026", category: "キャンペーン", date: "2026.08.21", thumbType: "campaign", excerpt: "2026年9月2日13:00〜11月4日の期間限定、ANAアメックス新規入会キャンペーンのカード別獲得マイル数・適用条件をまとめて解説します。" },
     { title: "ANAアメックスが大幅刷新!ゴールド・プレミアムの新特典とマイル還元まとめ", url: "/pages/articles/ana-amex-poikatsu", category: "クレジットカード", date: "2026.08.21", thumbType: "creditcard", excerpt: "2026年9月2日リニューアルの「ANAアメリカン・エキスプレス・カード」の年会費・マイル還元率・空港ラウンジなど新特典を解説します。" },
     { title: "ANAマイルが貯まる光回線が登場!「ANA光 powered by SoftBank」を徹底解説", url: "/pages/articles/ana-hikari-poikatsu", category: "生活", date: "2026.08.21", thumbType: "compare", excerpt: "ANAマイルが貯まる新しい光回線サービス「ANA光 powered by SoftBank」の月額料金、マイル特典の仕組み、契約期間、申込方法を解説します。" },
     { title: "家電量販店のポイント還元を徹底比較!ヨドバシ・ビック・ヤマダなど", url: "/pages/articles/kadenryohanten-point-hikaku", category: "ショッピング", date: "2026.08.20", thumbType: "compare", excerpt: "ヨドバシ・ビック・ヤマダ・エディオン・ジョーシン・ノジマ・ケーズデンキのポイント制度と現金値引きを比較。支払い方法による差、10万円購入シミュレーションまで解説します。" },
