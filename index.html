@@ -3439,13 +3439,18 @@
     <!-- 特集 -->
     <section class="section container" id="feature">
       <h2 class="section-title">特集</h2>
-      <div class="feature-grid" id="featureGrid">
-        <a class="feature-banner" href="pages/articles/ana-amex-campaign-2026">
-          <img src="images/feature/ana-amex-campaign-2026-banner.webp" alt="ANAアメックス新規入会キャンペーン" loading="lazy">
-        </a>
-        <a class="feature-banner" href="pages/articles/hashport-wallet-poikatsu">
-          <img src="images/feature/tokushu260722.webp" alt="HashPort Wallet" loading="lazy">
-        </a>
+      <div class="feature-slider" id="featureSlider" aria-label="特集バナー">
+        <div class="feature-slider__track">
+          <a class="feature-slider__slide" href="pages/articles/ana-amex-campaign-2026">
+            <img src="images/feature/ana-amex-campaign-2026-banner.webp" alt="ANAアメックス新規入会キャンペーン" loading="lazy">
+          </a>
+          <a class="feature-slider__slide" href="pages/articles/hashport-wallet-poikatsu">
+            <img src="images/feature/tokushu260722.webp" alt="HashPort Wallet" loading="lazy">
+          </a>
+        </div>
+        <button class="feature-slider__nav feature-slider__nav--prev" aria-label="前のスライド">&#8249;</button>
+        <button class="feature-slider__nav feature-slider__nav--next" aria-label="次のスライド">&#8250;</button>
+        <div class="feature-slider__dots"></div>
       </div>
     </section>
 

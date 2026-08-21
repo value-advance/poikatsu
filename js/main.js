@@ -39,29 +39,30 @@
     if (yearEl) yearEl.textContent = new Date().getFullYear();
   }
 
-  function initSlider() {
-    const slider = document.querySelector(".slider");
+  // rootSelector配下の1インスタンス分のスライダーを初期化する(ヒーローバナー・特集バナー共通)
+  function initSliderComponent(rootSelector, blockName) {
+    const slider = document.querySelector(rootSelector);
     if (!slider) return;
 
-    const track = slider.querySelector(".slider__track");
-    const slides = Array.from(slider.querySelectorAll(".slider__slide"));
-    const dotsWrap = slider.querySelector(".slider__dots");
-    const prevBtn = slider.querySelector(".slider__nav--prev");
-    const nextBtn = slider.querySelector(".slider__nav--next");
+    const track = slider.querySelector(`.${blockName}__track`);
+    const slides = Array.from(slider.querySelectorAll(`.${blockName}__slide`));
+    const dotsWrap = slider.querySelector(`.${blockName}__dots`);
+    const prevBtn = slider.querySelector(`.${blockName}__nav--prev`);
+    const nextBtn = slider.querySelector(`.${blockName}__nav--next`);
     let index = 0;
     let timer = null;
 
-    // スライドが1枚(メインバナーのみ)のときは矢印・ドット・自動再生は不要
+    // スライドが1枚以下のときは矢印・ドット・自動再生は不要
     if (slides.length <= 1) {
-      prevBtn.style.display = "none";
-      nextBtn.style.display = "none";
-      dotsWrap.style.display = "none";
+      if (prevBtn) prevBtn.style.display = "none";
+      if (nextBtn) nextBtn.style.display = "none";
+      if (dotsWrap) dotsWrap.style.display = "none";
       return;
     }
 
     slides.forEach((_, i) => {
       const dot = document.createElement("button");
-      dot.className = "slider__dot" + (i === 0 ? " is-active" : "");
+      dot.className = `${blockName}__dot` + (i === 0 ? " is-active" : "");
       dot.setAttribute("aria-label", `${i + 1}枚目のスライドを表示`);
       dot.addEventListener("click", () => goTo(i));
       dotsWrap.appendChild(dot);
@@ -102,6 +103,11 @@
     });
 
     resetTimer();
+  }
+
+  function initSlider() {
+    initSliderComponent(".slider", "slider");
+    initSliderComponent(".feature-slider", "feature-slider");
   }
 
   const RANKING_DATA = {
