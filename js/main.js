@@ -573,6 +573,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "高速バス予約でポイントを貯める方法!移動費を抑えるポイ活術", url: "/pages/articles/kousokubus-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "compare", excerpt: "高速バス予約サイトごとに貯まるポイントの違いや比較ポイント、早割・クーポンの確認、キャンセル料の注意、帰省・旅行で活用するコツを解説します。" },
+    { title: "ドトール・タリーズでポイ活する方法!カフェ利用時の支払い術", url: "/pages/articles/doutor-tullys-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "app", excerpt: "ドトール・タリーズのポイント制度の違いや公式アプリの使い方、チャージと決済の注意、クーポン確認の頻度、コーヒー代を抑えるコツを解説します。" },
+    { title: "ZOZOTOWNでポイ活する方法!服を買う前に確認したい支払いと送料", url: "/pages/articles/zozotown-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "caution", excerpt: "ZOZOTOWNのポイント制度やクーポンの探し方、送料・返品条件、支払い方法の選び方、衝動買いを防ぐコツを解説します。" },
     { title: "【期間限定】ANAアメックス新規入会キャンペーン特集!最大242,000マイル", url: "/pages/articles/ana-amex-campaign-2026", category: "キャンペーン", date: "2026.08.21", thumbType: "campaign", excerpt: "2026年9月2日13:00〜11月4日の期間限定、ANAアメックス新規入会キャンペーンのカード別獲得マイル数・適用条件をまとめて解説します。" },
     { title: "ANAアメックスが大幅刷新!ゴールド・プレミアムの新特典とマイル還元まとめ", url: "/pages/articles/ana-amex-poikatsu", category: "クレジットカード", date: "2026.08.21", thumbType: "creditcard", excerpt: "2026年9月2日リニューアルの「ANAアメリカン・エキスプレス・カード」の年会費・マイル還元率・空港ラウンジなど新特典を解説します。" },
     { title: "ANAマイルが貯まる光回線が登場!「ANA光 powered by SoftBank」を徹底解説", url: "/pages/articles/ana-hikari-poikatsu", category: "生活", date: "2026.08.21", thumbType: "compare", excerpt: "ANAマイルが貯まる新しい光回線サービス「ANA光 powered by SoftBank」の月額料金、マイル特典の仕組み、契約期間、申込方法を解説します。" },
