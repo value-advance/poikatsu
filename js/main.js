@@ -573,6 +573,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "回転寿司でポイントを貯める方法!予約アプリと支払い前のチェック", url: "/pages/articles/kaitenzushi-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "app", excerpt: "回転寿司チェーンごとの予約アプリの特徴や来店予約で得する場面、支払い方法の確認、クーポン利用の注意、家族外食で使うコツを解説します。" },
+    { title: "ガス会社乗り換えでポイ活する方法!セット割とポイントの確認術", url: "/pages/articles/gas-norikae-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "compare", excerpt: "ガス会社乗り換えの基本的な仕組みやセット割の確認、ポイント特典の条件、供給エリアの注意、年間費用で比較するコツを解説します。" },
+    { title: "Visaタッチ決済でポイ活する方法!対象店舗と支払い前の確認ポイント", url: "/pages/articles/visa-touch-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "creditcard", excerpt: "Visaのタッチ決済の基本的な仕組みや対象カードの確認、対象店舗での使い方、キャンペーン条件の注意、コンビニ利用で活かすコツを解説します。" },
     { title: "高速バス予約でポイントを貯める方法!移動費を抑えるポイ活術", url: "/pages/articles/kousokubus-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "compare", excerpt: "高速バス予約サイトごとに貯まるポイントの違いや比較ポイント、早割・クーポンの確認、キャンセル料の注意、帰省・旅行で活用するコツを解説します。" },
     { title: "ドトール・タリーズでポイ活する方法!カフェ利用時の支払い術", url: "/pages/articles/doutor-tullys-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "app", excerpt: "ドトール・タリーズのポイント制度の違いや公式アプリの使い方、チャージと決済の注意、クーポン確認の頻度、コーヒー代を抑えるコツを解説します。" },
     { title: "ZOZOTOWNでポイ活する方法!服を買う前に確認したい支払いと送料", url: "/pages/articles/zozotown-poikatsu", category: "ショッピング", date: "2026.08.22", thumbType: "caution", excerpt: "ZOZOTOWNのポイント制度やクーポンの探し方、送料・返品条件、支払い方法の選び方、衝動買いを防ぐコツを解説します。" },
