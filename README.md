@@ -114,7 +114,7 @@ poikatsu/
 
 ### TOPバナー(スライダー)の表示ルール
 
-- **キャンペーン・特集が無いとき**:メインバナー(`slider_main_pc.png` / `slider_main_sp.png`)の1枚のみを表示する
+- **キャンペーン・特集が無いとき**:メインバナー(`top_main_banner_pc.png` / `top_main_banner_sp.png`)の1枚のみを表示する
 - **キャンペーン・特集があるとき**:メインバナーに加えて、キャンペーンスライド(`main_sliderNN_pc.png` / `main_sliderNN_sp.png`)を追加する
 
 `index.html` の `<!-- 例:キャンペーンスライド -->` 以下はコメントアウトされたテンプレートになっている。
@@ -126,8 +126,8 @@ poikatsu/
 スマホ用・PC用で画像が異なるため、1枚につき2ファイル用意する。
 
 ```
-images/slider/slider_main_pc.png     … メインバナー・PC用(1024px以上で表示、常時表示)
-images/slider/slider_main_sp.png     … メインバナー・スマホ用(常時表示)
+images/slider/top_main_banner_pc.png … メインバナー・PC用(1024px以上で表示、常時表示)
+images/slider/top_main_banner_sp.png … メインバナー・スマホ用(常時表示)
 
 images/slider/main_slider02_pc.png   … キャンペーンスライド・PC用(キャンペーン時のみ)
 images/slider/main_slider02_sp.png   … キャンペーンスライド・スマホ用
@@ -251,8 +251,8 @@ python -m http.server 8000
       `includes/header.html` のナビゲーションにカテゴリーリンクを追加する
 - [ ] ロゴ・favicon の用意
 - [ ] 各ページのコンテンツ作成
-- [ ] TOPスライダー用のメインバナー(`slider_main_pc.png` / `slider_main_sp.png`)を
-      `images/slider/` に配置する(`<picture>` タグは実装済み。画像が無い間はCSSグラデーションが背景に表示される)
+- [x] TOPスライダー用のメインバナー(`top_main_banner_pc.png` / `top_main_banner_sp.png`)を
+      `images/slider/` に配置する(`<picture>` タグは実装済み)
 - [ ] TOPバナーのリンク先が決まり次第、`index.html` の `.slider__link` の
       `href="#"` を実際のURL(内部ページ or アフィリエイトURL)に差し替える
 - [ ] キャンペーン・特集が決まったら、`index.html` 内のコメントアウトされた
