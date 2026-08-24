@@ -237,6 +237,7 @@
     { title: "ニッセン 衣類・家具・生活用品の通販", type: "衣類・家具", points: "ニッセンポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/nissen-toha", img: "/images/article-thumb/shopping/nissen.webp" },
     { title: "高島屋オンラインストア 百貨店品質のギフト", type: "百貨店", points: "タカシマヤポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/takashimaya-online-toha", img: "/images/article-thumb/shopping/takashimaya-online.webp" },
     { title: "大丸松坂屋オンラインストア ギフト・化粧品", type: "百貨店", points: "QIRAポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/daimaru-matsuzakaya-toha", img: "/images/article-thumb/shopping/daimaru-matsuzakaya.webp" },
+    { title: "セブンネットショッピング 店舗受け取りで送料無料", type: "総合通販", points: "24時間", suffix: "受け取り可能", category: "shopping", tags: ["beginner"], url: "/pages/articles/sevennet-shopping-poikatsu", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892684845" },
     // 旅行(data-category="campaign")
     { title: "イオンコンパストラベルモール(宿泊予約) WAON POINTが貯まる", type: "宿・ホテル予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["beginner"], url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" },
     { title: "Yahoo!トラベル 約17,000施設から比較", type: "宿・ホテル予約", points: "PayPayポイント", suffix: "が貯まる・その場で使える", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/yahoo-travel-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1" },
@@ -573,6 +574,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "セブンネットショッピングとは?セブン‐イレブン受け取りで送料無料になる通販サイト", url: "/pages/articles/sevennet-shopping-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "summary", excerpt: "セブンネットショッピングの特徴やセブン‐イレブン受け取りで送料無料になる仕組み、限定商品、会員登録・注文方法を解説します。" },
     { title: "回転寿司でポイントを貯める方法!予約アプリと支払い前のチェック", url: "/pages/articles/kaitenzushi-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "app", excerpt: "回転寿司チェーンごとの予約アプリの特徴や来店予約で得する場面、支払い方法の確認、クーポン利用の注意、家族外食で使うコツを解説します。" },
     { title: "ガス会社乗り換えでポイ活する方法!セット割とポイントの確認術", url: "/pages/articles/gas-norikae-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "compare", excerpt: "ガス会社乗り換えの基本的な仕組みやセット割の確認、ポイント特典の条件、供給エリアの注意、年間費用で比較するコツを解説します。" },
     { title: "Visaタッチ決済でポイ活する方法!対象店舗と支払い前の確認ポイント", url: "/pages/articles/visa-touch-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "creditcard", excerpt: "Visaのタッチ決済の基本的な仕組みや対象カードの確認、対象店舗での使い方、キャンペーン条件の注意、コンビニ利用で活かすコツを解説します。" },
