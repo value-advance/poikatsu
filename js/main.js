@@ -574,6 +574,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "西友でお得に買い物する方法!ネットスーパーと店舗利用のポイント", url: "/pages/articles/seiyu-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "compare", excerpt: "西友の店舗とネットスーパーの違い、支払い方法の注意、送料・配送条件、まとめ買いの判断基準を解説します。" },
+    { title: "イトーヨーカドーでポイ活する方法!アプリ・nanaco・セールの使い分け", url: "/pages/articles/itoyokado-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "app", excerpt: "イトーヨーカドーのポイント制度やアプリ特典の使い方、nanaco利用時の注意、セール日との組み合わせを解説します。" },
+    { title: "JCBのJ-POINT(旧Oki Dokiポイント)活用術!交換先と還元率の考え方", url: "/pages/articles/jcb-jpoint-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "creditcard", excerpt: "JCBのJ-POINT(旧Oki Dokiポイント)の貯まり方、交換先ごとの違い、キャンペーンの見方を解説します。" },
     { title: "セブンネットショッピングとは?セブン‐イレブン受け取りで送料無料になる通販サイト", url: "/pages/articles/sevennet-shopping-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "summary", excerpt: "セブンネットショッピングの特徴やセブン‐イレブン受け取りで送料無料になる仕組み、限定商品、会員登録・注文方法を解説します。" },
     { title: "回転寿司でポイントを貯める方法!予約アプリと支払い前のチェック", url: "/pages/articles/kaitenzushi-yoyaku-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "app", excerpt: "回転寿司チェーンごとの予約アプリの特徴や来店予約で得する場面、支払い方法の確認、クーポン利用の注意、家族外食で使うコツを解説します。" },
     { title: "ガス会社乗り換えでポイ活する方法!セット割とポイントの確認術", url: "/pages/articles/gas-norikae-poikatsu", category: "ショッピング", date: "2026.08.23", thumbType: "compare", excerpt: "ガス会社乗り換えの基本的な仕組みやセット割の確認、ポイント特典の条件、供給エリアの注意、年間費用で比較するコツを解説します。" },
