@@ -574,6 +574,8 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "ポイ活メール通知の整理術!必要なキャンペーンだけ見逃さない方法", url: "/pages/articles/poikatsu-mail-tsuuchi-seiri", category: "ポイントサイト", date: "2026.08.25", thumbType: "beginner", excerpt: "必要な通知の選び方、フォルダ分け、迷惑メール化を防ぐ注意、週1回で確認するコツを解説します。" },
+    { title: "ハロウィン用品でポイ活する方法!衣装・お菓子を買いすぎないコツ", url: "/pages/articles/halloween-yohin-poikatsu", category: "ショッピング", date: "2026.08.25", thumbType: "caution", excerpt: "支出の目安、早めに買うメリット、100円ショップと通販の比較、ポイント利用の注意を解説します。" },
     { title: "クレジットカードのポイントを徹底比較|還元率・年会費・使い道で選ぶ", url: "/pages/articles/credit-card-point-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "compare", excerpt: "主要9枚を公式情報で比較。基本還元率と条件付き還元を分けて整理し、年間利用額別の実質還元シミュレーションも掲載します。" },
     { title: "共通ポイント別クレジットカード比較|d・楽天・Ponta・Vポイントで選ぶ", url: "/pages/articles/credit-card-common-point-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "compare", excerpt: "貯めたい共通ポイントから選ぶカード比較。直接貯まるカードと交換して貯めるカードの違いも解説します。" },
     { title: "マイルが貯まるクレジットカード比較|ANA・JALの還元と移行条件", url: "/pages/articles/credit-card-mile-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "mile", excerpt: "ANA JCB一般カード・JALカード普通カードを比較。カード還元率とマイル還元率の違い、移行条件を解説します。" },
