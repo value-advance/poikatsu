@@ -574,6 +574,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "クレジットカードのポイントを徹底比較|還元率・年会費・使い道で選ぶ", url: "/pages/articles/credit-card-point-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "compare", excerpt: "主要9枚を公式情報で比較。基本還元率と条件付き還元を分けて整理し、年間利用額別の実質還元シミュレーションも掲載します。" },
+    { title: "共通ポイント別クレジットカード比較|d・楽天・Ponta・Vポイントで選ぶ", url: "/pages/articles/credit-card-common-point-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "compare", excerpt: "貯めたい共通ポイントから選ぶカード比較。直接貯まるカードと交換して貯めるカードの違いも解説します。" },
+    { title: "マイルが貯まるクレジットカード比較|ANA・JALの還元と移行条件", url: "/pages/articles/credit-card-mile-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "mile", excerpt: "ANA JCB一般カード・JALカード普通カードを比較。カード還元率とマイル還元率の違い、移行条件を解説します。" },
     { title: "西友でお得に買い物する方法!ネットスーパーと店舗利用のポイント", url: "/pages/articles/seiyu-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "compare", excerpt: "西友の店舗とネットスーパーの違い、支払い方法の注意、送料・配送条件、まとめ買いの判断基準を解説します。" },
     { title: "イトーヨーカドーでポイ活する方法!アプリ・nanaco・セールの使い分け", url: "/pages/articles/itoyokado-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "app", excerpt: "イトーヨーカドーのポイント制度やアプリ特典の使い方、nanaco利用時の注意、セール日との組み合わせを解説します。" },
     { title: "JCBのJ-POINT(旧Oki Dokiポイント)活用術!交換先と還元率の考え方", url: "/pages/articles/jcb-jpoint-poikatsu", category: "ショッピング", date: "2026.08.24", thumbType: "creditcard", excerpt: "JCBのJ-POINT(旧Oki Dokiポイント)の貯まり方、交換先ごとの違い、キャンペーンの見方を解説します。" },
