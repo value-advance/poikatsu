@@ -579,6 +579,8 @@
     { title: "ウエルシアのポイント制度!WAON POINT・Vポイントと「ウエル活」の仕組み", url: "/pages/articles/welcia-point", category: "ショッピング", date: "2026.08.26", thumbType: "campaign", excerpt: "WAON POINT・Vポイントの基本還元と、毎月20日の「ウエル活」の現在の条件を解説します。" },
     { title: "スギ薬局のポイント制度!スギポイントの貯め方と使い方", url: "/pages/articles/sugi-point", category: "ショッピング", date: "2026.08.26", thumbType: "beginner", excerpt: "スギポイントの付与条件、クレジット払いでの上乗せ、処方箋支払い時の注意を解説します。" },
     { title: "ツルハのポイント制度!ツルハポイントカードと楽天ポイントの併用", url: "/pages/articles/tsuruha-point", category: "ショッピング", date: "2026.08.26", thumbType: "compare", excerpt: "商品カテゴリ別の還元率、楽天ポイントとの二重取り条件を解説します。" },
+    { title: "ドラッグストアモリのポイントを解説|ポイントデー・使い方・キャッシュレス時の条件", url: "/pages/articles/doramori-point", category: "ショッピング", date: "2026.08.26", thumbType: "compare", excerpt: "現金払いとキャッシュレス払いの違い、常設のポイント3倍デー、dポイントとの関係を解説します。" },
+    { title: "ドラッグセイムスのポイントを解説|セイムスポイントカードと楽天ポイントの関係", url: "/pages/articles/seims-point", category: "ショッピング", date: "2026.08.26", thumbType: "compare", excerpt: "富士薬品グループで使える範囲、楽天ポイントとの関係を解説します。" },
     { title: "ポイ活メール通知の整理術!必要なキャンペーンだけ見逃さない方法", url: "/pages/articles/poikatsu-mail-tsuuchi-seiri", category: "ポイントサイト", date: "2026.08.25", thumbType: "beginner", excerpt: "必要な通知の選び方、フォルダ分け、迷惑メール化を防ぐ注意、週1回で確認するコツを解説します。" },
     { title: "ハロウィン用品でポイ活する方法!衣装・お菓子を買いすぎないコツ", url: "/pages/articles/halloween-yohin-poikatsu", category: "ショッピング", date: "2026.08.25", thumbType: "caution", excerpt: "支出の目安、早めに買うメリット、100円ショップと通販の比較、ポイント利用の注意を解説します。" },
     { title: "クレジットカードのポイントを徹底比較|還元率・年会費・使い道で選ぶ", url: "/pages/articles/credit-card-point-hikaku", category: "クレジットカード", date: "2026.08.25", thumbType: "compare", excerpt: "主要9枚を公式情報で比較。基本還元率と条件付き還元を分けて整理し、年間利用額別の実質還元シミュレーションも掲載します。" },
