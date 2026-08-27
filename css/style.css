@@ -2322,6 +2322,34 @@ a.points-by-type__card:focus-visible {
   }
 }
 
+/* ネットスーパー記事のポイント比較表:店名が長く(西友ネットスーパー(楽天全国スーパー)等)、
+   .compare-tableの初期設定(nowrap+auto幅)だと列幅が崩れるため、この表だけ折り返し・固定幅に調整 */
+.compare-table--netsuper {
+  table-layout: fixed;
+  min-width: 760px;
+}
+
+.compare-table--netsuper th,
+.compare-table--netsuper td {
+  word-break: break-word;
+  overflow-wrap: break-word;
+}
+
+.compare-table--netsuper thead th,
+.compare-table--netsuper tbody th {
+  white-space: normal;
+}
+
+.compare-table--netsuper thead th:nth-child(1),
+.compare-table--netsuper tbody th {
+  width: 17%;
+}
+
+.compare-table--netsuper thead th:nth-child(2) { width: 19%; }
+.compare-table--netsuper thead th:nth-child(3) { width: 15%; }
+.compare-table--netsuper thead th:nth-child(4) { width: 18%; }
+.compare-table--netsuper thead th:nth-child(5) { width: 31%; }
+
 /* guide-card__title / faq-item__q をh3に変更した際も、
    article-body h3の共通スタイルで上書きされないようにする */
 .article-body .guide-card__title {
