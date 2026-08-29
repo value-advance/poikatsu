@@ -97,7 +97,11 @@ console.log("");
 console.log("Missing slugs:");
 missing.forEach(a => console.log(" ", a.slug));
 console.log("");
-console.log("Articles missing required metadata:");
+console.log("Articles whose OWN <article> tag lacks data-category/data-thumb-type");
+console.log("(this is separate from hub registration above -- these attributes only feed the");
+console.log("'related offers' tag-matching on the article page itself; the hub grid card's own");
+console.log("data-category/data-thumb-type, used for the /pages/articles/ category filter, is");
+console.log("unaffected and already correct for these articles. Informational only.):");
 console.log("  no data-category:", noCategoryCode.length, noCategoryCode.map(a => a.slug));
 console.log("  no data-thumb-type:", noThumbType.length, noThumbType.map(a => a.slug));
 console.log("  no meta description:", noDescription.length, noDescription.map(a => a.slug));
@@ -109,3 +113,13 @@ console.log("  noindex articles:", noindexed.length, noindexed.map(a => a.slug))
 fs.writeFileSync(path.join(__dirname, "_audit_all_articles.json"), JSON.stringify(articles, null, 2), "utf8");
 fs.writeFileSync(path.join(__dirname, "_audit_missing.json"), JSON.stringify(missing, null, 2), "utf8");
 console.log("\nWrote _audit_all_articles.json (" + articles.length + ") and _audit_missing.json (" + missing.length + ")");
+
+// Fail the process (and therefore CI) only on the things that are actually broken:
+// an article page that exists but isn't reachable from the all-articles hub, or a
+// duplicate slug. Missing data-category/data-thumb-type on the article's own tag is
+// informational (see above) and must not fail the build.
+if (missing.length > 0 || dupes.length > 0) {
+  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s).`);
+  process.exit(1);
+}
+console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs.");

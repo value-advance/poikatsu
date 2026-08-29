@@ -1,0 +1,15 @@
+name: Audit article hub registration
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check every article is registered in pages/articles/index.html
+        run: node scripts/audit_articles.js

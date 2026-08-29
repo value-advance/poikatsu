@@ -120,8 +120,11 @@ poikatsu/
    node scripts/audit_articles.js
    ```
    `pages/articles/*.html` の実ファイルと `pages/articles/index.html` のカード一覧を突き合わせ、
-   「記事ファイルはあるがハブに未登録」「`data-category`/`data-thumb-type`/meta descriptionが
-   未設定」などを一覧表示する(build等には組み込んでいないため、記事追加のたびに手動で実行する)。
+   「記事ファイルはあるがハブに未登録」「重複slug」などを検出し、見つかった場合はexit code 1で
+   失敗する。`.github/workflows/audit-articles.yml` により `main` への push / PR のたびに
+   GitHub Actions上で自動実行されるため、実行し忘れてもコミット後に検出できる
+   (このサイトはビルド不要の静的ホスティングで、デプロイ自体はActionsの成否と無関係に
+   進むため、これはデプロイをブロックする仕組みではなく「気づける」ための仕組み)。
 
 ### TOPバナー(スライダー)の表示ルール
 
