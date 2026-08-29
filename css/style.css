@@ -986,7 +986,8 @@ a.points-by-type__card:focus-visible {
   gap: 12px;
 }
 
-#articleList .article-card:nth-child(n+5) {
+#articleList .article-card:nth-child(n+5),
+#updatedArticleList .article-card:nth-child(n+5) {
   display: none;
 }
 
@@ -1091,13 +1092,25 @@ a.points-by-type__card:focus-visible {
 
 .article-card__meta {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 8px;
+  gap: 4px 8px;
 }
 
 .article-card__date {
   font-size: 11px;
   color: var(--color-text-light);
+}
+
+/* 更新記事カードの「更新理由」ラベル(任意表示、.article-card__metaの既存flexにそのまま収まる) */
+.article-card__update-tag {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--color-primary);
+  background: #fff1e0;
+  padding: 2px 8px;
+  border-radius: 999px;
+  white-space: nowrap;
 }
 
 .article-card__excerpt {
