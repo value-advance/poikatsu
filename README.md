@@ -111,6 +111,17 @@ poikatsu/
    ```
 4. 検索結果ページ用に `js/main.js` の `ARTICLE_SEARCH_INDEX` にもエントリを追加する
    (`category` フィールドは表示には使わないが、検索マッチング用に引き続き保持する)
+5. `pages/articles/index.html`(全記事ハブ)の `#articleListFull` にもカードを追加する。
+   カテゴリページにだけ記事を追加して、この全記事ハブへの追加を忘れると、記事ページ自体は
+   公開されているのに `/pages/articles/` や `/pages/articles/new` に載らない「登録漏れ」になる
+   (2026.08に41件のこの種の登録漏れが発生し、まとめて解消した実績あり)。
+   追加後は次のチェックスクリプトで漏れがないか確認する:
+   ```powershell
+   node scripts/audit_articles.js
+   ```
+   `pages/articles/*.html` の実ファイルと `pages/articles/index.html` のカード一覧を突き合わせ、
+   「記事ファイルはあるがハブに未登録」「`data-category`/`data-thumb-type`/meta descriptionが
+   未設定」などを一覧表示する(build等には組み込んでいないため、記事追加のたびに手動で実行する)。
 
 ### TOPバナー(スライダー)の表示ルール
 
