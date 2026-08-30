@@ -574,6 +574,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "PayPayポイント⇄Vポイント相互交換 完全ガイド【2026年版】", url: "/pages/articles/paypay-vpoint-koukan", category: "ショッピング", date: "2026.08.30", thumbType: "compare", excerpt: "交換レート・条件・PayPay⇄Vそれぞれの手順、有効期限の注意点を解説します。" },
+    { title: "ドコモの銀行(ドコモSMTBネット銀行)でdポイントを貯める方法【2026年】", url: "/pages/articles/docomo-ginkou-dpoint-poikatsu", category: "口座開設", date: "2026.08.30", thumbType: "app", excerpt: "dアカウント連携や給与受取・デビットカードでの貯め方を解説します。" },
+    { title: "コード決済4社を徹底比較|PayPay・d払い・楽天ペイ・au PAY", url: "/pages/articles/code-kessai-4sha-hikaku", category: "ショッピング", date: "2026.08.30", thumbType: "compare", excerpt: "還元率・貯まるポイント・有効期限・カード組み合わせをタイプ別に比較します。" },
     { title: "ドラッグストアのポイントを徹底比較|マツキヨ・ウエルシア・スギ薬局・ツルハなど", url: "/pages/articles/drugstore-point-hikaku", category: "ショッピング", date: "2026.08.26", thumbType: "compare", excerpt: "主要8社を公式情報で比較。独自ポイントと共通ポイントの関係、ポイントアップ制度、月間利用額シミュレーションを解説します。" },
     { title: "マツキヨココカラのポイント制度!マツキヨココカラポイントとdポイントの関係", url: "/pages/articles/matsukiyo-cocokara-point", category: "ショッピング", date: "2026.08.27", thumbType: "compare", excerpt: "現金払いとクレジット払いでの違い、dポイントとの併用条件を解説します。" },
     { title: "ウエルシアのポイント制度!WAON POINT・Vポイントと「ウエル活」の仕組み", url: "/pages/articles/welcia-point", category: "ショッピング", date: "2026.08.26", thumbType: "campaign", excerpt: "WAON POINT・Vポイントの基本還元と、毎月20日の「ウエル活」の現在の条件を解説します。" },
