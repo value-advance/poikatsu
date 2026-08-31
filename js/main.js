@@ -126,6 +126,7 @@
       { title: "大丸松坂屋オンラインストア ギフト・化粧品", type: "百貨店", points: "QIRAポイント", suffix: "などが貯まる", url: "/pages/articles/daimaru-matsuzakaya-toha", img: "/images/article-thumb/shopping/daimaru-matsuzakaya.webp" },
       { title: "京王ネットショッピング 旬のグルメ・スイーツ・ギフト", type: "百貨店", points: "京王グループ", suffix: "共通ポイントが貯まる", url: "/pages/articles/keio-net-shopping-toha", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892689212" },
       { title: "JTBショッピング 全国のお取り寄せ・お土産・ギフト", type: "お取り寄せ・ギフト", points: "JTBトラベル", suffix: "ポイントが貯まる・つかえる", url: "/pages/articles/jtb-shopping-toha", img: "https://www25.a8.net/svt/bgt?aid=260720103454&wid=002&eno=01&mid=s00000018449001010000&mc=1" },
+      { title: "OCNオンラインショップ 3,000円以上で送料無料", type: "家電・PC周辺機器", points: "3,000円", suffix: "以上で送料無料・d払いでポイント還元", url: "/pages/articles/ocn-online-shop-toha", img: "https://www25.a8.net/svt/bgt?aid=260720103495&wid=002&eno=01&mid=s00000003635001016000&mc=1" },
     ],
     travel: [
       { title: "イオンコンパストラベルモール(宿泊予約) WAON POINTが貯まる", type: "宿・ホテル予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" },
@@ -566,6 +567,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "OCNオンラインショップとは?特徴とお得な買い方をわかりやすく解説", url: "/pages/articles/ocn-online-shop-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "送料無料の条件、d払いのポイント還元、特価コーナーの活用方法を解説します。" },
     { title: "JTBショッピングとは?お取り寄せ・お土産・ギフトの特徴を解説", url: "/pages/articles/jtb-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "お取り寄せグルメ・お土産の事前注文・ギフトの活用方法、無料会員登録の特典を解説します。" },
     { title: "京王ネットショッピングとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/keio-net-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "京王グループ共通ポイントの貯め方、取扱商品、利用前に確認したいポイントを解説します。" },
     { title: "イトーヨーカドーネットスーパー by ONIGOとは?最短お届け・初回クーポンを解説", url: "/pages/articles/itoyokado-netsuper-onigo-poikatsu", category: "生活", date: "2026.08.31", thumbType: "app", excerpt: "最短お届けの特徴、対応時間・配送料、初回30%OFFクーポンの内容を解説します。" },
