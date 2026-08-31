@@ -574,6 +574,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "京王ネットショッピングとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/keio-net-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "京王グループ共通ポイントの貯め方、取扱商品、利用前に確認したいポイントを解説します。" },
     { title: "イトーヨーカドーネットスーパー by ONIGOとは?最短お届け・初回クーポンを解説", url: "/pages/articles/itoyokado-netsuper-onigo-poikatsu", category: "生活", date: "2026.08.31", thumbType: "app", excerpt: "最短お届けの特徴、対応時間・配送料、初回30%OFFクーポンの内容を解説します。" },
     { title: "PayPayポイント⇄Vポイント相互交換 完全ガイド【2026年版】", url: "/pages/articles/paypay-vpoint-koukan", category: "ショッピング", date: "2026.08.30", thumbType: "compare", excerpt: "交換レート・条件・PayPay⇄Vそれぞれの手順、有効期限の注意点を解説します。" },
     { title: "ドコモの銀行(ドコモSMTBネット銀行)でdポイントを貯める方法【2026年】", url: "/pages/articles/docomo-ginkou-dpoint-poikatsu", category: "口座開設", date: "2026.08.30", thumbType: "app", excerpt: "dアカウント連携や給与受取・デビットカードでの貯め方を解説します。" },
