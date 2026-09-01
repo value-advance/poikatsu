@@ -567,6 +567,9 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "【2026年10月〜】PayPay自治体キャンペーンまとめ!都城市・宮古島市の還元率・上限を解説", url: "/pages/articles/paypay-jichitai-campaign-2026", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "2026年10月開催のPayPay自治体キャンペーン(都城市・宮古島市など)を紹介。開催期間・還元率・付与上限・対象店舗などを解説します。" },
+    { title: "Yahoo!トラベル「ウルトラセール」とは?最大3万円クーポン・PayPayポイント特典を解説", url: "/pages/articles/yahoo-travel-ultrasale-poikatsu", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "Yahoo!トラベル「ヤフーパック ウルトラセール」を解説。JAL・ANA限定クーポン、PayPayポイント還元、開催期間・利用条件をまとめて紹介します。" },
+    { title: "JCB×マカオ航空キャンペーン!日本発マカオ行き航空券が8%OFF【2026年9〜10月】", url: "/pages/articles/jcb-airmacau-campaign-2026", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "JCBカード決済でマカオ航空の日本発マカオ行き航空券が8%OFFになるキャンペーンを解説。対象路線・搭乗期間・利用方法をまとめて紹介します。" },
     { title: "OCNオンラインショップとは?特徴とお得な買い方をわかりやすく解説", url: "/pages/articles/ocn-online-shop-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "送料無料の条件、d払いのポイント還元、特価コーナーの活用方法を解説します。" },
     { title: "JTBショッピングとは?お取り寄せ・お土産・ギフトの特徴を解説", url: "/pages/articles/jtb-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "お取り寄せグルメ・お土産の事前注文・ギフトの活用方法、無料会員登録の特典を解説します。" },
     { title: "京王ネットショッピングとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/keio-net-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "京王グループ共通ポイントの貯め方、取扱商品、利用前に確認したいポイントを解説します。" },
