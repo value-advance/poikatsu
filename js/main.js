@@ -155,6 +155,7 @@
       { title: "Retty 会員登録不要でネット予約", type: "グルメ予約", points: "2,600万人", suffix: "が利用(2022年5月時点)", url: "/pages/articles/retty-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1" },
       { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
       { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
+      { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
     ],
     sougou: [
       { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
@@ -266,6 +267,7 @@
     { title: "Retty 会員登録不要でネット予約", type: "グルメ予約", points: "2,600万人", suffix: "が利用(2022年5月時点)", category: "seikatsu", tags: ["paypay", "beginner"], url: "/pages/articles/retty-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1" },
     { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
     { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
+    { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", category: "seikatsu", tags: ["dpoint", "ponta", "beginner"], url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
     // アプリ(特集)
     { title: "HashPort Wallet 暗号資産・ポイント・NFTを一元管理", type: "Web3ウォレット", points: "無料", suffix: "で基本機能を利用可能", category: "app", tags: ["beginner"], url: "/pages/articles/hashport-wallet-poikatsu", img: null },
     // 銀行/証券
@@ -372,6 +374,7 @@
     { title: "Rettyとは?会員登録不要でPayPayポイントが貯まるグルメ予約サービス", excerpt: "実名ユーザーの口コミからお店探し・ネット予約ができるグルメサービス「Retty」の特徴を解説します。", url: "/pages/articles/retty-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "dバリューパスとは?初月無料で壁紙・待受が使い放題のサブスク", excerpt: "NTTドコモが提供し、待受・壁紙など約150の人気コンテンツが使い放題になるサブスク「dバリューパス」の特徴を解説します。", url: "/pages/articles/d-value-pass-poikatsu", thumbType: "app", category: "seikatsu" },
     { title: "auひかりとは?NEXT経由の申込みでキャッシュバックが早いって本当?", excerpt: "IPv6通信標準装備のKDDI光回線「auひかり」を、正規代理店NEXT経由で申し込める窓口を解説します。", url: "/pages/articles/auhikari-poikatsu", thumbType: "compare", category: "seikatsu" },
+    { title: "じゃらんゴルフとは?特徴とポイントの貯め方をわかりやすく解説", excerpt: "全国のゴルフ場を条件検索できる「じゃらんゴルフ」の特徴、dポイント・Pontaポイントの貯め方を解説します。", url: "/pages/articles/jalan-golf-toha", thumbType: "summary", category: "seikatsu" },
   ];
 
   function initPopularArticles() {
