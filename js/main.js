@@ -127,6 +127,7 @@
       { title: "京王ネットショッピング 旬のグルメ・スイーツ・ギフト", type: "百貨店", points: "京王グループ", suffix: "共通ポイントが貯まる", url: "/pages/articles/keio-net-shopping-toha", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892689212" },
       { title: "JTBショッピング 全国のお取り寄せ・お土産・ギフト", type: "お取り寄せ・ギフト", points: "JTBトラベル", suffix: "ポイントが貯まる・つかえる", url: "/pages/articles/jtb-shopping-toha", img: "https://www25.a8.net/svt/bgt?aid=260720103454&wid=002&eno=01&mid=s00000018449001010000&mc=1" },
       { title: "OCNオンラインショップ 3,000円以上で送料無料", type: "家電・PC周辺機器", points: "3,000円", suffix: "以上で送料無料・d払いでポイント還元", url: "/pages/articles/ocn-online-shop-toha", img: "https://www25.a8.net/svt/bgt?aid=260720103495&wid=002&eno=01&mid=s00000003635001016000&mc=1" },
+      { title: "アイリスプラザ 収納・家電・日用品を幅広く展開", type: "総合通販", points: "アイリスプラザポイント", suffix: "が貯まる", url: "/pages/articles/irisplaza-toha", img: "https://www21.a8.net/svt/bgt?aid=260719097184&wid=002&eno=01&mid=s00000001618001042000&mc=1" },
     ],
     travel: [
       { title: "イオンコンパストラベルモール(宿泊予約) WAON POINTが貯まる", type: "宿・ホテル予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" },
@@ -231,6 +232,7 @@
     { title: "高島屋オンラインストア 百貨店品質のギフト", type: "百貨店", points: "タカシマヤポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/takashimaya-online-toha", img: "/images/article-thumb/shopping/takashimaya-online.webp" },
     { title: "大丸松坂屋オンラインストア ギフト・化粧品", type: "百貨店", points: "QIRAポイント", suffix: "などが貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/daimaru-matsuzakaya-toha", img: "/images/article-thumb/shopping/daimaru-matsuzakaya.webp" },
     { title: "セブンネットショッピング 店舗受け取りで送料無料", type: "総合通販", points: "24時間", suffix: "受け取り可能", category: "shopping", tags: ["beginner"], url: "/pages/articles/sevennet-shopping-poikatsu", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892684845" },
+    { title: "アイリスプラザ 収納・家電・日用品を幅広く展開", type: "総合通販", points: "アイリスプラザポイント", suffix: "が貯まる", category: "shopping", tags: ["beginner"], url: "/pages/articles/irisplaza-toha", img: "https://www21.a8.net/svt/bgt?aid=260719097184&wid=002&eno=01&mid=s00000001618001042000&mc=1" },
     // 旅行(data-category="campaign")
     { title: "イオンコンパストラベルモール(宿泊予約) WAON POINTが貯まる", type: "宿・ホテル予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["beginner"], url: "/pages/articles/aeoncompass-travelmall-yado-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" },
     { title: "Yahoo!トラベル 約17,000施設から比較", type: "宿・ホテル予約", points: "PayPayポイント", suffix: "が貯まる・その場で使える", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/yahoo-travel-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1" },
@@ -570,6 +572,7 @@
     { title: "【2026年10月〜】PayPay自治体キャンペーンまとめ!都城市・宮古島市の還元率・上限を解説", url: "/pages/articles/paypay-jichitai-campaign-2026", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "2026年10月開催のPayPay自治体キャンペーン(都城市・宮古島市など)を紹介。開催期間・還元率・付与上限・対象店舗などを解説します。" },
     { title: "Yahoo!トラベル「ウルトラセール」とは?最大3万円クーポン・PayPayポイント特典を解説", url: "/pages/articles/yahoo-travel-ultrasale-poikatsu", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "Yahoo!トラベル「ヤフーパック ウルトラセール」を解説。JAL・ANA限定クーポン、PayPayポイント還元、開催期間・利用条件をまとめて紹介します。" },
     { title: "JCB×マカオ航空キャンペーン!日本発マカオ行き航空券が8%OFF【2026年9〜10月】", url: "/pages/articles/jcb-airmacau-campaign-2026", category: "キャンペーン", date: "2026.09.01", thumbType: "campaign", excerpt: "JCBカード決済でマカオ航空の日本発マカオ行き航空券が8%OFFになるキャンペーンを解説。対象路線・搭乗期間・利用方法をまとめて紹介します。" },
+    { title: "アイリスプラザとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/irisplaza-toha", category: "ショッピング", date: "2026.09.02", thumbType: "summary", excerpt: "アイリスプラザで貯まるポイントの基本や特徴、メリット、利用前に確認したいポイントまでをわかりやすく解説します。" },
     { title: "OCNオンラインショップとは?特徴とお得な買い方をわかりやすく解説", url: "/pages/articles/ocn-online-shop-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "送料無料の条件、d払いのポイント還元、特価コーナーの活用方法を解説します。" },
     { title: "JTBショッピングとは?お取り寄せ・お土産・ギフトの特徴を解説", url: "/pages/articles/jtb-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "お取り寄せグルメ・お土産の事前注文・ギフトの活用方法、無料会員登録の特典を解説します。" },
     { title: "京王ネットショッピングとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/keio-net-shopping-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "京王グループ共通ポイントの貯め方、取扱商品、利用前に確認したいポイントを解説します。" },
