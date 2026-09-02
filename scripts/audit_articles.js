@@ -66,15 +66,42 @@ function readArticle(file) {
 
 const files = fs.readdirSync(articlesDir).filter(f => f.endsWith(".html") && !EXCLUDE_FILES.has(f));
 const articles = files.map(readArticle);
+const createdBySlug = {};
+articles.forEach(a => { createdBySlug[a.slug] = a.created; });
+
+// 記事カードの並び(articleListFull的なコンテナ)から、出現順のslug配列を抽出する共通ヘルパー。
+// href は "pages/articles/x" "/pages/articles/x" のどちらの表記にも対応する。
+function extractCardOrder(html, sectionStart, sectionEnd) {
+  const section = html.slice(sectionStart, sectionEnd);
+  const order = [];
+  const re = /<a class="article-card" href="\/?pages\/articles\/([a-zA-Z0-9_-]+)\/?"/g;
+  let mm;
+  while ((mm = re.exec(section))) order.push(mm[1]);
+  return order;
+}
+
+// 与えられたslug配列(出現順)が、作成日(publishedAt)の降順(新しい→古い)になっているかを検証する。
+// 作成日不明のslugはスキップ(比較対象からは除外するが、順序自体は崩さない)。
+function findOrderViolations(order) {
+  const violations = [];
+  let prevSlug = null, prevCreated = null;
+  for (const slug of order) {
+    const created = createdBySlug[slug];
+    if (!created) continue;
+    if (prevCreated && created > prevCreated) {
+      violations.push({ afterSlug: prevSlug, afterCreated: prevCreated, slug, created });
+    }
+    prevSlug = slug;
+    prevCreated = created;
+  }
+  return violations;
+}
 
 const indexHtml = fs.readFileSync(path.join(articlesDir, "index.html"), "utf8");
 const gridStart = indexHtml.indexOf('id="articleListFull"');
 const gridEnd = indexHtml.indexOf('</div>\n\n      <nav class="pagination"');
-const gridHtml = indexHtml.slice(gridStart, gridEnd);
-const hubSlugs = new Set();
-const cardRe = /<a class="article-card" href="\/?pages\/articles\/([a-zA-Z0-9_-]+)\/?"/g;
-let m;
-while ((m = cardRe.exec(gridHtml))) hubSlugs.add(m[1]);
+const hubOrder = extractCardOrder(indexHtml, gridStart, gridEnd);
+const hubSlugs = new Set(hubOrder);
 
 const missing = articles.filter(a => !hubSlugs.has(a.slug));
 const noCategoryCode = articles.filter(a => !a.categoryCode);
@@ -110,16 +137,72 @@ console.log("  unmapped category code:", unmappedCategory.length, unmappedCatego
 console.log("  duplicate slugs:", dupes.length, dupes);
 console.log("  noindex articles:", noindexed.length, noindexed.map(a => a.slug));
 
+// --- 新着一覧同期(pages/articles/new.html) ---------------------------------
+// new.html は「公開済み全記事を作成日(publishedAt)降順で掲載する」一覧である前提。
+// 1) hub(index.html)に載っている記事が new.html に無ければ検出する
+// 2) new.html 自体の並び順が作成日降順になっているか検証する
+// ※ 更新日(updatedAt)だけが新しい記事(リライト記事)は、この判定には一切使わない。
+const newHtml = fs.readFileSync(path.join(articlesDir, "new.html"), "utf8");
+const newGridStart = newHtml.indexOf('id="articleListFull"');
+const newGridEnd = newHtml.indexOf('</div>\n\n      <nav class="pagination"');
+const newOrder = extractCardOrder(newHtml, newGridStart, newGridEnd);
+const newSlugs = new Set(newOrder);
+const missingFromNew = hubOrder.filter(slug => !newSlugs.has(slug));
+const hubOrderViolations = findOrderViolations(hubOrder);
+const newOrderViolations = findOrderViolations(newOrder);
+const newSyncOk = missingFromNew.length === 0 && hubOrderViolations.length === 0 && newOrderViolations.length === 0;
+
+console.log("");
+console.log("=== 新着一覧同期(pages/articles/new.html) ===");
+console.log("hub(index.html)登録件数:", hubOrder.length, " / new.html掲載件数:", newOrder.length);
+console.log("hubに登録済みだがnew.htmlに無い記事:", missingFromNew.length, missingFromNew);
+console.log("index.htmlの並び順で作成日降順に反する箇所:", hubOrderViolations.length);
+hubOrderViolations.forEach(v => console.log(`  ${v.slug}(作成日${v.created}) が ${v.afterSlug}(作成日${v.afterCreated}) より後ろに表示されている`));
+console.log("new.htmlの並び順で作成日降順に反する箇所:", newOrderViolations.length);
+newOrderViolations.forEach(v => console.log(`  ${v.slug}(作成日${v.created}) が ${v.afterSlug}(作成日${v.afterCreated}) より後ろに表示されている`));
+console.log("新着一覧同期:", newSyncOk ? "PASS" : "FAIL");
+
+// --- トップページ新着同期(ルート index.html #articleList) -------------------
+// トップページの「新着記事」は、公開済み全記事(作成日降順=hubOrder)の先頭N件と
+// 一致していなければならない。N は現在ホームページに表示されているカード枚数を
+// そのまま使う(枚数を勝手に増減させない)。
+const homeHtmlPath = path.join(root, "index.html");
+const homeHtml = fs.readFileSync(homeHtmlPath, "utf8");
+const homeGridStart = homeHtml.indexOf('id="articleList"');
+const homeGridEnd = homeHtml.indexOf('<a class="show-more-btn"');
+const homeOrder = extractCardOrder(homeHtml, homeGridStart, homeGridEnd);
+const expectedTopN = hubOrder.slice(0, homeOrder.length);
+const homeSyncOk = hubOrderViolations.length === 0 &&
+  homeOrder.length === expectedTopN.length &&
+  homeOrder.every((slug, i) => slug === expectedTopN[i]);
+
+console.log("");
+console.log("=== トップページ新着同期(index.html #articleList) ===");
+console.log("トップページ表示件数:", homeOrder.length);
+if (!homeSyncOk) {
+  console.error("ERROR:");
+  console.error("トップページの新着記事が最新公開記事と一致していません。");
+  console.error("");
+  console.error("期待(作成日降順の最新" + expectedTopN.length + "件):");
+  expectedTopN.forEach((slug, i) => console.error(`  ${i + 1}. ${slug}(作成日${createdBySlug[slug]})`));
+  console.error("");
+  console.error("現在のトップページ:");
+  homeOrder.forEach((slug, i) => console.error(`  ${i + 1}. ${slug}(作成日${createdBySlug[slug] || "不明"})`));
+}
+console.log("トップ新着同期:", homeSyncOk ? "PASS" : "FAIL");
+
 fs.writeFileSync(path.join(__dirname, "_audit_all_articles.json"), JSON.stringify(articles, null, 2), "utf8");
 fs.writeFileSync(path.join(__dirname, "_audit_missing.json"), JSON.stringify(missing, null, 2), "utf8");
 console.log("\nWrote _audit_all_articles.json (" + articles.length + ") and _audit_missing.json (" + missing.length + ")");
 
 // Fail the process (and therefore CI) only on the things that are actually broken:
-// an article page that exists but isn't reachable from the all-articles hub, or a
-// duplicate slug. Missing data-category/data-thumb-type on the article's own tag is
-// informational (see above) and must not fail the build.
-if (missing.length > 0 || dupes.length > 0) {
-  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s).`);
+// an article page that exists but isn't reachable from the all-articles hub, a
+// duplicate slug, new.html falling out of sync with the hub, or the homepage's
+// "新着記事" section falling out of sync with the latest published articles.
+// Missing data-category/data-thumb-type on the article's own tag is informational
+// (see above) and must not fail the build.
+if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk) {
+  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}.`);
   process.exit(1);
 }
-console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs.");
+console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and the homepage are in sync with the latest published articles.");
