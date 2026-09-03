@@ -278,6 +278,7 @@
     { title: "松井証券のiDeCo 運営管理手数料0円", type: "証券", points: "0円", suffix: "の運営管理手数料・低コスト商品40種類", category: "kouza", tags: ["beginner"], url: "/pages/articles/matsui-shouken-ideco-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260715065123&wid=002&eno=01&mid=s00000018318002010000&mc=1" },
     { title: "DMM株 少額投資・低コストのネット証券", type: "証券", points: "1,000円", suffix: "以下で購入できる銘柄あり", category: "kouza", tags: ["beginner"], url: "/pages/articles/dmm-kabu-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260714058100&wid=002&eno=01&mid=s00000008903007004000&mc=1" },
     { title: "マネックス証券 NISA売買手数料無料", type: "証券", points: "最大3.1%", suffix: "相当のdポイントが貯まる(dカード積立)", category: "kouza", tags: ["dpoint", "beginner"], url: "/pages/articles/monex-shouken-toha", img: "https://img.tcs-asp.net/imagesender?ac=C142999&lc=MXSEC1&isq=25&psq=0" },
+    { title: "楽天証券 NISA取引手数料0円", type: "証券", points: "楽天ポイント", suffix: "で投資信託・株式が購入できる", category: "kouza", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-shouken-toha", img: "https://srv2.trafficgate.net/t/b/907/738/318897_398564" },
   ];
 
   // 関連リンクとして意味を持つタグ(beginnerは対象が広すぎるため除外)
@@ -586,6 +587,7 @@
     { title: "期間限定ポイント5種を比較!失効前に使い切る方法", url: "/pages/articles/kikangentei-point-5shu-hikaku", category: "ショッピング", date: "2026.09.03", thumbType: "compare", excerpt: "d・楽天・PayPay・Ponta・Vポイントの期間限定ポイントを比較。有効期限や使える場所、通常ポイントとの違い、失効しそうなときの使い切り方を初心者向けに解説します。" },
     { title: "ポイント二重取り・三重取りの組み合わせ早見表", url: "/pages/articles/point-niju-sanjudori-kumiawase", category: "ショッピング", date: "2026.09.02", thumbType: "compare", excerpt: "クレジットカード×コード決済×共通ポイントを組み合わせた二重取り・三重取りの基本と、楽天・d・PayPay・Ponta・Vポイント別のおすすめルートを初心者向けに解説します。" },
     { title: "マツキヨココカラオンラインストアとは?送料無料条件・支払い方法・当日配送を解説", url: "/pages/articles/matsukiyo-cocokara-online-toha", category: "ショッピング", date: "2026.09.02", thumbType: "summary", excerpt: "マツモトキヨシ・ココカラファインの公式通販の特徴、送料無料の条件、支払い方法、当日配送サービスまでわかりやすく解説します。" },
+    { title: "楽天証券とは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/rakuten-shouken-toha", category: "口座開設", date: "2026.09.03", thumbType: "summary", excerpt: "楽天証券の特徴、NISA口座の手数料、楽天ポイントを使った投資、楽天カード積立の還元、口座開設の流れまでをわかりやすく解説します。" },
     { title: "マネックス証券とは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/monex-shouken-toha", category: "口座開設", date: "2026.09.03", thumbType: "summary", excerpt: "マネックス証券の特徴、NISA口座の手数料、dカード積立でのdポイント還元、口座開設の流れまでをわかりやすく解説します。" },
     { title: "DMMブックスとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/dmmbooks-toha", category: "生活", date: "2026.09.03", thumbType: "summary", excerpt: "DMMブックスで貯まるポイントの基本や特徴、メリット、利用前に確認したいポイントまでをわかりやすく解説します。" },
     { title: "じゃらんゴルフとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/jalan-golf-toha", category: "生活", date: "2026.09.02", thumbType: "summary", excerpt: "全国のゴルフ場を条件検索できる「じゃらんゴルフ」の特徴、dポイント・Pontaポイントの貯め方を解説します。" },
