@@ -2532,6 +2532,43 @@ a.guide-card:hover {
   }
 }
 
+/* guide-cardの右側に「詳細」ボタンを添えるバリエーション
+   (例:ポイント投資・運用サービス比較記事の一覧) */
+.guide-card--split {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.guide-card--split .guide-card__body {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.guide-card--split .guide-card__title,
+.guide-card--split .guide-card__desc {
+  margin: 0;
+}
+
+.guide-card__detail-btn {
+  flex: 0 0 auto;
+  display: inline-block;
+  padding: 7px 14px;
+  border-radius: 999px;
+  background: var(--color-primary);
+  color: #fff;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.guide-card__detail-btn:hover {
+  opacity: .85;
+}
+
 /* ===================================================================
    関連記事カード(重要な深掘り記事へのリンクを視覚的に強調する横長カード。
    アフィリエイトCTA(.cta-simple)とは意図的に見た目を分離している)
