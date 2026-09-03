@@ -157,6 +157,7 @@
       { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
       { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
       { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
+      { title: "DMMブックス 幅広いジャンルの電子書籍ストア", type: "電子書籍", points: "DMMポイント", suffix: "が貯まる", url: "/pages/articles/dmmbooks-toha", img: "https://www24.a8.net/svt/bgt?aid=260720103900&wid=002&eno=01&mid=s00000000842023010000&mc=1" },
     ],
     sougou: [
       { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
@@ -270,6 +271,7 @@
     { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
     { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
     { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", category: "seikatsu", tags: ["dpoint", "ponta", "beginner"], url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
+    { title: "DMMブックス 幅広いジャンルの電子書籍ストア", type: "電子書籍", points: "DMMポイント", suffix: "が貯まる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dmmbooks-toha", img: "https://www24.a8.net/svt/bgt?aid=260720103900&wid=002&eno=01&mid=s00000000842023010000&mc=1" },
     // アプリ(特集)
     { title: "HashPort Wallet 暗号資産・ポイント・NFTを一元管理", type: "Web3ウォレット", points: "無料", suffix: "で基本機能を利用可能", category: "app", tags: ["beginner"], url: "/pages/articles/hashport-wallet-poikatsu", img: null },
     // 銀行/証券
@@ -583,6 +585,7 @@
     { title: "期間限定ポイント5種を比較!失効前に使い切る方法", url: "/pages/articles/kikangentei-point-5shu-hikaku", category: "ショッピング", date: "2026.09.03", thumbType: "compare", excerpt: "d・楽天・PayPay・Ponta・Vポイントの期間限定ポイントを比較。有効期限や使える場所、通常ポイントとの違い、失効しそうなときの使い切り方を初心者向けに解説します。" },
     { title: "ポイント二重取り・三重取りの組み合わせ早見表", url: "/pages/articles/point-niju-sanjudori-kumiawase", category: "ショッピング", date: "2026.09.02", thumbType: "compare", excerpt: "クレジットカード×コード決済×共通ポイントを組み合わせた二重取り・三重取りの基本と、楽天・d・PayPay・Ponta・Vポイント別のおすすめルートを初心者向けに解説します。" },
     { title: "マツキヨココカラオンラインストアとは?送料無料条件・支払い方法・当日配送を解説", url: "/pages/articles/matsukiyo-cocokara-online-toha", category: "ショッピング", date: "2026.09.02", thumbType: "summary", excerpt: "マツモトキヨシ・ココカラファインの公式通販の特徴、送料無料の条件、支払い方法、当日配送サービスまでわかりやすく解説します。" },
+    { title: "DMMブックスとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/dmmbooks-toha", category: "生活", date: "2026.09.03", thumbType: "summary", excerpt: "DMMブックスで貯まるポイントの基本や特徴、メリット、利用前に確認したいポイントまでをわかりやすく解説します。" },
     { title: "じゃらんゴルフとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/jalan-golf-toha", category: "生活", date: "2026.09.02", thumbType: "summary", excerpt: "全国のゴルフ場を条件検索できる「じゃらんゴルフ」の特徴、dポイント・Pontaポイントの貯め方を解説します。" },
     { title: "アイリスプラザとは?特徴とポイントの貯め方をわかりやすく解説", url: "/pages/articles/irisplaza-toha", category: "ショッピング", date: "2026.09.02", thumbType: "summary", excerpt: "アイリスプラザで貯まるポイントの基本や特徴、メリット、利用前に確認したいポイントまでをわかりやすく解説します。" },
     { title: "OCNオンラインショップとは?特徴とお得な買い方をわかりやすく解説", url: "/pages/articles/ocn-online-shop-toha", category: "ショッピング", date: "2026.08.31", thumbType: "summary", excerpt: "送料無料の条件、d払いのポイント還元、特価コーナーの活用方法を解説します。" },

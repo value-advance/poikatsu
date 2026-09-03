@@ -9,6 +9,15 @@ const articlesDir = path.join(root, "pages", "articles");
 
 const EXCLUDE_FILES = new Set(["index.html", "new.html", "updated.html"]);
 
+// 記事は作成する(hubには必ず登録する)が、依頼者の明示指示により
+// トップページ「新着記事」および /pages/articles/new.html には
+// 意図的に掲載しない記事のslug一覧。「新着一覧同期」「トップ新着同期」
+// チェックの対象から個別に除外するためのallowlist。
+// 追加する場合は、必ずユーザーの明示的な指示があった場合のみ。
+const SHINCHAKU_EXCLUDED_SLUGS = new Set([
+  "dmmbooks-toha", // 案件記事(生活カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
+]);
+
 const CATEGORY_LABELS = {
   creditcard: "クレジットカード",
   kouza: "口座開設",
@@ -147,7 +156,7 @@ const newGridStart = newHtml.indexOf('id="articleListFull"');
 const newGridEnd = newHtml.indexOf('</div>\n\n      <nav class="pagination"');
 const newOrder = extractCardOrder(newHtml, newGridStart, newGridEnd);
 const newSlugs = new Set(newOrder);
-const missingFromNew = hubOrder.filter(slug => !newSlugs.has(slug));
+const missingFromNew = hubOrder.filter(slug => !newSlugs.has(slug) && !SHINCHAKU_EXCLUDED_SLUGS.has(slug));
 const hubOrderViolations = findOrderViolations(hubOrder);
 const newOrderViolations = findOrderViolations(newOrder);
 const newSyncOk = missingFromNew.length === 0 && hubOrderViolations.length === 0 && newOrderViolations.length === 0;
@@ -171,7 +180,8 @@ const homeHtml = fs.readFileSync(homeHtmlPath, "utf8");
 const homeGridStart = homeHtml.indexOf('id="articleList"');
 const homeGridEnd = homeHtml.indexOf('<a class="show-more-btn"');
 const homeOrder = extractCardOrder(homeHtml, homeGridStart, homeGridEnd);
-const expectedTopN = hubOrder.slice(0, homeOrder.length);
+const homeEligibleOrder = hubOrder.filter(slug => !SHINCHAKU_EXCLUDED_SLUGS.has(slug));
+const expectedTopN = homeEligibleOrder.slice(0, homeOrder.length);
 const homeSyncOk = hubOrderViolations.length === 0 &&
   homeOrder.length === expectedTopN.length &&
   homeOrder.every((slug, i) => slug === expectedTopN[i]);
