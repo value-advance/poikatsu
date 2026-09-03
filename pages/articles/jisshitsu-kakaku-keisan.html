@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
@@ -11,11 +11,27 @@
     gtag('config', 'G-H9CCXWBSXJ');
   </script>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>実質価格の計算方法!値引き・クーポン・ポイントをまとめて比較する | ポイントの殿堂</title>
-  <meta name="description" content="実質価格とは何か、値引きとポイントの違い、クーポンを入れた計算、送料・手数料の扱い、安さを判断する手順までを初心者向けに解説します。">
+  <title>実質価格とは?計算方法・ポイント還元と値引きの違いを具体例で解説</title>
+  <meta name="description" content="実質価格の基本計算式と、10%値引き・10%ポイント還元の違いを具体例で解説。クーポン・還元上限・期間限定ポイントを含めた計算方法、3店舗の比較例までまとめました。">
   <link rel="stylesheet" href="../../css/style.css">
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/jisshitsu-kakaku-keisan">
+
+  <style>
+    .jk-calc { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 16px; margin: 20px 0; }
+    .jk-calc__title { font-size: 14px; font-weight: 800; color: var(--color-navy); margin: 0 0 12px; }
+    .jk-calc__grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin-bottom: 14px; }
+    .jk-calc__field { display: flex; flex-direction: column; gap: 4px; font-size: 12px; font-weight: 600; color: var(--color-text); }
+    .jk-calc__field input { font-size: 14px; padding: 8px 10px; border: 1px solid var(--color-border); border-radius: 8px; width: 100%; box-sizing: border-box; }
+    .jk-calc__btn { display: block; width: 100%; background: var(--color-primary); color: #fff; border: none; border-radius: 999px; padding: 10px 20px; font-size: 13px; font-weight: 700; cursor: pointer; }
+    .jk-calc__btn:hover { background: var(--color-primary-dark); }
+    .jk-calc__result { margin-top: 14px; padding-top: 14px; border-top: 1px dashed var(--color-border); font-size: 13px; }
+    .jk-calc__result p { display: flex; justify-content: space-between; margin: 6px 0; }
+    .jk-calc__result strong { color: var(--color-navy); font-size: 15px; }
+    @media (min-width: 480px) {
+      .jk-calc__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+  </style>
 </head>
 <body data-root="../../">
 
@@ -26,152 +42,287 @@
 
       <p class="breadcrumb">
         <a href="../../">ホーム</a><span class="breadcrumb__sep">›</span>
-        <a href="../../#news">新着記事</a><span class="breadcrumb__sep">›</span>
-        実質価格の計算方法
+        <a href="../category/shopping">ショッピング</a><span class="breadcrumb__sep">›</span>
+        実質価格とは
       </p>
 
       <header class="article-header">
-        <h1>実質価格の計算方法!値引き・クーポン・ポイントをまとめて比較する</h1>
+        <h1>実質価格とは?計算方法・ポイント還元と値引きの違いを具体例で解説</h1>
         <div class="article-header__dates">
           <span class="article-header__date">作成日:2026.07.14</span>
-          <span class="article-header__date">更新日:2026.07.14</span>
+          <span class="article-header__date">更新日:2026.09.03</span>
         </div>
       </header>
 
       <div class="article-body">
 
-        <p>
-          「安い」と思って買った商品が、実は他の店のほうが実質的に安かった、という経験がある方もいるのではないでしょうか。値引き、クーポン、ポイント還元が入り混じると、どれが一番お得なのか一目ではわかりにくくなります。この記事では、実質価格とは何かという基本から、値引きとポイントの違い、クーポンを入れた計算、送料・手数料の扱い、安さを判断する手順までを、初心者にもわかりやすく解説します。
-        </p>
+        <nav class="article-toc" aria-label="ページ内ショートカット">
+          <div class="article-toc__title">この記事の内容</div>
+          <ul class="article-toc__list">
+            <li><a href="#ketsuron">結論|実質価格とは?</a></li>
+            <li><a href="#shiki">実質価格の基本計算式</a></li>
+            <li><a href="#nebiki-point">10%値引きと10%ポイント還元の違い</a></li>
+            <li><a href="#point-keisan">ポイント還元を含めた計算方法</a></li>
+            <li><a href="#coupon-point">クーポン+ポイントの場合</a></li>
+            <li><a href="#jougen">還元上限がある場合</a></li>
+            <li><a href="#souryou">送料・手数料を含める場合</a></li>
+            <li><a href="#kikangentei">期間限定ポイントはどう計算する?</a></li>
+            <li><a href="#hikaku">3店舗の実質価格を比較する</a></li>
+            <li><a href="#chuiten">計算するときの注意点</a></li>
+            <li><a href="#tool">簡単に計算する方法</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+            <li><a href="#matome">まとめ</a></li>
+          </ul>
+        </nav>
 
-        <h2>1. 実質価格とは何か</h2>
-        <p>
-          実質価格とは、表示されている金額から値引きやクーポン、ポイント還元分を差し引いた、最終的に負担する金額のことです。表示価格だけを見比べても、条件によって実質的な負担額は大きく変わることがあります。
-        </p>
-        <div class="mini-icon-grid">
-          <div class="mini-icon-item"><span class="mini-icon-item__emoji">🏷️</span>表示価格(店頭・サイトの金額)</div>
-          <div class="mini-icon-item"><span class="mini-icon-item__emoji">➖</span>値引き・クーポン分</div>
-          <div class="mini-icon-item"><span class="mini-icon-item__emoji">💰</span>実質価格(最終的な負担額)</div>
+        <h2 id="ketsuron">結論|実質価格とは?</h2>
+        <div class="highlight-box">
+          <p class="highlight-box__text">実質価格 = その場の支払額 − 使い切れるポイント価値 + 送料・手数料</p>
         </div>
         <p>
-          例えば同じ1,000円の商品でも、片方は表示価格のまま、もう片方は10%オフクーポンとポイント還元が付く場合、実質的な負担額には差が生まれます。表示価格だけで判断せず、こうした差し引きを意識することが、賢い買い物の第一歩になります。
+          実質価格とは、表示価格からクーポンや値引きを反映した「その場の支払額」に、送料・手数料を足し、後日使い切れるポイントの価値を差し引いた、最終的な負担額のことです。値引きはその場で支払額が減るのに対し、ポイント還元は後日「使い切れて初めて」価値が確定するため、単純に%だけで比べると判断を誤りやすくなります。次の章から、条件別に計算方法を具体的に見ていきます。
         </p>
 
-        <h2>2. 値引きとポイントの違い</h2>
+        <h2 id="shiki">実質価格の基本計算式</h2>
         <p>
-          値引きとポイント還元は、どちらも「お得」に感じられますが、性質はかなり異なります。違いを理解しておくと、比較がしやすくなります。
+          例えば「商品価格10,000円・10%OFF・ポイント5%・送料500円」の場合、次の順番で計算します。
+        </p>
+        <ol class="flow-list">
+          <li><strong>①クーポン適用後の支払額</strong>10,000円 × (1 − 10%) = 9,000円</li>
+          <li><strong>②ポイント付与対象額</strong>多くの場合、値引き後の金額(9,000円)が対象になります</li>
+          <li><strong>③獲得ポイント</strong>9,000円 × 5% = 450pt(1pt=1円として計算)</li>
+          <li><strong>④送料</strong>500円を加算</li>
+          <li><strong>⑤最終的な実質負担</strong>9,000円 + 500円 − 450円 = 9,050円</li>
+        </ol>
+        <p>
+          <small>ポイント付与の対象額(値引き前・値引き後どちらか)はサービスによって異なるため、実際に購入する前に対象条件を確認してください。</small>
+        </p>
+
+        <h2 id="nebiki-point">10%値引きと10%ポイント還元の違い</h2>
+        <p>
+          「10%OFF」と「10%ポイント還元」は、数字は同じでも性質が異なります。10,000円の商品で比べてみましょう。
         </p>
         <div class="compare-grid">
           <div class="compare-col compare-col--good">
-            <div class="compare-col__title">値引き</div>
+            <div class="compare-col__title">10%OFF(値引き)</div>
             <ul>
-              <li>その場で支払額が減るためわかりやすい</li>
-              <li>後から計算する手間がない</li>
+              <li>支払額はその場で9,000円になる</li>
+              <li>後から使い道を考える必要がない</li>
             </ul>
           </div>
           <div class="compare-col compare-col--bad">
-            <div class="compare-col__title">ポイント還元</div>
+            <div class="compare-col__title">10%ポイント還元</div>
             <ul>
-              <li>支払い額自体は変わらず、後日使える形で戻ってくる</li>
-              <li>有効期限や利用条件が付くことがある</li>
+              <li>支払額はその場では10,000円のまま</li>
+              <li>後日1,000円相当を使い切れて初めて、実質9,000円相当になる</li>
             </ul>
           </div>
         </div>
-        <p>
-          値引きはその場で効果を実感できる一方、ポイント還元は将来の買い物で使って初めて価値が確定するという特徴があります。この違いを理解しておくと、どちらを優先すべきか判断しやすくなります。
-        </p>
+        <div class="warning-box">
+          <div class="warning-box__title">⚠ ポイントは現金値引きと完全に同価値とは限らない</div>
+          <ul>
+            <li>有効期限内に使い切れないと、価値を満額発揮できない</li>
+            <li>利用先(自社サイトのみ等)が限定される場合がある</li>
+            <li>期間限定ポイントは通常ポイントより短い期限が設定されやすい</li>
+            <li>還元に上限が設定されている場合がある</li>
+            <li>一部の商品・支払い方法がポイント付与対象外になる場合がある</li>
+          </ul>
+        </div>
 
-        <h2>3. クーポンを入れた計算</h2>
+        <h2 id="point-keisan">ポイント還元を含めた計算方法</h2>
         <p>
-          クーポンが加わると、計算はやや複雑になります。以下は、5,000円の商品にクーポンとポイントが組み合わさった場合の目安です。
+          ポイント還元は、「どの金額に対して」計算されるかによって獲得数が変わります。5,000円の商品で比較します。
         </p>
         <div class="article-body__table-wrap">
           <table>
-            <thead>
-              <tr>
-                <th>条件</th>
-                <th>実質価格の目安</th>
-              </tr>
-            </thead>
+            <thead><tr><th>計算パターン</th><th>獲得ポイント</th></tr></thead>
             <tbody>
-              <tr>
-                <td>クーポンなし・ポイント1%</td>
-                <td>4,950円相当</td>
-              </tr>
-              <tr>
-                <td>10%クーポンのみ</td>
-                <td>4,500円</td>
-              </tr>
-              <tr>
-                <td>10%クーポン+ポイント1%</td>
-                <td>4,455円相当</td>
-              </tr>
+              <tr><th>値引きなし・5,000円に10%</th><td>500pt</td></tr>
+              <tr><th>10%OFF後の4,500円に10%</th><td>450pt</td></tr>
             </tbody>
           </table>
         </div>
         <p>
-          クーポンとポイントの両方が使える場合は、割引後の金額に対してポイントが計算されるのか、割引前の金額に対して計算されるのかによっても、最終的な実質価格に差が出ることがあります。適用順序もあわせて確認しておくと安心です。
+          値引き後の金額にポイントが付く場合は、単純に「表示価格 × 還元率」で計算すると獲得ポイントを多く見積もってしまいます。値引きとポイントが両方ある場合は、必ず「どちらの金額が対象か」を確認してから計算しましょう。
         </p>
 
-        <h2>4. 送料・手数料の扱い</h2>
+        <h2 id="coupon-point">クーポン+ポイントの場合</h2>
         <p>
-          実質価格を考えるうえで見落としやすいのが、送料や手数料です。
+          クーポンとポイントが両方使える場合、5,000円の商品を例に目安を整理します。
         </p>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead><tr><th>条件</th><th>実質価格の目安</th></tr></thead>
+            <tbody>
+              <tr><td>クーポンなし・ポイント1%</td><td>4,950円相当</td></tr>
+              <tr><td>10%クーポンのみ</td><td>4,500円</td></tr>
+              <tr><td>10%クーポン+ポイント1%(クーポン後価格に付与)</td><td>4,455円相当</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          クーポンとポイントの適用順序(割引後の金額にポイントが付くのか、割引前の金額に付くのか)によって最終的な実質価格に差が出ます。購入前に適用順序を確認しておくと安心です。
+        </p>
+
+        <h2 id="jougen">還元上限がある場合</h2>
+        <p>
+          ポイントキャンペーンには「20%還元・上限1,000ポイント」のように上限が設定されていることがあります。
+        </p>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead><tr><th>購入金額</th><th>単純計算(上限なし)</th><th>上限適用後</th></tr></thead>
+            <tbody>
+              <tr><td>10,000円(20%還元・上限1,000pt)</td><td>2,000pt</td><td>1,000pt(上限適用)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          還元率だけを見て「20%もお得」と考えると、実際の獲得ポイントを過大に見積もってしまいます。高還元キャンペーンほど上限が設定されやすいため、購入金額が上限を超えそうな場合は、事前に上限の有無と金額を確認してください。
+        </p>
+
+        <h2 id="souryou">送料・手数料を含める場合</h2>
         <ul class="check-list">
           <li>送料が別途かかる場合は、実質価格に加算して比較する</li>
           <li>代引き手数料やカード手数料の有無を確認する</li>
-          <li>送料無料ラインぎりぎりの注文は、追加購入の必要性も検討する</li>
+          <li>送料無料ラインぎりぎりの注文は、追加購入が本当に必要かも検討する</li>
         </ul>
         <p>
-          商品本体がどれだけ安くても、送料や手数料を含めると他店のほうが結果的に安く済むというケースも珍しくありません。合計金額でそろえて比較する習慣をつけましょう。
+          商品本体がどれだけ安くても、送料や手数料を含めると他店のほうが結果的に安く済むケースは珍しくありません。送料で損をしないための考え方は<a href="souryou-son-poikatsu">送料で損しないポイ活術</a>でも解説しています。
         </p>
 
-        <h2>5. 安さを判断する手順</h2>
+        <h2 id="kikangentei">期間限定ポイントはどう計算する?</h2>
         <p>
-          最後に、実質価格をもとに安さを判断するための手順を整理します。
+          実質価格を計算するとき、通常ポイントと期間限定ポイントを同じ価値として扱ってよいとは限りません。
         </p>
-        <ol class="flow-list">
-          <li><strong>表示価格を確認する</strong></li>
-          <li><strong>適用できる値引き・クーポンを洗い出す</strong></li>
-          <li><strong>ポイント還元分を金額に換算する</strong></li>
-          <li><strong>送料・手数料を加減して実質価格を出す</strong></li>
-          <li><strong>他店・他サービスの実質価格と比較する</strong></li>
-        </ol>
+        <div class="compare-grid">
+          <div class="compare-col compare-col--good">
+            <div class="compare-col__title">使い切れる見込みがあるポイント</div>
+            <ul>
+              <li>1pt=1円として実質価格にそのまま反映してよい</li>
+            </ul>
+          </div>
+          <div class="compare-col compare-col--bad">
+            <div class="compare-col__title">使い道がなく失効しそうなポイント</div>
+            <ul>
+              <li>実質価格から満額を差し引かず、控えめに見積もる</li>
+            </ul>
+          </div>
+        </div>
         <p>
-          この手順を踏むことで、感覚的な「お得そう」という印象ではなく、数字に基づいた判断ができるようになります。慣れてくると、暗算でもおおよその実質価格を見積もれるようになっていきます。
+          期間限定ポイントは通常ポイントより短い期限が設定されることが多く、有効期限内に使い切れて初めて実質価格に反映できます。d・楽天・PayPay・Ponta・Vポイントそれぞれの期間限定ポイントの違いは<a href="kikangentei-point-5shu-hikaku">期間限定ポイント5種を比較</a>で詳しく解説しています。
         </p>
 
-        <h2>割引表示の落とし穴</h2>
+        <h2 id="hikaku">3店舗の実質価格を比較する具体例</h2>
+        <p>
+          同じ10,000円前後の商品を、条件が異なる3店舗で比較してみます。
+        </p>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead><tr><th>店舗</th><th>支払額</th><th>獲得ポイント</th><th>送料</th><th>実質負担</th></tr></thead>
+            <tbody>
+              <tr><th>A店(現金値引き8%)</th><td>9,200円</td><td>0pt</td><td>0円</td><td>9,200円</td></tr>
+              <tr><th>B店(ポイント10%)</th><td>10,000円</td><td>1,000pt</td><td>0円</td><td>9,000円相当</td></tr>
+              <tr><th>C店(9,500円・ポイント3%・送料500円)</th><td>9,500円</td><td>285pt</td><td>500円</td><td>9,715円相当</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          表示価格だけを見るとC店が一番安く見えますが、送料を含めた実質負担で比較するとB店が最も安くなります。ポイントを1pt=1円として使い切れる前提の計算のため、使い道がない場合はB店の実質負担がさらに上がる点に注意してください。
+        </p>
+
+        <h2 id="chuiten">実質価格を計算するときの注意点</h2>
         <div class="warning-box">
           <div class="warning-box__title">⚠ 実質価格を見誤りやすい表示</div>
           <ul>
             <li>「今だけ半額」など期間限定表示に気を取られてしまう</li>
             <li>割引率だけが強調され、送料が別記載になっている</li>
             <li>ポイント還元率が上限付きであることが小さく書かれている</li>
+            <li>数量や容量が異なる商品をそのまま比較してしまう</li>
           </ul>
         </div>
+        <p>
+          セット販売と単品販売を比較する場合は、1個あたりの実質価格に換算してから並べるようにしましょう。
+        </p>
 
-        <h2>計算を楽にするコツ</h2>
-        <div class="point-pick-list">
-          <div class="point-pick-list__item"><span class="point-pick-list__num">POINT</span>電卓アプリやメモに「表示価格-値引き-ポイント換算+送料」の式を書いておくと、毎回同じ手順で比較でき、判断のブレを減らせます。</div>
+        <h2 id="tool">簡単に計算する方法</h2>
+        <p>
+          毎回手計算するのが面倒な場合は、以下のフォームに数字を入力すると簡易的な実質価格を計算できます(値引き適用後の金額にポイントが付く前提の目安計算です)。
+        </p>
+        <div class="jk-calc" id="jkCalc">
+          <p class="jk-calc__title">実質価格 簡易計算ツール</p>
+          <div class="jk-calc__grid">
+            <label class="jk-calc__field">商品価格(円)
+              <input type="number" id="jkPrice" min="0" value="10000" inputmode="numeric">
+            </label>
+            <label class="jk-calc__field">値引き率(%)
+              <input type="number" id="jkDiscount" min="0" max="100" value="0" inputmode="numeric">
+            </label>
+            <label class="jk-calc__field">クーポン金額(円)
+              <input type="number" id="jkCoupon" min="0" value="0" inputmode="numeric">
+            </label>
+            <label class="jk-calc__field">ポイント還元率(%)
+              <input type="number" id="jkPointRate" min="0" value="0" inputmode="numeric">
+            </label>
+            <label class="jk-calc__field">ポイント上限(pt・0で上限なし)
+              <input type="number" id="jkPointCap" min="0" value="0" inputmode="numeric">
+            </label>
+            <label class="jk-calc__field">送料・手数料(円)
+              <input type="number" id="jkShipping" min="0" value="0" inputmode="numeric">
+            </label>
+          </div>
+          <button type="button" class="jk-calc__btn" id="jkCalcBtn">計算する</button>
+          <div class="jk-calc__result" id="jkResult" hidden>
+            <p><span>支払額</span><strong id="jkPay"></strong></p>
+            <p><span>獲得ポイント</span><strong id="jkPoint"></strong></p>
+            <p><span>実質価格</span><strong id="jkFinal"></strong></p>
+          </div>
         </div>
+        <script>
+          (function () {
+            var btn = document.getElementById("jkCalcBtn");
+            if (!btn) return;
+            btn.addEventListener("click", function () {
+              var price = parseFloat(document.getElementById("jkPrice").value) || 0;
+              var discount = parseFloat(document.getElementById("jkDiscount").value) || 0;
+              var coupon = parseFloat(document.getElementById("jkCoupon").value) || 0;
+              var pointRate = parseFloat(document.getElementById("jkPointRate").value) || 0;
+              var pointCap = parseFloat(document.getElementById("jkPointCap").value) || 0;
+              var shipping = parseFloat(document.getElementById("jkShipping").value) || 0;
+
+              var afterDiscount = Math.max(price * (1 - discount / 100), 0);
+              var afterCoupon = Math.max(afterDiscount - coupon, 0);
+              var pay = afterCoupon + shipping;
+              var point = Math.floor(afterCoupon * (pointRate / 100));
+              if (pointCap > 0) point = Math.min(point, pointCap);
+              var final = pay - point;
+
+              document.getElementById("jkPay").textContent = Math.round(pay).toLocaleString() + "円";
+              document.getElementById("jkPoint").textContent = Math.round(point).toLocaleString() + "pt";
+              document.getElementById("jkFinal").textContent = Math.round(final).toLocaleString() + "円相当";
+              document.getElementById("jkResult").hidden = false;
+            });
+          })();
+        </script>
         <p>
-          式をテンプレートとして保存しておけば、買い物のたびにゼロから考える必要がなくなり、比較にかかる時間も短縮しやすくなります。スマホのメモアプリに固定文言として残しておき、数字だけを入れ替えて使う方法もおすすめです。
+          <small>この計算ツールは目安です。実際のポイント付与対象額や上限、送料条件はサービスごとに異なるため、購入前に必ず公式サイトでご確認ください。</small>
         </p>
 
-        <h2>比較対象をそろえるときの注意</h2>
-        <p>
-          実質価格を比較するときは、比較する商品や店舗の条件をそろえることも大切です。数量や容量が異なる商品をそのまま比べてしまうと、単価の違いが見えにくくなります。セット販売と単品販売を比較する場合は、1個あたりの実質価格に換算してから並べるようにしましょう。
-        </p>
-
-        <h2>よくある質問</h2>
+        <h2 id="faq">よくある質問</h2>
         <div class="faq-item">
           <p class="faq-item__q">実質価格の計算は難しいですか?</p>
-          <p class="faq-item__a">慣れないうちは手間に感じるかもしれませんが、基本の式さえ覚えてしまえば、電卓やメモを使って誰でも計算できます。</p>
+          <p class="faq-item__a">基本の式(支払額-使い切れるポイント+送料)さえ覚えてしまえば、電卓やメモを使って誰でも計算できます。慣れないうちは本記事の計算ツールも活用してください。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">10%OFFと10%ポイント還元、どちらがお得ですか?</p>
+          <p class="faq-item__a">ポイントを確実に使い切れるなら実質的な価値は近くなりますが、有効期限や利用先の制限があるため、必ずしも同価値とは限りません。使い切れる自信がない場合は値引きの方が確実です。</p>
         </div>
         <div class="faq-item">
           <p class="faq-item__q">ポイント還元は実質価格にそのまま含めてよいですか?</p>
           <p class="faq-item__a">使い切れることが前提になります。有効期限内に使い道がない場合は、実質価格への反映を控えめに見積もっておくと安心です。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">還元上限があるとどう変わりますか?</p>
+          <p class="faq-item__a">還元率が高くても、上限を超えた分は付与されません。購入金額が上限を超えそうな場合は、単純計算より獲得ポイントが少なくなる点に注意してください。</p>
         </div>
         <div class="faq-item">
           <p class="faq-item__q">送料無料にするための追加購入はお得ですか?</p>
@@ -181,17 +332,15 @@
         <div class="article-summary">
           <div class="article-summary__title">この記事のまとめ</div>
           <ul>
-            <li>実質価格は表示価格から値引き・ポイント・送料などを差し引いた金額</li>
-            <li>値引きとポイントは性質が異なるため、それぞれの特徴を理解して比較する</li>
-            <li>手順化して比較することで、感覚に頼らない判断ができる</li>
+            <li>実質価格 = その場の支払額 − 使い切れるポイント価値 + 送料・手数料</li>
+            <li>10%値引きと10%ポイント還元は数字が同じでも性質が異なる</li>
+            <li>ポイントの計算対象額(値引き前・後)と還元上限を必ず確認する</li>
+            <li>期間限定ポイントは使い切れる見込みがある分だけ実質価格に反映する</li>
           </ul>
         </div>
 
         <p>
-          値引き、クーポン、ポイントが入り混じる場面では、どうしても表示価格の見た目に気を取られがちです。しかし実質価格という視点を持つことで、本当にお得な選択肢を見極めやすくなります。
-        </p>
-        <p>
-          次に買い物をする際は、今回紹介した手順に沿って、実質価格を一度計算してみてください。慣れてくると、特別な準備をしなくても自然と比較できるようになっていきます。
+          値引き、クーポン、ポイントが入り混じる場面では、どうしても表示価格の見た目に気を取られがちです。しかし実質価格という視点を持つことで、本当にお得な選択肢を見極めやすくなります。ポイント還元率の見方そのものをもっと詳しく知りたい方は<a href="point-kangenritsu-mikata">ポイント還元率の見方を解説</a>、現金値引きとの比較は<a href="point-kangen-genkin-nebiki-hikaku">ポイント還元と現金値引きの比較</a>もあわせてご覧ください。
         </p>
 
       </div>

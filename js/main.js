@@ -141,7 +141,7 @@
     ],
     survey: [
       { title: "ファンくる 覆面調査で幅広いジャンルに対応", type: "覆面調査・モニター", points: "覆面調査", suffix: "の謝礼としてポイントがもらえる", url: "/pages/articles/fancrew-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103535&wid=002&eno=01&mid=s00000007875007018000&mc=1" },
-      { title: "オピニオンワールド 単価が高くて貯まりやすい", type: "海外企業アンケート", points: "1pt=2円", suffix: "と単価が高め", url: "/pages/articles/opinionworld-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" },
+      { title: "オピニオンワールド Dynata運営の海外アンケート", type: "海外企業アンケート", points: "Amazon", suffix: "ギフト券・Pontaなどに交換できる", url: "/pages/articles/opinionworld-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" },
       { title: "Ipsos iSay 交換先が豊富", type: "海外企業アンケート", points: "500pt", suffix: "から交換可能(Amazon/デジコ)", url: "/pages/articles/ipsos-isay-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260715065235&wid=002&eno=01&mid=s00000018951001006000&mc=1" },
       { title: "アイリサーチ 上場企業運営で安心", type: "アンケート・会場調査", points: "1,000pt", suffix: "から銀行振込に交換可能", url: "/pages/articles/iresearch-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260715065250&wid=002&eno=01&mid=s00000023983001009000&mc=1" },
       { title: "マクロミル 振込手数料無料で交換可能", type: "アンケートモニター", points: "1pt=1円", suffix: "相当・振込手数料無料", url: "/pages/articles/macromill-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065256&wid=002&eno=01&mid=s00000013554002116000&mc=1" },
@@ -247,7 +247,7 @@
     { title: "トラベリスト(国内航空券) JAL・ANA・LCCを比較", type: "航空券予約", points: "3%", suffix: "還元(アプリ購入時)", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/travelist-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260715065195&wid=002&eno=01&mid=s00000023067001009000&mc=1" },
     // アンケート
     { title: "ファンくる 覆面調査で幅広いジャンルに対応", type: "覆面調査・モニター", points: "覆面調査", suffix: "の謝礼としてポイントがもらえる", category: "survey", tags: ["beginner"], url: "/pages/articles/fancrew-poikatsu", img: "https://www26.a8.net/svt/bgt?aid=260720103535&wid=002&eno=01&mid=s00000007875007018000&mc=1" },
-    { title: "オピニオンワールド 単価が高くて貯まりやすい", type: "海外企業アンケート", points: "1pt=2円", suffix: "と単価が高め", category: "survey", tags: ["beginner"], url: "/pages/articles/opinionworld-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" },
+    { title: "オピニオンワールド Dynata運営の海外アンケート", type: "海外企業アンケート", points: "Amazon", suffix: "ギフト券・Pontaなどに交換できる", category: "survey", tags: ["beginner"], url: "/pages/articles/opinionworld-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" },
     { title: "Ipsos iSay 交換先が豊富", type: "海外企業アンケート", points: "500pt", suffix: "から交換可能(Amazon/デジコ)", category: "survey", tags: ["beginner"], url: "/pages/articles/ipsos-isay-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260715065235&wid=002&eno=01&mid=s00000018951001006000&mc=1" },
     { title: "アイリサーチ 上場企業運営で安心", type: "アンケート・会場調査", points: "1,000pt", suffix: "から銀行振込に交換可能", category: "survey", tags: ["beginner"], url: "/pages/articles/iresearch-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260715065250&wid=002&eno=01&mid=s00000023983001009000&mc=1" },
     { title: "マクロミル 振込手数料無料で交換可能", type: "アンケートモニター", points: "1pt=1円", suffix: "相当・振込手数料無料", category: "survey", tags: ["beginner"], url: "/pages/articles/macromill-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260715065256&wid=002&eno=01&mid=s00000013554002116000&mc=1" },
@@ -375,7 +375,7 @@
     { title: "トラベリストとは?国内航空券を一括比較できる予約サービス", excerpt: "JAL・ANA・LCCを一括比較できる航空券予約サービス「トラベリスト」の特徴を解説します。", url: "/pages/articles/travelist-poikatsu", thumbType: "compare", category: "campaign" },
     // アンケート
     { title: "ファンくるとは?覆面調査の仕組み・ポイント・安全性を解説", excerpt: "覆面調査の仕組み、ポイントの受け取り方、安全性の判断材料までわかりやすく解説します。", url: "/pages/articles/fancrew-poikatsu", thumbType: "earnings", category: "survey" },
-    { title: "オピニオンワールドとは?単価が高めの海外アンケートサイトを解説", excerpt: "大手市場調査会社Dynataの日本法人が運営し、単価が高めとされるアンケートサイト「オピニオンワールド」の特徴を解説します。", url: "/pages/articles/opinionworld-poikatsu", thumbType: "earnings", category: "survey" },
+    { title: "OpinionWorld(オピニオンワールド)とは?ポイント・交換先・安全性を公式情報で解説", excerpt: "運営会社Dynata、ポイントの価値と有効期限、Amazon・Pontaなどの交換先、月いくら貯まるかの目安を公式情報にもとづいて解説します。", url: "/pages/articles/opinionworld-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "Ipsos iSay(イプソス・アイセイ)とは?特徴・ポイントの貯め方を解説", excerpt: "世界的な市場調査会社イプソスが運営するアンケートサイト「Ipsos iSay」の特徴、公式アプリの有無、交換先を解説します。", url: "/pages/articles/ipsos-isay-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "アイリサーチとは?自社会場調査・ポイントの貯め方をわかりやすく解説", excerpt: "東証スタンダード上場企業が運営するアンケートサイト「アイリサーチ」の特徴、公式アプリの有無、交換条件を解説します。", url: "/pages/articles/iresearch-poikatsu", thumbType: "earnings", category: "survey" },
     { title: "マクロミルとは?アンケート回答でポイントが貯まるモニターサービス", excerpt: "アンケート回答でポイントが貯まる大手ネットリサーチ企業のモニターサービス「マクロミル」の特徴を解説します。", url: "/pages/articles/macromill-poikatsu", thumbType: "earnings", category: "survey" },
@@ -596,6 +596,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "OpinionWorld(オピニオンワールド)とは?ポイント・交換先・安全性を公式情報で解説", url: "/pages/articles/opinionworld-poikatsu", category: "アンケート", date: "2026.09.03", thumbType: "earnings", excerpt: "運営会社Dynata、ポイントの価値と有効期限、Amazon・Pontaなどの交換先、月いくら貯まるかの目安を公式情報にもとづいて解説します。" },
     { title: "Nexus Cardとは?特徴と申込前に確認したいポイントを解説", url: "/pages/articles/nexus-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "デポジット式のショッピング専用カード「Nexus Card」の特徴、年会費、ポイント還元、申込条件、利用前の注意点をわかりやすく解説します。" },
     { title: "エポスカードとは?年会費無料の特徴とマルイでの優待を解説", url: "/pages/articles/epos-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "年会費無料のVisaカード「エポスカード」の特徴、ポイント還元、マルイでの優待、申込前に確認したいポイントをわかりやすく解説します。" },
     { title: "コスモ・ザ・カード・オーパスとは?ガソリン割引の特徴を解説", url: "/pages/articles/cosmo-opus-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "コスモ石油のクレジットカード「コスモ・ザ・カード・オーパス」の年会費、ガソリン割引、WAON POINT還元、申込前に確認したいポイントをわかりやすく解説します。" },
@@ -681,7 +682,7 @@
     { title: "ANAマイルを貯めるべき人・貯めない方がいい人を解説", url: "/pages/articles/ana-mile-tameru-kachi", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "ANAマイルを貯める価値がある人・無理に貯めなくてもよい人を利用状況別に解説します。" },
     { title: "ANAマイルとJALマイルはどっち?貯めやすさ・使いやすさを比較", url: "/pages/articles/ana-jal-mile-hikaku", category: "ショッピング", date: "2026.08.15", thumbType: "compare", excerpt: "利用航空会社・国内線・国際線・航空連合・ポイント交換・有効期限・特典航空券・家族利用の軸で比較し、生活圏で選ぶ考え方を解説します。" },
     { title: "楽天ポイントとPayPayポイントはどっち?通販・決済・カードで比較", url: "/pages/articles/rakuten-paypay-hikaku", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "楽天市場とYahoo!ショッピング、楽天ペイとPayPay、楽天カードとPayPayカードなど項目別に比較し、生活圏で選ぶ考え方を解説します。" },
-    { title: "dポイントとPontaポイントはどっち?貯めやすさ・使いやすさを比較", url: "/pages/articles/dpoint-ponta-hikaku", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "携帯キャリア・スマホ決済・クレジットカード・コンビニ・ネット通販・交換・有効期限で比較し、生活圏で選ぶ考え方を解説します。" },
+    { title: "dポイントとPontaはどっちが得?貯め方・使える店・有効期限を比較", url: "/pages/articles/dpoint-ponta-hikaku", category: "ショッピング", date: "2026.09.03", thumbType: "compare", excerpt: "カード提示・決済アプリ・クレジットカードを分けて比較。2025年12月改定後の有効期限やケース別にどちらが向くか解説します。" },
     { title: "Vポイントと携帯キャリアの関係|ドコモ・au・ソフトバンクでも使える?", url: "/pages/articles/vpoint-no-carrier", category: "ショッピング", date: "2026.08.27", thumbType: "compare", excerpt: "携帯キャリア別のVポイントとの関係、三井住友カード・Olive・SBI証券との相性、メリット・注意点を初心者向けに解説します。" },
     { title: "au・UQユーザーはPontaポイントにまとめるべき?相性の良いサービスを解説", url: "/pages/articles/au-uq-ponta", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "au PAY・au PAYカード・auじぶん銀行・ローソンとの相性や、Pontaに寄せない方がよいケースを初心者向けに解説します。" },
     { title: "SoftBank・Y!mobileならPayPayポイント?相性の良いサービスを比較", url: "/pages/articles/softbank-ymobile-paypay-point", category: "ショッピング", date: "2026.08.14", thumbType: "compare", excerpt: "PayPay決済・PayPayカード・Yahoo!ショッピングとの相性や、他ポイントの方が向く人を初心者向けに解説します。" },
@@ -856,7 +857,7 @@
     { title: "ポイント問い合わせの準備方法!必要情報をそろえてスムーズに確認する", url: "/pages/articles/point-toiawase-junbi", category: "ポイントサイト", date: "2026.07.14", thumbType: "summary", excerpt: "問い合わせ前に確認すべきことや購入日時・注文番号の整理、スクリーンショットの活用、条件未達の可能性、丁寧な文章の作り方を解説します。" },
     { title: "スクリーンショット保存でポイ活ミスを減らす方法!残すべき画面を解説", url: "/pages/articles/screenshot-hozon-poikatsu-miss", category: "ポイントサイト", date: "2026.07.14", thumbType: "caution", excerpt: "スクショが役立つ理由や保存すべき画面、ファイル名の付け方、保存期間の目安、個人情報の扱いに注意する点を初心者向けに解説します。" },
     { title: "エントリーカレンダーの作り方!毎月のポイ活予定を見える化する", url: "/pages/articles/entry-calendar-tsukurikata", category: "ポイントサイト", date: "2026.07.14", thumbType: "summary", excerpt: "カレンダー化するメリットや登録するキャンペーン情報、通知設定の使い方、家計予定との連携、続けやすい更新頻度を解説します。" },
-    { title: "実質価格の計算方法!値引き・クーポン・ポイントをまとめて比較する", url: "/pages/articles/jisshitsu-kakaku-keisan", category: "ショッピング", date: "2026.07.14", thumbType: "summary", excerpt: "実質価格とは何か、値引きとポイントの違い、クーポンを入れた計算、送料・手数料の扱い、安さを判断する手順までを初心者向けに解説します。" },
+    { title: "実質価格とは?計算方法・ポイント還元と値引きの違いを具体例で解説", url: "/pages/articles/jisshitsu-kakaku-keisan", category: "ショッピング", date: "2026.09.03", thumbType: "summary", excerpt: "実質価格の基本計算式と、10%値引き・10%ポイント還元の違いを具体例で解説。クーポン・還元上限・期間限定ポイントを含めた計算方法をまとめました。" },
     { title: "ポイント還元と現金値引きはどっちが得?迷った時の比較方法", url: "/pages/articles/point-kangen-genkin-nebiki-hikaku", category: "ショッピング", date: "2026.07.14", thumbType: "compare", excerpt: "現金値引きのメリット、ポイント還元のメリット、使い切れるかの確認、有効期限の考え方、高額商品での判断例までをわかりやすく解説します。" },
     { title: "送料で損しないポイ活術!送料無料ラインとまとめ買いの考え方", url: "/pages/articles/souryou-son-poikatsu", category: "ショッピング", date: "2026.07.14", thumbType: "caution", excerpt: "送料が損につながる理由、送料無料ラインの確認、まとめ買いの注意点、店舗受け取りの活用、実質価格で判断する方法までを解説します。" },
     { title: "ポイント倍率表の読み方!何倍表示に惑わされないチェックポイント", url: "/pages/articles/point-bairitsu-hyou-yomikata", category: "ショッピング", date: "2026.07.14", thumbType: "caution", excerpt: "ポイント倍率表示の基本、通常還元を含むかの確認、付与上限の見方、対象外商品への注意、実際の還元額の計算方法までを解説します。" },
