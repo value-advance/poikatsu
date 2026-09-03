@@ -18,6 +18,8 @@ const SHINCHAKU_EXCLUDED_SLUGS = new Set([
   "dmmbooks-toha", // 案件記事(生活カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
   "monex-shouken-toha", // 案件記事(口座開設カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
   "rakuten-shouken-toha", // 案件記事(口座開設カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
+  "sbisec-shouken-toha", // 案件記事(口座開設カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
+  "paypaysec-shouken-toha", // 案件記事(口座開設カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-03)
 ]);
 
 const CATEGORY_LABELS = {
