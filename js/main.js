@@ -596,6 +596,7 @@
   // サイト内検索用インデックス
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
+    { title: "トラベリストとは?発券方法・ポイント還元・手数料をわかりやすく解説", url: "/pages/articles/travelist-poikatsu", category: "キャンペーン", date: "2026.09.04", thumbType: "compare", excerpt: "国内航空券の比較方法、予約後の発券方法、ポイント還元・有効期限、手数料の注意点を公式情報にもとづいて解説します。" },
     { title: "OpinionWorld(オピニオンワールド)とは?ポイント・交換先・安全性を公式情報で解説", url: "/pages/articles/opinionworld-poikatsu", category: "アンケート", date: "2026.09.03", thumbType: "earnings", excerpt: "運営会社Dynata、ポイントの価値と有効期限、Amazon・Pontaなどの交換先、月いくら貯まるかの目安を公式情報にもとづいて解説します。" },
     { title: "Nexus Cardとは?特徴と申込前に確認したいポイントを解説", url: "/pages/articles/nexus-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "デポジット式のショッピング専用カード「Nexus Card」の特徴、年会費、ポイント還元、申込条件、利用前の注意点をわかりやすく解説します。" },
     { title: "エポスカードとは?年会費無料の特徴とマルイでの優待を解説", url: "/pages/articles/epos-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "年会費無料のVisaカード「エポスカード」の特徴、ポイント還元、マルイでの優待、申込前に確認したいポイントをわかりやすく解説します。" },
