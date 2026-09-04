@@ -119,6 +119,7 @@
       { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", url: "/pages/articles/hapitas-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
       { title: "ポイントミュージアム 毎日抽選で当たる", type: "ポイントサイト", points: "1,000", suffix: "円が毎日抽選で当たる", url: "/pages/articles/point-museum-poikatsu", img: "https://www20.a8.net/svt/bgt?aid=260715065224&wid=002&eno=01&mid=s00000003655005014000&mc=1" },
       { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", url: "/pages/articles/chobirich-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
+      { title: "げん玉 貯め方いろいろの老舗ポイントサイト", type: "ポイントサイト", points: "10pt", suffix: "=1円、3,000ptから交換可能", url: "/pages/articles/gendama-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100pvnm00oy8i" },
     ],
     shopping: [
       { title: "Yahoo!ショッピング 獲得予定ポイントを表示", type: "総合通販", points: "PayPayポイント", suffix: "などが貯まる", url: "/pages/articles/yahoo-shopping-toha", img: "/images/article-thumb/shopping/yahoo-shopping.webp" },
@@ -158,6 +159,10 @@
       { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
       { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
       { title: "DMMブックス 幅広いジャンルの電子書籍ストア", type: "電子書籍", points: "DMMポイント", suffix: "が貯まる", url: "/pages/articles/dmmbooks-toha", img: "https://www24.a8.net/svt/bgt?aid=260720103900&wid=002&eno=01&mid=s00000000842023010000&mc=1" },
+      { title: "バスのる 高速バスの比較・予約で独自ポイントが貯まる", type: "高速バス予約", points: "乗車代金1%", suffix: "がバスのるポイントとして貯まる", url: "/pages/articles/busnoru-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100o66d00oy8i" },
+      { title: "さとふる 全国の返礼品を検索できるふるさと納税サイト", type: "ふるさと納税", points: "返礼品", suffix: "選びから手続きまでオンラインで完結", url: "/pages/articles/satofull-poikatsu", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892692224" },
+      { title: "Rakuten家計簿 無料で使える家計簿・資産管理アプリ", type: "家計簿アプリ", points: "楽天ポイント", suffix: "がミッション達成でもらえる場合あり", url: "/pages/articles/rakuten-kakeibo-poikatsu", img: "https://srv2.trafficgate.net/t/b/24/6606/318897_398564" },
+      { title: "楽天Car洗車・コーティング 加盟店を検索して予約", type: "洗車・コーティング予約", points: "1〜5%", suffix: "相当の楽天ポイントが貯まる", url: "/pages/articles/rakuten-carwash-poikatsu", img: "https://srv2.trafficgate.net/t/b/33/6391/318897_398564" },
     ],
     sougou: [
       { title: "ワラウ 1pt=1円で豊富な交換先に対応", type: "ポイントサイト", points: "40", suffix: "種類の交換先", url: "/pages/articles/warau-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260714058081&wid=002&eno=01&mid=s00000018660003014000&mc=1" },
@@ -221,6 +226,7 @@
     { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", category: "pointsite", tags: ["beginner"], url: "/pages/articles/hapitas-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
     { title: "ポイントミュージアム 毎日抽選で当たる", type: "ポイントサイト", points: "1,000", suffix: "円が毎日抽選で当たる", category: "pointsite", tags: ["beginner"], url: "/pages/articles/point-museum-poikatsu", img: "https://www20.a8.net/svt/bgt?aid=260715065224&wid=002&eno=01&mid=s00000003655005014000&mc=1" },
     { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", category: "pointsite", tags: ["beginner"], url: "/pages/articles/chobirich-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
+    { title: "げん玉 貯め方いろいろの老舗ポイントサイト", type: "ポイントサイト", points: "10pt", suffix: "=1円、3,000ptから交換可能", category: "pointsite", tags: ["beginner"], url: "/pages/articles/gendama-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100pvnm00oy8i" },
     // ショッピング
     { title: "楽天市場 総合通販でジャンルが幅広い", type: "総合通販", points: "楽天ポイント", suffix: "が貯まる", category: "shopping", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-ichiba-toha", img: "/images/article-thumb/shopping/rakuten-ichiba.webp" },
     { title: "Yahoo!ショッピング 獲得予定ポイントを表示", type: "総合通販", points: "PayPayポイント", suffix: "などが貯まる", category: "shopping", tags: ["paypay", "beginner"], url: "/pages/articles/yahoo-shopping-toha", img: "/images/article-thumb/shopping/yahoo-shopping.webp" },
@@ -295,7 +301,13 @@
     { title: "dヒッツ 月額300円からの音楽配信", type: "音楽配信", points: "300円", suffix: "から利用できる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dhits-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000002605/267.jpg" },
     { title: "ahamo 月額2,970円で30GB", type: "格安モバイル回線", points: "5分以内通話", suffix: "がかけ放題込み", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/ahamo-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000001629/675.jpg" },
     { title: "docomo select スマホ・タブレット用アクセサリー", type: "アクセサリー", points: "dポイント", suffix: "が貯まる", category: "shopping", tags: ["dpoint", "beginner"], url: "/pages/articles/docomo-select-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000001231/428.png" },
+    { title: "ECカレント 家電を幅広く扱う通販サイト", type: "家電", points: "カレントポイント", suffix: "・Vポイント/dポイントも対応", category: "shopping", tags: ["vpoint", "dpoint", "beginner"], url: "/pages/articles/ec-current-poikatsu", img: "https://srv2.trafficgate.net/t/b/61/6540/318897_398564" },
     { title: "Leminoプレミアム 約180,000本のコンテンツ", type: "動画配信", points: "月額1,540円", suffix: "、初回31日間無料", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/lemino-premium-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000000236/61.jpg" },
+    { title: "小田急ポイントカード 小田急沿線でOPポイントが貯まる", type: "クレジットカード", points: "OPポイント", suffix: "が貯まる", category: "creditcard", tags: ["beginner"], url: "/pages/articles/odakyu-point-card-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100kw0d00oy8i" },
+    { title: "バスのる 高速バスの比較・予約で独自ポイントが貯まる", type: "高速バス予約", points: "乗車代金1%", suffix: "がバスのるポイントとして貯まる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/busnoru-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100o66d00oy8i" },
+    { title: "さとふる 全国の返礼品を検索できるふるさと納税サイト", type: "ふるさと納税", points: "返礼品", suffix: "選びから手続きまでオンラインで完結", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/satofull-poikatsu", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892692224" },
+    { title: "Rakuten家計簿 無料で使える家計簿・資産管理アプリ", type: "家計簿アプリ", points: "楽天ポイント", suffix: "がミッション達成でもらえる場合あり", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-kakeibo-poikatsu", img: "https://srv2.trafficgate.net/t/b/24/6606/318897_398564" },
+    { title: "楽天Car洗車・コーティング 加盟店を検索して予約", type: "洗車・コーティング予約", points: "1〜5%", suffix: "相当の楽天ポイントが貯まる", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-carwash-poikatsu", img: "https://srv2.trafficgate.net/t/b/33/6391/318897_398564" },
   ];
 
   // 関連リンクとして意味を持つタグ(beginnerは対象が広すぎるため除外)
@@ -597,6 +609,14 @@
   // TODO: 新しい記事を作成したら、ここにも追加する
   const ARTICLE_SEARCH_INDEX = [
     { title: "トラベリストとは?発券方法・ポイント還元・手数料をわかりやすく解説", url: "/pages/articles/travelist-poikatsu", category: "キャンペーン", date: "2026.09.04", thumbType: "compare", excerpt: "国内航空券の比較方法、予約後の発券方法、ポイント還元・有効期限、手数料の注意点を公式情報にもとづいて解説します。" },
+    { title: "げん玉とは?ポイントの貯め方・交換方法をわかりやすく解説", url: "/pages/articles/gendama-poikatsu", category: "ポイントサイト", date: "2026.09.04", thumbType: "summary", excerpt: "老舗ポイントサイト「げん玉」の特徴、ポイントの貯め方、ポイントの価値、交換先、登録方法、利用前に確認したいポイントをわかりやすく解説します。" },
+    { title: "バスのるとは?高速バス予約と「バスのるポイント」を解説", url: "/pages/articles/busnoru-poikatsu", category: "生活", date: "2026.09.04", thumbType: "summary", excerpt: "高速バス・路線バスの予約サイト「バスのる」の特徴、独自の「バスのるポイント」の還元率・使い方・有効期限、利用前に確認したいポイントをわかりやすく解説します。" },
+    { title: "小田急ポイントカードとは?OPポイントの貯め方を解説", url: "/pages/articles/odakyu-point-card-poikatsu", category: "クレジットカード", date: "2026.09.04", thumbType: "summary", excerpt: "小田急ポイントカード[OPカード]の年会費、小田急ポイント(OPポイント)の貯め方・還元率・使える場所、申込前に確認したいポイントをわかりやすく解説します。" },
+    { title: "さとふるとは?ふるさと納税の流れとポイント制度の現状を解説", url: "/pages/articles/satofull-poikatsu", category: "生活", date: "2026.09.04", thumbType: "summary", excerpt: "ふるさと納税サイト「さとふる」の特徴、寄付から返礼品受け取りまでの流れ、ワンストップ特例制度、独自ポイント制度の現状をわかりやすく解説します。" },
+    { title: "Rakuten家計簿とは?無料で使える家計簿アプリと楽天ポイントを解説", url: "/pages/articles/rakuten-kakeibo-poikatsu", category: "生活", date: "2026.09.04", thumbType: "summary", excerpt: "楽天グループの家計簿アプリ「Rakuten家計簿」の特徴、無料プランとプレミアムプランの違い、楽天ポイントとの関連性をわかりやすく解説します。" },
+    { title: "楽天Car洗車・コーティングとは?予約方法と楽天ポイントを解説", url: "/pages/articles/rakuten-carwash-poikatsu", category: "生活", date: "2026.09.04", thumbType: "summary", excerpt: "全国の洗車・コーティング加盟店を検索・予約できる「楽天Car洗車・コーティング」の特徴、楽天ポイントの還元率やキャンペーン、予約方法をわかりやすく解説します。" },
+    { title: "ECカレントとは?家電通販の特徴とポイント制度を解説", url: "/pages/articles/ec-current-poikatsu", category: "ショッピング", date: "2026.09.04", thumbType: "summary", excerpt: "家電・生活家電の通販サイト「ECカレント」の特徴、自社ポイント「カレントポイント」やVポイント・dポイントとの連携、利用前に確認したいポイントをわかりやすく解説します。" },
+    { title: "楽天ビューティとは?美容室・ネイル・エステの検索・予約ができるサービス", url: "/pages/articles/rakuten-beauty-poikatsu", category: "生活", date: "2026.09.04", thumbType: "app", excerpt: "全国の美容室・ネイル・まつげ・エステ・リラクサロンを検索・予約できる「楽天ビューティ」の特徴、楽天ポイントの貯め方・使い方、キャンペーンによるポイントアップまで解説します。" },
     { title: "OpinionWorld(オピニオンワールド)とは?ポイント・交換先・安全性を公式情報で解説", url: "/pages/articles/opinionworld-poikatsu", category: "アンケート", date: "2026.09.03", thumbType: "earnings", excerpt: "運営会社Dynata、ポイントの価値と有効期限、Amazon・Pontaなどの交換先、月いくら貯まるかの目安を公式情報にもとづいて解説します。" },
     { title: "Nexus Cardとは?特徴と申込前に確認したいポイントを解説", url: "/pages/articles/nexus-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "デポジット式のショッピング専用カード「Nexus Card」の特徴、年会費、ポイント還元、申込条件、利用前の注意点をわかりやすく解説します。" },
     { title: "エポスカードとは?年会費無料の特徴とマルイでの優待を解説", url: "/pages/articles/epos-card-poikatsu", category: "クレジットカード", date: "2026.09.03", thumbType: "summary", excerpt: "年会費無料のVisaカード「エポスカード」の特徴、ポイント還元、マルイでの優待、申込前に確認したいポイントをわかりやすく解説します。" },
