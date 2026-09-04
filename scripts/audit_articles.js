@@ -95,6 +95,8 @@ const files = fs.readdirSync(articlesDir).filter(f => f.endsWith(".html") && !EX
 const articles = files.map(readArticle);
 const createdBySlug = {};
 articles.forEach(a => { createdBySlug[a.slug] = a.created; });
+const updatedBySlug = {};
+articles.forEach(a => { updatedBySlug[a.slug] = a.updated; });
 
 // 記事カードの並び(articleListFull的なコンテナ)から、出現順のslug配列を抽出する共通ヘルパー。
 // href は "pages/articles/x" "/pages/articles/x" のどちらの表記にも対応する。
@@ -120,6 +122,23 @@ function findOrderViolations(order) {
     }
     prevSlug = slug;
     prevCreated = created;
+  }
+  return violations;
+}
+
+// findOrderViolations の更新日(updatedAt)版。/pages/articles/updated.html や
+// トップページの「更新記事」セクションが更新日降順になっているかの検証に使う。
+function findUpdatedOrderViolations(order) {
+  const violations = [];
+  let prevSlug = null, prevUpdated = null;
+  for (const slug of order) {
+    const updated = updatedBySlug[slug];
+    if (!updated) continue;
+    if (prevUpdated && updated > prevUpdated) {
+      violations.push({ afterSlug: prevSlug, afterUpdated: prevUpdated, slug, updated });
+    }
+    prevSlug = slug;
+    prevUpdated = updated;
   }
   return violations;
 }
@@ -219,18 +238,58 @@ if (!homeSyncOk) {
 }
 console.log("トップ新着同期:", homeSyncOk ? "PASS" : "FAIL");
 
+// --- トップページ更新同期(ルート index.html #updatedArticleList) -------------
+// トップページの「更新記事」は、/pages/articles/updated.html の掲載順(更新日降順)の
+// 先頭N件と一致していなければならない。N は現在ホームページに表示されているカード
+// 枚数をそのまま使う。updated.html 自体への追加・並び替えはこの監査の対象外で、
+// 「実質更新した記事をupdated.htmlへ登録する」既存運用に従っていることが前提となる。
+const updatedHtmlPath = path.join(articlesDir, "updated.html");
+const updatedHtml = fs.readFileSync(updatedHtmlPath, "utf8");
+const updatedListStart = updatedHtml.indexOf('<div class="article-list">');
+const updatedListEnd = updatedHtml.indexOf('<nav class="article-footer-nav">');
+const updatedOrder = extractCardOrder(updatedHtml, updatedListStart, updatedListEnd);
+// updated.html 自体が更新日降順になっているかは参考情報として表示するのみで、
+// トップページ同期のPASS/FAIL判定には使わない(updated.html の並び替え・再登録は
+// このチェックの対象外で、既存運用に従っているという前提を尊重するため)。
+const updatedOrderViolations = findUpdatedOrderViolations(updatedOrder);
+
+const homeUpdatedGridStart = homeHtml.indexOf('id="updatedArticleList"');
+const homeUpdatedGridEnd = homeHtml.indexOf('<a class="show-more-btn"', homeUpdatedGridStart);
+const homeUpdatedOrder = extractCardOrder(homeHtml, homeUpdatedGridStart, homeUpdatedGridEnd);
+const expectedUpdatedTopN = updatedOrder.slice(0, homeUpdatedOrder.length);
+const homeUpdatedSyncOk =
+  homeUpdatedOrder.length === expectedUpdatedTopN.length &&
+  homeUpdatedOrder.every((slug, i) => slug === expectedUpdatedTopN[i]);
+
+console.log("");
+console.log("=== トップページ更新同期(index.html #updatedArticleList) ===");
+console.log("トップページ表示件数:", homeUpdatedOrder.length);
+console.log("updated.htmlの並び順で更新日降順に反する箇所(参考情報、PASS/FAILには影響しません):", updatedOrderViolations.length);
+updatedOrderViolations.forEach(v => console.log(`  ${v.slug}(更新日${v.updated}) が ${v.afterSlug}(更新日${v.afterUpdated}) より後ろに表示されている`));
+if (!homeUpdatedSyncOk) {
+  console.error("ERROR:");
+  console.error("トップページの更新記事が最新状態と一致していません。");
+  console.error("");
+  console.error("期待(updated.html先頭" + expectedUpdatedTopN.length + "件):");
+  expectedUpdatedTopN.forEach((slug, i) => console.error(`  ${i + 1}. ${slug}(更新日${updatedBySlug[slug] || "不明"})`));
+  console.error("");
+  console.error("現在のトップページ:");
+  homeUpdatedOrder.forEach((slug, i) => console.error(`  ${i + 1}. ${slug}(更新日${updatedBySlug[slug] || "不明"})`));
+}
+console.log("トップ更新同期:", homeUpdatedSyncOk ? "PASS" : "FAIL");
+
 fs.writeFileSync(path.join(__dirname, "_audit_all_articles.json"), JSON.stringify(articles, null, 2), "utf8");
 fs.writeFileSync(path.join(__dirname, "_audit_missing.json"), JSON.stringify(missing, null, 2), "utf8");
 console.log("\nWrote _audit_all_articles.json (" + articles.length + ") and _audit_missing.json (" + missing.length + ")");
 
 // Fail the process (and therefore CI) only on the things that are actually broken:
 // an article page that exists but isn't reachable from the all-articles hub, a
-// duplicate slug, new.html falling out of sync with the hub, or the homepage's
-// "新着記事" section falling out of sync with the latest published articles.
-// Missing data-category/data-thumb-type on the article's own tag is informational
-// (see above) and must not fail the build.
-if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk) {
-  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}.`);
+// duplicate slug, new.html falling out of sync with the hub, or either of the
+// homepage's "新着記事"/"更新記事" sections falling out of sync with their source
+// lists. Missing data-category/data-thumb-type on the article's own tag is
+// informational (see above) and must not fail the build.
+if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk || !homeUpdatedSyncOk) {
+  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}, トップ更新同期=${homeUpdatedSyncOk ? "PASS" : "FAIL"}.`);
   process.exit(1);
 }
-console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and the homepage are in sync with the latest published articles.");
+console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and both homepage sections are in sync with their source lists.");
