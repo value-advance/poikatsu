@@ -610,6 +610,7 @@
   const ARTICLE_SEARCH_INDEX = [
     { title: "期間限定ポイントのおすすめ使い道|失効前にすぐ使える交換先ガイド", url: "/pages/articles/kikangentei-point-tsukaimichi", category: "ショッピング", date: "2026.09.04", thumbType: "beginner", excerpt: "d・楽天・PayPay・Ponta・Vポイントの期間限定ポイントを、サービスごとにどこで使うのがおすすめか、使えない場所とあわせて初心者向けに解説します。" },
     { title: "トラベリストとは?発券方法・ポイント還元・手数料をわかりやすく解説", url: "/pages/articles/travelist-poikatsu", category: "キャンペーン", date: "2026.09.04", thumbType: "compare", excerpt: "国内航空券の比較方法、予約後の発券方法、ポイント還元・有効期限、手数料の注意点を公式情報にもとづいて解説します。" },
+    { title: "ポイ活サービスを退会する前に確認すること!ポイント失効を防ぐ手順", url: "/pages/articles/poikatsu-taikai-mae-kakunin", category: "ポイントサイト", date: "2026.09.05", thumbType: "beginner", excerpt: "ポイ活サービスを退会する前に確認したい保有残高・交換可能額・未承認ポイントの扱い、メール配信停止との違い、退会後に記録を残すコツを初心者向けに解説します。" },
     { title: "げん玉とは?ポイントの貯め方・交換方法をわかりやすく解説", url: "/pages/articles/gendama-poikatsu", category: "ポイントサイト", date: "2026.09.04", thumbType: "summary", excerpt: "老舗ポイントサイト「げん玉」の特徴、ポイントの貯め方、ポイントの価値、交換先、登録方法、利用前に確認したいポイントをわかりやすく解説します。" },
     { title: "バスのるとは?高速バス予約と「バスのるポイント」を解説", url: "/pages/articles/busnoru-poikatsu", category: "生活", date: "2026.09.04", thumbType: "summary", excerpt: "高速バス・路線バスの予約サイト「バスのる」の特徴、独自の「バスのるポイント」の還元率・使い方・有効期限、利用前に確認したいポイントをわかりやすく解説します。" },
     { title: "小田急ポイントカードとは?OPポイントの貯め方を解説", url: "/pages/articles/odakyu-point-card-poikatsu", category: "クレジットカード", date: "2026.09.04", thumbType: "summary", excerpt: "小田急ポイントカード[OPカード]の年会費、小田急ポイント(OPポイント)の貯め方・還元率・使える場所、申込前に確認したいポイントをわかりやすく解説します。" },
