@@ -201,14 +201,18 @@ console.log("\n");
 const { runSitemapAudit } = require("./audit_sitemap");
 const sitemapOk = runSitemapAudit();
 
+console.log("\n");
+const { runHtmlSitemapAudit } = require("./audit_html_sitemap");
+const htmlSitemapOk = runHtmlSitemapAudit();
+
 // Fail the process (and therefore CI) only on the things that are actually broken:
 // an article page that exists but isn't reachable from the all-articles hub, a
 // duplicate slug, new.html falling out of sync with the hub, either of the
 // homepage's "新着記事"/"更新記事" sections falling out of sync with their source
-// lists, or the sitemap audit failing. Missing data-category/data-thumb-type on
+// lists, or either sitemap audit failing. Missing data-category/data-thumb-type on
 // the article's own tag is informational (see above) and must not fail the build.
-if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk || !homeUpdatedSyncOk || !sitemapOk) {
-  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}, トップ更新同期=${homeUpdatedSyncOk ? "PASS" : "FAIL"}, audit_sitemap=${sitemapOk ? "PASS" : "FAIL"}.`);
+if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk || !homeUpdatedSyncOk || !sitemapOk || !htmlSitemapOk) {
+  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}, トップ更新同期=${homeUpdatedSyncOk ? "PASS" : "FAIL"}, audit_sitemap=${sitemapOk ? "PASS" : "FAIL"}, audit_html_sitemap=${htmlSitemapOk ? "PASS" : "FAIL"}.`);
   process.exit(1);
 }
-console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and both homepage sections are in sync with their source lists, and the sitemap audit passed.");
+console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and both homepage sections are in sync with their source lists, and both sitemap audits passed.");
