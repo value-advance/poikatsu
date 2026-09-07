@@ -90,6 +90,8 @@ function readArticle(file) {
   const attrs = articleTagM ? articleTagM[1] : "";
   const categoryCode = (attrs.match(/data-category="([^"]*)"/) || [])[1] || null;
   const thumbType = (attrs.match(/data-thumb-type="([^"]*)"/) || [])[1] || null;
+  const tagsAttr = (attrs.match(/data-tags="([^"]*)"/) || [])[1] || "";
+  const tags = tagsAttr.split(" ").filter(Boolean);
 
   const titleTagM = content.match(/<title>([^<]*)<\/title>/);
   const rawTitle = titleTagM ? titleTagM[1] : null;
@@ -112,6 +114,7 @@ function readArticle(file) {
     categoryCode,
     categoryLabel: categoryCode ? (CATEGORY_LABELS[categoryCode] || null) : null,
     thumbType,
+    tags,
     title,
     h1,
     description,
