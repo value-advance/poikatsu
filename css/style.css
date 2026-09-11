@@ -1104,6 +1104,7 @@ a.points-by-type__card:focus-visible {
 
 /* 更新記事カードの「更新理由」ラベル(任意表示、.article-card__metaの既存flexにそのまま収まる) */
 .article-card__update-tag {
+  display: none;
   font-size: 10px;
   font-weight: 700;
   color: var(--color-primary);
