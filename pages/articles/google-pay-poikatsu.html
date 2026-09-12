@@ -61,8 +61,8 @@
       },
       {
         "@type": "Question",
-        "name": "電子マネー(Suicaなど)を使うのにおサイフケータイ対応は必要ですか?",
-        "acceptedAnswer": { "@type": "Answer", "text": "Suica・PASMO・楽天Edy・nanaco・WAONなどの電子マネーをGoogleウォレットで使うには、おサイフケータイに対応したAndroid端末が必要です。一方、QUICPay・iD・Visaのタッチ決済・Mastercardタッチ決済といったカード決済は、Android 9以降であれば、おサイフケータイ非対応の端末でも利用できるとされています。" }
+        "name": "電子マネー(Suicaなど)やiD・QUICPayを使うのにおサイフケータイ対応は必要ですか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "はい、必要です。Suica・PASMO・楽天Edy・nanaco・WAONなどの電子マネーに加え、iD・QUICPayもFeliCa(おサイフケータイ)を使う決済方式のため、おサイフケータイに対応したAndroid端末が必要です。一方、Visa・Mastercard・JCB・American Expressのタッチ決済は、おサイフケータイに対応していない端末でも、Android 9以降でNFCに対応していれば利用できるとされています。" }
       },
       {
         "@type": "Question",
@@ -97,8 +97,24 @@
       <div class="article-body">
 
         <p>
-          Androidスマホでの支払いを調べていると、「Google Pay」と「Googleウォレット」という2つの呼び方が出てきて混乱しやすいポイントです。この記事では、Google PayとGoogleウォレットの違い、対応する決済方法、ポイントがどこから付与されるのかという仕組みを、iD・QUICPay・タッチ決済の比較とあわせて解説します。すでに解説しているVisaのタッチ決済やApple Payの記事とは重複しないよう、Android・Googleウォレット特有の内容に絞って整理します。
+          結論からいうと、Google Pay・Googleウォレット自体が独自にポイントを発行しているわけではありません。Androidスマホで実際にポイントが貯まるのは、Googleウォレットに登録したクレジットカード・電子マネー・決済サービス側の還元条件によります。この記事では、Google PayとGoogleウォレットの違い、対応する決済方法、ポイントがどこから付与されるのかという仕組みを、iD・QUICPay・タッチ決済の比較とあわせて解説します。すでに解説しているVisaのタッチ決済やApple Payの記事とは重複しないよう、Android・Googleウォレット特有の内容に絞って整理します。
         </p>
+
+        <h2>主な支払い方法をひと目で比較</h2>
+        <p>
+          詳しい解説の前に、Googleウォレットで使う主な支払い方法の違いを確認しておきましょう。
+        </p>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead><tr><th></th><th>Suica等の電子マネー</th><th>iD・QUICPay</th><th>ブランドのタッチ決済</th></tr></thead>
+            <tbody>
+              <tr><th>おサイフケータイ</th><td>必要</td><td>必要</td><td>不要</td></tr>
+              <tr><th>NFC対応</th><td>必要</td><td>必要</td><td>必要</td></tr>
+              <tr><th>主な利用条件</th><td>種類ごとに1枚まで登録可</td><td>対応カードの登録が必要</td><td>Android 9以降・対応カードの登録が必要</td></tr>
+              <tr><th>ポイントの主な発生元</th><td>チャージ元のカード・鉄道会社等の制度</td><td>登録したクレジットカードの制度</td><td>登録したクレジットカードの制度</td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <h2>Google PayとGoogleウォレットの違い</h2>
         <p>
@@ -115,14 +131,14 @@
 
         <h2>Googleウォレットに登録できるもの・対応する決済方法</h2>
         <p>
-          Googleウォレットには、電子マネーとカード決済の2種類を登録できます。それぞれ必要な端末条件が異なります。
+          Googleウォレットには、電子マネー・iD/QUICPay・クレジットカード(タッチ決済)を登録できます。「Google Payならどれも同じ端末条件で使える」わけではなく、決済方式によって必要な条件が異なります。
         </p>
         <div class="article-body__table-wrap">
           <table>
             <thead><tr><th>区分</th><th>対応する決済方法</th><th>必要な端末条件</th></tr></thead>
             <tbody>
-              <tr><th>電子マネー</th><td>Suica・PASMO・楽天Edy・nanaco・WAON</td><td>おサイフケータイ対応のAndroid端末</td></tr>
-              <tr><th>カード決済</th><td>QUICPay・iD・Visaのタッチ決済・Mastercardタッチ決済</td><td>Android 9以降(おサイフケータイ非対応機でも利用可能)</td></tr>
+              <tr><th>電子マネー・iD・QUICPay</th><td>Suica・PASMO・楽天Edy・nanaco・WAON、QUICPay、iD</td><td>おサイフケータイ対応のAndroid端末(FeliCa方式のため)</td></tr>
+              <tr><th>クレジット・デビットカードのタッチ決済</th><td>Visa・Mastercard・JCB・American Expressのタッチ決済(代表例。カード会社・カードの種類により対応状況は異なる)</td><td>Android 9以降・NFC対応端末(おサイフケータイ非対応機でも利用可能)</td></tr>
             </tbody>
           </table>
         </div>
@@ -131,7 +147,10 @@
           <p style="margin:0;">Googleウォレットに登録できる電子マネーは、種類ごとに1枚までとされています。複数のSuicaを使い分けたい場合などは、この制限に注意してください。</p>
         </div>
         <p>
-          <small>情報確認日:2026年9月12日。参考:<a href="https://support.google.com/wallet/answer/13314575?hl=ja" target="_blank" rel="noopener">Googleウォレット公式ヘルプ「電子マネー、デビットカード、クレジット カードを Google ウォレット アプリに追加する」</a>。対応する決済方法・端末条件は変更される場合があるため、最新情報は公式ヘルプでご確認ください。</small>
+          American Expressは2025年9月29日からGoogle Payに対応しており、JCBのタッチ決済もあわせて利用できるとされています。ただし、対応しているカードブランドであっても、実際に使えるかどうかは発行会社・カードの種類によって異なる場合があるため、「利用できるブランド」と「すべてのカードが利用可能」は分けて考えてください。
+        </p>
+        <p>
+          <small>情報確認日:2026年9月12日。参考:<a href="https://support.google.com/wallet/answer/12059326?hl=ja" target="_blank" rel="noopener">Googleウォレット公式ヘルプ「サポートされているお支払い方法を確認する」</a>、<a href="https://support.google.com/wallet/answer/13314575?hl=ja" target="_blank" rel="noopener">Googleウォレット公式ヘルプ「電子マネー、デビットカード、クレジット カードを Google ウォレット アプリに追加する」</a>。対応する決済方法・端末条件・対応ブランドは変更される場合があるため、最新情報は公式ヘルプでご確認ください。</small>
         </p>
 
         <h2>ポイントはどこから付与される?</h2>
@@ -151,12 +170,12 @@
           <div class="compare-col compare-col--good">
             <div class="compare-col__title">iD・QUICPay</div>
             <ul>
-              <li>おサイフケータイの非接触通信を使う、日本独自の電子マネー型の決済方式</li>
+              <li>おサイフケータイ(FeliCa)の非接触通信を使う、日本独自の決済方式</li>
               <li>レジで「iDで」「QUICPayで」と伝えて端末にタッチする</li>
             </ul>
           </div>
           <div class="compare-col compare-col--bad">
-            <div class="compare-col__title">タッチ決済(Visa・Mastercard)</div>
+            <div class="compare-col__title">タッチ決済(Visa・Mastercard・JCB・American Express)</div>
             <ul>
               <li>国際ブランドの非接触決済規格で、海外の店舗でも使われている方式</li>
               <li>レジで「クレジットで」と伝え、カードと同じ要領で端末にタッチする</li>
@@ -164,24 +183,31 @@
           </div>
         </div>
         <p>
-          登録したカードによって対応する方式が異なるため、Googleウォレットへ追加する際に、そのカードがどの方式で使えるかを確認しておくと、店頭で迷いにくくなります。iD・QUICPay・タッチ決済のより詳しい特徴は<a href="apple-pay-poikatsu">Apple Payでポイ活する方法</a>でも解説しているため、あわせてご覧ください。
+          登録したカードによって対応する方式が異なるため、Googleウォレットへ追加する際に、そのカードがどの方式で使えるかを確認しておくと、店頭で迷いにくくなります。ブランドのタッチ決済自体の対象店舗・利用条件は<a href="visa-touch-poikatsu">Visaタッチ決済でポイ活する方法</a>で詳しく解説しています。iPhone(Apple Pay)との違いを比較したい場合は<a href="apple-pay-poikatsu">Apple Payでポイ活する方法</a>もあわせてご覧ください。
         </p>
 
-        <h2>設定方法</h2>
+        <h2>設定方法と利用条件</h2>
+        <p>
+          カードをGoogleウォレットへ追加するだけで、どの店舗でもすぐにタッチ決済できるとは限りません。実際に店頭で使うには、次の条件がそろっている必要があります。
+        </p>
         <ol class="flow-list">
-          <li><div><strong>STEP1:Googleウォレットアプリを開く</strong><br>Android端末にプリインストールされている場合が多いですが、ない場合はGoogle Playからインストールします。</div></li>
-          <li><div><strong>STEP2:「ウォレットに追加」をタップする</strong><br>電子マネーを追加する場合とクレジット・デビットカードを追加する場合で、選ぶメニューが異なります。</div></li>
-          <li><div><strong>STEP3:追加したいものの種類を選ぶ</strong><br>電子マネーの場合は種類を選択、カードの場合はカード情報を入力します。</div></li>
-          <li><div><strong>STEP4:画面の指示に従って登録を完了する</strong><br>本人確認や認証が必要になる場合があります。</div></li>
+          <li><div><strong>STEP1:端末がAndroid 9以降・NFC対応であることを確認する</strong><br>タッチ決済にはNFC機能が必要です。おサイフケータイ非対応機でもブランドのタッチ決済(Visa等)は使える場合があります。</div></li>
+          <li><div><strong>STEP2:Googleウォレットアプリでカード・電子マネーを追加する</strong><br>「ウォレットに追加」から、電子マネーかクレジット・デビットカードかを選び、画面の指示に従って登録します。カード会社側の本人確認が必要になる場合があります。</div></li>
+          <li><div><strong>STEP3:画面ロックを設定する</strong><br>Googleウォレットでの支払いには端末の画面ロック設定が必須とされています(一定額未満の少額決済では、地域によりロック解除が不要な場合があります)。</div></li>
+          <li><div><strong>STEP4:必要に応じてタップ&ペイのデフォルトカードを設定する</strong><br>複数のカードを登録している場合、Googleウォレット側でどのカードを標準の支払い方法にするか設定できます。</div></li>
         </ol>
+        <p>
+          <small>情報確認日:2026年9月12日。参考:<a href="https://support.google.com/wallet/answer/12059519?hl=ja" target="_blank" rel="noopener">Googleウォレット公式ヘルプ「タッチ決済取引用に画面ロックを設定する」</a></small>
+        </p>
 
         <h2>利用前に確認したいポイント</h2>
         <div class="warning-box">
           <div class="warning-box__title">⚠ 利用前に確認したいポイント</div>
           <ul>
             <li>Google Pay自体にポイント制度はなく、還元はあくまで登録したカードの条件による</li>
-            <li>電子マネーはおサイフケータイ対応端末が必要(カード決済は非対応機でも利用できる場合がある)</li>
+            <li>電子マネー・iD・QUICPayはおサイフケータイ対応端末が必要(ブランドのタッチ決済は非対応機でも利用できる場合がある)</li>
             <li>電子マネーは種類ごとに1枚までしか登録できない</li>
+            <li>タッチ決済の利用には画面ロックの設定が必要</li>
             <li>「Google Pay」と「Google Playポイント」は名前が似ているが別のサービス</li>
           </ul>
         </div>
@@ -207,8 +233,8 @@
           <p class="faq-item__a">登録したカードによって、Googleウォレット上で選べる決済方式が変わります。同じカードでも、レジでは「iDで」「QUICPayで」「クレジットで(タッチ決済)」のように伝え方が異なる場合があるため、登録時にどの方式に対応しているかを確認しておくと迷いにくくなります。</p>
         </div>
         <div class="faq-item">
-          <p class="faq-item__q">電子マネー(Suicaなど)を使うのにおサイフケータイ対応は必要ですか?</p>
-          <p class="faq-item__a">Suica・PASMO・楽天Edy・nanaco・WAONなどの電子マネーをGoogleウォレットで使うには、おサイフケータイに対応したAndroid端末が必要です。一方、QUICPay・iD・Visaのタッチ決済・Mastercardタッチ決済といったカード決済は、Android 9以降であれば、おサイフケータイ非対応の端末でも利用できるとされています。</p>
+          <p class="faq-item__q">電子マネー(Suicaなど)やiD・QUICPayを使うのにおサイフケータイ対応は必要ですか?</p>
+          <p class="faq-item__a">はい、必要です。Suica・PASMO・楽天Edy・nanaco・WAONなどの電子マネーに加え、iD・QUICPayもFeliCa(おサイフケータイ)を使う決済方式のため、おサイフケータイに対応したAndroid端末が必要です。一方、Visa・Mastercard・JCB・American Expressのタッチ決済は、おサイフケータイに対応していない端末でも、Android 9以降でNFCに対応していれば利用できるとされています。</p>
         </div>
         <div class="faq-item">
           <p class="faq-item__q">Google Payと「Google Playポイント」は同じものですか?</p>
@@ -220,7 +246,7 @@
           <ul>
             <li>Googleウォレットはアプリの名称、Google Payはそのアプリで使う決済サービスの名称</li>
             <li>Google Pay自体にポイント制度はなく、還元は登録したカードの条件で決まる</li>
-            <li>電子マネーはおサイフケータイ対応端末が必要、カード決済(iD・QUICPay・タッチ決済)はAndroid 9以降なら非対応機でも使える場合がある</li>
+            <li>電子マネー・iD・QUICPayはおサイフケータイ対応端末が必要、Visa・Mastercard・JCB・American Expressのタッチ決済はAndroid 9以降・NFC対応なら非対応機でも使える場合がある</li>
             <li>「Google Pay」と「Google Playポイント」は別サービスなので混同しない</li>
           </ul>
         </div>
