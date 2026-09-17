@@ -991,7 +991,28 @@ a.points-by-type__card:focus-visible {
 @media (min-width: 600px) {
   .offer-card__cta {
     grid-column: 2;
-    margin-top: 6px;
+    margin-top: 8px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .offer-card__cta-link {
+    flex: 0 0 auto;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+
+  .offer-card__cta-link--secondary {
+    width: 170px;
+  }
+
+  .offer-card__cta-link--primary {
+    width: 210px;
   }
 }
 
