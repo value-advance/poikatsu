@@ -978,7 +978,8 @@ a.points-by-type__card:focus-visible {
 }
 
 /* offer-card内の「詳細へ」「公式サイト」2ボタンCTA(カード全体のaタグ内に別のaを入れ子にしないための構造)
-   スマホ:カード下部に全幅で配置 / PC(600px〜):本文列(説明文の直下)に配置 */
+   スマホ:カード下部に全幅で配置 / PC(600px〜):本文列(説明文の直下)に左揃え・固定幅で配置
+   ※PC向け上書きは、同じ詳細度のベースルールより後ろに置いて確実に効かせること */
 .offer-card__cta {
   grid-column: 1 / -1;
   grid-row: 4;
@@ -986,34 +987,6 @@ a.points-by-type__card:focus-visible {
   flex-wrap: wrap;
   gap: 8px;
   margin-top: 10px;
-}
-
-@media (min-width: 600px) {
-  .offer-card__cta {
-    grid-column: 2;
-    margin-top: 8px;
-    justify-content: flex-start;
-    gap: 10px;
-  }
-
-  .offer-card__cta-link {
-    flex: 0 0 auto;
-    min-width: 0;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    height: 40px;
-    padding: 0 14px;
-    box-sizing: border-box;
-  }
-
-  .offer-card__cta-link--secondary {
-    width: 170px;
-  }
-
-  .offer-card__cta-link--primary {
-    width: 210px;
-  }
 }
 
 .offer-card__cta-link {
@@ -1047,6 +1020,34 @@ a.points-by-type__card:focus-visible {
 
 .offer-card__cta-link--primary:hover {
   background: var(--color-primary-dark);
+}
+
+@media (min-width: 600px) {
+  .offer-card__cta {
+    grid-column: 2;
+    margin-top: 8px;
+    justify-content: flex-start;
+    gap: 10px;
+  }
+
+  .offer-card__cta-link {
+    flex: 0 0 auto;
+    min-width: 0;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    padding: 0 14px;
+    box-sizing: border-box;
+  }
+
+  .offer-card__cta-link--secondary {
+    width: 170px;
+  }
+
+  .offer-card__cta-link--primary {
+    width: 210px;
+  }
 }
 
 /* -------------------------------------------------------------
