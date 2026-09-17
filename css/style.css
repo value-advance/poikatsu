@@ -977,14 +977,12 @@ a.points-by-type__card:focus-visible {
   margin: 0;
 }
 
-/* offer-card内の「詳細へ」「公式サイト」2ボタンCTA(カード全体のaタグ内に別のaを入れ子にしないための構造) */
+/* offer-card内の「詳細へ」「公式サイト」2ボタンCTA(カード全体のaタグ内に別のaを入れ子にしないための構造、offer-card__body内で説明文の直下に配置) */
 .offer-card__cta {
-  grid-column: 1 / -1;
-  grid-row: 4;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 10px;
+  margin-top: 2px;
 }
 
 .offer-card__cta-link {
