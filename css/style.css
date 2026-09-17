@@ -1022,31 +1022,33 @@ a.points-by-type__card:focus-visible {
   background: var(--color-primary-dark);
 }
 
+/* ワラウ専用モディファイア: PC(600px〜)のみ、説明文の右側にCTAを縦並び・同幅で配置
+   (.offer-cardの共通グリッド定義は変更せず、このクラスが付いたカードだけ3列化して他カードへの影響を避ける) */
 @media (min-width: 600px) {
-  .offer-card__cta {
-    grid-column: 2;
-    margin-top: 8px;
-    justify-content: flex-start;
-    gap: 10px;
+  .offer-card--cta-side {
+    grid-template-columns: minmax(0, min(34%, 140px)) minmax(0, 1fr) auto;
   }
 
-  .offer-card__cta-link {
+  .offer-card--cta-side .offer-card__cta {
+    grid-column: 3;
+    grid-row: 3;
+    align-self: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 8px;
+    margin-top: 0;
+  }
+
+  .offer-card--cta-side .offer-card__cta-link {
     flex: 0 0 auto;
     min-width: 0;
+    width: 150px;
+    height: 40px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 40px;
     padding: 0 14px;
     box-sizing: border-box;
-  }
-
-  .offer-card__cta-link--secondary {
-    width: 170px;
-  }
-
-  .offer-card__cta-link--primary {
-    width: 210px;
   }
 }
 
