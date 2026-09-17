@@ -977,12 +977,22 @@ a.points-by-type__card:focus-visible {
   margin: 0;
 }
 
-/* offer-card内の「詳細へ」「公式サイト」2ボタンCTA(カード全体のaタグ内に別のaを入れ子にしないための構造、offer-card__body内で説明文の直下に配置) */
+/* offer-card内の「詳細へ」「公式サイト」2ボタンCTA(カード全体のaタグ内に別のaを入れ子にしないための構造)
+   スマホ:カード下部に全幅で配置 / PC(600px〜):本文列(説明文の直下)に配置 */
 .offer-card__cta {
+  grid-column: 1 / -1;
+  grid-row: 4;
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  margin-top: 2px;
+  margin-top: 10px;
+}
+
+@media (min-width: 600px) {
+  .offer-card__cta {
+    grid-column: 2;
+    margin-top: 6px;
+  }
 }
 
 .offer-card__cta-link {
