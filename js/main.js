@@ -250,7 +250,7 @@
     { title: "トラベリスト(海外航空券) IATA認可代理店", type: "海外航空券予約", points: "20秒", suffix: "で発券完了(最短)", category: "campaign", tags: ["beginner"], url: "/pages/articles/travelist-kaigai-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260720103939&wid=002&eno=01&mid=s00000023067003003000&mc=1" },
     { title: "じゃらんnet 国内最大級の掲載数", type: "宿・ホテル予約", points: "2%", suffix: "程度のポイント還元(基本)", category: "campaign", tags: ["beginner", "ponta", "dpoint"], url: "/pages/articles/jalan-net-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1" },
     { title: "エアトリ 国内主要14社を一括比較", type: "航空券予約", points: "2%", suffix: "がポイント還元(購入額)", category: "campaign", tags: ["beginner"], url: "/pages/articles/airtrip-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720103908&wid=002&eno=01&mid=s00000001343001062000&mc=1" },
-    { title: "イオンコンパストラベルモール(レンタカー予約) 複数社を比較", type: "レンタカー予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["beginner"], url: "/pages/articles/aeoncompass-travelmall-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260720103819&wid=002&eno=01&mid=s00000026954002003000&mc=1" },
+    { title: "イオンコンパストラベルモール(レンタカー予約) 複数社を比較", type: "レンタカー予約", points: "WAON POINT", suffix: "が貯まる・1pt=1円で使える", category: "campaign", tags: ["rentacar", "beginner"], url: "/pages/articles/aeoncompass-travelmall-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260720103819&wid=002&eno=01&mid=s00000026954002003000&mc=1" },
     { title: "トラベリスト(国内航空券) JAL・ANA・LCCを比較", type: "航空券予約", points: "3%", suffix: "還元(アプリ購入時)", category: "campaign", tags: ["paypay", "beginner"], url: "/pages/articles/travelist-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260715065195&wid=002&eno=01&mid=s00000023067001009000&mc=1" },
     { title: "一休.com 高級ホテル・旅館とレストラン予約", type: "宿・ホテル/レストラン予約", points: "最大5%", suffix: "程度のポイント還元(ステージ・決済方法による)", category: "campaign", tags: ["beginner"], url: "/pages/articles/ikkyu-poikatsu", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892694644" },
     // アンケート
@@ -265,18 +265,18 @@
     { title: "BIGLOBE光 フレッツ光の設備を使った格安光回線", type: "光回線", points: "最大2,200円", suffix: "割引(auスマートバリュー)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/biglobe-hikari-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260813279105&wid=002&eno=01&mid=s00000017718046009000&mc=1" },
     { title: "SoftBank 光 フレッツ光より安い高速光回線", type: "光回線", points: "最大10万円", suffix: "還元(あんしん乗り換えキャンペーン)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/softbank-hikari-poikatsu", img: "https://www20.a8.net/svt/bgt?aid=260813279086&wid=002&eno=01&mid=s00000016370001008000&mc=1" },
     { title: "楽天ひかり 楽天モバイルとセットで楽天市場ポイント7倍", type: "光回線", points: "毎日7倍", suffix: "楽天モバイルとセット利用で楽天市場ポイント", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-hikari-poikatsu", img: "https://srv2.trafficgate.net/t/b/208/3159/318897_398564" },
-    { title: "楽天ミュージック 広告なしで約1億曲聴き放題", type: "音楽サブスク", points: "780円", suffix: "〜/月(楽天モバイル・楽天カード会員)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-music-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260720103548&wid=002&eno=01&mid=s00000027553001005000&mc=1" },
+    { title: "楽天ミュージック 広告なしで約1億曲聴き放題", type: "音楽サブスク", points: "780円", suffix: "〜/月(楽天モバイル・楽天カード会員)", category: "seikatsu", tags: ["rakuten", "subscription", "beginner"], url: "/pages/articles/rakuten-music-poikatsu", img: "https://www21.a8.net/svt/bgt?aid=260720103548&wid=002&eno=01&mid=s00000027553001005000&mc=1" },
     { title: "楽天Car車検 見積もり比較・予約で楽天ポイント", type: "車検の見積もり・予約", points: "500", suffix: "ポイント進呈(見積もり予約&車検実施)", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-car-shaken-poikatsu", img: "https://srv2.trafficgate.net/t/b/78/5734/318897_398564" },
-    { title: "楽天ビューティ 美容室・ネイル・エステの検索&予約", type: "美容室・サロン予約", points: "楽天ポイント", suffix: "が貯まる・使える", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-beauty-poikatsu", img: "https://srv2.trafficgate.net/t/b/10/6369/318897_398564" },
+    { title: "楽天ビューティ 美容室・ネイル・エステの検索&予約", type: "美容室・サロン予約", points: "楽天ポイント", suffix: "が貯まる・使える", category: "seikatsu", tags: ["rakuten", "beauty", "beginner"], url: "/pages/articles/rakuten-beauty-poikatsu", img: "https://srv2.trafficgate.net/t/b/10/6369/318897_398564" },
     { title: "楽天写真館 写真プリント〜フォトブックが作れる", type: "写真プリント・フォトブック", points: "100円", suffix: "につき楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-shashinkan-poikatsu", img: "https://srv2.trafficgate.net/t/b/391/4055/318897_398564" },
     { title: "楽天でんわ 番号そのままで通話料半額", type: "電話アプリ", points: "30秒11円", suffix: "(税込)の通話料、110円で楽天ポイント1pt", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-denwa-poikatsu", img: "https://srv2.trafficgate.net/t/b/17/5812/318897_398564" },
     { title: "楽天モバイル データ使い放題で楽天ポイントも貯まる", type: "携帯回線", points: "2,980円", suffix: "(税込3,278円)/月でデータ使い放題", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-mobile-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260720103756&wid=002&eno=01&mid=s00000027494001003000&mc=1" },
     { title: "@nifty with ドコモ光 最大35,000円キャッシュバック", type: "光回線", points: "35,000円", suffix: "キャッシュバック(最大)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/nifty-docomo-hikari-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720104398&wid=002&eno=01&mid=s00000019208003021000&mc=1" },
-    { title: "au PAY ふるさと納税 保有ポイントで寄付可能", type: "ふるさと納税", points: "Ponta", suffix: "ポイントを寄付に充当できる", category: "seikatsu", tags: ["ponta", "beginner"], url: "/pages/articles/aupay-furusato-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260720103926&wid=002&eno=01&mid=s00000023934001006000&mc=1" },
-    { title: "ドコモでんき 電気代でdポイントが貯まる", type: "電力", points: "最大20%", suffix: "dポイント還元(Greenプラン)", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/docomo-denki-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260720103797&wid=002&eno=01&mid=s00000000018049011000&mc=1" },
+    { title: "au PAY ふるさと納税 保有ポイントで寄付可能", type: "ふるさと納税", points: "Ponta", suffix: "ポイントを寄付に充当できる", category: "seikatsu", tags: ["ponta", "furusato", "beginner"], url: "/pages/articles/aupay-furusato-poikatsu", img: "https://www28.a8.net/svt/bgt?aid=260720103926&wid=002&eno=01&mid=s00000023934001006000&mc=1" },
+    { title: "ドコモでんき 電気代でdポイントが貯まる", type: "電力", points: "最大20%", suffix: "dポイント還元(Greenプラン)", category: "seikatsu", tags: ["dpoint", "denki", "beginner"], url: "/pages/articles/docomo-denki-poikatsu", img: "https://www22.a8.net/svt/bgt?aid=260720103797&wid=002&eno=01&mid=s00000000018049011000&mc=1" },
     { title: "ahamo光 新規申込みでdポイントプレゼント", type: "光回線", points: "10,000pt", suffix: "dポイントプレゼント(新規申込)", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/ahamo-hikari-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720103759&wid=002&eno=01&mid=s00000017718076006000&mc=1" },
     { title: "Retty 会員登録不要でネット予約", type: "グルメ予約", points: "2,600万人", suffix: "が利用(2022年5月時点)", category: "seikatsu", tags: ["paypay", "beginner"], url: "/pages/articles/retty-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1" },
-    { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
+    { title: "dバリューパス 約150の人気コンテンツが使い放題", type: "壁紙・待受サブスク", points: "31日間", suffix: "無料でお試し可能", category: "seikatsu", tags: ["dpoint", "subscription", "beginner"], url: "/pages/articles/d-value-pass-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" },
     { title: "auひかり(NEXT申込窓口) オプション加入不要", type: "光回線", points: "最大181,800円", suffix: "相当お得(キャッシュバック合計)", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/auhikari-poikatsu", img: "https://www27.a8.net/svt/bgt?aid=260720103522&wid=002&eno=01&mid=s00000014546021006000&mc=1" },
     { title: "じゃらんゴルフ 全国のゴルフ場を条件検索", type: "ゴルフ場予約", points: "1%", suffix: "相当のdポイント・Pontaポイントが貯まる", category: "seikatsu", tags: ["dpoint", "ponta", "beginner"], url: "/pages/articles/jalan-golf-toha", img: "https://www22.a8.net/svt/bgt?aid=260720103856&wid=002&eno=01&mid=s00000014877001047000&mc=1" },
     { title: "DMMブックス 幅広いジャンルの電子書籍ストア", type: "電子書籍", points: "DMMポイント", suffix: "が貯まる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dmmbooks-toha", img: "https://www24.a8.net/svt/bgt?aid=260720103900&wid=002&eno=01&mid=s00000000842023010000&mc=1" },
@@ -287,7 +287,7 @@
     { title: "BB.exciteモバイル Flatプラン 容量ごとの定額料金", type: "格安SIM", points: "データ繰り越し", suffix: "に対応した定額プラン", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/bbexcite-flat-toha", img: "https://www20.a8.net/svt/bgt?aid=260908518002&wid=002&eno=01&mid=s00000000979026003000&mc=1" },
     { title: "ごえんモバイル 通話専用プランもある格安SIM", type: "格安SIM", points: "最短2か月", suffix: "から利用できる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/goen-mobile-toha", img: "https://www23.a8.net/svt/bgt?aid=260908518014&wid=002&eno=01&mid=s00000018938005005000&mc=1" },
     { title: "DTI SIM 最低利用期間・解約金なしの格安SIM", type: "格安SIM", points: "解約金", suffix: "なしで気軽に契約できる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dti-sim-toha", img: "https://www28.a8.net/svt/bgt?aid=260908518001&wid=002&eno=01&mid=s00000008091018007000&mc=1" },
-    { title: "出前館 特典クーポン・キャンペーンと決済ポイントを使い分け", type: "フードデリバリー", points: "特典クーポン", suffix: "が利用状況に応じて届く", category: "seikatsu", tags: ["paypay", "beginner"], url: "/pages/articles/demaecan-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260908517921&wid=002&eno=01&mid=s00000027476001003000&mc=1" },
+    { title: "出前館 特典クーポン・キャンペーンと決済ポイントを使い分け", type: "フードデリバリー", points: "特典クーポン", suffix: "が利用状況に応じて届く", category: "seikatsu", tags: ["paypay", "delivery", "beginner"], url: "/pages/articles/demaecan-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260908517921&wid=002&eno=01&mid=s00000027476001003000&mc=1" },
     // アプリ(特集)
     { title: "HashPort Wallet 暗号資産・ポイント・NFTを一元管理", type: "Web3ウォレット", points: "無料", suffix: "で基本機能を利用可能", category: "app", tags: ["beginner"], url: "/pages/articles/hashport-wallet-poikatsu", img: "https://www23.a8.net/svt/bgt?aid=260720103750&wid=002&eno=01&mid=s00000027478001004000&mc=1" },
     // 銀行/証券
@@ -304,26 +304,35 @@
     { title: "利回りくん 1口1万円からの不動産クラウドファンディング", type: "不動産クラウドファンディング", points: "元本保証", suffix: "ではありません", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/rimawarikun-toha", img: "https://www27.a8.net/svt/bgt?aid=260720104461&wid=002&eno=01&mid=s00000025945001003000&mc=1" },
     { title: "ひかりTV テレビ・ビデオ・カラオケが楽しめる", type: "テレビ・ビデオ配信", points: "複数プラン", suffix: "から選べる", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/hikaritv-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000006209/1048.jpg" },
     { title: "dカーシェア 5社のカーシェア・8社のレンタカーを1つのIDで", type: "カーシェア・レンタカー", points: "dポイント", suffix: "で支払い可能", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/dcarshare-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000004528/716.jpg" },
-    { title: "dマガジン 2,400誌以上が読み放題", type: "雑誌読み放題", points: "月額580円", suffix: "で読み放題", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/dmagazine-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000003844/111.jpg" },
+    { title: "dマガジン 2,400誌以上が読み放題", type: "雑誌読み放題", points: "月額580円", suffix: "で読み放題", category: "seikatsu", tags: ["dpoint", "subscription", "beginner"], url: "/pages/articles/dmagazine-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000003844/111.jpg" },
     { title: "あんしんセキュリティ 迷惑電話・危険サイト対策など8機能", type: "セキュリティ", points: "月額550円", suffix: "で8機能が使える", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/anshin-security-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000003719/439.jpg" },
     { title: "dヘルスケア 歩数・体重記録でdポイント", type: "健康管理アプリ", points: "初回31日間", suffix: "無料", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/dhealthcare-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000003047/320.jpg" },
     { title: "dフォト スマホの写真から毎月フォトブック", type: "フォトブック", points: "月額594円", suffix: "、毎月送料無料", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dphoto-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000002936/151.jpg" },
-    { title: "dヒッツ 月額300円からの音楽配信", type: "音楽配信", points: "300円", suffix: "から利用できる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/dhits-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000002605/267.jpg" },
+    { title: "dヒッツ 月額300円からの音楽配信", type: "音楽配信", points: "300円", suffix: "から利用できる", category: "seikatsu", tags: ["subscription", "beginner"], url: "/pages/articles/dhits-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000002605/267.jpg" },
     { title: "ahamo 月額2,970円で30GB", type: "格安モバイル回線", points: "5分以内通話", suffix: "がかけ放題込み", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/ahamo-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000001629/675.jpg" },
     { title: "docomo select スマホ・タブレット用アクセサリー", type: "アクセサリー", points: "dポイント", suffix: "が貯まる", category: "shopping", tags: ["dpoint", "beginner"], url: "/pages/articles/docomo-select-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000001231/428.png" },
     { title: "ECカレント 家電を幅広く扱う通販サイト", type: "家電", points: "カレントポイント", suffix: "・Vポイント/dポイントも対応", category: "shopping", tags: ["vpoint", "dpoint", "beginner"], url: "/pages/articles/ec-current-poikatsu", img: "https://srv2.trafficgate.net/t/b/61/6540/318897_398564" },
-    { title: "Leminoプレミアム 約180,000本のコンテンツ", type: "動画配信", points: "月額1,540円", suffix: "、初回31日間無料", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/lemino-premium-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000000236/61.jpg" },
+    { title: "Leminoプレミアム 約180,000本のコンテンツ", type: "動画配信", points: "月額1,540円", suffix: "、初回31日間無料", category: "seikatsu", tags: ["dpoint", "subscription", "beginner"], url: "/pages/articles/lemino-premium-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000000236/61.jpg" },
     { title: "小田急ポイントカード 小田急沿線でOPポイントが貯まる", type: "クレジットカード", points: "OPポイント", suffix: "が貯まる", category: "creditcard", tags: ["beginner"], url: "/pages/articles/odakyu-point-card-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100kw0d00oy8i" },
     { title: "バスのる 高速バスの比較・予約で独自ポイントが貯まる", type: "高速バス予約", points: "乗車代金1%", suffix: "がバスのるポイントとして貯まる", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/busnoru-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100o66d00oy8i" },
-    { title: "さとふる 全国の返礼品を検索できるふるさと納税サイト", type: "ふるさと納税", points: "返礼品", suffix: "選びから手続きまでオンラインで完結", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/satofull-poikatsu", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892692224" },
+    { title: "さとふる 全国の返礼品を検索できるふるさと納税サイト", type: "ふるさと納税", points: "返礼品", suffix: "選びから手続きまでオンラインで完結", category: "seikatsu", tags: ["furusato", "beginner"], url: "/pages/articles/satofull-poikatsu", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892692224" },
     { title: "Rakuten家計簿 無料で使える家計簿・資産管理アプリ", type: "家計簿アプリ", points: "楽天ポイント", suffix: "がミッション達成でもらえる場合あり", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-kakeibo-poikatsu", img: "https://srv2.trafficgate.net/t/b/24/6606/318897_398564" },
     { title: "楽天Car洗車・コーティング 加盟店を検索して予約", type: "洗車・コーティング予約", points: "1〜5%", suffix: "相当の楽天ポイントが貯まる", category: "seikatsu", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-carwash-poikatsu", img: "https://srv2.trafficgate.net/t/b/33/6391/318897_398564" },
-    { title: "東京ガスの電気「基本プラン」 ガス・電気セット割で電気料金0.5%割引", type: "電気・新電力", points: "0.5%", suffix: "ガス・電気セット割で電気料金を割引", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/tokyo-gas-denki-kihon-plan", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892705745" },
+    { title: "東京ガスの電気「基本プラン」 ガス・電気セット割で電気料金0.5%割引", type: "電気・新電力", points: "0.5%", suffix: "ガス・電気セット割で電気料金を割引", category: "seikatsu", tags: ["denki", "beginner"], url: "/pages/articles/tokyo-gas-denki-kihon-plan", img: "//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892705745" },
     { title: "岩井コスモ証券 NISA売買手数料無料", type: "証券", points: "無料", suffix: "NISA口座は日本株・米国株とも売買手数料無料", category: "kouza", tags: ["beginner"], url: "/pages/articles/iwai-cosmo-shoken", img: "/images/article-thumb/iwaicosmo.webp" },
   ];
 
   // 関連リンクとして意味を持つタグ(beginnerは対象が広すぎるため除外)
-  const RELATED_TAG_WHITELIST = ["rakuten", "dpoint", "paypay", "ponta", "vpoint"];
+  // furusato/denki/beauty/subscription/delivery/rentacarは、本文中で該当する案件記事に
+  // 実際にリンクしているにもかかわらずcategoryの違いにより関連案件が表示されていなかった
+  // 記事を修正するために追加(2026.09.17)。
+  const RELATED_TAG_WHITELIST = ["rakuten", "dpoint", "paypay", "ponta", "vpoint", "furusato", "denki", "beauty", "subscription", "delivery", "rentacar"];
+
+  // 上記のうち、一致時にcategory一致より優先して並べるタグ(2026.09.17追加分のみ)。
+  // rakuten/dpoint/paypay/ponta/vpointは複数タグを併せ持つ記事(例:はじめての
+  // ポイ活まとめ記事)も多く、そこまで優先扱いにすると本来もっとも関連性の高い
+  // category一致(pointsite等)の案件が枠から押し出されてしまうため対象外とした。
+  const RELATED_TAG_PRIORITY = ["furusato", "denki", "beauty", "subscription", "delivery", "rentacar"];
 
   function initRelatedOffers() {
     const section = document.getElementById("relatedOffers");
@@ -334,11 +343,20 @@
     const category = article.dataset.category || "";
     const tags = (article.dataset.tags || "").split(" ").filter(Boolean);
     const meaningfulTags = tags.filter((t) => RELATED_TAG_WHITELIST.includes(t));
+    const priorityTags = tags.filter((t) => RELATED_TAG_PRIORITY.includes(t));
     const currentFile = location.pathname.split("/").pop();
 
+    // 優先タグ一致を、category一致など他の一致より先に並べてから先頭6件を採用する。
+    // 単純にPR_OFFERSの配列順でslice(0,6)すると、記事のcategoryに合致する案件が
+    // 配列の前方に多数あるカテゴリ(shopping/seikatsu等)では、優先タグで明確に
+    // 関連づけた案件が枠に入らず表示されない問題があったため(2026.09.17に発見・対応)。
     const matches = PR_OFFERS.filter((offer) => {
       if (offer.url && currentFile && offer.url.endsWith("/" + currentFile)) return false;
       return offer.category === category || offer.tags.some((t) => meaningfulTags.includes(t));
+    }).sort((a, b) => {
+      const aHit = a.tags.some((t) => priorityTags.includes(t)) ? 1 : 0;
+      const bHit = b.tags.some((t) => priorityTags.includes(t)) ? 1 : 0;
+      return bHit - aHit;
     }).slice(0, 6);
 
     if (matches.length === 0) {
