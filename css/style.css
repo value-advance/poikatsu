@@ -1967,7 +1967,13 @@ a.points-by-type__card:focus-visible {
   word-break: break-word;
 }
 
-/* メリット、のようなチェックリスト */
+/* メリット、のようなチェックリスト(チェックカード)
+   注意: <li> は display:flex にしない。<strong>タイトル</strong>本文<a>リンク</a> のような
+   インライン混在コンテンツを flex コンテナの直接の子にすると、各テキスト断片・リンクが
+   個別の flex item として横並びになり、幅を奪い合って1文字ずつ縦に折り返される崩れが
+   発生するため(旧実装で発生していた不具合の根本原因)。
+   ここではアイコン・区切り線を ::before/::after の絶対配置にし、<li> 自体は
+   padding-left で余白を確保した通常のブロック要素として文章を流し込む。 */
 .check-list {
   list-style: none;
   padding: 0;
@@ -1975,29 +1981,85 @@ a.points-by-type__card:focus-visible {
 }
 
 .check-list li {
-  display: flex;
-  gap: 10px;
-  align-items: flex-start;
+  position: relative;
   background: #f2fbf9;
-  border-radius: 8px;
-  padding: 10px 12px;
-  margin-bottom: 8px;
+  border: 1px solid #c9ece6;
+  border-radius: 12px;
+  padding: 12px 14px 12px 42px;
+  margin-bottom: 10px;
   font-size: 13px;
+  line-height: 1.7;
+  color: var(--color-text);
+  overflow-wrap: break-word;
+  word-break: break-word;
 }
 
 .check-list li::before {
   content: "✓";
-  flex: 0 0 auto;
+  position: absolute;
+  left: 10px;
+  top: 12px;
   width: 20px;
   height: 20px;
   border-radius: 50%;
   background: var(--color-accent);
   color: #fff;
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 800;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex: none;
+}
+
+.check-list li::after {
+  content: "";
+  position: absolute;
+  left: 34px;
+  top: 12px;
+  bottom: 12px;
+  width: 1px;
+  background: #c9ece6;
+}
+
+.check-list li strong:first-child {
+  display: block;
+  color: #0f7a6c;
+  font-weight: 800;
+  font-size: 14px;
+  margin-bottom: 3px;
+}
+
+.check-list li a {
+  color: var(--color-navy);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  word-break: break-word;
+}
+
+@media (min-width: 600px) {
+  .check-list li {
+    padding: 16px 20px 16px 52px;
+    font-size: 14px;
+  }
+
+  .check-list li::before {
+    left: 16px;
+    top: 16px;
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
+  }
+
+  .check-list li::after {
+    left: 44px;
+    top: 16px;
+    bottom: 16px;
+  }
+
+  .check-list li strong:first-child {
+    font-size: 15px;
+  }
 }
 
 /* 注意点、のような警告ボックス */
