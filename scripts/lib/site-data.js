@@ -58,6 +58,7 @@ const SHINCHAKU_EXCLUDED_SLUGS = new Set([
   "akippa-toha", // 案件記事(生活カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-09)
   "iwai-cosmo-shoken", // 案件記事(口座開設カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-15)
   "tokyo-gas-denki-kihon-plan", // 案件記事(生活カテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-15)
+  "jcom-mobile-toha", // 案件記事(通信・スマホカテゴリ)にのみ掲載、新着記事には含めないよう明示指示(2026-09-24)
 ]);
 
 const CATEGORY_LABELS = {
