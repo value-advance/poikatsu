@@ -308,15 +308,17 @@
     <section class="section container">
       <h2 class="section-title">カテゴリ別おすすめ</h2>
       <p class="section-desc">運営実績、サービス内容、還元条件、初心者向けの使いやすさなどをもとに選定しています。広告報酬の金額だけで掲載順を決定しているわけではありません。</p>
-      <div class="ranking-tabs" id="rankingTabs">
-        <button class="ranking-tab is-active" data-tab="sougou">総合</button>
-        <button class="ranking-tab" data-tab="pointsite">ポイントサイト</button>
-        <button class="ranking-tab" data-tab="shopping">ショッピング</button>
-        <button class="ranking-tab" data-tab="survey">アンケート</button>
-        <button class="ranking-tab" data-tab="travel">旅行</button>
-        <button class="ranking-tab" data-tab="seikatsu">生活</button>
+      <div class="ranking-tabs" id="rankingTabs" role="tablist" aria-label="カテゴリを選ぶ">
+        <button type="button" class="ranking-tab is-active" role="tab" aria-selected="true" data-tab="shopping"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M6 8h12l-1 12H7L6 8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg></span><span class="ranking-tab__label">ショッピング</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="pointsite"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><circle cx="12" cy="12" r="9"/><path d="M9.5 16.5v-9h3.2a2.7 2.7 0 0 1 0 5.4H9.5"/></svg></span><span class="ranking-tab__label">ポイ活サイト</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="survey"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="5" y="4.5" width="14" height="17" rx="2"/><rect x="9" y="2.5" width="6" height="3.5" rx="1"/><path d="m9 12 1.5 1.5L13 10.5M9 17h6"/></svg></span><span class="ranking-tab__label">アンケート</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="travel"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M21 15.5 13.5 11V5.5a1.5 1.5 0 0 0-3 0V11L3 15.5v1.8l7.5-2.2V19l-2 1.4V22l3.5-1 3.5 1v-1.6l-2-1.4v-4.9l7.5 2.2z"/></svg></span><span class="ranking-tab__label">旅行</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="seikatsu"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3.5 11 12 4l8.5 7"/><path d="M6 9.8V20h12V9.8"/><path d="M10 20v-5.5h4V20"/></svg></span><span class="ranking-tab__label">生活サービス</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="tsushin"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="7" y="2.5" width="10" height="19" rx="2.5"/><path d="M11 18.5h2"/></svg></span><span class="ranking-tab__label">通信スマホ</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="finance"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><path d="M3 9.5 12 4l9 5.5"/><path d="M5 10.5v7M9.5 10.5v7M14.5 10.5v7M19 10.5v7M3 20h18"/></svg></span><span class="ranking-tab__label">銀行/証券</span></button>
+        <button type="button" class="ranking-tab" role="tab" aria-selected="false" data-tab="credit"><span class="ranking-tab__icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" focusable="false"><rect x="2.5" y="5.5" width="19" height="13" rx="2.5"/><path d="M2.5 10h19M6 15h4"/></svg></span><span class="ranking-tab__label">クレジット</span></button>
       </div>
-      <div class="ranking-panel">
+      <div class="ranking-panel" role="tabpanel" aria-live="polite">
         <div class="ranking-grid" id="rankingGrid"></div>
       </div>
     </section>

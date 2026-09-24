@@ -724,38 +724,174 @@ a.points-by-type__card:focus-visible {
 /* -------------------------------------------------------------
    Category ranking (カテゴリ別ランキング)
 ------------------------------------------------------------- */
+/* カテゴリ切り替え: スマホは4列×2行のアイコン型メニュー、768px以上(PC)は従来のタブ帯 */
 .ranking-tabs {
-  display: flex;
-  gap: 2px;
-  overflow-x: auto;
-  background: var(--color-border);
-  border-radius: 8px 8px 0 0;
-  padding: 4px 4px 0;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px 4px;
+  margin-bottom: 12px;
 }
 
 .ranking-tab {
-  flex: 0 0 auto;
-  padding: 10px 16px;
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--color-text-light);
+  --tab-accent: var(--color-primary);
+  --tab-tint: #fff0e0;
+  --tab-ink: var(--color-primary-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6px;
+  min-width: 0;
+  min-height: 76px;
+  padding: 8px 2px 6px;
+  font-family: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--color-text);
   background: transparent;
   border: none;
-  border-radius: 6px 6px 0 0;
+  border-bottom: 3px solid transparent;
+  border-radius: 10px;
   cursor: pointer;
-  white-space: nowrap;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.ranking-tab[data-tab="shopping"]  { --tab-accent: #f28a1e; --tab-tint: #fff0df; --tab-ink: #b85f00; }
+.ranking-tab[data-tab="pointsite"] { --tab-accent: #d9a406; --tab-tint: #fff6d1; --tab-ink: #8a6500; }
+.ranking-tab[data-tab="survey"]    { --tab-accent: #4aa860; --tab-tint: #e4f5e9; --tab-ink: #2c7a40; }
+.ranking-tab[data-tab="travel"]    { --tab-accent: #3a92e0; --tab-tint: #e3f0fc; --tab-ink: #1f6bb5; }
+.ranking-tab[data-tab="seikatsu"]  { --tab-accent: #e8703a; --tab-tint: #fde9df; --tab-ink: #b34a17; }
+.ranking-tab[data-tab="tsushin"]   { --tab-accent: #4d6be0; --tab-tint: #e8ecfb; --tab-ink: #3049b5; }
+.ranking-tab[data-tab="finance"]   { --tab-accent: #2f9d76; --tab-tint: #e0f4ec; --tab-ink: #1e7754; }
+.ranking-tab[data-tab="credit"]    { --tab-accent: #8a5ad6; --tab-tint: #efe8fb; --tab-ink: #6238ad; }
+
+.ranking-tab__icon {
+  display: grid;
+  place-items: center;
+  flex: 0 0 auto;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  color: var(--tab-accent);
+  background: var(--tab-tint);
+  transition: background-color .15s ease, color .15s ease, box-shadow .15s ease;
+}
+
+.ranking-tab__icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.ranking-tab__label {
+  display: block;
+  max-width: 100%;
+  overflow-wrap: anywhere;
 }
 
 .ranking-tab.is-active {
-  background: var(--color-surface);
-  color: var(--color-primary);
-  box-shadow: inset 0 3px 0 var(--color-primary);
+  border-bottom-color: var(--tab-accent);
+}
+
+.ranking-tab.is-active .ranking-tab__icon {
+  color: #fff;
+  background: var(--tab-accent);
+  box-shadow: 0 0 0 3px var(--tab-tint);
+}
+
+.ranking-tab.is-active .ranking-tab__label {
+  font-weight: 800;
+  color: var(--tab-ink);
+}
+
+.ranking-tab:focus-visible {
+  outline: 2px solid var(--color-navy);
+  outline-offset: 2px;
 }
 
 .ranking-panel {
   background: var(--color-surface);
-  border-radius: 0 0 var(--radius) var(--radius);
+  border-radius: var(--radius);
   padding: 14px;
+}
+
+.ranking-empty {
+  grid-column: 1 / -1;
+  margin: 0;
+  padding: 24px 12px;
+  text-align: center;
+  font-size: 13px;
+  color: var(--color-text-light);
+}
+
+@media (max-width: 359px) {
+  .ranking-tabs {
+    gap: 6px 2px;
+  }
+
+  .ranking-tab {
+    padding: 8px 0 6px;
+    font-size: 10px;
+    letter-spacing: -0.02em;
+  }
+
+  .ranking-tab__icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .ranking-tab__icon svg {
+    width: 22px;
+    height: 22px;
+  }
+}
+
+@media (min-width: 768px) {
+  .ranking-tabs {
+    display: flex;
+    gap: 2px;
+    overflow-x: auto;
+    margin-bottom: 0;
+    padding: 4px 4px 0;
+    background: var(--color-border);
+    border-radius: 8px 8px 0 0;
+  }
+
+  .ranking-tab {
+    flex: 1 1 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    min-height: 0;
+    padding: 10px 8px;
+    font-size: 12px;
+    font-weight: 700;
+    color: var(--color-text-light);
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    white-space: nowrap;
+  }
+
+  .ranking-tab__icon {
+    display: none;
+  }
+
+  .ranking-tab.is-active {
+    background: var(--color-surface);
+    color: var(--color-primary);
+    box-shadow: inset 0 3px 0 var(--color-primary);
+  }
+
+  .ranking-tab.is-active .ranking-tab__label {
+    font-weight: 700;
+    color: var(--color-primary);
+  }
+
+  .ranking-panel {
+    border-radius: 0 0 var(--radius) var(--radius);
+  }
 }
 
 .ranking-grid {
