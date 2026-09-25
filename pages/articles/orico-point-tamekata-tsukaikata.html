@@ -72,6 +72,61 @@
     ]
   }
   </script>
+  <style>
+    /* この記事専用の表示調整(サイト共通CSSは変更しない) */
+    .article-body p a:not([class]) { color: var(--color-navy); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--color-secondary); }
+    .article-body small a { color: var(--color-navy); text-decoration: underline; text-underline-offset: 2px; }
+    .orico-lead p { margin: 0 0 10px; }
+    .orico-facts { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 16px; margin: 16px 0 24px; }
+    .orico-facts__title { font-size: 15px; font-weight: 800; color: var(--color-navy); margin: 0 0 12px; }
+    .article-body .orico-facts__grid { display: grid; grid-template-columns: 1fr; gap: 6px; list-style: none; margin: 0; padding: 0; }
+    .article-body .orico-facts__item { display: grid; grid-template-columns: 96px minmax(0, 1fr); column-gap: 10px; align-items: start; background: var(--color-bg); border-radius: 8px; padding: 10px 12px; margin: 0; min-width: 0; }
+    .orico-facts__label { grid-row: 1 / span 2; font-size: 11px; font-weight: 700; color: var(--color-text-light); line-height: 1.6; padding-top: 2px; }
+    .orico-facts__value { font-size: 14px; font-weight: 800; color: var(--color-navy); line-height: 1.5; }
+    .orico-facts__sub { font-size: 12px; color: var(--color-text); line-height: 1.6; margin-top: 2px; }
+    .orico-facts__note { margin: 12px 0 0; padding: 10px 12px; border-radius: 8px; background: #fff4e5; border-left: 4px solid var(--color-primary); font-size: 13px; font-weight: 700; color: var(--color-text); line-height: 1.6; }
+    .orico-table-2col thead th:first-child { width: 36%; }
+    .orico-table-rate thead th:nth-child(1) { width: 34%; }
+    .orico-table-rate thead th:nth-child(2) { width: 38%; }
+    .orico-table-rate th, .orico-table-rate td { padding-left: 8px; padding-right: 8px; }
+    .orico-nw { display: inline-block; white-space: nowrap; }
+    .orico-table-rate td strong { color: #0f7a6c; }
+    .orico-table-rate tr.is-best th, .orico-table-rate tr.is-best td { background: #f2fbf9; }
+    .orico-rates { display: grid; grid-template-columns: 1fr; gap: 8px; margin: 16px 0; }
+    .orico-rate { display: flex; align-items: center; gap: 12px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 12px 14px; }
+    .orico-rate--best { border-color: #c9ece6; background: #f2fbf9; }
+    .orico-rate__value { flex: 0 0 96px; text-align: center; font-size: 17px; font-weight: 800; color: var(--color-navy); line-height: 1.3; }
+    .orico-rate__value small { display: block; font-size: 11px; font-weight: 700; color: var(--color-text-light); }
+    .orico-rate--best .orico-rate__value { color: #0f7a6c; }
+    .orico-rate__body { min-width: 0; font-size: 13px; line-height: 1.6; color: var(--color-text); }
+    .orico-rate__body strong { display: block; font-size: 13px; color: var(--color-navy); }
+    .orico-example { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 14px 16px; margin: 16px 0; }
+    .orico-example__title { font-size: 13px; font-weight: 800; color: var(--color-navy); margin: 0 0 8px; }
+    .orico-example__row { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; font-size: 13px; line-height: 1.6; padding: 8px 0; border-top: 1px dashed var(--color-border); }
+    .orico-example__row:first-of-type { border-top: none; }
+    .orico-example__from { font-weight: 700; color: var(--color-text); }
+    .orico-example__to { font-weight: 800; color: var(--color-primary-dark); }
+    .orico-tip { background: #fff4e5; border-left: 4px solid var(--color-primary); border-radius: 8px; padding: 12px 14px; margin: 16px 0; font-size: 13px; line-height: 1.7; }
+    .orico-tip strong { display: block; color: var(--color-navy); margin-bottom: 2px; }
+    .orico-source { margin: 12px 0 24px; padding: 10px 12px; border-radius: 8px; background: var(--color-surface); border: 1px solid var(--color-border); font-size: 12px; line-height: 1.7; color: var(--color-text-light); }
+    .article-body .orico-links { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+    .article-body .orico-links li { margin: 0; }
+    .orico-links a { display: block; padding: 12px 14px; background: var(--color-surface); border: 1px solid var(--color-border); border-radius: 8px; font-size: 13px; font-weight: 700; color: var(--color-navy); text-decoration: none; }
+    .orico-links a::after { content: " →"; color: var(--color-primary); }
+    @media (max-width: 359px) {
+      .article-body .orico-facts__item { grid-template-columns: 1fr; }
+      .orico-facts__label { grid-row: auto; }
+      .orico-rate__value { flex-basis: 80px; font-size: 15px; }
+    }
+    @media (min-width: 600px) {
+      .article-body .orico-facts__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .article-body .orico-facts__item--wide { grid-column: 1 / -1; }
+      .orico-rates { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .orico-rate { flex-direction: column; align-items: stretch; text-align: center; }
+      .orico-rate__value { flex: none; }
+      .article-body .orico-links { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    }
+  </style>
 </head>
 <body data-root="../../">
 
@@ -96,12 +151,47 @@
 
       <div class="article-body">
 
-        <p>
-          オリコポイントは、オリコカードのショッピング利用やオリコモール、キャンペーンなどで貯まるポイントです。ただし、カードの種類によって還元率が異なるうえ、カード利用分・オリコモール利用分は獲得月を含めて12か月後の月末が有効期限となるため、貯めっぱなしにしていると気づかないうちに失効してしまうことがあります。この記事では、オリコポイントの貯め方、オリコモールの活用方法、有効期限、交換先ごとのレートまでを公式情報にもとづいて整理します。カードそのものの比較は<a href="credit-card-point-hikaku">クレジットカード徹底比較</a>もあわせてご覧ください。
-        </p>
+        <div class="orico-lead">
+          <p>
+            オリコポイントは、オリコカードのショッピング利用やオリコモール、キャンペーンなどで貯まるポイントです。
+          </p>
+          <p>
+            ただし、カードの種類によって還元率が異なるうえ、カード利用分・オリコモール利用分は獲得月を含めて12か月後の月末が有効期限となるため、貯めっぱなしにしていると気づかないうちに失効してしまうことがあります。
+          </p>
+          <p>
+            この記事では、オリコポイントの貯め方、オリコモールの活用方法、有効期限、交換先ごとのレートまでを公式情報にもとづいて整理します。カードそのものの比較は<a href="credit-card-point-hikaku">クレジットカード徹底比較</a>もあわせてご覧ください。
+          </p>
+        </div>
 
-        <div class="highlight-box">
-          <p class="highlight-box__text">オリコポイントは対象オリコカードでのショッピング、オリコモール利用、キャンペーン等で貯まりますが、カードによって還元率が異なります。また、カード利用分・オリコモール利用分は獲得月を含めて12か月後の月末が有効期限となるため、貯めっぱなしに注意してください。</p>
+        <div class="orico-facts">
+          <p class="orico-facts__title">オリコポイントの要点</p>
+          <ul class="orico-facts__grid">
+            <li class="orico-facts__item orico-facts__item--wide">
+              <span class="orico-facts__label">貯まる場面</span>
+              <span class="orico-facts__value">カード利用・オリコモール・キャンペーン</span>
+            </li>
+            <li class="orico-facts__item">
+              <span class="orico-facts__label">還元率</span>
+              <span class="orico-facts__value">カードによって異なる</span>
+              <span class="orico-facts__sub">基本の目安は100円につき1pt</span>
+            </li>
+            <li class="orico-facts__item">
+              <span class="orico-facts__label">有効期限</span>
+              <span class="orico-facts__value">獲得月を含めて12か月後の月末</span>
+              <span class="orico-facts__sub">カード利用分・オリコモール利用分</span>
+            </li>
+            <li class="orico-facts__item">
+              <span class="orico-facts__label">1ポイントの価値</span>
+              <span class="orico-facts__value">約0.83円〜1円</span>
+              <span class="orico-facts__sub">交換先によって異なる</span>
+            </li>
+            <li class="orico-facts__item">
+              <span class="orico-facts__label">残高・期限の確認</span>
+              <span class="orico-facts__value">eオリコ</span>
+              <span class="orico-facts__sub">eオリコアプリでも確認できる</span>
+            </li>
+          </ul>
+          <p class="orico-facts__note">⚠ 有効期限があるため、貯めっぱなしにせず、失効前に交換することが大切です。</p>
         </div>
 
         <nav class="article-toc" aria-label="ページ内ショートカット">
@@ -122,34 +212,36 @@
 
         <h2 id="toha">オリコポイントとは</h2>
         <p>
-          オリコポイントは、株式会社オリエントコーポレーション(オリコ)が発行するクレジットカードの利用で貯まるポイントです。対象カードでのショッピング利用のほか、通販サイト「オリコモール」経由の買い物、期間限定キャンペーンなどでも貯めることができます。貯まったポイントは、会員サイト「eオリコ」からオンラインギフト券や他社ポイント・マイルなどへ交換して使う仕組みです。
+          オリコポイントは、株式会社オリエントコーポレーション(オリコ)が発行するクレジットカードの利用で貯まるポイントです。対象カードでのショッピング利用のほか、通販サイト「オリコモール」経由の買い物、期間限定キャンペーンなどでも貯めることができます。
         </p>
         <p>
-          <small>参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a></small>
+          貯まったポイントは、会員サイト「eオリコ」からオンラインギフト券や他社ポイント・マイルなどへ交換して使う仕組みです。
         </p>
+        <p class="orico-source">参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a></p>
 
         <h2 id="tamekata">対象カード利用での貯まり方</h2>
         <p>
           対象カードでのショッピング利用では、税込100円につき1オリコポイントが基本の目安とされています。カードによっては、入会から一定期間、還元率が通常より高くなるキャンペーンが用意されている場合もあります。
         </p>
         <div class="article-body__table-wrap">
-          <table>
+          <table class="orico-table-2col">
             <thead><tr><th>貯め方</th><th>内容</th></tr></thead>
             <tbody>
-              <tr><th>カードショッピング利用</th><td>対象カードでの支払いに応じてオリコポイントが貯まる(基本の目安は100円につき1pt)</td></tr>
-              <tr><th>オリコモール経由の買い物</th><td>カード利用分に加えて、ショップごとに0.5%以上のオリコポイントが上乗せされる</td></tr>
+              <tr><th>カードショッピング利用</th><td>対象カードでの支払いに応じてオリコポイントが貯まる(基本の目安は<strong>100円につき1pt</strong>)</td></tr>
+              <tr><th>オリコモール経由の買い物</th><td>カード利用分に加えて、ショップごとに<strong>0.5%以上</strong>のオリコポイントが上乗せされる</td></tr>
               <tr><th>電子マネー・リボ払いの利用</th><td>iD・QUICPayの利用や、ショッピングリボ払いの選択で特別加算がある場合がある</td></tr>
               <tr><th>キャンペーン参加</th><td>期間限定キャンペーンへの参加でポイントが加算される場合がある</td></tr>
             </tbody>
           </table>
         </div>
-        <p>
-          <small>情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a>。還元率・加算条件はカード・時期により変更される場合があるため、最新情報は公式サイトでご確認ください。</small>
-        </p>
+        <p class="orico-source">情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a>。還元率・加算条件はカード・時期により変更される場合があるため、最新情報は公式サイトでご確認ください。</p>
 
         <h2 id="kaishaku">カードによって還元率が異なる</h2>
         <p>
-          オリコポイントの還元率は、すべてのオリコカードで一律ではありません。たとえば「Orico Card THE POINT」では、通常時の還元率が1.0%(税込100円につき1pt)とされ、入会後一定期間は還元率が引き上げられるキャンペーンが用意されている場合があります。他のオリコカードでは還元率や特典内容が異なるため、「オリコポイント=一律この還元率」と決めつけず、自分が使っている(または検討している)カードの条件を確認することが大切です。
+          オリコポイントの還元率は、すべてのオリコカードで一律ではありません。たとえば「Orico Card THE POINT」では、通常時の還元率が<strong>1.0%(税込100円につき1pt)</strong>とされ、入会後一定期間は還元率が引き上げられるキャンペーンが用意されている場合があります。
+        </p>
+        <p>
+          他のオリコカードでは還元率や特典内容が異なるため、「オリコポイント=一律この還元率」と決めつけず、自分が使っている(または検討している)カードの条件を確認することが大切です。
         </p>
         <div class="warning-box">
           <div class="warning-box__title">⚠ カードランキングではありません</div>
@@ -158,72 +250,108 @@
 
         <h2 id="mall">オリコモール経由で貯める方法</h2>
         <p>
-          「オリコモール」は、Amazon・楽天市場・Yahoo!ショッピングなど提携先のネットショップへオリコモール経由でアクセスして購入すると、通常のカード利用分に加えて、ショップごとに0.5%以上のオリコポイントが上乗せされる仕組みです。対象カードでは、これにカード側の特別加算が加わる場合もあるとされています。オリコモールを経由し忘れると上乗せ分が付かないため、ネットショッピングをする際はオリコモールのトップページやアプリを経由してから購入するよう習慣づけるとよいでしょう。
+          「オリコモール」は、Amazon・楽天市場・Yahoo!ショッピングなど提携先のネットショップへオリコモール経由でアクセスして購入すると、通常のカード利用分に加えて、ショップごとに0.5%以上のオリコポイントが上乗せされる仕組みです。
         </p>
-        <p>
-          <small>参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a></small>
-        </p>
+        <div class="point-pick-list">
+          <div class="point-pick-list__item"><span class="point-pick-list__num">カード利用分</span>通常のカード利用分のオリコポイント</div>
+          <div class="point-pick-list__item"><span class="point-pick-list__num">＋ オリコモール利用分</span>ショップごとに0.5%以上のオリコポイントが上乗せされる</div>
+          <div class="point-pick-list__item"><span class="point-pick-list__num">＋ 特別加算</span>対象カードでは、これにカード側の特別加算が加わる場合もあるとされている</div>
+        </div>
+        <ol class="flow-list">
+          <li><strong>オリコモールのトップページやアプリを経由する</strong></li>
+          <li><strong>提携先のネットショップへアクセスする</strong></li>
+          <li><strong>そのままショップで購入する</strong></li>
+        </ol>
+        <div class="orico-tip">
+          <strong>経由し忘れに注意</strong>
+          オリコモールを経由し忘れると上乗せ分が付かないため、ネットショッピングをする際はオリコモールのトップページやアプリを経由してから購入するよう習慣づけるとよいでしょう。
+        </div>
+        <p class="orico-source">参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a></p>
 
         <h2 id="zandaka">ポイント残高の確認方法</h2>
         <p>
-          オリコポイントの残高は、会員サイト「eオリコ」(またはeオリコアプリ)にログインし、「ポイント」メニューから「オリコポイント・ステージ」を選択すると確認できます。複数のオリコカードを持っている場合は、ポイントを合算して確認できるとされています。
+          オリコポイントの残高は、会員サイト「eオリコ」(またはeオリコアプリ)で確認できます。
         </p>
+        <ol class="flow-list">
+          <li><strong>eオリコ(またはeオリコアプリ)にログインする</strong></li>
+          <li><strong>「ポイント」メニューから「オリコポイント・ステージ」を選択する</strong></li>
+          <li><strong>ポイント残高を確認する</strong></li>
+        </ol>
         <p>
-          <small>参考:<a href="https://www.orico.co.jp/creditcard/for/member/about/eorico/point/" target="_blank" rel="noopener">オリコ公式「eオリコでのポイント確認・交換」</a></small>
+          複数のオリコカードを持っている場合は、ポイントを合算して確認できるとされています。
         </p>
+        <p class="orico-source">参考:<a href="https://www.orico.co.jp/creditcard/for/member/about/eorico/point/" target="_blank" rel="noopener">オリコ公式「eオリコでのポイント確認・交換」</a></p>
 
         <h2 id="kigen">有効期限</h2>
         <div class="article-body__table-wrap">
-          <table>
+          <table class="orico-table-2col">
             <thead><tr><th>獲得パターン</th><th>有効期限</th></tr></thead>
             <tbody>
-              <tr><th>カード利用分</th><td>ポイント獲得月を含めて12か月後の月末</td></tr>
-              <tr><th>オリコモール利用分</th><td>ポイント獲得月を含めて12か月後の月末</td></tr>
+              <tr><th>カード利用分</th><td>ポイント獲得月を含めて<strong>12か月後の月末</strong></td></tr>
+              <tr><th>オリコモール利用分</th><td>ポイント獲得月を含めて<strong>12か月後の月末</strong></td></tr>
               <tr><th>キャンペーン獲得分</th><td>キャンペーンごとに個別に設定される(内容により異なる)</td></tr>
             </tbody>
           </table>
         </div>
+        <div class="orico-example">
+          <p class="orico-example__title">例:4月にポイントを獲得した場合(オリコ公式の例)</p>
+          <div class="orico-example__row"><span class="orico-example__from">カード利用分・オリコモール利用分</span><span>→</span><span class="orico-example__to">翌年3月末に失効</span></div>
+          <div class="orico-example__row"><span class="orico-example__from">有効期限が6か月のキャンペーン獲得分</span><span>→</span><span class="orico-example__to">9月末に失効</span></div>
+        </div>
         <p>
           カード利用分・オリコモール利用分は、獲得した月を1か月目として数えて12か月後の月末が期限となる仕組みです。永久不滅ではない点に注意し、eオリコでこまめに残高と有効期限を確認しておくと、失効を防ぎやすくなります。
         </p>
-        <p>
-          <small>情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a>。有効期限の詳細条件は変更される場合があるため、最新情報は公式サイト・eオリコでご確認ください。</small>
-        </p>
+        <p class="orico-source">情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/oricopoint/" target="_blank" rel="noopener">オリコ公式「オリコポイントサービス」</a>。有効期限の詳細条件は変更される場合があるため、最新情報は公式サイト・eオリコでご確認ください。</p>
 
         <h2 id="koukan">交換先とレートの比較</h2>
         <p>
-          オリコポイントは、オンラインギフト券や他社ポイント・マイルなど幅広い交換先が用意されています。代表的な交換先について、必要ポイントと交換価値を整理しました。
+          オリコポイントは、オンラインギフト券や他社ポイント・マイルなど幅広い交換先が用意されています。交換先によって1ポイントの価値が異なります。
+        </p>
+        <div class="orico-rates">
+          <div class="orico-rate orico-rate--best">
+            <div class="orico-rate__value">1円<small>1ptあたり</small></div>
+            <div class="orico-rate__body"><strong>FamiPayギフトコード・J-Coinボーナス</strong>最も低い交換単位の500ポイントから交換できる</div>
+          </div>
+          <div class="orico-rate">
+            <div class="orico-rate__value">約0.83円<small>1ptあたり</small></div>
+            <div class="orico-rate__body"><strong>Amazonギフトカード・dポイント・Pontaポイントなど</strong>多くの交換先がこのレート</div>
+          </div>
+          <div class="orico-rate">
+            <div class="orico-rate__value">600マイル<small>1,000ptあたり</small></div>
+            <div class="orico-rate__body"><strong>ANAマイレージクラブ</strong>マイルへの交換</div>
+          </div>
+        </div>
+        <p>
+          代表的な交換先について、必要ポイントと交換価値を整理しました。
         </p>
         <div class="article-body__table-wrap">
-          <table>
-            <thead><tr><th>交換先</th><th>必要ポイント</th><th>交換価値</th><th>1ポイントの価値</th></tr></thead>
+          <table class="orico-table-rate">
+            <thead><tr><th>交換先</th><th>必要ポイント→交換価値</th><th>1ptの価値</th></tr></thead>
             <tbody>
-              <tr><th>Amazonギフトカード</th><td>600pt</td><td>500円分</td><td>約0.83円</td></tr>
-              <tr><th>Apple Gift Card</th><td>600pt</td><td>500円分</td><td>約0.83円</td></tr>
-              <tr><th>PayPayポイント</th><td>1,200pt</td><td>1,000円分</td><td>約0.83円</td></tr>
-              <tr><th>nanacoギフト</th><td>1,200pt</td><td>1,000円分</td><td>約0.83円</td></tr>
-              <tr><th>dポイント</th><td>1,200pt</td><td>1,000pt相当</td><td>約0.83円相当</td></tr>
-              <tr><th>Pontaポイント</th><td>1,200pt</td><td>1,000pt相当</td><td>約0.83円相当</td></tr>
-              <tr><th>FamiPayギフトコード</th><td>500pt</td><td>500円分</td><td>1円</td></tr>
-              <tr><th>J-Coinボーナス</th><td>500pt</td><td>500円分</td><td>1円</td></tr>
-              <tr><th>ANAマイレージクラブ</th><td>1,000pt</td><td>600マイル</td><td>-</td></tr>
-              <tr><th>UCギフトカード</th><td>6,000pt</td><td>5,000円分</td><td>約0.83円</td></tr>
+              <tr class="is-best"><th>FamiPayギフトコード</th><td><span class="orico-nw">500pt</span><span class="orico-nw">→500円分</span></td><td><strong>1円</strong></td></tr>
+              <tr class="is-best"><th>J-Coinボーナス</th><td><span class="orico-nw">500pt</span><span class="orico-nw">→500円分</span></td><td><strong>1円</strong></td></tr>
+              <tr><th>Amazonギフトカード</th><td><span class="orico-nw">600pt</span><span class="orico-nw">→500円分</span></td><td>約0.83円</td></tr>
+              <tr><th>Apple Gift Card</th><td><span class="orico-nw">600pt</span><span class="orico-nw">→500円分</span></td><td>約0.83円</td></tr>
+              <tr><th>PayPayポイント</th><td><span class="orico-nw">1,200pt</span><span class="orico-nw">→1,000円分</span></td><td>約0.83円</td></tr>
+              <tr><th>nanacoギフト</th><td><span class="orico-nw">1,200pt</span><span class="orico-nw">→1,000円分</span></td><td>約0.83円</td></tr>
+              <tr><th>dポイント</th><td><span class="orico-nw">1,200pt</span><span class="orico-nw">→1,000pt相当</span></td><td><span class="orico-nw">約0.83円</span><span class="orico-nw">相当</span></td></tr>
+              <tr><th>Pontaポイント</th><td><span class="orico-nw">1,200pt</span><span class="orico-nw">→1,000pt相当</span></td><td><span class="orico-nw">約0.83円</span><span class="orico-nw">相当</span></td></tr>
+              <tr><th>UCギフトカード</th><td><span class="orico-nw">6,000pt</span><span class="orico-nw">→5,000円分</span></td><td>約0.83円</td></tr>
+              <tr><th>ANAマイレージクラブ</th><td><span class="orico-nw">1,000pt</span><span class="orico-nw">→600マイル</span></td><td>-</td></tr>
             </tbody>
           </table>
         </div>
         <p>
-          最も低い交換単位はFamiPayギフトコード・J-Coinボーナスの500ポイントからで、1ポイント1円相当です。一方、Amazonギフトカードやdポイント・Pontaポイントなど多くの交換先は1ポイント約0.83円相当となっており、交換先によって価値が異なります。「1ポイント=1円」と決めつけず、自分が使いやすい交換先のレートを確認してから交換することをおすすめします。
+          「1ポイント=1円」と決めつけず、自分が使いやすい交換先のレートを確認してから交換することをおすすめします。
         </p>
-        <p>
-          <small>情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/pointlist/" target="_blank" rel="noopener">オリコ公式「オリコポイント交換一覧」</a>。交換レート・ラインアップは変更される場合があるため、交換前に必ず公式サイトで最新の条件をご確認ください。</small>
-        </p>
+        <p class="orico-source">情報確認日:2026年9月14日。参考:<a href="https://www.orico.co.jp/creditcard/pointservice/pointlist/" target="_blank" rel="noopener">オリコ公式「オリコポイント交換一覧」</a>。交換レート・ラインアップは変更される場合があるため、交換前に必ず公式サイトで最新の条件をご確認ください。</p>
 
         <h2 id="shikkou">失効を防ぐ管理方法</h2>
         <ul class="check-list">
-          <li>eオリコに定期的にログインし、ポイント残高と有効期限を確認する</li>
-          <li>有効期限が近いポイントから優先して交換する</li>
-          <li>少額でも交換できる500ポイント単位の交換先(FamiPayギフトコード等)を覚えておくと、失効直前でも使い切りやすい</li>
-          <li>オリコモールを使う習慣がある場合は、経由し忘れがないかも定期的に見直す</li>
+          <li><strong>残高と期限を定期的に確認</strong>eオリコに定期的にログインし、ポイント残高と有効期限を確認する</li>
+          <li><strong>期限が近い分から交換</strong>有効期限が近いポイントから優先して交換する</li>
+          <li><strong>500pt単位の交換先を覚えておく</strong>少額でも交換できる500ポイント単位の交換先(FamiPayギフトコード等)を覚えておくと、失効直前でも使い切りやすい</li>
+          <li><strong>オリコモールの経由を見直す</strong>オリコモールを使う習慣がある場合は、経由し忘れがないかも定期的に見直す</li>
         </ul>
         <p>
           有効期限があるポイント全般の管理方法は<a href="point-yuukoukigen-kanri">ポイントの有効期限を管理する方法</a>でも解説していますので、あわせてご覧ください。
@@ -281,8 +409,16 @@
         </div>
 
         <p>
-          オリコポイントは交換先や有効期限を把握しておけば無駄なく活用できるポイントです。交換レートや有効期限のルールは変更される場合があるため、実際に交換する前にeオリコ・公式サイトで最新の条件を確認しましょう。カードそのものの比較は<a href="credit-card-point-hikaku">クレジットカード徹底比較</a>、永久不滅ポイントとの違いは<a href="eikyufumetsu-point-tsukaikata">永久不滅ポイントの使い方</a>、有効期限の一般的な管理方法は<a href="point-yuukoukigen-kanri">ポイントの有効期限を管理する方法</a>でも解説していますので、あわせてご覧ください。
+          オリコポイントは交換先や有効期限を把握しておけば無駄なく活用できるポイントです。交換レートや有効期限のルールは変更される場合があるため、実際に交換する前にeオリコ・公式サイトで最新の条件を確認しましょう。
         </p>
+        <p>
+          カードそのものの比較、永久不滅ポイントとの違い、有効期限の一般的な管理方法は、次の記事でも解説していますので、あわせてご覧ください。
+        </p>
+        <ul class="orico-links">
+          <li><a href="credit-card-point-hikaku">クレジットカード徹底比較</a></li>
+          <li><a href="eikyufumetsu-point-tsukaikata">永久不滅ポイントの使い方</a></li>
+          <li><a href="point-yuukoukigen-kanri">ポイントの有効期限を管理する方法</a></li>
+        </ul>
 
       </div>
 
