@@ -195,7 +195,7 @@
     // クレジット(クレジットカード・カード入会案件)
     credit: [
       { title: "楽天カード 楽天市場・楽天ペイと相性抜群", type: "クレジットカード", points: "楽天ポイント", suffix: "が貯まる", url: "/pages/articles/rakuten-card-poikatsu", img: "https://srv2.trafficgate.net/t/b/948/1396/318897_398564" },
-      { title: "エポスカード 年会費無料のVisaカード", type: "クレジットカード", points: "マルイ", suffix: "などで優待が受けられる", url: "/pages/articles/epos-card-poikatsu", img: "/images/article-thumb/creditcard/epos.webp" },
+      { title: "エポスカード 年会費無料のVisaカード", type: "クレジットカード", points: "マルイ", suffix: "などで優待が受けられる", url: "/pages/articles/epos-card-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100i7hh00oy8i" },
       { title: "Nexus Card デポジット式ショッピングカード", type: "クレジットカード", points: "200円", suffix: "ごとに1ポイント", url: "/pages/articles/nexus-card-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065035&wid=002&eno=01&mid=s00000022442001032000&mc=1" },
       { title: "コスモ・ザ・カード・オーパス ガソリン代がお得に", type: "クレジットカード", points: "WAON POINT", suffix: "が貯まる", url: "/pages/articles/cosmo-opus-card-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260828408085&wid=002&eno=01&mid=s00000027665001003000&mc=1" },
       { title: "小田急ポイントカード 小田急沿線でOPポイントが貯まる", type: "クレジットカード", points: "OPポイント", suffix: "が貯まる", url: "/pages/articles/odakyu-point-card-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100kw0d00oy8i" },
@@ -341,7 +341,7 @@
     { title: "PayPay証券 100円から株式投資", type: "証券", points: "PayPayポイント", suffix: "で投資できる", category: "kouza", tags: ["paypay", "beginner"], url: "/pages/articles/paypaysec-shouken-toha", img: "/images/article-thumb/kouza/paypay-sec.webp" },
     { title: "楽天カード 楽天市場・楽天ペイと相性抜群", type: "クレジットカード", points: "楽天ポイント", suffix: "が貯まる", category: "creditcard", tags: ["rakuten", "beginner"], url: "/pages/articles/rakuten-card-poikatsu", img: "https://srv2.trafficgate.net/t/b/948/1396/318897_398564" },
     { title: "Nexus Card デポジット式ショッピングカード", type: "クレジットカード", points: "200円", suffix: "ごとに1ポイント", category: "creditcard", tags: ["beginner"], url: "/pages/articles/nexus-card-poikatsu", img: "https://www25.a8.net/svt/bgt?aid=260715065035&wid=002&eno=01&mid=s00000022442001032000&mc=1" },
-    { title: "エポスカード 年会費無料のVisaカード", type: "クレジットカード", points: "マルイ", suffix: "などで優待が受けられる", category: "creditcard", tags: ["beginner"], url: "/pages/articles/epos-card-poikatsu", img: "/images/article-thumb/creditcard/epos.webp" },
+    { title: "エポスカード 年会費無料のVisaカード", type: "クレジットカード", points: "マルイ", suffix: "などで優待が受けられる", category: "creditcard", tags: ["beginner"], url: "/pages/articles/epos-card-poikatsu", img: "https://h.accesstrade.net/sp/rr?rk=0100i7hh00oy8i" },
     { title: "コスモ・ザ・カード・オーパス ガソリン代がお得に", type: "クレジットカード", points: "WAON POINT", suffix: "が貯まる", category: "creditcard", tags: ["beginner"], url: "/pages/articles/cosmo-opus-card-poikatsu", img: "https://www29.a8.net/svt/bgt?aid=260828408085&wid=002&eno=01&mid=s00000027665001003000&mc=1" },
     { title: "利回りくん 1口1万円からの不動産クラウドファンディング", type: "不動産クラウドファンディング", points: "元本保証", suffix: "ではありません", category: "seikatsu", tags: ["beginner"], url: "/pages/articles/rimawarikun-toha", img: "https://www27.a8.net/svt/bgt?aid=260720104461&wid=002&eno=01&mid=s00000025945001003000&mc=1" },
     { title: "ひかりTV テレビ・ビデオ・カラオケが楽しめる", type: "テレビ・ビデオ配信", points: "複数プラン", suffix: "から選べる", category: "seikatsu", tags: ["dpoint", "beginner"], url: "/pages/articles/hikaritv-toha", img: "https://img.affiliate-sp.docomo.ne.jp/ad/d0000006209/1048.jpg" },
