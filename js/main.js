@@ -116,8 +116,8 @@
   const RANKING_DATA = {
     // ショッピング(EC・ネット通販・百貨店・ドラッグストア通販など)
     shopping: [
-      { title: "Yahoo!ショッピング 獲得予定ポイントを表示", type: "総合通販", points: "PayPayポイント", suffix: "などが貯まる", url: "/pages/articles/yahoo-shopping-toha", img: "/images/article-thumb/shopping/yahoo-shopping.webp" },
-      { title: "au PAY マーケット Pontaポイントが貯まる", type: "総合通販", points: "Pontaポイント", suffix: "が貯まる", url: "/pages/articles/aupay-market-toha", img: "/images/article-thumb/shopping/aupay-market.webp" },
+      { title: "Yahoo!ショッピング 獲得予定ポイントを表示", type: "総合通販", points: "PayPayポイント", suffix: "などが貯まる", url: "/pages/articles/yahoo-shopping-toha", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892684862" },
+      { title: "au PAY マーケット Pontaポイントが貯まる", type: "総合通販", points: "Pontaポイント", suffix: "が貯まる", url: "/pages/articles/aupay-market-toha", img: "https://www29.a8.net/svt/bgt?aid=260720103448&wid=002&eno=01&mid=s00000023933001015000&mc=1" },
       { title: "大丸松坂屋オンラインストア ギフト・化粧品", type: "百貨店", points: "QIRAポイント", suffix: "などが貯まる", url: "/pages/articles/daimaru-matsuzakaya-toha", img: "/images/article-thumb/shopping/daimaru-matsuzakaya.webp" },
       { title: "京王ネットショッピング 旬のグルメ・スイーツ・ギフト", type: "百貨店", points: "京王グループ", suffix: "共通ポイントが貯まる", url: "/pages/articles/keio-net-shopping-toha", img: "https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892689212" },
       { title: "JTBショッピング 全国のお取り寄せ・お土産・ギフト", type: "お取り寄せ・ギフト", points: "JTBトラベル", suffix: "ポイントが貯まる・つかえる", url: "/pages/articles/jtb-shopping-toha", img: "https://www25.a8.net/svt/bgt?aid=260720103454&wid=002&eno=01&mid=s00000018449001010000&mc=1" },
