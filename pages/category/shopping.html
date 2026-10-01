@@ -14,6 +14,19 @@
   <title>ショッピングサイトおすすめ比較|初心者向けの選び方・お得な使い方 | ポイントの殿堂</title>
   <meta name="description" content="初心者向けにネット通販サイトのおすすめ比較、失敗しない選び方、お得な使い方、注意点をまとめました。目的別の記事やサービスごとの詳しい記事にもご案内します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/category/shopping">
   <script type="application/ld+json">
@@ -484,6 +497,26 @@
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/ec-current-poikatsu">詳細へ</a>
               <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://ad2.trafficgate.net/t/r/61/6540/318897_398564" target="_blank" rel="noopener sponsored">公式サイト</a>
+            </div>
+          </div>
+          <div class="offer-card offer-card--cta-side">
+            <span class="offer-card__type">電子書籍</span>
+            <p class="offer-card__title">DMMブックス</p>
+            <div class="offer-card__divider"></div>
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EVU5ZU+6HW+3SZUAP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=260720103900&wid=002&eno=01&mid=s00000000842023010000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B84X3+EVU5ZU+6HW+3SZUAP" alt="">
+            </div>
+            <div class="offer-card__body">
+              <p class="offer-card__desc">コミック・雑誌・小説など幅広いジャンルを扱う電子書籍ストア</p>
+              <p class="offer-card__reward">貯まるポイント:DMMポイント</p>
+            </div>
+          
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/dmmbooks-toha">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EVU5ZU+6HW+3SY4KI" rel="nofollow">【DMMブックス】</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X3+EVU5ZU+6HW+3SY4KI" alt=""></span>
             </div>
           </div>
         </div>
