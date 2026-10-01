@@ -14,6 +14,19 @@
   <title>アンケートのおすすめ一覧 | ポイントの殿堂</title>
   <meta name="description" content="アンケートに回答してポイントが貯まるサービスを紹介します。特徴を比較して、自分に合うサービスを探せます。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/category/survey-ichiran">
 </head>
@@ -43,8 +56,10 @@
             <span class="offer-card__type">覆面調査・モニター</span>
             <p class="offer-card__title">ファンくる</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www26.a8.net/svt/bgt?aid=260720103535&wid=002&eno=01&mid=s00000007875007018000&mc=1" alt="ファンくる" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+8UIY6Y+1ORI+15S78H" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260720103535&wid=002&eno=01&mid=s00000007875007018000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X3+8UIY6Y+1ORI+15S78H" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">多数の飲食店をはじめ多ジャンルのモニター案件がある覆面調査サービス</p>
@@ -53,15 +68,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/fancrew-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X3+8UIY6Y+1ORI+15S78H" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+8UIY6Y+1ORI+15YF02" rel="nofollow">ファンくる</a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B84X3+8UIY6Y+1ORI+15YF02" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">海外企業アンケート</span>
             <p class="offer-card__title">オピニオンワールド</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www23.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1" alt="オピニオンワールド" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+3ZHICA+31E2+69HA9" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260715065241&wid=002&eno=01&mid=s00000014177001052000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B8115+3ZHICA+31E2+69HA9" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">世界的な市場調査会社Dynataが運営するアンケートサイト</p>
@@ -70,15 +88,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/opinionworld-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+3ZHICA+31E2+69HA9" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+3ZHICA+31E2+67JUA" rel="nofollow">オピニオンワールド</a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B8115+3ZHICA+31E2+67JUA" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">海外企業アンケート</span>
             <p class="offer-card__title">Ipsos iSay</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www28.a8.net/svt/bgt?aid=260715065235&wid=002&eno=01&mid=s00000018951001006000&mc=1" alt="Ipsos iSay" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+3VWWPM+4286+65U41" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www23.a8.net/svt/bgt?aid=260715065235&wid=002&eno=01&mid=s00000018951001035000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B8115+3VWWPM+4286+65U41" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">世界的な市場調査会社イプソスが運営するアンケートサイト</p>
@@ -87,15 +108,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/ipsos-isay-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+3VWWPM+4286+5ZMCH" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+3VWWPM+4286+69P02" rel="nofollow">Ipsos iSay</a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B8115+3VWWPM+4286+69P02" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">アンケート・会場調査</span>
             <p class="offer-card__title">アイリサーチ</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www22.a8.net/svt/bgt?aid=260715065250&wid=002&eno=01&mid=s00000023983001009000&mc=1" alt="アイリサーチ" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+44UESA+551Y+609HT" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260715065250&wid=002&eno=01&mid=s00000023983001009000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B8115+44UESA+551Y+609HT" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">東証スタンダード上場企業運営、自社会場調査もあるアンケートサイト</p>
@@ -104,15 +128,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/iresearch-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+44UESA+551Y+609HT" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+44UESA+551Y+5ZEMQ" rel="nofollow">アイリサーチ</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B8115+44UESA+551Y+5ZEMQ" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">アンケートモニター</span>
             <p class="offer-card__title">マクロミル</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www23.a8.net/svt/bgt?aid=260715065256&wid=002&eno=01&mid=s00000013554002116000&mc=1" alt="マクロミル" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+48F0EY+2WL0+CPE1T" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www29.a8.net/svt/bgt?aid=260715065256&wid=002&eno=01&mid=s00000013554002134000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B8115+48F0EY+2WL0+CPE1T" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">アンケート回答でポイントが貯まる大手ネットリサーチのモニターサービス</p>
@@ -121,15 +148,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/macromill-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+48F0EY+2WL0+CLJ5T" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+48F0EY+2WL0+CCQSY" rel="nofollow">マクロミル</a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B8115+48F0EY+2WL0+CCQSY" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">ゲーム・アンケート・懸賞</span>
             <p class="offer-card__title">フルーツメール</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www21.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1" alt="フルーツメール" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+49LVMI+2U8+O1WU9" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=260715065258&wid=002&eno=01&mid=s00000000368004040000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B8115+49LVMI+2U8+O1WU9" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">ゲームやアンケートで手軽にポイントが貯まる懸賞サイト</p>
@@ -138,7 +168,8 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/fruitmail-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+49LVMI+2U8+O1WU9" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+49LVMI+2U8+NTZCI" rel="nofollow">フルーツメール</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B8115+49LVMI+2U8+NTZCI" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
