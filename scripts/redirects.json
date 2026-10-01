@@ -1,0 +1,20 @@
+{
+  "_comment": [
+    "Amplifyコンソール「Rewrites and redirects」に設定した301(記事の統合・URL変更)の記録。",
+    "リダイレクトの実設定はAmplify側にありリポジトリから読めないため、同じ内容をここにも記録する。",
+    "generate_sitemap.js はここに載ったリダイレクト元URLをサイトマップから除外し、",
+    "audit_sitemap.js はリダイレクト元の混入・リダイレクト先の掲載漏れ・チェーン・内部リンク残りを検査する",
+    "(--live を付けると本番で301とLocationも確認する)。",
+    "source の .html 付き・末尾スラッシュ付きの表記ゆれも同じURLとして扱う。",
+    "Amplifyに301を追加・削除したら、このファイルも同時に更新すること。"
+  ],
+  "redirects": [
+    {
+      "source": "/pages/articles/vpoint-tameru-tsukau",
+      "target": "/pages/articles/vpoint-tamekata",
+      "status": 301,
+      "since": "2026-10-01",
+      "note": "vpoint-tameru-tsukau を vpoint-tamekata へ統合(Amplifyには .html付き・末尾スラッシュ付きのルールも設定済み)"
+    }
+  ]
+}

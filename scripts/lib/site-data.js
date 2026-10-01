@@ -93,6 +93,48 @@ function extractRobotsNoindex(content) {
   return !!(m && /noindex/i.test(m[1]));
 }
 
+// ページ見出し部分(class="article-header__date")に表示されている日付だけを読む。
+// 本文中の記事カード(article-card__date)の日付は、そのページ自体の更新日ではないため対象外。
+//   作成日/制定日 → created、更新日/改定日 → updated(同じ種類が複数あれば最初のもの)。
+function extractHeaderDates(content) {
+  const values = [...content.matchAll(/class="article-header__date">([^<]*)</g)].map(m => m[1].trim());
+  const pick = labels => {
+    for (const v of values) {
+      if (!labels.some(l => v.startsWith(l))) continue;
+      const m = v.match(/(\d{4}\.\d{2}\.\d{2})/);
+      if (m) return m[1];
+    }
+    return null;
+  };
+  return { created: pick(["作成日", "制定日"]), updated: pick(["更新日", "改定日"]) };
+}
+
+// 301統合などのリダイレクト元URL一覧(scripts/redirects.json)。
+// リダイレクトの実設定はAmplifyコンソール側にありリポジトリから読めないため、
+// 同じ内容をここに記録し、サイトマップ生成・監査の判定に使う。
+const redirectsFile = path.join(__dirname, "..", "redirects.json");
+
+// URLやパスを「同一ページかどうか」の比較用キーにそろえる。
+// 例: https://value-advance.com/pages/x.html → /pages/x、/pages/x/ → /pages/x、/pages/articles/index.html → /pages/articles
+function normalizePathKey(urlOrPath) {
+  let p = String(urlOrPath).replace(/^https?:\/\/(www\.)?value-advance\.com/i, "");
+  p = p.replace(/[?#].*$/, "");
+  if (!p.startsWith("/")) p = "/" + p;
+  p = p.replace(/\/index\.html$/i, "/").replace(/\.html$/i, "");
+  if (p.length > 1) p = p.replace(/\/+$/, "");
+  return p || "/";
+}
+
+function loadRedirects() {
+  if (!fs.existsSync(redirectsFile)) return [];
+  const data = JSON.parse(fs.readFileSync(redirectsFile, "utf8"));
+  return (data.redirects || []).map(r => ({
+    ...r,
+    sourceKey: normalizePathKey(r.source),
+    targetKey: normalizePathKey(r.target),
+  }));
+}
+
 function readArticle(file) {
   const slug = file.replace(/\.html$/, "");
   const content = fs.readFileSync(path.join(articlesDir, file), "utf8");
@@ -114,14 +156,14 @@ function readArticle(file) {
   const h1M = content.match(/<h1>([^<]*)<\/h1>/);
   const h1 = h1M ? h1M[1] : null;
 
-  const createdM = content.match(/作成日:(\d{4}\.\d{2}\.\d{2})/);
-  const updatedM = content.match(/更新日:(\d{4}\.\d{2}\.\d{2})/);
-  const created = createdM ? createdM[1] : null;
-  const updated = updatedM ? updatedM[1] : null;
+  // 表示上の作成日・更新日(記事見出しの article-header__date)。
+  const { created, updated } = extractHeaderDates(content);
 
   return {
     slug,
+    file: `pages/articles/${file}`,
     href: `/pages/articles/${slug}`,
+    expectedCanonical: `${SITE_ORIGIN}/pages/articles/${slug}`,
     categoryCode,
     categoryLabel: categoryCode ? (CATEGORY_LABELS[categoryCode] || null) : null,
     thumbType,
@@ -135,6 +177,41 @@ function readArticle(file) {
     lastmod: dotDateToDash(updated || created),
     canonical: extractCanonical(content),
     noindex: extractRobotsNoindex(content),
+    jsonLdDates: extractJsonLdArticleDates(content),
+  };
+}
+
+// Article系JSON-LDの datePublished / dateModified(無ければnull)。表示日付との整合監査に使う。
+function extractJsonLdArticleDates(content) {
+  const found = [];
+  for (const m of content.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)) {
+    let data;
+    try { data = JSON.parse(m[1]); } catch (e) { found.push({ parseError: true }); continue; }
+    for (const node of data["@graph"] || [data]) {
+      if (/Article|BlogPosting/.test(String(node["@type"]))) {
+        found.push({ datePublished: node.datePublished || null, dateModified: node.dateModified || null });
+      }
+    }
+  }
+  return found;
+}
+
+// 記事以外の1ページ分の共通情報(canonical・noindex・見出しの表示日付からのlastmod)。
+function readPage(absFile, relFile, href) {
+  const content = fs.readFileSync(absFile, "utf8");
+  const { created, updated } = extractHeaderDates(content);
+  return {
+    file: relFile,
+    href,
+    expectedCanonical: `${SITE_ORIGIN}${href}`,
+    canonical: extractCanonical(content),
+    noindex: extractRobotsNoindex(content),
+    created,
+    updated,
+    // 見出しに更新日(または作成日・制定日)が表示されているページだけlastmodを持つ。
+    // 表示日付が無いページは、不正確な日付を入れるより省略する。
+    lastmod: dotDateToDash(updated || created),
+    content,
   };
 }
 
@@ -148,27 +225,16 @@ function listArticles() {
 
 // pages/articles/index.html(全記事一覧) / new.html(新着一覧) / updated.html(更新一覧)。
 // 個別記事ではなく一覧ページなので、記事canonicalの一覧とは別に扱う。
+// ディレクトリURL(index.html)は末尾スラッシュ、それ以外は拡張子なしが正規URL。
+const ARTICLE_HUB_HREFS = { "index.html": "/pages/articles/", "new.html": "/pages/articles/new", "updated.html": "/pages/articles/updated" };
 function readArticleHubPage(file) {
-  const content = fs.readFileSync(path.join(articlesDir, file), "utf8");
-  return {
-    file,
-    canonical: extractCanonical(content),
-    noindex: extractRobotsNoindex(content),
-    content,
-  };
+  return readPage(path.join(articlesDir, file), `pages/articles/${file}`, ARTICLE_HUB_HREFS[file] || `/pages/articles/${file.replace(/\.html$/, "")}`);
 }
 
-// pages/category/*.html。カテゴリページ自体に信頼できる更新日情報が無いため、
-// lastmodは持たない(生成側で省略する)。
+// pages/category/*.html。見出しに更新日(作成日)が表示されているページだけ、その日付をlastmodにする。
 function readCategoryPage(file) {
   const slug = file.replace(/\.html$/, "");
-  const content = fs.readFileSync(path.join(categoryDir, file), "utf8");
-  return {
-    slug,
-    href: `/pages/category/${slug}`,
-    canonical: extractCanonical(content),
-    noindex: extractRobotsNoindex(content),
-  };
+  return { slug, ...readPage(path.join(categoryDir, file), `pages/category/${file}`, `/pages/category/${slug}`) };
 }
 
 function listCategoryFiles() {
@@ -188,13 +254,7 @@ function listTopLevelPages() {
     .filter(f => f.endsWith(".html"))
     .map(file => {
       const slug = file.replace(/\.html$/, "");
-      const content = fs.readFileSync(path.join(pagesDir, file), "utf8");
-      return {
-        slug,
-        href: `/pages/${slug}`,
-        canonical: extractCanonical(content),
-        noindex: extractRobotsNoindex(content),
-      };
+      return { slug, ...readPage(path.join(pagesDir, file), `pages/${file}`, `/pages/${slug}`) };
     });
 }
 
@@ -206,23 +266,12 @@ function listBeginnerPages() {
     .filter(f => f.endsWith(".html"))
     .map(file => {
       const slug = file.replace(/\.html$/, "");
-      const content = fs.readFileSync(path.join(beginnerDir, file), "utf8");
-      return {
-        slug,
-        href: `/pages/beginner/${slug}`,
-        canonical: extractCanonical(content),
-        noindex: extractRobotsNoindex(content),
-      };
+      return { slug, ...readPage(path.join(beginnerDir, file), `pages/beginner/${file}`, `/pages/beginner/${slug}`) };
     });
 }
 
 function readHomePage() {
-  const content = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  return {
-    canonical: extractCanonical(content),
-    noindex: extractRobotsNoindex(content),
-    content,
-  };
+  return readPage(path.join(root, "index.html"), "index.html", "/");
 }
 
 // 記事カードの並び(articleListFull的なコンテナ)から、出現順のslug配列を抽出する共通ヘルパー。
@@ -249,6 +298,10 @@ module.exports = {
   dotDateToDash,
   extractCanonical,
   extractRobotsNoindex,
+  extractHeaderDates,
+  normalizePathKey,
+  loadRedirects,
+  redirectsFile,
   readArticle,
   listArticleFiles,
   listArticles,
