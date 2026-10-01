@@ -6,7 +6,8 @@
 // 単体実行: node scripts/audit_sitemap.js
 //           node scripts/audit_sitemap.js --live   … 本番(value-advance.com)でも確認する
 //             (サイトマップ各ファイルのHTTP 200・Content-Type、リダイレクト元の301とLocation、
-//              掲載URLすべてのHTTP 200。外部へのHTTPアクセスを行うため既定ではオフ)
+//              掲載URLすべてのHTTP 200と、レスポンスヘッダー X-Robots-Tag の noindex 指定。
+//              外部へのHTTPアクセスを行うため既定ではオフ)
 // audit_articles.js からは runSitemapAudit() として呼び出される(オフラインの検査のみ)。
 const fs = require("fs");
 const path = require("path");
@@ -32,7 +33,21 @@ const {
   parseSitemapIndexXml,
   parseUrlsetXml,
   listManagedSitemapFilesOnDisk,
+  todayJst,
 } = require("./lib/sitemap");
+
+// "2026-10-01" / "2026-10-01T10:00:00+09:00" / "2026.10.01" → "2026-10-01"(比較用。日付部分のみ)
+function dateOnly(value) {
+  if (!value) return null;
+  const m = String(value).match(/^(\d{4})[-.](\d{2})[-.](\d{2})/);
+  return m ? `${m[1]}-${m[2]}-${m[3]}` : null;
+}
+
+// X-Robots-Tag の値に noindex(または noindex を含む none)の指定があるか。
+// 「googlebot: noindex」のようなクローラー指定付きの書き方も対象にする。
+function hasNoindexDirective(value) {
+  return /(^|[\s,:])(noindex|none)(\s|,|$)/i.test(String(value || ""));
+}
 
 function readFileIfExists(filePath) {
   return fs.existsSync(filePath) ? fs.readFileSync(filePath, "utf8") : null;
@@ -247,6 +262,49 @@ function runSitemapAudit() {
   summary.lastmod = lastmodMismatches.length + jsonLdMismatches.length;
   summary.broken = broken.length;
 
+  // --- 6b. 日付の妥当性(日本時間の今日より未来の日付・前後関係の矛盾) ------------------------
+  //   未来日: サイトマップのlastmod(子サイトマップのURL・sitemap.xmlの子サイトマップ)、
+  //           記事の構造化データ(Article/BlogPosting/NewsArticle)の datePublished / dateModified
+  //   前後関係: dateModified < datePublished、lastmod < 公開日(構造化データのdatePublished、無ければ表示上の作成日)
+  const today = todayJst();
+  const futureDates = [];
+  const invalidDateOrder = [];
+  for (const e of allEntries) {
+    if (e.lastmod && e.lastmod > today) futureDates.push(`${e.loc}: lastmod=${e.lastmod}`);
+  }
+  for (const c of index) {
+    if (c.lastmod && c.lastmod > today) futureDates.push(`sitemap.xml ${c.loc}: lastmod=${c.lastmod}`);
+  }
+  for (const a of articles) {
+    const lds = (a.jsonLdDates || []).filter(d => !d.parseError);
+    for (const d of lds) {
+      const pub = dateOnly(d.datePublished);
+      const mod = dateOnly(d.dateModified);
+      if (pub && pub > today) futureDates.push(`${a.slug}: datePublished=${d.datePublished}`);
+      if (mod && mod > today) futureDates.push(`${a.slug}: dateModified=${d.dateModified}`);
+      if (pub && mod && mod < pub) invalidDateOrder.push(`${a.slug}: dateModified(${mod}) < datePublished(${pub})`);
+    }
+    const entry = entryByKey[normalizePathKey(a.expectedCanonical)];
+    const published = dateOnly((lds.find(d => d.datePublished) || {}).datePublished) || dateOnly(a.created);
+    if (entry && entry.lastmod && published && entry.lastmod < published) invalidDateOrder.push(`${a.slug}: lastmod(${entry.lastmod}) < 公開日(${published})`);
+  }
+  // 記事以外のページ(カテゴリ・初心者向け等): 表示上の作成日より lastmod が古くないか。
+  for (const s of sources.filter(x => x.bucket !== "articles" && !x.computedLastmod)) {
+    const entry = entryByKey[normalizePathKey(s.expectedCanonical)];
+    const created = dateOnly(s.created);
+    if (entry && entry.lastmod && created && entry.lastmod < created) invalidDateOrder.push(`${s.file}: lastmod(${entry.lastmod}) < 作成日(${created})`);
+  }
+  console.log("");
+  console.log(`日付チェックの基準日(日本時間の今日): ${today}`);
+  problems.push(!note("未来日(lastmod・datePublished・dateModified)", futureDates.length, futureDates.join(", ")));
+  problems.push(!note("日付の前後関係の矛盾(dateModified < datePublished、lastmod < 公開日)", invalidDateOrder.length, invalidDateOrder.join(", ")));
+  summary.future = futureDates.length;
+  summary.dateOrder = invalidDateOrder.length;
+
+  // --- 6c. 記事の構造化データ搭載率(参考情報。FAIL条件にはしない) ---------------------------
+  const withArticleLd = articles.filter(a => (a.jsonLdDates || []).some(d => !d.parseError)).length;
+  summary.ldCoverage = { with: withArticleLd, total: articles.length };
+
   // --- 7. リダイレクト(scripts/redirects.json = Amplifyの301の記録) -------------------------
   const redirectInSitemap = [];
   const redirectTargetMissing = [];
@@ -322,6 +380,12 @@ function runSitemapAudit() {
   console.log(`Canonical mismatches: ${summary.canonical}`);
   console.log(`Lastmod mismatches: ${summary.lastmod}`);
   console.log(`Broken URLs: ${summary.broken}`);
+  console.log(`Future dates: ${summary.future}`);
+  console.log(`Invalid date order: ${summary.dateOrder}`);
+  console.log("");
+  console.log("Structured data coverage (参考情報・FAIL条件ではありません):");
+  console.log(`Article/BlogPosting/NewsArticle: ${summary.ldCoverage.with} / ${summary.ldCoverage.total}`);
+  console.log(`Missing: ${summary.ldCoverage.total - summary.ldCoverage.with}`);
   console.log("");
   console.log(ok ? "PASS" : "FAIL");
   console.log(ok ? "OK: サイトマップ監査はすべてPASSしました。" : "FAIL: サイトマップ監査で問題が見つかりました。上記を確認してください。");
@@ -335,7 +399,7 @@ async function runLiveChecks() {
   const head = async (url, method = "HEAD") => {
     try {
       const res = await fetch(url, { method, redirect: "manual" });
-      return { status: res.status, location: res.headers.get("location"), type: res.headers.get("content-type") || "" };
+      return { status: res.status, location: res.headers.get("location"), type: res.headers.get("content-type") || "", xRobots: res.headers.get("x-robots-tag") || "" };
     } catch (e) {
       return { status: 0, error: String(e) };
     }
@@ -357,17 +421,23 @@ async function runLiveChecks() {
   }
   const locs = BUCKETS.flatMap(b => expected.chunksByBucket[b]).flatMap(f => parseUrlsetXml(expected.files[f]).map(e => e.loc));
   const bad = [];
+  const xRobotsNoindex = [];
   let i = 0;
   await Promise.all(Array.from({ length: 8 }, async () => {
     while (i < locs.length) {
       const loc = locs[i++];
       const r = await head(loc);
       if (r.status !== 200) bad.push(`${r.status} ${loc}`);
+      // レスポンスヘッダーの X-Robots-Tag で noindex 指定されているURL(HTMLのmetaとは別経路の noindex)。
+      if (hasNoindexDirective(r.xRobots)) xRobotsNoindex.push(`${loc}  (X-Robots-Tag: ${r.xRobots})`);
     }
   }));
   console.log(`掲載URLのHTTP 200: ${locs.length - bad.length}/${locs.length}`, bad.length ? "FAIL" : "PASS");
   bad.slice(0, 30).forEach(b => console.log("  " + b));
   problems.push(bad.length > 0);
+  console.log(`X-Robots-Tag noindex: ${xRobotsNoindex.length}`, xRobotsNoindex.length ? "FAIL" : "PASS");
+  xRobotsNoindex.slice(0, 30).forEach(b => console.log("  " + b));
+  problems.push(xRobotsNoindex.length > 0);
   const ok = !problems.some(Boolean);
   console.log(ok ? "LIVE: PASS" : "LIVE: FAIL");
   return ok;
