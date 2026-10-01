@@ -1189,19 +1189,24 @@ a.points-by-type__card:focus-visible {
 }
 
 /* 「ポイントが貯まるサービスを探す」の一覧ページ用: CTAボタンの横幅を広げる
-   (ASP発行のテキストリンク「マツキヨオンラインストア」「京王ネットショッピング」などがボタン内で改行しないように)。
+   (ASP発行のテキストリンク「イオントラベル(レンタカー)」「マツキヨオンラインストア」などがボタン内で改行しないように)。
    .offer-grid--wide-cta を付けた一覧ページだけに効かせ、記事内など他の .offer-card--cta-side には影響させない。
-   スマホ: 「公式サイト」側を180px以上にする(画面が狭い場合は「詳細へ」の最小幅120px+余白8pxを残せる範囲まで)。
-   PC(600px〜): 2ボタンとも150px→180pxに統一 */
+   スマホ: 「公式サイト」側を210px以上にする(画面が狭い場合は「詳細へ」の最小幅120px+余白8pxを残せる範囲まで)。
+   PC(600px〜): 2ボタンとも150px→210pxに統一 */
 @media (max-width: 599px) {
   .offer-grid--wide-cta .offer-card__cta-link--primary {
-    min-width: min(180px, calc(100% - 128px));
+    min-width: min(210px, calc(100% - 128px));
+  }
+  /* ASP発行テキストリンクのボタンだけ左右の余白を14px→10pxにして、360px幅のスマホでも長めの文言を1行に収める(ボタン幅は変えない) */
+  .offer-grid--wide-cta .offer-card__cta-asp {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
 @media (min-width: 600px) {
   .offer-grid--wide-cta .offer-card--cta-side .offer-card__cta-link {
-    width: 180px;
+    width: 210px;
   }
 }
 
