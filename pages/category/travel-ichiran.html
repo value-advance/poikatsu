@@ -14,6 +14,19 @@
   <title>旅行のおすすめ一覧 | ポイントの殿堂</title>
   <meta name="description" content="旅行の予約やホテル・航空券の手配でポイントが貯まるサービスを紹介します。特徴を比較して、自分に合うサービスを探せます。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/category/travel-ichiran">
 </head>
@@ -43,8 +56,10 @@
             <span class="offer-card__type">宿・ホテル予約</span>
             <p class="offer-card__title">イオンコンパストラベルモール(宿泊予約)</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www26.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1" alt="イオンコンパストラベルモール(宿泊予約)" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+DIF6SA+5RZ8+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www27.a8.net/svt/bgt?aid=260720103817&wid=002&eno=01&mid=s00000026954001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B84X3+DIF6SA+5RZ8+5YZ75" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">全国の宿・ホテルを検索・予約できる宿泊予約サービス</p>
@@ -53,15 +68,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/aeoncompass-travelmall-yado-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X3+DIF6SA+5RZ8+5YZ75" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+DIF6SA+5RZ8+5YRHE" rel="nofollow">イオントラベル(国内宿泊)</a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B84X3+DIF6SA+5RZ8+5YRHE" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">宿・ホテル予約</span>
             <p class="offer-card__title">Yahoo!トラベル</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www25.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1" alt="Yahoo!トラベル" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+7LVFTM+4ZCO+63WO1" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X4+7LVFTM+4ZCO+63WO1" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">全国約17,000施設から比較できる宿泊予約サービス</p>
@@ -70,15 +88,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/yahoo-travel-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X4+7LVFTM+4ZCO+63WO1" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+7LVFTM+4ZCO+5YRHE" rel="nofollow">Yahoo!トラベル</a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B84X4+7LVFTM+4ZCO+5YRHE" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">海外航空券予約</span>
             <p class="offer-card__title">トラベリスト(海外航空券)</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www24.a8.net/svt/bgt?aid=260720103939&wid=002&eno=01&mid=s00000023067003003000&mc=1" alt="トラベリスト(海外航空券)" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+FJ22L6+4XZI+HVNAP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=260720103939&wid=002&eno=01&mid=s00000023067003003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B84X3+FJ22L6+4XZI+HVNAP" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">IATA認可代理店で世界規模の航空会社を比較できる</p>
@@ -87,15 +108,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/travelist-kaigai-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X3+FJ22L6+4XZI+HVNAP" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+FJ22L6+4XZI+HVFKY" rel="nofollow">トラベリスト(海外)</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X3+FJ22L6+4XZI+HVFKY" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">宿・ホテル予約</span>
             <p class="offer-card__title">じゃらんnet</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www23.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1" alt="じゃらんnet" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F3KSUY+14CS+6GZCH" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B84X3+F3KSUY+14CS+6GZCH" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">国内最大級の掲載数を誇る宿・ホテル予約サービス</p>
@@ -104,15 +128,18 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/jalan-net-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F3KSUY+14CS+6GZCH" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F3KSUY+14CS+64JTE" rel="nofollow">じゃらんnet</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X3+F3KSUY+14CS+64JTE" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">航空券予約</span>
             <p class="offer-card__title">エアトリ</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www29.a8.net/svt/bgt?aid=260720103908&wid=002&eno=01&mid=s00000001343001062000&mc=1" alt="エアトリ" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+2VLGT6+AD2+3B4MFL" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www29.a8.net/svt/bgt?aid=260720104174&wid=002&eno=01&mid=s00000001343020009000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B84X4+2VLGT6+AD2+3B4MFL" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">国内主要14社の航空券を一括比較できる旅行予約サービス</p>
@@ -121,7 +148,8 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/airtrip-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F0LMU2+AD2+6BMG1" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+2VLGT6+AD2+3B3ZAA" rel="nofollow">エアトリ！</a>
+<img border="0" width="1" height="1" src="https://www19.a8.net/0.gif?a8mat=4B84X4+2VLGT6+AD2+3B3ZAA" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
@@ -145,8 +173,10 @@
             <span class="offer-card__type">航空券予約</span>
             <p class="offer-card__title">トラベリスト(国内航空券)</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www24.a8.net/svt/bgt?aid=260715065195&wid=002&eno=01&mid=s00000023067001009000&mc=1" alt="トラベリスト" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+383KII+4XZI+609HT" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=260715065195&wid=002&eno=01&mid=s00000023067001009000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B8115+383KII+4XZI+609HT" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">JAL・ANA・LCCを一括比較できる航空券予約サービス</p>
@@ -155,7 +185,8 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/travelist-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+383KII+4XZI+609HT" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+383KII+4XZI+5YRHE" rel="nofollow">トラベリスト(国内)</a>
+<img border="0" width="1" height="1" src="https://www14.a8.net/0.gif?a8mat=4B8115+383KII+4XZI+5YRHE" alt=""></span>
             </div>
           </div>
         </div>
