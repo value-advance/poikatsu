@@ -14,6 +14,12 @@
   <title>ショッピングサイトのおすすめ一覧 | ポイントの殿堂</title>
   <meta name="description" content="ネットショッピングでポイントが貯まるおすすめの通販サイトを紹介します。それぞれの特徴や貯まるポイントを比較して、自分に合うサイトを探せます。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コードを改変せずに置くための外側ラッパー(Yahoo!ショッピングの検証用)。広告コード自体には手を加えず、外側のCSSだけで既存の「公式サイト」ボタンの見た目に合わせる */
+    .offer-card__cta-asp { position: relative; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/category/shopping-ichiran">
 </head>
@@ -61,7 +67,7 @@
             <p class="offer-card__title">Yahoo!ショッピング</p>
             <div class="offer-card__divider"></div>
             <div class="offer-card__thumb">
-              <img src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892684862" alt="Yahoo!ショッピング" loading="lazy">
+              <script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3776575&pid=892717321"></script><noscript><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717321" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717321" border="0"></a></noscript>
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">商品ごとに獲得予定ポイントを表示</p>
@@ -70,7 +76,7 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/yahoo-shopping-toha">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892684862" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717456" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717456" height="1" width="1" border="0">Yahooショッピング</a></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
