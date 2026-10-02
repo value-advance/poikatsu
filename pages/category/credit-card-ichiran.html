@@ -14,6 +14,19 @@
   <title>クレジットカードのおすすめ一覧 | ポイントの殿堂</title>
   <meta name="description" content="ポイントが貯まるおすすめのクレジットカードを紹介します。年会費や還元率、特徴を比較して、自分に合うカードを探せます。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/category/credit-card-ichiran">
 </head>
@@ -62,8 +75,10 @@
             <span class="offer-card__type">デポジット式カード</span>
             <p class="offer-card__title">Nexus Card</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www25.a8.net/svt/bgt?aid=260715065035&wid=002&eno=01&mid=s00000022442001032000&mc=1" alt="Nexus Card" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B8115+KU7Q2+4T5W+5ZMCH" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www21.a8.net/svt/bgt?aid=260715065035&wid=002&eno=01&mid=s00000022442001006000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B8115+KU7Q2+4T5W+5ZMCH" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">デポジット額に応じて利用枠が決まるショッピング専用カード</p>
@@ -72,15 +87,16 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/nexus-card-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4B8115+KU7Q2+4T5W+656YP" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B8115+KU7Q2+4T5W+5YJRM" rel="nofollow">Nexus Card</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B8115+KU7Q2+4T5W+5YJRM" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">クレジットカード</span>
             <p class="offer-card__title">エポスカード</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://h.accesstrade.net/sp/rr?rk=0100i7hh00oy8i" alt="エポスカード" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://click.j-a-net.jp/2451242/1069398/" target="_blank" rel="nofollow"><img src="https://image.j-a-net.jp/2451242/1069398/" width="300" height="250" border="0"></a>
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">年会費無料、全国のマルイで優待が受けられるVisaカード</p>
@@ -89,15 +105,17 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/epos-card-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://h.accesstrade.net/sp/cc?rk=0100i7hh00oy8i" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://click.j-a-net.jp/2451242/578080/" target="_blank" rel="nofollow">EPOS<img src="https://text.j-a-net.jp/2451242/578080/" height="1" width="1" border="0"></a></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">ガソリンカード</span>
             <p class="offer-card__title">コスモ・ザ・カード・オーパス</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www29.a8.net/svt/bgt?aid=260828408085&wid=002&eno=01&mid=s00000027665001003000&mc=1" alt="コスモ・ザ・カード・オーパス" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4BAGHK+1ELVYY+5XGQ+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=260828408085&wid=002&eno=01&mid=s00000027665001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4BAGHK+1ELVYY+5XGQ+5YZ75" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">コスモ石油のガソリン・軽油が会員価格になる年会費永年無料カード</p>
@@ -106,15 +124,16 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/cosmo-opus-card-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://px.a8.net/svt/ejp?a8mat=4BAGHK+1ELVYY+5XGQ+5YZ75" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4BAGHK+1ELVYY+5XGQ+5YRHE" rel="nofollow">コスモ・ザ・カード</a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4BAGHK+1ELVYY+5XGQ+5YRHE" alt=""></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">クレジットカード</span>
             <p class="offer-card__title">小田急ポイントカード</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://h.accesstrade.net/sp/rr?rk=0100kw0d00oy8i" alt="小田急ポイントカード" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://h.accesstrade.net/sp/cc?rk=0100kw0d00oy8i" rel="nofollow" referrerpolicy="no-referrer-when-downgrade"><img src="https://h.accesstrade.net/sp/rr?rk=0100kw0d00oy8i" alt="小田急ポイントカード" border="0" width="300" height="250"></a>
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">小田急沿線の生活とOPポイントが貯まるカード</p>
@@ -123,7 +142,7 @@
           
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="../articles/odakyu-point-card-poikatsu">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://h.accesstrade.net/sp/cc?rk=0100kw0d00oy8i" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://h.accesstrade.net/sp/cc?rk=01004q8t00oy8i" rel="nofollow" referrerpolicy="no-referrer-when-downgrade">小田急ポイントカード<img src="https://h.accesstrade.net/sp/rr?rk=01004q8t00oy8i" width="1" height="1" border="0" alt=""></a></span>
             </div>
           </div>
         </div>
