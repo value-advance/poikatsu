@@ -135,7 +135,6 @@
       { title: "ハピタス 1pt=1円のわかりやすいレート", type: "ポイントサイト", points: "300", suffix: "円から交換可", url: "/pages/articles/hapitas-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260715065205&wid=002&eno=01&mid=s00000007478002065000&mc=1" },
       { title: "ポイントミュージアム 毎日抽選で当たる", type: "ポイントサイト", points: "1,000", suffix: "円が毎日抽選で当たる", url: "/pages/articles/point-museum-poikatsu", img: "https://www20.a8.net/svt/bgt?aid=260715065224&wid=002&eno=01&mid=s00000003655005014000&mc=1" },
       { title: "ちょびリッチ 無料登録+ミッション達成で獲得", type: "ポイントサイト", points: "200", suffix: "pts.", url: "/pages/articles/chobirich-poikatsu", img: "https://www24.a8.net/svt/bgt?aid=260714058071&wid=002&eno=01&mid=s00000015067001040000&mc=1" },
-      { title: "げん玉 貯め方いろいろの老舗ポイントサイト", type: "ポイントサイト", points: "10pt", suffix: "=1円、3,000ptから交換可能", url: "/pages/articles/gendama-poikatsu", img: "/images/article-thumb/pointsite/gendama.webp" },
     ],
     // アンケート(アンケートモニター・調査サービス)
     survey: [
