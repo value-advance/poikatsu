@@ -14,6 +14,19 @@
   <title>こどもNISAは2027年1月開始!年60万円・600万円枠と旧ジュニアNISAの違い</title>
   <meta name="description" content="こどもNISAは2027年1月に始まる0〜17歳向けのNISA。年間投資枠60万円・非課税保有限度額600万円、12歳以降の払出し条件、18歳での移行、旧ジュニアNISAとの違い、10月1日からの各社の受付を公式情報で解説します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/kodomo-nisa-2027">
 
@@ -334,8 +347,12 @@
             <span class="offer-card__type">証券</span>
             <p class="offer-card__title">楽天証券</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://srv2.trafficgate.net/t/b/907/738/318897_398564" alt="楽天証券" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <!-- TG-Affiliate Banner Space -->
+<a href="https://ad2.trafficgate.net/t/r/1176/738/318897_398564" target="_blank" rel="nofollow">
+  <img src="https://srv2.trafficgate.net/t/b/1176/738/318897_398564" />
+</a>
+<!-- /TG-Affiliate Banner Space -->
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">NISA口座の取引手数料が0円のネット証券</p>
@@ -344,7 +361,11 @@
 
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="rakuten-shouken-toha">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://ad2.trafficgate.net/t/r/907/738/318897_398564" target="_blank" rel="noopener sponsored">公式サイト</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><!-- TG-Affiliate Banner Space -->
+<a href="https://ad2.trafficgate.net/t/r/1181/738/318897_398564" target="_blank" rel="nofollow">
+楽天証券
+</a>
+<!-- /TG-Affiliate Banner Space --></span>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
@@ -361,7 +382,7 @@
 
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="sbisec-shouken-toha">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://www.sbisec.co.jp/visitor/" target="_blank" rel="noopener">公式サイト</a>
+              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://www.sbisec.co.jp/visitor/" target="_blank" rel="noopener">SBI証券</a>
             </div>
           </div>
           <div class="offer-card offer-card--cta-side">
@@ -378,7 +399,7 @@
 
             <div class="offer-card__cta">
               <a class="offer-card__cta-link offer-card__cta-link--secondary" href="paypaysec-shouken-toha">詳細へ</a>
-              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://www.paypay-sec.co.jp/" target="_blank" rel="noopener">公式サイト</a>
+              <a class="offer-card__cta-link offer-card__cta-link--primary" href="https://www.paypay-sec.co.jp/" target="_blank" rel="noopener">PayPay証券</a>
             </div>
           </div>
         </div>
