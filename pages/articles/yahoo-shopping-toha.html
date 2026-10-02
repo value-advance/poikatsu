@@ -14,6 +14,16 @@
   <title>Yahoo!ショッピングとは?特徴とポイントの貯め方をわかりやすく解説</title>
   <meta name="description" content="Yahoo!ショッピングで貯まるPayPayポイントの基本や特徴、メリット、利用前に確認したいポイントまでをわかりやすく解説します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* 「公式サイト」ボタン: ASP発行のテキストリンクコードを改変せずにボタン内の2行目へ置くための外側CSS。
+       ボタンの見た目は .cta-simple のまま。1行目「公式サイトへ」はリンクなしの通常テキストで、
+       クリック領域はASPの<a>(ブロック表示)の擬似要素をボタン全体に広げて確保する */
+    .cta-simple--asp { position: relative; }
+    .cta-simple--asp .cta-simple__lead { display: block; font-size: 11px; font-weight: 500; opacity: .9; margin-bottom: 4px; }
+    .cta-simple--asp a { display: block; color: #fff; font-size: 15px; font-weight: 800; text-decoration: none; }
+    .cta-simple--asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    .cta-simple--asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/yahoo-shopping-toha">
 </head>
@@ -92,10 +102,10 @@
           <li>購入前に獲得ポイント数を確認してから買いたい方</li>
         </ul>
 
-        <a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892684862" class="cta-simple" target="_blank" rel="noopener sponsored">
-          Yahoo!ショッピングの詳細を見る
-          <span class="cta-simple__sub">公式サイトへ移動します</span>
-        </a>
+        <div class="cta-simple cta-simple--asp">
+          <span class="cta-simple__lead">公式サイトへ</span>
+          <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717456" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717456" height="1" width="1" border="0">Yahooショッピング</a>
+        </div>
 
         <h2>よくある質問</h2>
         <div class="faq-item">
@@ -120,10 +130,10 @@
           Yahoo!ショッピングは、購入前にポイント数を確認しながら買い物ができる通販サイトです。普段PayPayを利用している方は、あわせてチェックしてみてください。
         </p>
 
-        <a href="https://ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892684862" class="cta-simple" target="_blank" rel="noopener sponsored">
-          今すぐYahoo!ショッピングを見てみる
-          <span class="cta-simple__sub">公式サイトへ移動します</span>
-        </a>
+        <div class="cta-simple cta-simple--asp">
+          <span class="cta-simple__lead">公式サイトへ</span>
+          <a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717456" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717456" height="1" width="1" border="0">Yahooショッピング</a>
+        </div>
 
       </div>
 
