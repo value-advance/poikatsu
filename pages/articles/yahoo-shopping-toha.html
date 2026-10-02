@@ -18,13 +18,14 @@
     /* 「公式サイト」ボタン: ASP発行のテキストリンクコードを改変せずにボタン内の2行目へ置くための外側CSS。
        ボタンの見た目は .cta-simple のまま。1行目「公式サイトへ」はリンクなしの通常テキストで、
        クリック領域はASPの<a>(ブロック表示)の擬似要素をボタン全体に広げて確保する */
-    .cta-simple--asp { position: relative; width: fit-content; min-width: 260px; max-width: 100%; box-sizing: border-box; margin-left: auto; margin-right: auto; padding: 12px 40px; }
+    .cta-simple--asp { position: relative; }
     .cta-simple--asp .cta-simple__lead { display: block; font-size: 14px; font-weight: 500; opacity: .9; margin-bottom: 4px; }
     .cta-simple--asp a { display: block; color: #fff; font-size: 15px; font-weight: 800; text-decoration: none; }
     .cta-simple--asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
     .cta-simple--asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    /* スマホ: 従来の .cta-simple どおり画面幅いっぱい。PC(600px〜): 文字に合わせた幅(最小400px)で中央配置 */
     @media (min-width: 600px) {
-      .cta-simple--asp { min-width: 400px; }
+      .cta-simple--asp { width: fit-content; min-width: 400px; max-width: 100%; box-sizing: border-box; margin-left: auto; margin-right: auto; padding: 12px 40px; }
     }
   </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
