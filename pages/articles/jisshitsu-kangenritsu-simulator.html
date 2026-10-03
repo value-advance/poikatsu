@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-H9CCXWBSXJ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-H9CCXWBSXJ');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>実質還元率シミュレーター|ポイント・クーポン・手数料・上限をまとめて計算</title>
+  <meta name="description" content="実質還元率を自分の条件で計算できるシミュレーター。商品価格・クーポン・基本還元率・キャンペーン上乗せ・1ポイントの価値・獲得上限・送料・決済手数料を入力すると、実質負担額と実質還元率、名目還元率との差を表示します。計算の定義と計算例も掲載。">
+  <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    .jks { background: var(--color-surface); border: 1px solid var(--color-border); border-radius: var(--radius); padding: 16px; margin: 16px 0 20px; }
+    .jks__group { border: none; margin: 0 0 14px; padding: 0; display: grid; grid-template-columns: 1fr; gap: 10px; }
+    .jks__group legend { font-size: 13px; font-weight: 800; color: var(--color-navy); margin-bottom: 8px; padding: 0; }
+    .jks__field { display: flex; flex-direction: column; gap: 4px; }
+    .jks__field label { font-size: 13px; font-weight: 700; color: var(--color-text); }
+    .jks__unit { font-weight: 500; margin-left: 2px; }
+    .jks__field input, .jks__field select { font-size: 16px; padding: 10px 12px; border: 1px solid var(--color-border); border-radius: 8px; width: 100%; box-sizing: border-box; background: #fff; color: var(--color-text); }
+    .jks__field input:focus, .jks__field select:focus { outline: 2px solid var(--color-primary); outline-offset: 1px; }
+    .jks__field input[aria-invalid="true"] { border-color: #d93025; background: #fff6f5; }
+    .jks__hint { font-size: 11px; color: var(--color-text-light); margin: 0; }
+    .jks__error { color: #d93025; font-size: 12px; font-weight: 700; margin: 0 0 10px; }
+    .jks__buttons { display: flex; gap: 8px; }
+    .jks__btn { flex: 1 1 auto; background: var(--color-primary); color: #fff; border: 1px solid var(--color-primary); border-radius: 999px; padding: 12px 20px; font-size: 14px; font-weight: 700; cursor: pointer; }
+    .jks__btn:hover { background: var(--color-primary-dark); }
+    .jks__btn:focus-visible { outline: 2px solid var(--color-navy); outline-offset: 2px; }
+    .jks__btn--sub { flex: 0 0 auto; background: #fff; color: var(--color-primary); }
+    .jks__btn--sub:hover { background: var(--color-primary); color: #fff; }
+    .jks__result { margin-top: 16px; padding-top: 14px; border-top: 1px dashed var(--color-border); }
+    .jks__result-title { font-size: 13px; font-weight: 800; color: var(--color-navy); margin: 0 0 8px; }
+    .jks__result[data-state="error"] .jks__list { opacity: .4; }
+    .jks__list { margin: 0; font-size: 13px; }
+    .jks__list div { display: flex; justify-content: space-between; gap: 12px; padding: 6px 0; border-bottom: 1px solid var(--color-border); }
+    .jks__list dt { color: var(--color-text); }
+    .jks__list dd { margin: 0; font-weight: 700; color: var(--color-navy); text-align: right; white-space: nowrap; }
+    .jks__list .jks__main dt { font-weight: 800; }
+    .jks__list .jks__main dd { font-size: 20px; color: var(--color-primary); }
+    .jks__note { font-size: 12px; color: var(--color-text-light); margin: 8px 0 0; }
+    @media (min-width: 600px) {
+      .jks__group { grid-template-columns: repeat(2, 1fr); }
+      .jks__group legend { grid-column: 1 / -1; }
+    }
+  </style>
+  <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
+  <link rel="canonical" href="https://value-advance.com/pages/articles/jisshitsu-kangenritsu-simulator">
+
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="実質還元率シミュレーター|ポイント・クーポン・手数料・上限をまとめて計算">
+  <meta property="og:description" content="実質還元率を自分の条件で計算できるシミュレーター。商品価格・クーポン・基本還元率・キャンペーン上乗せ・1ポイントの価値・獲得上限・送料・決済手数料を入力すると、実質負担額と実質還元率、名目還元率との差を表示します。計算の定義と計算例も掲載。">
+  <meta property="og:url" content="https://value-advance.com/pages/articles/jisshitsu-kangenritsu-simulator">
+  <meta property="og:site_name" content="ポイントの殿堂">
+  <meta property="og:image" content="https://value-advance.com/images/favicon/favicon.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="実質還元率シミュレーター|ポイント・クーポン・手数料・上限をまとめて計算">
+  <meta name="twitter:description" content="実質還元率を自分の条件で計算できるシミュレーター。商品価格・クーポン・基本還元率・キャンペーン上乗せ・1ポイントの価値・獲得上限・送料・決済手数料を入力すると、実質負担額と実質還元率、名目還元率との差を表示します。計算の定義と計算例も掲載。">
+  <meta name="twitter:image" content="https://value-advance.com/images/favicon/favicon.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "実質還元率シミュレーター|ポイント・クーポン・手数料・上限をまとめて計算",
+    "datePublished": "2026-10-03",
+    "dateModified": "2026-10-03",
+    "mainEntityOfPage": "https://value-advance.com/pages/articles/jisshitsu-kangenritsu-simulator"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://value-advance.com/" },
+      { "@type": "ListItem", "position": 2, "name": "ポイントサイト", "item": "https://value-advance.com/pages/category/pointsite" },
+      { "@type": "ListItem", "position": 3, "name": "実質還元率シミュレーター", "item": "https://value-advance.com/pages/articles/jisshitsu-kangenritsu-simulator" }
+    ]
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "クーポンの値引きは実質還元率に含まれますか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "このシミュレーターでは含めます。値引き額を「得られる経済的価値」として分子に入れ、分母は値引き前の価格+送料・手数料にそろえて計算しています。" }
+      },
+      {
+        "@type": "Question",
+        "name": "獲得ポイント上限を空欄にするとどうなりますか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "上限なしとして計算します。0を入力した場合は上限0ptとして計算するため、上限の対象にしたポイントは付きません。" }
+      },
+      {
+        "@type": "Question",
+        "name": "1ポイントの円換算価値には何を入力すればよいですか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "1ポイントを1円として使えるなら1を入力します。交換で価値が変わる場合や、期限内に使い切れるか不安な場合は、実際に使う価値に合わせて入力します。" }
+      },
+      {
+        "@type": "Question",
+        "name": "送料や手数料を入れると実質還元率が下がるのはなぜですか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "送料・手数料は分母(支払う総額)に加わるため、同じポイントでも支払う総額に対する割合が小さくなるからです。" }
+      },
+      {
+        "@type": "Question",
+        "name": "入力した数字は送信・保存されますか?",
+        "acceptedAnswer": { "@type": "Answer", "text": "されません。計算はすべてお使いのブラウザの中で行い、入力値を外部に送信したり保存したりしません。個人情報を入力する欄もありません。" }
+      }
+    ]
+  }
+  </script>
+</head>
+<body data-root="../../">
+
+  <div data-include="header"></div>
+
+  <main>
+    <article class="section container article-page" data-category="pointsite" data-tags="beginner" data-thumb-type="summary">
+
+      <p class="breadcrumb">
+        <a href="../../">ホーム</a><span class="breadcrumb__sep">›</span>
+        <a href="../category/pointsite">ポイントサイト</a><span class="breadcrumb__sep">›</span>
+        実質還元率シミュレーター
+      </p>
+
+      <header class="article-header">
+        <h1>実質還元率シミュレーター|ポイント・クーポン・手数料・上限をまとめて計算</h1>
+        <div class="article-header__dates">
+          <span class="article-header__date">作成日:2026.10.03</span>
+          <span class="article-header__date">更新日:2026.10.03</span>
+        </div>
+      </header>
+
+      <p class="pr-disclosure">この記事にはアフィリエイト広告を含みます。</p>
+
+      <div class="article-body">
+
+        <p>
+          商品やサービスの価格、クーポン、ポイント還元率、獲得上限、送料・手数料を入力すると、実際の負担額と実質還元率をすぐに計算できます。入力した数字はこのページの中だけで計算され、外部には送信されません。
+        </p>
+
+        <h2 id="simulator">実質還元率シミュレーター</h2>
+        <div class="jks" id="jks">
+          <form id="jksForm" novalidate>
+            <fieldset class="jks__group">
+              <legend>価格・値引き</legend>
+            <div class="jks__field">
+              <label for="jksPrice">商品・サービス価格<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksPrice" name="jksPrice" inputmode="decimal" autocomplete="off" value="10000" aria-describedby="jksPriceHint">
+              <p class="jks__hint" id="jksPriceHint">必須。ポイントの対象になる金額を入力します</p>
+            </div>
+            <div class="jks__field">
+              <label for="jksCoupon">クーポン・値引き額<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksCoupon" name="jksCoupon" inputmode="decimal" autocomplete="off" value="0">
+            </div>
+            </fieldset>
+            <fieldset class="jks__group">
+              <legend>ポイント</legend>
+            <div class="jks__field">
+              <label for="jksBaseRate">基本ポイント還元率<span class="jks__unit">(%)</span></label>
+              <input type="text" id="jksBaseRate" name="jksBaseRate" inputmode="decimal" autocomplete="off" value="1">
+            </div>
+            <div class="jks__field">
+              <label for="jksCampRate">キャンペーン上乗せ還元率<span class="jks__unit">(%)</span></label>
+              <input type="text" id="jksCampRate" name="jksCampRate" inputmode="decimal" autocomplete="off" value="0">
+            </div>
+            <div class="jks__field">
+              <label for="jksPointValue">1ポイントの円換算価値<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksPointValue" name="jksPointValue" inputmode="decimal" autocomplete="off" value="1" aria-describedby="jksPointValueHint">
+              <p class="jks__hint" id="jksPointValueHint">1ポイント=1円なら1。空欄は0円として計算します</p>
+            </div>
+            <div class="jks__field">
+              <label for="jksCap">獲得ポイント上限<span class="jks__unit">(pt)</span></label>
+              <input type="text" id="jksCap" name="jksCap" inputmode="decimal" autocomplete="off" value="" aria-describedby="jksCapHint">
+              <p class="jks__hint" id="jksCapHint">空欄のときは上限なし。0を入れると上限0ptとして計算します</p>
+            </div>
+              <div class="jks__field">
+                <label for="jksCapTarget">上限をかける対象</label>
+                <select id="jksCapTarget" name="jksCapTarget">
+                  <option value="campaign" selected>キャンペーン上乗せ分のみ</option>
+                  <option value="total">基本+キャンペーンの合計</option>
+                </select>
+              </div>
+            </fieldset>
+            <fieldset class="jks__group">
+              <legend>送料・手数料</legend>
+            <div class="jks__field">
+              <label for="jksShipping">送料<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksShipping" name="jksShipping" inputmode="decimal" autocomplete="off" value="0">
+            </div>
+            <div class="jks__field">
+              <label for="jksFee">決済手数料<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksFee" name="jksFee" inputmode="decimal" autocomplete="off" value="0">
+            </div>
+            <div class="jks__field">
+              <label for="jksOther">その他固定費<span class="jks__unit">(円)</span></label>
+              <input type="text" id="jksOther" name="jksOther" inputmode="decimal" autocomplete="off" value="0">
+            </div>
+            </fieldset>
+            <p class="jks__error" id="jksError" role="alert" hidden></p>
+            <div class="jks__buttons">
+              <button type="submit" class="jks__btn">計算する</button>
+              <button type="button" class="jks__btn jks__btn--sub" id="jksReset">リセット</button>
+            </div>
+          </form>
+          <div class="jks__result" id="jksResult" aria-live="polite">
+            <p class="jks__result-title">計算結果</p>
+            <dl class="jks__list">
+              <div><dt>値引き後支払額(商品代)</dt><dd id="jksOutGoods">-</dd></div>
+              <div><dt>基本ポイント相当額</dt><dd id="jksOutBase">-</dd></div>
+              <div><dt>キャンペーンポイント相当額</dt><dd id="jksOutCamp">-</dd></div>
+              <div><dt>上限適用後のポイント価値</dt><dd id="jksOutPoint">-</dd></div>
+              <div><dt>送料・手数料込みの実支払額</dt><dd id="jksOutPay">-</dd></div>
+              <div><dt>ポイント等を差し引いた実質負担額</dt><dd id="jksOutNet">-</dd></div>
+              <div class="jks__main"><dt>実質還元率</dt><dd id="jksOutRate">-</dd></div>
+              <div><dt>名目還元率(基本+キャンペーン)</dt><dd id="jksOutNominal">-</dd></div>
+              <div><dt>名目還元率との差</dt><dd id="jksOutDiff">-</dd></div>
+            </dl>
+            <p class="jks__note" id="jksNote"></p>
+          </div>
+        </div>
+        <script>
+          (function () {
+            "use strict";
+
+            /* JKS-CALC-START */
+            /*
+             * 実質還元率シミュレーターの計算ロジック(ブラウザ内で完結。入力値は外部に送信しない)
+             *
+             * 【このシミュレーターでの定義】
+             *   分母(基準額)       = 商品・サービス価格 + 送料 + 決済手数料 + その他固定費
+             *                        …値引きもポイントもない場合に支払う総額
+             *   分子(得られる価値) = 実際に適用される値引き額 + 上限適用後のポイントの円換算額
+             *   実質還元率(%)      = 分子 ÷ 分母 × 100
+             *   実質負担額         = 送料・手数料込みの実支払額 − ポイントの円換算額(= 分母 − 分子)
+             *   名目還元率(%)      = 基本ポイント還元率 + キャンペーン上乗せ還元率
+             *
+             * クーポン・値引きは「支払う前の値引き」だが、このツールでは還元と同じく「得られる経済的価値」として分子に入れる。
+             * その代わり分母は値引き前の総額にそろえ、値引きを分母・分子の両方で二重に扱わないようにしている。
+             * ポイントは「値引き後の商品代」に対して付くものとし、送料・手数料には付かない前提で計算する。
+             * ポイント数は種類ごと(基本・キャンペーン)に1pt未満を切り捨てる。付与単位(100円・200円ごとなど)は考慮しない。
+             * 上限: cap が null のときは上限なし。capTarget が "campaign" のときはキャンペーン分だけに、
+             *       "total" のときは基本+キャンペーンの合計に上限をかける(合計に上限をかける場合はキャンペーン分から先に減らす)。
+             */
+            function jksCalc(v) {
+              var discount = Math.min(v.coupon, v.price);          // 価格を超える値引きは価格までしか効かない
+              var goods = v.price - discount;                        // 値引き後の商品代(=ポイント付与の対象額)
+              var floorPt = function (x) { return Math.floor(x + 1e-9); }; // 浮動小数点誤差(例: 0.29*100)で1pt落ちるのを防ぐ
+              var basePts = floorPt(goods * v.baseRate / 100);
+              var campPts = floorPt(goods * v.campRate / 100);
+              var baseAfter = basePts;
+              var campAfter = campPts;
+              if (v.cap !== null) {
+                if (v.capTarget === "total") {
+                  var over = Math.max(basePts + campPts - v.cap, 0);
+                  var cut = Math.min(over, campPts);
+                  campAfter = campPts - cut;
+                  baseAfter = basePts - (over - cut);
+                } else {
+                  campAfter = Math.min(campPts, v.cap);
+                }
+              }
+              var pts = baseAfter + campAfter;
+              var pointYen = pts * v.pointValue;
+              var pay = goods + v.shipping + v.fee + v.other;      // 送料・手数料込みの実支払額
+              var gross = v.price + v.shipping + v.fee + v.other;  // 分母
+              var benefit = discount + pointYen;                     // 分子
+              var effRate = gross > 0 ? benefit / gross * 100 : null; // 0円のときは計算しない(ゼロ除算防止)
+              var nominal = v.baseRate + v.campRate;
+              return {
+                discount: discount,
+                goods: goods,
+                basePts: basePts,
+                campPts: campPts,
+                baseYen: basePts * v.pointValue,
+                campYen: campPts * v.pointValue,
+                pts: pts,
+                capCutPts: basePts + campPts - pts,
+                pointYen: pointYen,
+                pay: pay,
+                net: pay - pointYen,
+                gross: gross,
+                benefit: benefit,
+                effRate: effRate,
+                nominal: nominal,
+                diff: effRate === null ? null : effRate - nominal
+              };
+            }
+
+            /*
+             * 入力文字列を数値にする。全角数字・全角ピリオド・カンマ区切りを受け付ける。
+             * 戻り値: { ok: true, value: 数値|null(空欄) } または { ok: false, reason: "invalid"|"negative" }
+             */
+            function jksParse(raw) {
+              var s = String(raw == null ? "" : raw)
+                .replace(/[０-９]/g, function (c) { return String.fromCharCode(c.charCodeAt(0) - 0xFEE0); })
+                .replace(/[．。]/g, ".")
+                .replace(/[－−ー‐]/g, "-")
+                .replace(/[,，\s]/g, "");
+              if (s === "") return { ok: true, value: null };
+              if (!/^-?(\d+\.?\d*|\.\d+)$/.test(s)) return { ok: false, reason: "invalid" };
+              var n = Number(s);
+              if (!isFinite(n)) return { ok: false, reason: "invalid" };
+              if (n < 0) return { ok: false, reason: "negative" };
+              return { ok: true, value: n };
+            }
+
+            /* 表示ルール: 円は小数点以下を四捨五入、%は小数第3位を四捨五入して小数第2位まで */
+            function jksYen(n) { var r = Math.round(n); return (r === 0 ? 0 : r).toLocaleString("ja-JP") + "円"; }
+            function jksPct(n) { var r = Math.round(n * 100) / 100; return (r === 0 ? 0 : r).toFixed(2) + "%"; }
+            /* JKS-CALC-END */
+
+            if (typeof document === "undefined") return;
+            var form = document.getElementById("jksForm");
+            if (!form) return;
+
+            // 入力欄の定義(max は現実的な上限。超えた場合は入力エラーにする)
+            var FIELDS = [
+              { id: "jksPrice", key: "price", label: "商品・サービス価格", max: 1e9, required: true },
+              { id: "jksCoupon", key: "coupon", label: "クーポン・値引き額", max: 1e9 },
+              { id: "jksBaseRate", key: "baseRate", label: "基本ポイント還元率", max: 100 },
+              { id: "jksCampRate", key: "campRate", label: "キャンペーン上乗せ還元率", max: 100 },
+              { id: "jksPointValue", key: "pointValue", label: "1ポイントの円換算価値", max: 100 },
+              { id: "jksCap", key: "cap", label: "獲得ポイント上限", max: 1e9, blankIsNull: true },
+              { id: "jksShipping", key: "shipping", label: "送料", max: 1e9 },
+              { id: "jksFee", key: "fee", label: "決済手数料", max: 1e9 },
+              { id: "jksOther", key: "other", label: "その他固定費", max: 1e9 }
+            ];
+            var DEFAULTS = { jksPrice: "10000", jksCoupon: "0", jksBaseRate: "1", jksCampRate: "0", jksPointValue: "1", jksCap: "", jksShipping: "0", jksFee: "0", jksOther: "0" };
+            var errorBox = document.getElementById("jksError");
+            var out = function (id, text) { document.getElementById(id).textContent = text; };
+
+            function readInputs() {
+              var v = { capTarget: document.getElementById("jksCapTarget").value };
+              var errors = [];
+              FIELDS.forEach(function (f) {
+                var el = document.getElementById(f.id);
+                var p = jksParse(el.value);
+                var bad = "";
+                if (!p.ok) bad = p.reason === "negative" ? "0以上の数値を入力してください" : "数値を入力してください";
+                else if (p.value !== null && p.value > f.max) bad = (f.max === 100 ? "100以下" : "10億以下") + "の数値を入力してください";
+                else if (f.required && (p.value === null || p.value === 0)) bad = "1円以上の金額を入力してください";
+                if (bad) { errors.push(f.label + ":" + bad); el.setAttribute("aria-invalid", "true"); }
+                else el.removeAttribute("aria-invalid");
+                // 空欄は0として扱う(獲得ポイント上限だけは空欄=上限なし)
+                v[f.key] = p.ok && p.value !== null ? p.value : (f.blankIsNull ? null : 0);
+              });
+              return { v: v, errors: errors };
+            }
+
+            function render() {
+              var r = readInputs();
+              if (r.errors.length) {
+                errorBox.textContent = r.errors.join(" / ");
+                errorBox.hidden = false;
+                document.getElementById("jksResult").setAttribute("data-state", "error");
+                // 入力エラーのときは前回の計算結果を残さず「-」にする
+                ["jksOutGoods", "jksOutBase", "jksOutCamp", "jksOutPoint", "jksOutPay", "jksOutNet", "jksOutRate", "jksOutNominal", "jksOutDiff"].forEach(function (id) { out(id, "-"); });
+                out("jksNote", "入力内容を確認してください。");
+                return;
+              }
+              errorBox.hidden = true;
+              errorBox.textContent = "";
+              var c = jksCalc(r.v);
+              document.getElementById("jksResult").setAttribute("data-state", "ok");
+              out("jksOutGoods", jksYen(c.goods));
+              out("jksOutBase", jksYen(c.baseYen) + "(" + c.basePts.toLocaleString("ja-JP") + "pt)");
+              out("jksOutCamp", jksYen(c.campYen) + "(" + c.campPts.toLocaleString("ja-JP") + "pt)");
+              out("jksOutPoint", jksYen(c.pointYen) + "(" + c.pts.toLocaleString("ja-JP") + "pt)");
+              out("jksOutPay", jksYen(c.pay));
+              out("jksOutNet", jksYen(c.net));
+              out("jksOutRate", c.effRate === null ? "計算できません" : jksPct(c.effRate));
+              out("jksOutNominal", jksPct(c.nominal));
+              if (c.diff === null) out("jksOutDiff", "-");
+              else { var d = Math.round(c.diff * 100) / 100; out("jksOutDiff", (d > 0 ? "+" : d < 0 ? "−" : "") + Math.abs(d).toFixed(2) + "ポイント"); }
+              var notes = [];
+              if (r.v.cap === null) notes.push("獲得ポイント上限は「上限なし」で計算しています。");
+              if (c.capCutPts > 0) notes.push("上限により" + c.capCutPts.toLocaleString("ja-JP") + "pt少なくなっています。");
+              if (r.v.coupon > r.v.price) notes.push("値引き額が価格を上回るため、値引きは価格までとして計算しています。");
+              if (c.net < 0) notes.push("ポイントの価値が支払額を上回るため、実質負担額がマイナスになっています。");
+              out("jksNote", notes.join(" "));
+            }
+
+            form.addEventListener("submit", function (e) { e.preventDefault(); render(); });
+            // 入力を変えたら、その場で再計算する
+            form.addEventListener("input", render);
+            form.addEventListener("change", render);
+            document.getElementById("jksReset").addEventListener("click", function () {
+              Object.keys(DEFAULTS).forEach(function (id) { document.getElementById(id).value = DEFAULTS[id]; });
+              document.getElementById("jksCapTarget").value = "campaign";
+              render();
+              document.getElementById("jksPrice").focus();
+            });
+            render();
+          })();
+        </script>
+        <p>
+          <small>実質還元率は「(値引き額+ポイントの価値)÷(値引き前の価格+送料・手数料・その他固定費)」で計算しています。計算の定義は<a href="#teigi">このシミュレーターで計算しているもの</a>で説明しています。円は小数点以下を四捨五入、%は小数第2位まで表示します。</small>
+        </p>
+
+        <nav class="article-toc" aria-label="ページ内ショートカット">
+          <div class="article-toc__title">この記事の内容</div>
+          <ul class="article-toc__list">
+            <li><a href="#simulator">実質還元率シミュレーター</a></li>
+            <li><a href="#toha">実質還元率とは?</a></li>
+            <li><a href="#teigi">このシミュレーターで計算しているもの</a></li>
+            <li><a href="#rei">計算例</a></li>
+            <li><a href="#chuui">シミュレーターを使うときの注意</a></li>
+            <li><a href="#faq">よくある質問</a></li>
+            <li><a href="#matome">まとめ</a></li>
+          </ul>
+        </nav>
+
+        <h2 id="toha">実質還元率とは?</h2>
+        <p>
+          実質還元率は、表示されている還元率(名目の還元率)ではなく、上限・値引き・送料や手数料まで含めたときに、支払った総額のうち実際にどれだけ戻ってくるかを表す考え方です。「実質還元率」という言葉は、基本還元率とキャンペーン上乗せの合計を指して使われることもあるため、このページでは計算の定義を明記しています。
+        </p>
+        <p>
+          還元率の基本や「最大◯%」の見方は、<a href="point-kangenritsu-mikata">還元率とは?計算方法と「最大◯%」を見るときの注意点</a>で詳しく解説しています。
+        </p>
+
+        <h2 id="teigi">このシミュレーターで計算しているもの</h2>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead>
+              <tr><th>項目</th><th>このシミュレーターでの扱い</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>分母(基準額)</th><td>商品・サービス価格+送料+決済手数料+その他固定費。値引きもポイントもない場合に支払う総額</td></tr>
+              <tr><th>分子(得られる価値)</th><td>実際に適用される値引き額+上限を適用した後のポイントの円換算額</td></tr>
+              <tr><th>値引き</th><td>クーポン・値引きは支払う前の値引きですが、得られる経済的価値として分子に入れます。分母は値引き前の総額にそろえ、二重に数えないようにしています。価格を超える値引きは価格までとして計算します</td></tr>
+              <tr><th>ポイント</th><td>値引き後の商品代に、基本還元率とキャンペーン上乗せ還元率をかけて計算します(送料・手数料にはポイントが付かない前提)。ポイント数は種類ごとに1pt未満を切り捨てます</td></tr>
+              <tr><th>手数料</th><td>送料・決済手数料・その他固定費は分母と実支払額に加わります。同じポイントでも、手数料がかかるほど実質還元率は下がります</td></tr>
+              <tr><th>上限</th><td>空欄なら上限なし。「キャンペーン上乗せ分のみ」か「基本+キャンペーンの合計」のどちらに上限をかけるかを選べます(合計にかける場合は、キャンペーン分から先に減らします)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="notice-box">
+          <p><strong>計算式</strong></p>
+          <p>実支払額=(価格−値引き額)+送料+決済手数料+その他固定費</p>
+          <p>実質負担額=実支払額−ポイントの価値</p>
+          <p>実質還元率(%)=(値引き額+ポイントの価値)÷(価格+送料+決済手数料+その他固定費)×100</p>
+          <p>名目還元率(%)=基本ポイント還元率+キャンペーン上乗せ還元率</p>
+        </div>
+        <p>
+          入力していない欄は0として計算します(獲得ポイント上限だけは、空欄のとき上限なし)。価格が0円で送料・手数料もない場合は、分母が0になるため実質還元率は計算しません。
+        </p>
+
+        <h2 id="rei">計算例</h2>
+        <p>
+          以下はすべて架空の条件で、1ポイント=1円として計算した例です。
+        </p>
+        <div class="article-body__table-wrap">
+          <table>
+            <thead>
+              <tr><th>例</th><th>条件(架空)</th><th>結果</th></tr>
+            </thead>
+            <tbody>
+              <tr><th>通常還元のみ</th><td>価格10,000円、基本1%</td><td>ポイント100pt、実質負担額9,900円、実質還元率1.00%(名目1.00%との差0.00ポイント)</td></tr>
+              <tr><th>クーポン+ポイント</th><td>価格10,000円、クーポン1,000円、基本1%、キャンペーン5%</td><td>値引き後9,000円に基本90pt・キャンペーン450pt。実質負担額8,460円、実質還元率15.40%=(1,000円+540円)÷10,000円(名目6.00%より+9.40ポイント)</td></tr>
+              <tr><th>上限あり</th><td>価格50,000円、基本1%、キャンペーン10%、上限1,000pt(キャンペーン分のみ)</td><td>キャンペーン5,000ptが上限で1,000ptに。合計1,500pt、実質負担額48,500円、実質還元率3.00%(名目11.00%より−8.00ポイント)</td></tr>
+              <tr><th>送料・手数料あり</th><td>価格3,000円、基本1%、キャンペーン2%、送料500円、決済手数料100円</td><td>ポイント90pt、実支払額3,600円、実質負担額3,510円、実質還元率2.50%=90円÷3,600円(名目3.00%より−0.50ポイント)</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          支払額とポイントを合わせた「実質価格」の考え方は、<a href="jisshitsu-kakaku-keisan">実質価格の計算方法</a>でも具体例で解説しています。
+        </p>
+
+        <h2 id="chuui">シミュレーターを使うときの注意</h2>
+        <ul class="check-list">
+          <li><strong>1ポイント=1円とは限らない</strong>交換先によって1ポイントの価値が変わる場合は、「1ポイントの円換算価値」に実際に使う価値を入力します</li>
+          <li><strong>税込・税抜</strong>ポイントの対象額が税込か税抜かはサービスごとに違います。価格欄には、そのサービスがポイント計算に使う金額を入力します</li>
+          <li><strong>付与単位</strong>このシミュレーターは1pt未満の切り捨てだけを考慮しています。100円・200円ごとに付与される場合の端数は、<a href="point-fuyo-tani-hasu-hikaku">ポイント付与単位の比較</a>を参考にしてください</li>
+          <li><strong>上限</strong>キャンペーンの上限が期間や月ごとの合計で決まっている場合は、すでに獲得した分を差し引いた残りの上限を入力します</li>
+          <li><strong>対象外商品</strong>ポイントやキャンペーンの対象外の商品がある場合は、対象の金額だけで計算します</li>
+          <li><strong>期間限定ポイント</strong>期限内に使い切れない可能性がある場合は、1ポイントの価値を低めに見積もるのも一つの方法です(<a href="kikangentei-point-5shu-hikaku">期間限定ポイントの比較</a>)</li>
+          <li><strong>キャンペーン条件</strong>エントリーや支払い方法などの条件を満たさないと、キャンペーン分は付きません</li>
+        </ul>
+        <p>
+          ポイントの組み合わせ方は<a href="point-niju-sanjudori-kumiawase">ポイント二重取り・三重取りの組み合わせ早見表</a>、カードごとの還元率は<a href="credit-card-point-hikaku">クレジットカードのポイント比較</a>や<a href="koukyou-ryoukin-card-kangenritsu">公共料金のカード払いの還元率比較</a>で紹介しています。
+        </p>
+
+        <h2 id="faq">よくある質問</h2>
+        <div class="faq-item">
+          <p class="faq-item__q">クーポンの値引きは実質還元率に含まれますか?</p>
+          <p class="faq-item__a">このシミュレーターでは含めます。値引き額を「得られる経済的価値」として分子に入れ、分母は値引き前の価格+送料・手数料にそろえて計算しています。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">獲得ポイント上限を空欄にするとどうなりますか?</p>
+          <p class="faq-item__a">上限なしとして計算します。0を入力した場合は上限0ptとして計算するため、上限の対象にしたポイントは付きません。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">1ポイントの円換算価値には何を入力すればよいですか?</p>
+          <p class="faq-item__a">1ポイントを1円として使えるなら1を入力します。交換で価値が変わる場合や、期限内に使い切れるか不安な場合は、実際に使う価値に合わせて入力します。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">送料や手数料を入れると実質還元率が下がるのはなぜですか?</p>
+          <p class="faq-item__a">送料・手数料は分母(支払う総額)に加わるため、同じポイントでも支払う総額に対する割合が小さくなるからです。</p>
+        </div>
+        <div class="faq-item">
+          <p class="faq-item__q">入力した数字は送信・保存されますか?</p>
+          <p class="faq-item__a">されません。計算はすべてお使いのブラウザの中で行い、入力値を外部に送信したり保存したりしません。個人情報を入力する欄もありません。</p>
+        </div>
+
+        <h2 id="matome">まとめ</h2>
+        <div class="article-summary">
+          <div class="article-summary__title">この記事のまとめ</div>
+          <ul>
+            <li>価格・クーポン・還元率・上限・送料・手数料を入力すると、実質負担額と実質還元率を計算できる</li>
+            <li>実質還元率=(値引き額+ポイントの価値)÷(値引き前の価格+送料・手数料・その他固定費)</li>
+            <li>上限や送料・手数料があると、名目の還元率より実質還元率は下がることがある</li>
+            <li>1ポイントの価値・税込/税抜・付与単位・キャンペーン条件は、利用するサービスの条件に合わせて入力する</li>
+          </ul>
+        </div>
+
+        <p>
+          <small>このシミュレーターは目安を計算するためのものです。実際のポイント数は、各サービスの付与単位・対象金額・上限・キャンペーン条件によって異なります。</small>
+        </p>
+
+      </div>
+
+      <section class="related-offers" id="relatedOffers">
+        <h2 class="section-title">この記事に関連するお得なポイント</h2>
+        <div class="ranking-grid" id="relatedOffersGrid"></div>
+      </section>
+
+      <section class="popular-articles" id="popularArticles">
+        <h2 class="section-title">よくみられている記事</h2>
+        <div class="article-list" id="popularArticlesGrid"></div>
+      </section>
+
+      <nav class="article-footer-nav">
+        <a href="point-kangenritsu-mikata">還元率の見方を見る →</a>
+        <a href="jisshitsu-kakaku-keisan">実質価格の計算方法を見る →</a>
+        <a href="point-fuyo-tani-hasu-hikaku">ポイント付与単位の比較を見る →</a>
+        <a href="../../#news">← 新着記事一覧に戻る</a>
+      </nav>
+
+    </article>
+  </main>
+
+  <div data-include="footer"></div>
+
+  <script src="../../js/main.js"></script>
+</body>
+</html>
