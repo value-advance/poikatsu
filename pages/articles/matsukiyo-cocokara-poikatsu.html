@@ -14,6 +14,20 @@
   <title>マツキヨココカラでポイ活する方法!アプリ・クーポン・決済の基本</title>
   <meta name="description" content="マツキヨココカラでポイ活する方法を紹介。公式アプリの会員登録、クーポンの入手・使い方、支払い方法の選び方、日用品購入で活用するコツを初心者向けに解説します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* 「公式サイト」ボタン: ASP発行のテキストリンクコードを改変せずにボタン内の2行目へ置くための外側CSS(matsukiyo-cocokara-pointと同じ)。
+       ボタンの見た目は .cta-simple のまま。1行目「公式サイトへ」はリンクなしの通常テキストで、
+       クリック領域はASPの<a>(ブロック表示)の擬似要素をボタン全体に広げて確保する */
+    .cta-simple--asp { position: relative; }
+    .cta-simple--asp .cta-simple__lead { display: block; font-size: 14px; font-weight: 500; opacity: .9; margin-bottom: 4px; }
+    .cta-simple--asp a { display: block; color: #fff; font-size: 15px; font-weight: 800; text-decoration: none; }
+    .cta-simple--asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    .cta-simple--asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    /* スマホ: 従来の .cta-simple どおり画面幅いっぱい。PC(600px〜): 文字に合わせた幅(最小400px)で中央配置 */
+    @media (min-width: 600px) {
+      .cta-simple--asp { width: fit-content; min-width: 400px; max-width: 100%; box-sizing: border-box; margin-left: auto; margin-right: auto; padding: 12px 40px; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/matsukiyo-cocokara-poikatsu">
 </head>
@@ -56,10 +70,11 @@
           店頭のポイントカードだけでも利用はできますが、公式アプリを併用すると、クーポンの受け取りや通知の確認がしやすくなり、取りこぼしを防ぎやすくなります。マツキヨココカラオンラインストアでは、店舗と同じ会員情報でお得に買い物できます。
         </p>
 
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EDZ5UI+5QFO+5Z6WX" class="cta-simple" target="_blank" rel="noopener sponsored">
-          マツキヨココカラオンラインストアを見る
-          <span class="cta-simple__sub">公式サイトへ移動します</span>
-        </a>
+        <div class="cta-simple cta-simple--asp">
+          <span class="cta-simple__lead">公式サイトへ</span>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EDZ5UI+5QFO+5YRHE" rel="nofollow">マツキヨオンラインストア</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B84X3+EDZ5UI+5QFO+5YRHE" alt="">
+        </div>
 
         <h2>2. アプリ会員の確認</h2>
         <ol class="flow-list">
@@ -100,8 +115,8 @@
         <div class="warning-box">
           <div class="warning-box__title">⚠ 支払い方法でポイントの仕組みが変わる</div>
           <ul>
-            <li>現金払いは、マツキヨココカラポイントが直接付与される</li>
-            <li>メンバーズクレジットカード払いは、現金向けポイントとは別建ての「クレジットポイント」として付与され、後日ポイントへ自動移行されるとされる</li>
+            <li>会計前に会員証(ポイントカード・公式アプリ)を提示すると、割引後・税抜100円ごとにマツキヨココカラポイントが付与される(公式FAQで支払い方法による対象外とされているのは、調剤の会計の現金以外での支払い)</li>
+            <li>マツキヨココカラメンバーズクレジットカードで払うと、会員証として提示した分に加えて、カード利用分として100円(税込)ごとに1ポイントが付き、利用月の翌月末までにマツキヨココカラポイントへ自動移行される</li>
             <li>dポイントカードを一緒に提示すると、マツキヨココカラポイントと同時に貯まることが公式に確認できている</li>
           </ul>
         </div>
@@ -142,10 +157,11 @@
           マツキヨココカラは、アプリとクーポンをうまく組み合わせることで日用品の買い物をお得にしやすい店舗です。送料無料の条件や当日配送サービスなど、オンラインストアそのものの使い方は<a href="matsukiyo-cocokara-online-toha">マツキヨココカラオンラインストアとは</a>で解説しています。他店との違いは<a href="drugstore-point-hikaku">ドラッグストアのポイント徹底比較</a>もあわせてご覧ください。
         </p>
 
-        <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EDZ5UI+5QFO+5Z6WX" class="cta-simple" target="_blank" rel="noopener sponsored">
-          今すぐマツキヨココカラオンラインストアを見てみる
-          <span class="cta-simple__sub">公式サイトへ移動します</span>
-        </a>
+        <div class="cta-simple cta-simple--asp">
+          <span class="cta-simple__lead">公式サイトへ</span>
+          <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+EDZ5UI+5QFO+5YRHE" rel="nofollow">マツキヨオンラインストア</a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B84X3+EDZ5UI+5QFO+5YRHE" alt="">
+        </div>
 
       </div>
 
