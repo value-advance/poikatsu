@@ -1486,43 +1486,112 @@
     }
   }
 
-  // affiliate_click: アフィリエイト/ASPリンク(rel="sponsored")のクリックを計測。
+  // affiliate_click: アフィリエイト/ASPリンクのクリックを計測。
   // related_article_click: 「よくみられている記事」「関連するお得なポイント」カードの
   // クリックを計測(module_nameで区別)。
   // いずれもASP URL・アフィリエイトID・トラッキングパラメータには一切手を加えない
-  // (delegated listenerでクリックを観測するだけで、href自体は変更しない)。
+  // (delegated listenerでクリックを観測するだけで、href・rel・DOMは変更しない)。
+  //
+  // アフィリエイトリンクの判定条件(クリック判定とcta_positionの一覧で同じ関数を使う):
+  //   1. rel に sponsored を含む
+  //   2. リンク先のホスト名が、ASPのクリック計測用ドメイン(下の一覧)に一致する
+  // 2は、ASP発行コードを原文のまま置いたリンク(rel="nofollow"やrelなし)を計測するための条件。
+  // 一覧には、サイト内に実在するASPのホスト名だけを入れる(新しいASPを使うときに追加する)。
+  //
+  // 【計測範囲の変更】2026-10-07の本番反映より前は、1(rel="sponsored")のリンクだけを計測していた。
+  // この日以降は2のリンクも計測するため、前後でaffiliate_clickの件数は単純に比較できない
+  // (増加分は、それまで計測されていなかったASPリンクのクリック)。
+  const AFFILIATE_NETWORK_BY_HOST = new Map([
+    ["px.a8.net", "a8"],
+    ["ad2.trafficgate.net", "trafficgate"],
+    ["h.accesstrade.net", "accesstrade"],
+    ["www.tcs-asp.net", "tcs"],
+    ["click.j-a-net.jp", "janet"],
+    ["ck.jp.ap.valuecommerce.com", "valuecommerce"],
+    ["tr.affiliate-sp.docomo.ne.jp", "docomo"],
+  ]);
+
+  // アフィリエイトリンクなら { hostname, network, method } を、そうでなければ null を返す。
+  // sponsored とホスト名の両方に一致しても結果は1つ(methodはsponsoredを優先)。
+  function getAffiliateLinkInfo(anchor) {
+    if (!anchor || typeof anchor.getAttribute !== "function") return null;
+    const href = anchor.getAttribute("href");
+    if (!href) return null;
+
+    let hostname = "";
+    try {
+      hostname = new URL(href, location.href).hostname;
+    } catch (err) {
+      hostname = "";
+    }
+
+    const network = AFFILIATE_NETWORK_BY_HOST.get(hostname) || "";
+    const relTokens = (anchor.getAttribute("rel") || "").toLowerCase().split(/\s+/);
+    const sponsored = relTokens.indexOf("sponsored") !== -1;
+    if (!sponsored && !network) return null;
+
+    return {
+      hostname: hostname,
+      network: network || "other",
+      method: sponsored ? "sponsored" : "asp_hostname",
+    };
+  }
+
+  function isAffiliateLink(anchor) {
+    return getAffiliateLinkInfo(anchor) !== null;
+  }
+
+  // service_name: リンク内の表示テキスト → 画像のalt → 案件カードの見出し → ASP名(なければホスト名)
+  // の順で決める。画像だけのバナーリンクでも空にならないようにするための処理で、HTMLは変更しない。
+  function getAffiliateServiceName(link, rawText, info) {
+    if (rawText) {
+      const subEl = link.querySelector(".cta-simple__sub");
+      const subText = subEl ? (subEl.textContent || "").replace(/\s+/g, " ").trim() : "";
+      const mainText = subText && rawText.endsWith(subText) ? rawText.slice(0, rawText.length - subText.length).trim() : rawText;
+      return mainText || rawText;
+    }
+
+    const images = link.querySelectorAll("img[alt]");
+    for (let i = 0; i < images.length; i++) {
+      const alt = (images[i].getAttribute("alt") || "").replace(/\s+/g, " ").trim();
+      if (alt) return alt;
+    }
+
+    const card = link.closest(".offer-card");
+    const titleEl = card ? card.querySelector(".offer-card__title") : null;
+    const title = titleEl ? (titleEl.textContent || "").replace(/\s+/g, " ").trim() : "";
+    if (title) return title;
+
+    return info.network !== "other" ? info.network : info.hostname;
+  }
+
   function initAnalyticsTracking() {
     const article = document.querySelector("[data-category]");
     const sourceSlug = (location.pathname.split("/").pop() || "").replace(/\.html$/, "");
     const sourceCategory = article ? article.dataset.category || "" : "";
 
+    // クリック1回につき、最も近い<a>を1つだけ判定してイベントを1回送る
+    // (sponsoredとASPホスト名の両方に一致するリンクでも二重には送らない)。
     document.addEventListener("click", (e) => {
-      const link = e.target.closest('a[rel~="sponsored"]');
-      if (!link) return;
+      const link = e.target && typeof e.target.closest === "function" ? e.target.closest("a[href]") : null;
+      const info = getAffiliateLinkInfo(link);
+      if (!info) return;
 
-      let destinationDomain = "";
-      try {
-        destinationDomain = new URL(link.href, location.href).hostname;
-      } catch (err) {
-        destinationDomain = "";
-      }
-
-      const ctaLinks = Array.from(document.querySelectorAll('a[rel~="sponsored"]'));
+      const ctaLinks = Array.from(document.querySelectorAll("a[href]")).filter(isAffiliateLink);
       const idx = ctaLinks.indexOf(link);
       const ctaPosition = idx === -1 ? "unknown" : idx === 0 ? "top" : idx === ctaLinks.length - 1 ? "bottom" : "middle";
 
       const rawText = (link.textContent || "").replace(/\s+/g, " ").trim();
-      const subEl = link.querySelector(".cta-simple__sub");
-      const subText = subEl ? (subEl.textContent || "").replace(/\s+/g, " ").trim() : "";
-      const serviceName = subText && rawText.endsWith(subText) ? rawText.slice(0, rawText.length - subText.length).trim() : rawText;
 
       trackEvent("affiliate_click", {
-        service_name: serviceName || rawText,
+        service_name: getAffiliateServiceName(link, rawText, info),
         article_slug: sourceSlug,
         category: sourceCategory,
         cta_position: ctaPosition,
         cta_text: rawText,
-        destination_domain: destinationDomain,
+        destination_domain: info.hostname,
+        affiliate_network: info.network,
+        detection_method: info.method,
       });
     });
 

@@ -79,6 +79,12 @@ shopping・fallback対象72記事いずれも、**「関連記事の候補を選
 - `cta_text`: アンカーの全文言
 - `destination_domain`: リンク先のホスト名
 
+> **2026-10-07 追記(計測範囲の変更)**: この日の本番反映から、`affiliate_click` の判定条件を「`rel` に `sponsored` を含む」**または**「リンク先のホスト名がASPのクリック計測用ドメインに一致する」に広げた。ASP発行コードを原文のまま置いたリンク(`rel="nofollow"` や `rel` なし)が計測されていなかったため。対象ホスト名は `js/main.js` の `AFFILIATE_NETWORK_BY_HOST`(px.a8.net / ad2.trafficgate.net / h.accesstrade.net / www.tcs-asp.net / click.j-a-net.jp / ck.jp.ap.valuecommerce.com / tr.affiliate-sp.docomo.ne.jp)。**2026-10-07 以前と以後では計測範囲が異なる**ため、前後の件数は単純に比較できない(増加分は、それまで計測されていなかったASPリンクのクリック)。
+> - 追加したパラメータ: `affiliate_network`(a8 / trafficgate / accesstrade / tcs / janet / valuecommerce / docomo / other)、`detection_method`(sponsored / asp_hostname)。既存のパラメータ名とイベント名は変更していない。
+> - `service_name`: 画像だけのバナーリンクでは、画像の `alt` → 案件カードの見出し(`.offer-card__title`)→ ASP名の順で補う(以前は空だった)。
+> - `cta_position`: 位置の基準が「sponsoredリンク」から「上の判定条件に一致するリンクすべて」に変わった。ASPコードのリンクがあるページでは、従来と値が変わることがある。
+> - ASP発行コード(URL・`rel`・計測用画像)とDOMは変更していない。クリック1回につきイベントは1回だけ送信される。
+
 **`related_article_click`** — 「よくみられている記事」(`data-module="popular_articles"`)および「この記事に関連するお得なポイント」(`data-module="related_offers"`)カードのクリックを計測。カードのDOMに`data-category`/`data-module`/`data-position`属性を追加した(表示内容・デザインは変更なし)。
 - `source_slug` / `source_category`: クリック元記事
 - `destination_slug` / `destination_category`: クリック先記事
