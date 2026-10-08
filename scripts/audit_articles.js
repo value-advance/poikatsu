@@ -190,6 +190,21 @@ if (!homeUpdatedSyncOk) {
 }
 console.log("トップ更新同期:", homeUpdatedSyncOk ? "PASS" : "FAIL");
 
+// --- サイト内検索データ同期(js/main.js ARTICLE_SEARCH_INDEX) -----------------
+// 検索データは scripts/generate_related_articles.js が全記事から自動生成する。
+// 記事を追加・更新したのに生成スクリプトを実行していないと、その記事が検索に出ない
+// (または古いタイトル・日付のまま表示される)ため、生成し直した内容と一致するかを確認する。
+const searchIndexCheck = require("./lib/search-index").checkSearchIndex();
+const searchIndexOk = searchIndexCheck.ok;
+console.log("");
+console.log("=== サイト内検索データ同期(js/main.js ARTICLE_SEARCH_INDEX) ===");
+console.log("登録されるべき件数(記事+初心者向けページ):", searchIndexCheck.count);
+if (!searchIndexOk) {
+  console.error("ERROR:");
+  console.error(searchIndexCheck.reason);
+}
+console.log("検索データ同期:", searchIndexOk ? "PASS" : "FAIL");
+
 fs.writeFileSync(path.join(__dirname, "_audit_all_articles.json"), JSON.stringify(articles, null, 2), "utf8");
 fs.writeFileSync(path.join(__dirname, "_audit_missing.json"), JSON.stringify(missing, null, 2), "utf8");
 console.log("\nWrote _audit_all_articles.json (" + articles.length + ") and _audit_missing.json (" + missing.length + ")");
@@ -209,10 +224,10 @@ const htmlSitemapOk = runHtmlSitemapAudit();
 // an article page that exists but isn't reachable from the all-articles hub, a
 // duplicate slug, new.html falling out of sync with the hub, either of the
 // homepage's "新着記事"/"更新記事" sections falling out of sync with their source
-// lists, or either sitemap audit failing. Missing data-category/data-thumb-type on
+// lists, the generated search index being out of date, or either sitemap audit failing. Missing data-category/data-thumb-type on
 // the article's own tag is informational (see above) and must not fail the build.
-if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk || !homeUpdatedSyncOk || !sitemapOk || !htmlSitemapOk) {
-  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}, トップ更新同期=${homeUpdatedSyncOk ? "PASS" : "FAIL"}, audit_sitemap=${sitemapOk ? "PASS" : "FAIL"}, audit_html_sitemap=${htmlSitemapOk ? "PASS" : "FAIL"}.`);
+if (missing.length > 0 || dupes.length > 0 || !newSyncOk || !homeSyncOk || !homeUpdatedSyncOk || !searchIndexOk || !sitemapOk || !htmlSitemapOk) {
+  console.error(`\nFAIL: ${missing.length} article(s) missing from the hub, ${dupes.length} duplicate slug(s), 新着一覧同期=${newSyncOk ? "PASS" : "FAIL"}, トップ新着同期=${homeSyncOk ? "PASS" : "FAIL"}, トップ更新同期=${homeUpdatedSyncOk ? "PASS" : "FAIL"}, 検索データ同期=${searchIndexOk ? "PASS" : "FAIL"}, audit_sitemap=${sitemapOk ? "PASS" : "FAIL"}, audit_html_sitemap=${htmlSitemapOk ? "PASS" : "FAIL"}.`);
   process.exit(1);
 }
-console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and both homepage sections are in sync with their source lists, and both sitemap audits passed.");
+console.log("\nOK: every article file is registered in the hub grid, no duplicate slugs, new.html and both homepage sections are in sync with their source lists, the search index is up to date, and both sitemap audits passed.");

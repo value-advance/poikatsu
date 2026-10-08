@@ -21,6 +21,9 @@
 //   6. 同じカテゴリの記事(被リンク数が多い=サイト内で重要度が高い記事を優先)
 //   7. (最終手段、main.js側のSITE_DEFAULT_FALLBACKで処理)
 //
+// あわせて、サイト内検索用インデックス(AUTO-GENERATED:ARTICLE_SEARCH_INDEX マーカー間)も
+// 同じ実行で作り直す(scripts/lib/search-index.js)。
+//
 // 実行: node scripts/generate_related_articles.js
 const fs = require("fs");
 const path = require("path");
@@ -213,6 +216,11 @@ if (startIdx === -1 || endIdx === -1) {
 const newMainJs = mainJs.slice(0, startIdx) + generatedBlock + mainJs.slice(endIdx + END_MARKER.length);
 fs.writeFileSync(MAIN_JS_PATH, newMainJs);
 
+// サイト内検索用インデックス(ARTICLE_SEARCH_INDEX)も、公開済みの全記事から毎回作り直す。
+// 記事の追加・タイトルや説明文の変更・更新日の変更が、このスクリプトの実行だけで検索に反映される
+// (以前は手で1行ずつ追記する運用で、追記漏れの記事が検索に出なかった)。
+const searchIndexCount = require("./lib/search-index").writeSearchIndex();
+
 // 監査レポート用の内部データ(サイトには含めない、reports/ 生成時のみ使用)
 fs.writeFileSync(
   path.join(siteData.root, "scripts", "_related_articles_bands.json"),
@@ -223,6 +231,7 @@ fs.writeFileSync(
 const noCandidates = articles.filter((a) => relatedMap[a.slug].length === 0);
 const fewCandidates = articles.filter((a) => relatedMap[a.slug].length > 0 && relatedMap[a.slug].length < 4);
 console.log(`関連記事データを生成しました: ${articles.length}記事`);
+console.log(`サイト内検索データを生成しました: ${searchIndexCount}件(記事+初心者向けページ)`);
 console.log(`候補0件(最終フォールバックのみ表示される記事): ${noCandidates.length}件`);
 if (noCandidates.length > 0) console.log("  " + noCandidates.map((a) => a.slug).join(", "));
 console.log(`候補1〜3件(フォールバックで一部補完される記事): ${fewCandidates.length}件`);

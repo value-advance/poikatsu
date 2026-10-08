@@ -109,8 +109,8 @@ poikatsu/
      </div>
    </a>
    ```
-4. 検索結果ページ用に `js/main.js` の `ARTICLE_SEARCH_INDEX` にもエントリを追加する
-   (`category` フィールドは表示には使わないが、検索マッチング用に引き続き保持する)
+4. 検索結果ページ用の `ARTICLE_SEARCH_INDEX`(`js/main.js`)は手で追加しない。`node scripts/generate_related_articles.js` を実行すると、
+   公開済みの全記事から自動で作り直される(`category` は全記事ハブのカードの `data-category` を使う)
 5. `pages/articles/index.html`(全記事ハブ)の `#articleListFull` にもカードを追加する。
    カテゴリページにだけ記事を追加して、この全記事ハブへの追加を忘れると、記事ページ自体は
    公開されているのに `/pages/articles/` や `/pages/articles/new` に載らない「登録漏れ」になる
@@ -252,12 +252,14 @@ python -m http.server 8000
   クエリパラメータ(`?q=...`)ごと失われてしまうため、**必ず拡張子なしの `/pages/search` を指定する**
 - `pages/search.html` が検索結果ページ(拡張子なしの `/pages/search` でアクセスされる)。
   `js/main.js` の `ARTICLE_SEARCH_INDEX`(記事のタイトル・カテゴリ・抜粋を持つ配列)に対して、
-  URLの `q` パラメータをタイトル・カテゴリ・抜粋に対して部分一致(大文字小文字を区別しない)で検索し、
-  一致した記事を記事カード形式で表示する(`initSearchResults()`)
+  URLの `q` パラメータを空白(全角スペースを含む)で区切り、すべての語がタイトル・カテゴリ・抜粋の
+  いずれかに部分一致(大文字小文字を区別しない)する記事を、記事カード形式で表示する(`initSearchResults()`)
 - **検索結果ページはクロール対象外**: `pages/search.html` の `<head>` に
   `<meta name="robots" content="noindex, nofollow">` を指定済み
-- 新しい記事を追加したら、`ARTICLE_SEARCH_INDEX` にもタイトル・URL・カテゴリ・日付・
-  `data-thumb-type`・抜粋を追加する(追加を忘れると検索にヒットしない)
+- `ARTICLE_SEARCH_INDEX` は `scripts/generate_related_articles.js`(`scripts/lib/search-index.js`)が自動生成する。
+  タイトルは `<title>`、抜粋は meta description、日付は表示上の更新日(無ければ作成日)、カテゴリと
+  `data-thumb-type` は全記事ハブ(`pages/articles/index.html`)のカードから取る。記事を追加・更新したら
+  生成スクリプトを実行する(実行し忘れは `node scripts/audit_articles.js` の「検索データ同期」で検出される)
 
 ## TODO
 
@@ -277,4 +279,4 @@ python -m http.server 8000
       全11タイプ×3枚=33枚、必ず4:3で書き出す)を用意する。画像が無い間はタイプ別グラデーションが表示される
 - [ ] `js/main.js` の `PR_OFFERS` を実際のPR案件データに差し替える
       (現在はタグマッチングの動作確認用サンプル)
-- [ ] 新しい記事を追加するたびに `js/main.js` の `ARTICLE_SEARCH_INDEX` にも追加する
+- [x] `js/main.js` の `ARTICLE_SEARCH_INDEX` を自動生成にする(2026-10-08。`scripts/generate_related_articles.js` の実行で更新)
