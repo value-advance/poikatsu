@@ -14,6 +14,19 @@
   <title>楽天ポイントの使い方|楽天市場・楽天ペイ・街のお店で使う方法と上限・注意点</title>
   <meta name="description" content="楽天ポイントは1ポイント=1円で、楽天市場・楽天ペイ・楽天ポイントカード加盟店・料金の支払いなどに使えます。最低利用ポイントと1回・1か月の上限、通常ポイントと期間限定ポイントの違い、有効期限、Edy・ANAマイルへの交換を公式情報で解説します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/rakuten-point-tsukaikata">
 
@@ -118,6 +131,8 @@
           <span class="article-header__date">更新日:2026.10.15</span>
         </div>
       </header>
+
+      <p class="pr-disclosure">この記事にはアフィリエイト広告を含みます。</p>
 
       <div class="article-body">
 
@@ -252,18 +267,25 @@
           楽天モバイル、Rakuten Turbo、楽天でんき、楽天ガスなどの料金や、楽天生命・楽天損保・楽天ペット保険などの支払いにもポイントを使えると、楽天PointClubで案内されています。対象になる料金や手続きは、各サービスの案内で確認します。
         </p>
         <div class="offer-grid">
-          <a class="offer-card" href="rakuten-mobile-poikatsu">
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">携帯回線</span>
             <p class="offer-card__title">楽天モバイル</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www28.a8.net/svt/bgt?aid=260720103756&wid=002&eno=01&mid=s00000027494001003000&mc=1" alt="楽天モバイル" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CI3QVU+5W58+5YZ75" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260720103756&wid=002&eno=01&mid=s00000027494001003000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B84X3+CI3QVU+5W58+5YZ75" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">データ使用量に応じた段階制料金の携帯回線サービス</p>
               <p class="offer-card__reward">毎月の利用料金に楽天ポイントを充当できる対象サービス</p>
             </div>
-          </a>
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="rakuten-mobile-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CI3QVU+5W58+5YRHE" rel="nofollow">楽天モバイル</a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B84X3+CI3QVU+5W58+5YRHE" alt=""></span>
+            </div>
+          </div>
         </div>
         <ul class="check-list">
           <li><strong>楽天カードの利用代金に充てる</strong>楽天カードの利用代金にポイントを充てるサービスがあります。2026年8月の記事作成時の確認では、対象は通常ポイントのみとされていました。2026年10月15日は、楽天カードの公式ページをこの記事の確認環境から開けなかったため、最新の条件は楽天カードの公式サイトで確認してください</li>
