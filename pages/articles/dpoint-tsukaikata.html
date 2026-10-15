@@ -14,6 +14,19 @@
   <title>dポイントの使い方とは?店舗・連携・交換まで完全ガイド | ポイントの殿堂</title>
   <meta name="description" content="dポイントの使い方を徹底解説。街のお店やネットでそのまま使う方法、アカウント連携で使えるサービス、JALマイル・スターバックスカードへの交換方法まで、公式情報にもとづき具体的な手順で紹介します。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/dpoint-tsukaikata">
 
@@ -117,6 +130,8 @@
           <span class="article-header__date">更新日:2026.08.07</span>
         </div>
       </header>
+
+      <p class="pr-disclosure">この記事にはアフィリエイト広告を含みます。</p>
 
       <div class="article-body">
 
@@ -246,42 +261,63 @@
           ドコモ関連の料金請求がある方は、以下のようなサービスの利用料金にもdポイントを充当できる場合があります。
         </p>
         <div class="offer-grid">
-          <a class="offer-card" href="ahamo-hikari-poikatsu">
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">光回線</span>
             <p class="offer-card__title">ahamo光</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www29.a8.net/svt/bgt?aid=260720103759&wid=002&eno=01&mid=s00000017718076006000&mc=1" alt="ahamo光" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CJW1P6+3SPO+CKIQ1T" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www28.a8.net/svt/bgt?aid=260720103759&wid=002&eno=01&mid=s00000017718076006000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X3+CJW1P6+3SPO+CKIQ1T" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">フレッツ光回線の設備を使ったNTTドコモの光インターネットサービス</p>
               <p class="offer-card__reward">月々の利用料金にdポイントを充当できる対象サービス</p>
             </div>
-          </a>
-          <a class="offer-card" href="docomo-denki-poikatsu">
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="ahamo-hikari-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CJW1P6+3SPO+CKHV6Q" rel="nofollow">ahamo光</a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B84X3+CJW1P6+3SPO+CKHV6Q" alt=""></span>
+            </div>
+          </div>
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">電力</span>
             <p class="offer-card__title">ドコモでんき</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www22.a8.net/svt/bgt?aid=260720103797&wid=002&eno=01&mid=s00000000018049011000&mc=1" alt="ドコモでんき" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+D6IIOQ+50+83SRAP" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www25.a8.net/svt/bgt?aid=260720103797&wid=002&eno=01&mid=s00000000018049011000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B84X3+D6IIOQ+50+83SRAP" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">電気料金の支払いでdポイントが貯まる電力サービス</p>
               <p class="offer-card__reward">電気代にdポイントを充当できる対象サービス</p>
             </div>
-          </a>
-          <a class="offer-card" href="d-value-pass-poikatsu">
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="docomo-denki-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+D6IIOQ+50+83QM4Y" rel="nofollow">ドコモでんき</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X3+D6IIOQ+50+83QM4Y" alt=""></span>
+            </div>
+          </div>
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">壁紙・待受サブスク</span>
             <p class="offer-card__title">dバリューパス</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www27.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1" alt="dバリューパス" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+90HA8Q+5TUG+601S1" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www24.a8.net/svt/bgt?aid=260720103545&wid=002&eno=01&mid=s00000027196001008000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www15.a8.net/0.gif?a8mat=4B84X3+90HA8Q+5TUG+601S1" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">約150の人気コンテンツが使い放題になる月額サブスク(初回31日間無料)</p>
               <p class="offer-card__reward">月額料金にdポイントを充当できる対象サービス</p>
             </div>
-          </a>
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="d-value-pass-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+90HA8Q+5TUG+5YRHE" rel="nofollow">dバリューパス</a>
+<img border="0" width="1" height="1" src="https://www12.a8.net/0.gif?a8mat=4B84X3+90HA8Q+5TUG+5YRHE" alt=""></span>
+            </div>
+          </div>
         </div>
         <p>
           <small>掲載しているサービスの内容は記事作成時点の情報です。料金充当の対象条件は変更される場合があるため、最新情報は各案件の記事および公式サイトでご確認ください。</small>
@@ -364,18 +400,25 @@
           リクルートID連携が必要なサービスの例として、じゃらんnetは当サイトでも詳しく紹介しています。
         </p>
         <div class="offer-grid">
-          <a class="offer-card" href="jalan-net-poikatsu">
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">宿・ホテル予約</span>
             <p class="offer-card__title">じゃらんnet</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www23.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1" alt="じゃらんnet" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F3KSUY+14CS+6GZCH" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www26.a8.net/svt/bgt?aid=260720103913&wid=002&eno=01&mid=s00000005230001087000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www11.a8.net/0.gif?a8mat=4B84X3+F3KSUY+14CS+6GZCH" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">国内最大級の掲載数を誇る宿・ホテル予約サービス</p>
               <p class="offer-card__reward">リクルートID連携でdポイントを予約に利用できる</p>
             </div>
-          </a>
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="jalan-net-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+F3KSUY+14CS+64JTE" rel="nofollow">じゃらんnet</a>
+<img border="0" width="1" height="1" src="https://www17.a8.net/0.gif?a8mat=4B84X3+F3KSUY+14CS+64JTE" alt=""></span>
+            </div>
+          </div>
         </div>
 
         <h3>マネックス証券で投資に使う</h3>

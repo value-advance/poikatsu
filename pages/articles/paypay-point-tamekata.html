@@ -14,6 +14,19 @@
   <title>PayPayポイントの貯め方とは?もらう方法・使い方を解説 | ポイントの殿堂</title>
   <meta name="description" content="PayPayポイントの貯め方を初心者向けに解説。PayPay決済、Yahoo!ショッピング、クレジットカード紐付けなど、主な貯め方と使い方、注意点をまとめています。">
   <link rel="stylesheet" href="../../css/style.css">
+  <style>
+    /* ASPの発行コード(バナー・テキストリンク)を改変せずに置くための外側ラッパー。広告コード自体には手を加えず、外側のCSSだけで既存カードの見た目に合わせる */
+    .offer-card__thumb--asp { position: relative; }
+    .offer-card__thumb--asp img { object-fit: contain; }
+    .offer-card__thumb--asp img[width="1"][height="1"],
+    .offer-card__cta-asp img[width="1"][height="1"] { position: absolute; left: 0; top: 0; width: 1px; height: 1px; }
+    .offer-card__cta-asp { position: relative; flex: 1 1 90px; white-space: normal; }
+    .offer-card__cta-asp a { color: inherit; text-decoration: none; }
+    .offer-card__cta-asp a::after { content: ""; position: absolute; inset: 0; border-radius: inherit; }
+    @media (min-width: 600px) {
+      .offer-card--cta-side .offer-card__cta-asp { line-height: 1.3; }
+    }
+  </style>
   <link rel="icon" href="../../images/favicon/favicon.png" type="image/png">
   <link rel="canonical" href="https://value-advance.com/pages/articles/paypay-point-tamekata">
 
@@ -113,6 +126,8 @@
         </div>
       </header>
 
+      <p class="pr-disclosure">この記事にはアフィリエイト広告を含みます。</p>
+
       <div class="article-body">
 
         <p>
@@ -196,42 +211,60 @@
           利用に応じてPayPayポイントがもらえる案件もあります。代表的な例を紹介します。
         </p>
         <div class="offer-grid">
-          <a class="offer-card" href="yahoo-shopping-toha">
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">総合通販</span>
             <p class="offer-card__title">Yahoo!ショッピング</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892684862" alt="Yahoo!ショッピング" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <script language="javascript" src="//ad.jp.ap.valuecommerce.com/servlet/jsbanner?sid=3776575&pid=892717321"></script><noscript><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717321" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717321" border="0"></a></noscript>
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">商品ごとに獲得予定ポイントを表示してくれる総合通販サイト</p>
               <p class="offer-card__reward">購入金額に応じてPayPayポイントが貯まる</p>
             </div>
-          </a>
-          <a class="offer-card" href="yahoo-travel-poikatsu">
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="yahoo-shopping-toha">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="//ck.jp.ap.valuecommerce.com/servlet/referral?sid=3776575&pid=892717456" rel="nofollow"><img src="//ad.jp.ap.valuecommerce.com/servlet/gifbanner?sid=3776575&pid=892717456" height="1" width="1" border="0">Yahooショッピング</a></span>
+            </div>
+          </div>
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">宿・ホテル予約</span>
             <p class="offer-card__title">Yahoo!トラベル</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www25.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1" alt="Yahoo!トラベル" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+7LVFTM+4ZCO+63WO1" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www22.a8.net/svt/bgt?aid=260720104460&wid=002&eno=01&mid=s00000023244001026000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www18.a8.net/0.gif?a8mat=4B84X4+7LVFTM+4ZCO+63WO1" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">全国約17,000施設から比較できる宿泊予約サービス</p>
               <p class="offer-card__reward">PayPayポイントが貯まり、その場で使える</p>
             </div>
-          </a>
-          <a class="offer-card" href="retty-poikatsu">
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="yahoo-travel-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X4+7LVFTM+4ZCO+5YRHE" rel="nofollow">Yahoo!トラベル</a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B84X4+7LVFTM+4ZCO+5YRHE" alt=""></span>
+            </div>
+          </div>
+          <div class="offer-card offer-card--cta-side">
             <span class="offer-card__type">グルメ予約</span>
             <p class="offer-card__title">Retty</p>
             <div class="offer-card__divider"></div>
-            <div class="offer-card__thumb">
-              <img src="https://www29.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1" alt="Retty" loading="lazy">
+            <div class="offer-card__thumb offer-card__thumb--asp">
+              <a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CGBG2I+4EI4+BZVU9" rel="nofollow">
+<img border="0" width="300" height="250" alt="" src="https://www20.a8.net/svt/bgt?aid=260720103753&wid=002&eno=01&mid=s00000020542002015000&mc=1"></a>
+<img border="0" width="1" height="1" src="https://www13.a8.net/0.gif?a8mat=4B84X3+CGBG2I+4EI4+BZVU9" alt="">
             </div>
             <div class="offer-card__body">
               <p class="offer-card__desc">実名口コミが特徴の会員登録不要で使えるグルメ予約サービス</p>
               <p class="offer-card__reward">ネット予約でPayPayポイントが貯まる</p>
             </div>
-          </a>
+            <div class="offer-card__cta">
+              <a class="offer-card__cta-link offer-card__cta-link--secondary" href="retty-poikatsu">詳細へ</a>
+              <span class="offer-card__cta-link offer-card__cta-link--primary offer-card__cta-asp"><a href="https://px.a8.net/svt/ejp?a8mat=4B84X3+CGBG2I+4EI4+BX3J6" rel="nofollow">Retty</a>
+<img border="0" width="1" height="1" src="https://www16.a8.net/0.gif?a8mat=4B84X3+CGBG2I+4EI4+BX3J6" alt=""></span>
+            </div>
+          </div>
         </div>
         <p>
           <small>掲載している還元内容は記事作成時点の情報です。条件や実施状況は変更される場合があるため、最新情報は各案件の記事および公式サイトでご確認ください。</small>
