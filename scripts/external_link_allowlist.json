@@ -1,0 +1,27 @@
+{
+  "_note": "scripts/check_external_links.js --network で通信してよい公式ホストの一覧。ASP・広告・計測のホストは載せない(載せても check_external_links.js 側で先に除外される)。先頭が . の項目はサブドメインも含む。",
+  "hosts": [
+    "value-advance.com",
+    "point.rakuten.co.jp",
+    "pointcard.rakuten.co.jp",
+    "pay.rakuten.co.jp",
+    "event.rakuten.co.jp",
+    "ichiba.faq.rakuten.net",
+    "corp.rakuten.co.jp",
+    "www.rakuten.co.jp",
+    "www.rakuten-card.co.jp",
+    "edy.rakuten.co.jp",
+    "books.rakuten.co.jp",
+    "paypay.ne.jp",
+    "www.paypay-card.co.jp",
+    "service.smt.docomo.ne.jp",
+    "dpoint.docomo.ne.jp",
+    "www.au.com",
+    "www.kddi-fs.com",
+    "policy.ponta.jp",
+    "point.recruit.co.jp",
+    "support.yahoo-net.jp",
+    "www.24028.jp",
+    "www.24028-net.jp"
+  ]
+}
